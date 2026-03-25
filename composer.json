@@ -47,15 +47,19 @@
     },
     "scripts": {
         "setup": [
+            "@setup:env",
+            "@docker:up",
             "composer install",
-            "php bin/setup-env",
-            "php artisan key:generate",
-            "php artisan migrate --force",
-            "npm install",
-            "npm run build"
+            "php artisan key:generate --ansi",
+            "php artisan migrate --force --ansi"
         ],
         "setup:env": [
             "php bin/setup-env"
+        ],
+        "setup:quick": [
+            "composer install",
+            "php bin/setup-env",
+            "php artisan key:generate --ansi"
         ],
         "docker:up": [
             "docker-compose -f docker/docker-compose.yml up -d"
@@ -167,9 +171,7 @@
         ],
         "post-create-project-cmd": [
             "php bin/setup-env",
-            "php artisan key:generate --ansi",
-            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "php artisan migrate --graceful --ansi"
+            "php artisan key:generate --ansi"
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"

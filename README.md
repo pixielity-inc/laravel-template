@@ -1,57 +1,159 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Template - Production-Ready Headless API Backend
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Production-ready Laravel 13 template with Docker, Redis, PostgreSQL, and comprehensive tooling for building headless API backends.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Laravel 13 with PHP 8.4
+- Production-grade configuration for headless API
+- Docker infrastructure (PostgreSQL, Redis, MinIO, Mailpit, Meilisearch, Reverb)
+- Token-based authentication (Sanctum ready)
+- Code quality tools (Pint, Rector, PHPStan, PHPInsights)
+- Modular architecture with nwidart/laravel-modules
+- Automated environment setup
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Quick Start
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 1. Create from Template
 
 ```bash
-composer require laravel/boost --dev
+# Using GitHub CLI
+gh repo create my-api --template pixielity-inc/laravel-template --clone
 
-php artisan boost:install
+# Or using Composer
+composer create-project pixielity/laravel-template my-api
+
+# Or clone directly
+git clone https://github.com/pixielity-inc/laravel-template.git my-api
+cd my-api
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Setup Environment
 
-## Contributing
+```bash
+# Quick setup (env files + dependencies + key generation)
+composer setup:quick
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Review and update environment files
+# - environments/.env (application config)
+# - environments/.env.docker (Docker infrastructure)
+```
 
-## Code of Conduct
+### 3. Start Docker Services
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+# Start all Docker containers
+composer docker:up
 
-## Security Vulnerabilities
+# Check container status
+composer docker:ps
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# View logs
+composer docker:logs
+```
+
+### 4. Run Migrations
+
+```bash
+# Run database migrations
+php artisan migrate
+
+# Or use the full setup (includes docker:up and migrate)
+composer setup
+```
+
+### 5. Start Development Server
+
+```bash
+# Traditional Laravel server
+composer dev:traditional
+
+# Or with Octane (FrankenPHP)
+composer octane
+```
+
+## Setup Scripts
+
+- `composer setup:quick` - Setup env files, install dependencies, generate key (no Docker/migrations)
+- `composer setup:env` - Setup environment files only
+- `composer setup` - Full setup: env + docker + dependencies + migrations
+- `composer docker:up` - Start Docker containers
+- `composer docker:down` - Stop Docker containers
+- `composer docker:restart` - Restart Docker containers
+- `composer docker:ps` - Show container status
+- `composer docker:logs` - Show container logs
+
+## Development
+
+```bash
+# Start development server
+composer dev:traditional        # Laravel built-in server
+composer octane                 # Octane with FrankenPHP
+
+# Code quality
+composer format                 # Format code with Pint
+composer refactor              # Refactor with Rector
+composer analyse               # Static analysis with PHPStan
+composer quality:fix           # Run all quality tools
+
+# Testing
+composer test                  # Run tests
+```
+
+## Docker Services
+
+The template includes the following Docker services:
+
+- **PostgreSQL** - Primary database (port 5432)
+- **Redis** - Cache, session, and queue (port 6379)
+- **MinIO** - S3-compatible storage (port 9000, console 9001)
+- **Mailpit** - Email testing (SMTP 1025, UI 8025)
+- **Meilisearch** - Search engine (port 7700)
+- **Reverb** - WebSocket server (port 6001)
+- **pgAdmin** - PostgreSQL admin UI (port 5050)
+
+## Configuration
+
+### Environment Files
+
+- `environments/.env` - Application configuration
+- `environments/.env.docker` - Docker infrastructure configuration
+- Symlinks created automatically:
+  - `.env` → `environments/.env`
+  - `docker/.env.docker` → `environments/.env.docker`
+
+### Production Defaults
+
+- **Auth**: Sanctum (token-based API authentication)
+- **Database**: PostgreSQL
+- **Cache**: Redis
+- **Session**: Redis
+- **Queue**: Redis
+- **Storage**: S3 (MinIO)
+- **Mail**: SMTP (Mailpit for development)
+
+## API Features
+
+- CORS configuration
+- Security headers (.htaccess)
+- Rate limiting ready
+- API versioning support
+- Robots.txt configured for API (disallow all)
+
+## Code Quality Tools
+
+```bash
+composer format              # Laravel Pint (code formatting)
+composer format:test         # Check formatting without changes
+composer refactor           # Rector (automated refactoring)
+composer refactor:dry       # Dry run refactoring
+composer analyse            # PHPStan (static analysis)
+composer analyse:baseline   # Generate PHPStan baseline
+composer insights           # PHP Insights (code quality)
+composer insights:fix       # Fix issues with PHP Insights
+composer quality            # Run all checks
+composer quality:fix        # Run all fixes
+```
 
 ## License
 
