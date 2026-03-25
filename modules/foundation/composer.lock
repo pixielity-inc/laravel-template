@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ef494352e5e0cf8c0fd4bde1be077c1",
+    "content-hash": "342f0ec7ede17626f3c4c4fa273de8fa",
     "packages": [
         {
             "name": "abbasudo/laravel-purity",
@@ -1380,6 +1380,58 @@
             "time": "2025-08-22T14:27:06+00:00"
         },
         {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5",
+                "reference": "7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5|^7.5|^8.5|^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "support": {
+                "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.3.7"
+            },
+            "time": "2026-02-02T19:15:54+00:00"
+        },
+        {
             "name": "ksubileau/color-thief-php",
             "version": "v2.0.2",
             "source": {
@@ -2547,6 +2599,60 @@
             "time": "2026-03-08T20:05:35+00:00"
         },
         {
+            "name": "maantje/react-email",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maantje/laravel-react-email.git",
+                "reference": "a3a10f3103b451a60c93fbf5fba37db95ae936cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maantje/laravel-react-email/zipball/a3a10f3103b451a60c93fbf5fba37db95ae936cb",
+                "reference": "a3a10f3103b451a60c93fbf5fba37db95ae936cb",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.20 || ^8.0 || ^9.0 || ^10",
+                "pestphp/pest": "^1.20 || ^2.0 || ^3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Maantje\\ReactEmail\\ReactEmailServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Maantje\\ReactEmail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jamie Schouten",
+                    "email": "j4mie@hey.com"
+                }
+            ],
+            "description": "React email for Laravel",
+            "homepage": "https://github.com/maantje/laravel-react-email",
+            "keywords": [
+                "laravel",
+                "react",
+                "react email"
+            ],
+            "support": {
+                "issues": "https://github.com/maantje/laravel-react-email/issues",
+                "source": "https://github.com/maantje/laravel-react-email/tree/v1.0.0"
+            },
+            "time": "2025-03-01T21:43:25+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.10.0",
             "source": {
@@ -3488,16 +3594,16 @@
         },
         {
             "name": "pixielity/laravel-discovery",
-            "version": "v1.1.0",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pixielity/laravel/discovery.git",
-                "reference": "3d351077d5d400cff5df605af9eff53222471dce"
+                "reference": "118e4b4b4756ff238bcce08435419096960e73d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pixielity%2Flaravel%2Fdiscovery/repository/archive.zip?sha=3d351077d5d400cff5df605af9eff53222471dce",
-                "reference": "3d351077d5d400cff5df605af9eff53222471dce",
+                "url": "https://gitlab.com/api/v4/projects/pixielity%2Flaravel%2Fdiscovery/repository/archive.zip?sha=118e4b4b4756ff238bcce08435419096960e73d7",
+                "reference": "118e4b4b4756ff238bcce08435419096960e73d7",
                 "shasum": ""
             },
             "require": {
@@ -3567,7 +3673,7 @@
                 "issues": "https://gitlab.com/pixielity/laravel/discovery/-/issues",
                 "source": "https://gitlab.com/pixielity/laravel/discovery"
             },
-            "time": "2026-03-25T13:43:12+00:00"
+            "time": "2026-03-25T14:34:12+00:00"
         },
         {
             "name": "pixielity/laravel-framework",
@@ -3575,7 +3681,7 @@
             "dist": {
                 "type": "path",
                 "url": "../framework",
-                "reference": "f0f85542e058d3847134490de7f392e3fc929e90"
+                "reference": "a60f9ad83dee2dbc61b3c3002593928bc38f20bb"
             },
             "require": {
                 "abbasudo/laravel-purity": "^3.0",
@@ -3595,20 +3701,12 @@
                 "spatie/laravel-translatable": "^6.0"
             },
             "replace": {
-                "pixielity/laravel-actions": "self.version",
-                "pixielity/laravel-color-thief": "self.version",
                 "pixielity/laravel-container": "self.version",
-                "pixielity/laravel-database": "self.version",
                 "pixielity/laravel-enum": "self.version",
                 "pixielity/laravel-localization": "self.version",
-                "pixielity/laravel-logging": "self.version",
-                "pixielity/laravel-response": "self.version",
                 "pixielity/laravel-routing": "self.version",
                 "pixielity/laravel-serializer": "self.version",
-                "pixielity/laravel-service-provider": "self.version",
-                "pixielity/laravel-support": "self.version",
-                "pixielity/laravel-uuid": "self.version",
-                "pixielity/laravel-workflow": "self.version"
+                "pixielity/laravel-support": "self.version"
             },
             "require-dev": {
                 "driftingly/rector-laravel": "^2.1",
@@ -3629,54 +3727,32 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Pixielity\\Actions\\Providers\\ActionsServiceProvider",
                         "Pixielity\\Routing\\Providers\\RoutingServiceProvider",
-                        "Pixielity\\Response\\Providers\\ResponseServiceProvider",
-                        "Pixielity\\Database\\Providers\\DatabaseServiceProvider",
                         "Pixielity\\Container\\Providers\\ContainerServiceProvider",
-                        "Pixielity\\ColorThief\\Providers\\ColorThiefServiceProvider",
                         "Pixielity\\Localization\\Providers\\LocalizationServiceProvider"
                     ],
-                    "aliases": {
-                        "Response": "Pixielity\\Response\\Facades\\Response"
-                    }
+                    "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Pixielity\\": "src/",
                     "Pixielity\\Enum\\": "src/Enum/src/",
-                    "Pixielity\\Uuid\\": "src/Uuid/src/",
-                    "Pixielity\\Support\\": "src/Support/src/",
-                    "Pixielity\\Logging\\": "src/Logging/src/",
-                    "Pixielity\\Actions\\": "src/Actions/src/",
                     "Pixielity\\Routing\\": "src/Routing/src/",
-                    "Pixielity\\Response\\": "src/Response/src/",
-                    "Pixielity\\Database\\": "src/Database/src/",
-                    "Pixielity\\Workflow\\": "src/Workflow/src/",
+                    "Pixielity\\Support\\": "src/Support/src/",
                     "Pixielity\\Container\\": "src/Container/src/",
-                    "Pixielity\\ColorThief\\": "src/ColorThief/src/",
                     "Pixielity\\Serializer\\": "src/Serializer/src/",
-                    "Pixielity\\Localization\\": "src/Localization/src/",
-                    "Pixielity\\ServiceProvider\\": "src/ServiceProvider/src/"
+                    "Pixielity\\Localization\\": "src/Localization/src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
                     "Pixielity\\Enum\\Tests\\": "src/Enum/tests/",
-                    "Pixielity\\Uuid\\Tests\\": "src/Uuid/tests/",
-                    "Pixielity\\Support\\Tests\\": "src/Support/tests/",
-                    "Pixielity\\Logging\\Tests\\": "src/Logging/tests/",
-                    "Pixielity\\Actions\\Tests\\": "src/Actions/tests/",
                     "Pixielity\\Routing\\Tests\\": "src/Routing/tests/",
-                    "Pixielity\\Response\\Tests\\": "src/Response/tests/",
-                    "Pixielity\\Database\\Tests\\": "src/Database/tests/",
-                    "Pixielity\\Workflow\\Tests\\": "src/Workflow/tests/",
+                    "Pixielity\\Support\\Tests\\": "src/Support/tests/",
                     "Pixielity\\Container\\Tests\\": "src/Container/tests/",
-                    "Pixielity\\ColorThief\\Tests\\": "src/ColorThief/tests/",
                     "Pixielity\\Serializer\\Tests\\": "src/Serializer/tests/",
-                    "Pixielity\\Localization\\Tests\\": "src/Localization/tests/",
-                    "Pixielity\\ServiceProvider\\Tests\\": "src/ServiceProvider/tests/"
+                    "Pixielity\\Localization\\Tests\\": "src/Localization/tests/"
                 }
             },
             "scripts": {
