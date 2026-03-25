@@ -28,7 +28,7 @@ interface HasBaseIdentifier
     /**
      * Default base identifier column name.
      */
-    public const BASEID = 'base_id';
+    public const BASEID = 'baseid';
 
     /**
      * Find a model by its base identifier.
