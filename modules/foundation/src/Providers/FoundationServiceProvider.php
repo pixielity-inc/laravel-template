@@ -2,7 +2,6 @@
 
 namespace Pixielity\Foundation\Providers;
 
-use Illuminate\Console\Scheduling\Schedule;
 use Nwidart\Modules\Support\ModuleServiceProvider;
 use Pixielity\Discovery\Facades\Discovery;
 use Pixielity\Routing\Attributes\AsController;
@@ -58,16 +57,18 @@ class FoundationServiceProvider extends ModuleServiceProvider
         // Pass the router and config from the container
         $registrar = new RouteRegistrar(
             $this->app->make('router'),
+            $this->app->make('config')
         );
 
         // Use Discovery to find all controllers with #[AsController] attribute
-        // get() returns a collection with metadata, keys() gives us just the class names
+        // Cached for performance - cache is cleared on composer dump-autoload
         Discovery::attribute(AsController::class)
+            ->cached('foundation.controllers')
             ->get()
             ->keys()
             // Filter out any classes that don't exist (safety check)
-            ->filter(fn (string $controller): bool => Reflection::exists($controller))
+            ->filter(Reflection::exists(...))
             // Register each controller with our route registrar
-            ->each(fn (string $controller) => $registrar->registerController($controller));
+            ->each($registrar->registerController(...));
     }
 }
