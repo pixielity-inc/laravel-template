@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c22880d24c560221287ac33f49ef8a93",
+    "content-hash": "04c71ffee5ea4b2b2eab7217b1703da2",
     "packages": [
         {
             "name": "brick/math",
@@ -2696,6 +2696,43 @@
                 }
             ],
             "time": "2025-12-27T19:41:33+00:00"
+        },
+        {
+            "name": "pixielity/foundation",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./modules/foundation",
+                "reference": "63e71533ebce050656ea1daea3a8a061159f3654"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pixielity\\Foundation\\": "src/",
+                    "Pixielity\\Foundation\\Database\\Factories\\": "database/factories/",
+                    "Pixielity\\Foundation\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Pixielity\\Foundation\\Tests\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Nicolas Widart",
+                    "email": "n.widart@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "predis/predis",
@@ -13431,7 +13468,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "pixielity/foundation": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
