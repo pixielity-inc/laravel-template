@@ -8,8 +8,10 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Pixielity\Support\Facades\Json;
 use Pixielity\Support\Facades\Serializer;
-use Spatie\RouteAttributes\Attributes\Get;
-use Spatie\RouteAttributes\Attributes\Prefix;
+use Pixielity\Routing\Attributes\AsController;
+use Pixielity\Routing\Attributes\Get;
+use Pixielity\Routing\Attributes\Group;
+use Pixielity\Routing\Attributes\Prefix;
 
 /**
  * Serializer Test Controller.
@@ -24,7 +26,9 @@ use Spatie\RouteAttributes\Attributes\Prefix;
  *
  * @since   1.0.0
  */
-#[Prefix('/api/test/serializer')]
+#[AsController]
+#[Group('api')]
+#[Prefix('test/serializer')]
 class SerializerTestController extends Controller
 {
     /**

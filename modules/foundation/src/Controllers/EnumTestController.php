@@ -8,10 +8,14 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Pixielity\Foundation\Enums\OrderStatus;
 use Pixielity\Foundation\Enums\UserStatus;
-use Spatie\RouteAttributes\Attributes\Get;
-use Spatie\RouteAttributes\Attributes\Prefix;
+use Pixielity\Routing\Attributes\AsController;
+use Pixielity\Routing\Attributes\Get;
+use Pixielity\Routing\Attributes\Group;
+use Pixielity\Routing\Attributes\Prefix;
 
-#[Prefix('/api/test/enums')]
+#[AsController]
+#[Group('api')]
+#[Prefix('test/enums')]
 class EnumTestController extends Controller
 {
     #[Get('/', name: 'foundation.api.test.enums.index')]

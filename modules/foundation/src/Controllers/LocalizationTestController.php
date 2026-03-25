@@ -9,8 +9,10 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
-use Spatie\RouteAttributes\Attributes\Get;
-use Spatie\RouteAttributes\Attributes\Prefix;
+use Pixielity\Routing\Attributes\AsController;
+use Pixielity\Routing\Attributes\Get;
+use Pixielity\Routing\Attributes\Group;
+use Pixielity\Routing\Attributes\Prefix;
 
 /**
  * Localization Test Controller.
@@ -22,7 +24,9 @@ use Spatie\RouteAttributes\Attributes\Prefix;
  * - Available locales configuration
  * - Translation functionality
  */
-#[Prefix('/api/test/localization')]
+#[AsController]
+#[Group('api')]
+#[Prefix('test/localization')]
 class LocalizationTestController extends Controller
 {
     /**

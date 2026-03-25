@@ -4,9 +4,11 @@ namespace Pixielity\Foundation\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
-use Spatie\RouteAttributes\Attributes\Get;
-use Spatie\RouteAttributes\Attributes\Where;
+use Pixielity\Routing\Attributes\AsController;
+use Pixielity\Routing\Attributes\Get;
+use Pixielity\Routing\Attributes\Where;
 
+#[AsController]
 class RootController extends Controller
 {
     /**
@@ -21,7 +23,7 @@ class RootController extends Controller
     /**
      * Handle the root API request.
      */
-    #[Get('/api', name: 'foundation.api.index')]
+    #[Get('/api', name: 'foundation.api.index', middleware: ['api'])]
     public function api(): JsonResponse
     {
         abort(401);
@@ -30,7 +32,7 @@ class RootController extends Controller
     /**
      * Handle versioned API requests.
      */
-    #[Get('/api/{version}', name: 'foundation.api.version.index')]
+    #[Get('/api/{version}', name: 'foundation.api.version.index', middleware: ['api'])]
     #[Where('version', 'v[0-9]+')]
     public function versionedApi(): JsonResponse
     {
