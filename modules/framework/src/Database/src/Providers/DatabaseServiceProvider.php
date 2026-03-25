@@ -7,7 +7,6 @@ namespace Pixielity\Database\Providers;
 use Override;
 use Pixielity\Database\Attributes\AsDatabaseBlueprint;
 use Pixielity\Discovery\Facades\Discovery;
-// use Pixielity\ServiceProvider\Contracts\HasMacros;
 use Pixielity\Support\ServiceProvider;
 
 /**
@@ -17,11 +16,22 @@ use Pixielity\Support\ServiceProvider;
  *
  * ## Features:
  * - Custom Blueprint macros for common database patterns
+ * - Automatic repository injection via #[UseRepository] attribute
  * - Database utilities and extensions
  * - Model traits and repositories
  *
  * ## Blueprint Macros:
  * - `$table->baseId()` - Adds a base_id column for public-facing identifiers
+ *
+ * ## Repository Injection:
+ * Services can use #[UseRepository(Model::class)] to automatically inject repositories:
+ * ```php
+ * class UserService
+ * {
+ *     #[UseRepository(User::class)]
+ *     private UserRepository $users;
+ * }
+ * ```
  *
  * ## Usage:
  *

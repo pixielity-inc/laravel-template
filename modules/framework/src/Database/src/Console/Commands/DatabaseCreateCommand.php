@@ -18,7 +18,7 @@ use function Laravel\Prompts\text;
 
 use PDO;
 use PDOException;
-use Pixielity\Foundation\Console\Commands\BaseCommand;
+use Illuminate\Console\Command;
 use Pixielity\Support\Str;
 
 use function preg_match;
@@ -152,7 +152,7 @@ use Throwable;
     name: 'db:create',
     description: 'Create a new database with optional environment configuration update'
 )]
-class DatabaseCreateCommand extends BaseCommand
+class DatabaseCreateCommand extends Command
 {
     /**
      * The console command signature.
