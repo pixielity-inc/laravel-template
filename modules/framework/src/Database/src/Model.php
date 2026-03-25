@@ -272,48 +272,6 @@ abstract class Model extends BaseModel implements ModelInterface
     protected $dateFormat;
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [];
-
-    /**
-     * The attributes that should be visible in serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $visible = [];
-
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array<int, string>
-     */
-    protected $appends = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [];
-
-    /**
-     * The attributes that aren't mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $guarded = ['*'];
-
-    /**
-     * The relations to eager load on every query.
-     *
-     * @var array<int, string>
-     */
-    protected $with = [];
-
-    /**
      * The relationship counts that should be eager loaded on every query.
      *
      * @var array<int, string>
