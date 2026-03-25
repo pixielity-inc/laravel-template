@@ -39,6 +39,11 @@ composer setup:quick
 # - environments/.env.docker (Docker infrastructure)
 ```
 
+**Important**: For local development on macOS/Linux host machine:
+- Change `DB_HOST=postgres` to `DB_HOST=127.0.0.1` in `environments/.env`
+- The hostname `postgres` only works inside Docker containers
+- If running Laravel inside a container, keep `DB_HOST=postgres`
+
 ### 3. Start Docker Services
 
 ```bash
@@ -105,12 +110,14 @@ composer test                  # Run tests
 The template includes the following Docker services:
 
 - **PostgreSQL** - Primary database (port 5432)
+  - **pgAdmin** - PostgreSQL admin UI at http://localhost:5050
+  - Login: admin@admin.com / admin
+  - Pre-configured with "Laravel PostgreSQL" server connection
 - **Redis** - Cache, session, and queue (port 6379)
 - **MinIO** - S3-compatible storage (port 9000, console 9001)
 - **Mailpit** - Email testing (SMTP 1025, UI 8025)
 - **Meilisearch** - Search engine (port 7700)
 - **Reverb** - WebSocket server (port 6001)
-- **pgAdmin** - PostgreSQL admin UI (port 5050)
 
 ## Configuration
 
