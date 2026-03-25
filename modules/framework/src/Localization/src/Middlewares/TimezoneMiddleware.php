@@ -118,8 +118,16 @@ class TimezoneMiddleware
         $timezone = $request->header($this->headerName);
 
         // If no timezone in header, try to get from authenticated user
-        if (empty($timezone) && $request->user()) {
-            $timezone = $request->user()->timezone ?? null;
+        if (empty($timezone)) {
+            try {
+                $user = $request->user();
+                if ($user) {
+                    $timezone = $user->timezone ?? null;
+                }
+            } catch (\InvalidArgumentException) {
+                // Guard not defined (e.g., sanctum not installed)
+                $user = null;
+            }
         }
 
         // If still no timezone, use application default
