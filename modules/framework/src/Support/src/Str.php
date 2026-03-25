@@ -72,26 +72,60 @@ class Str extends BaseStr
     }
 
     /**
-     * Formats a string with the provided arguments.
+     * Formats a string or array of strings with the provided arguments.
      *
      * Supports multiple placeholder formats including:
      * - Named placeholders: `:name`, `:value` (Laravel style)
      * - Numeric placeholders: `%1`, `%2`, etc.
      * - String placeholders: `%s`, `%d`, etc. (sprintf style)
      *
-     * Examples:
+     * ## Examples:
      * ```php
+     * // Single string with named placeholders
      * Str::format('Hello :name', ['name' => 'John']); // "Hello John"
+     *
+     * // Single string with numeric placeholders
      * Str::format('User %1 has %2 points', 'John', 100); // "User John has 100 points"
+     *
+     * // Single string with sprintf placeholders
      * Str::format('Total: %d items', 5); // "Total: 5 items"
+     *
+     * // Array of strings (joins with space)
+     * Str::format(['Hello', 'World']); // "Hello World"
+     *
+     * // Array of strings with arguments
+     * Str::format(['User', ':name', 'has', '%1', 'points'], ['name' => 'John'], 100);
+     * // "User John has 100 points"
      * ```
      *
-     * @param  string  $phrase  The string with placeholders.
-     * @param  mixed  ...$args  The arguments to replace the placeholders.
-     * @return string The formatted string.
+     * ## Performance:
+     * - Time complexity: O(n) where n is string length
+     * - Space complexity: O(n) for the formatted string
+     * - Array input adds O(m) where m is array length
+     *
+     * ## Notes:
+     * - When phrase is an array, elements are joined with a space
+     * - Named placeholders use associative array as first argument
+     * - Numeric placeholders use 1-based indexing (%1, %2, etc.)
+     * - Sprintf placeholders use sequential arguments
+     * - Empty arrays return empty string
+     *
+     * @param  string|array<string>  $phrase  The string or array of strings with placeholders
+     * @param  mixed  ...$args  The arguments to replace the placeholders
+     * @return string The formatted string
+     *
+     * @see replace() For simple string replacement
+     * @see sprintf() For the underlying sprintf function
+     * @see join() For joining array elements
+     * @since 1.0.0
      */
-    public static function format(string $phrase, ...$args): string
+    public static function format(string|array $phrase, ...$args): string
     {
+        // If phrase is an array, join elements with space
+        if (is_array($phrase)) {
+            $phrase = static::join(' ', $phrase);
+        }
+
         // If first argument is an array, treat it as named parameters (Laravel style)
         if (count($args) === 1 && is_array($args[0])) {
             $replacements = $args[0];
