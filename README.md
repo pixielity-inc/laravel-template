@@ -39,11 +39,6 @@ composer setup:quick
 # - environments/.env.docker (Docker infrastructure)
 ```
 
-**Important**: For local development on macOS/Linux host machine:
-- Change `DB_HOST=postgres` to `DB_HOST=127.0.0.1` in `environments/.env`
-- The hostname `postgres` only works inside Docker containers
-- If running Laravel inside a container, keep `DB_HOST=postgres`
-
 ### 3. Start Docker Services
 
 ```bash
