@@ -192,6 +192,26 @@ class Reflection extends BaseReflector
     }
 
     /**
+     * Check if the class has a specific attribute defined.
+     *
+     * This method checks whether the class has a specific attribute (annotation or metadata)
+     * defined using PHP 8.0 attributes. It utilizes the `getAttributes()` method of `ReflectionClass`
+     * with the attribute name to check for its existence.
+     *
+     * @param  string|object  $classOrObject  The class or object to check.
+     * @param  string  $attributeName  The fully qualified name of the attribute to check for.
+     * @return bool True if the class has the specified attribute, false otherwise.
+     */
+    public static function hasAttribute(string|object $classOrObject, string $attributeName): bool
+    {
+        // Retrieve the ReflectionClass instance for the class or object
+        $reflectionClass = static::getClass($classOrObject);
+
+        // Check if the class has the specific attribute
+        return $reflectionClass->getAttributes($attributeName) !== [];
+    }
+
+    /**
      * Check if the class uses any traits.
      *
      * This method checks if the class utilizes any traits, which are code blocks
