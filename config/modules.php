@@ -38,15 +38,15 @@ return [
         'enabled' => false,
         'path' => base_path('vendor/modules/laravel-modules/src/Commands/stubs'),
         'files' => [
-            'routes/web' => 'routes/web.php',
-            'routes/api' => 'routes/api.php',
-            'views/index' => 'resources/views/index.blade.php',
-            'views/master' => 'resources/views/components/layouts/master.blade.php',
+            // 'routes/web' => 'routes/web.php',
+            // 'routes/api' => 'routes/api.php',
+            // 'views/index' => 'resources/views/index.blade.php',
+            // 'views/master' => 'resources/views/components/layouts/master.blade.php',
             'scaffold/config' => 'config/config.php',
             'composer' => 'composer.json',
-            'assets/js/app' => 'resources/assets/js/app.js',
-            'assets/sass/app' => 'resources/assets/sass/app.scss',
-            'vite' => 'vite.config.js',
+            // 'assets/js/app' => 'resources/assets/js/app.js',
+            // 'assets/sass/app' => 'resources/assets/sass/app.scss',
+            // 'vite' => 'vite.config.js',
             'package' => 'package.json',
         ],
         'replacements' => [
@@ -71,12 +71,12 @@ return [
              *
              * Note: Keys should be in UPPERCASE.
              */
-            'routes/web' => ['LOWER_NAME', 'STUDLY_NAME', 'PLURAL_LOWER_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'CONTROLLER_NAMESPACE'],
-            'routes/api' => ['LOWER_NAME', 'STUDLY_NAME', 'PLURAL_LOWER_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'CONTROLLER_NAMESPACE'],
-            'vite' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME'],
+            // 'routes/web' => ['LOWER_NAME', 'STUDLY_NAME', 'PLURAL_LOWER_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'CONTROLLER_NAMESPACE'],
+            // 'routes/api' => ['LOWER_NAME', 'STUDLY_NAME', 'PLURAL_LOWER_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'CONTROLLER_NAMESPACE'],
+            // 'vite' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
-            'views/index' => ['LOWER_NAME'],
-            'views/master' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME'],
+            // 'views/index' => ['LOWER_NAME'],
+            // 'views/master' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME'],
             'scaffold/config' => ['STUDLY_NAME'],
             'composer' => [
                 'LOWER_NAME',
@@ -136,7 +136,7 @@ return [
         | If you change this value, you'll need to manually update the generator
         | paths below to match your new app_folder structure.
         */
-        'app_folder' => env('MODULES_APP_FOLDER', 'src/'),
+        'app_folder' => env('MODULES_APP_FOLDER', 'src'),
 
         /*
         |--------------------------------------------------------------------------
@@ -150,39 +150,37 @@ return [
         | something else (e.g., 'app/'), update all paths below accordingly.
         */
         'generator' => [
-            // src/
-            'actions' => ['path' => 'src/Actions', 'generate' => false],
-            'casts' => ['path' => 'src/Casts', 'generate' => false],
-            'channels' => ['path' => 'src/Broadcasting', 'generate' => false],
-            'class' => ['path' => 'src/Classes', 'generate' => false],
-            'command' => ['path' => 'src/Console', 'generate' => false],
-            'command_replacements' => ['path' => 'src/Console/Replacements', 'generate' => false],
-            'component-class' => ['path' => 'src/View/Components', 'generate' => false],
-            'emails' => ['path' => 'src/Emails', 'generate' => false],
-            'event' => ['path' => 'src/Events', 'generate' => false],
-            'enums' => ['path' => 'src/Enums', 'generate' => false],
-            'exceptions' => ['path' => 'src/Exceptions', 'generate' => false],
-            'jobs' => ['path' => 'src/Jobs', 'generate' => false],
-            'helpers' => ['path' => 'src/Helpers', 'generate' => false],
-            'interfaces' => ['path' => 'src/Interfaces', 'generate' => false],
-            'listener' => ['path' => 'src/Listeners', 'generate' => false],
-            'model' => ['path' => 'src/Models', 'generate' => false],
-            'notifications' => ['path' => 'src/Notifications', 'generate' => false],
-            'observer' => ['path' => 'src/Observers', 'generate' => false],
-            'policies' => ['path' => 'src/Policies', 'generate' => false],
+            // src/ - Core application logic
+            'controller' => ['path' => 'src/Controllers', 'generate' => true],
+            'model' => ['path' => 'src/Models', 'generate' => true],
+            'service' => ['path' => 'src/Services', 'generate' => true],
+            'repository' => ['path' => 'src/Repositories', 'generate' => true],
+            'interface' => ['path' => 'src/Interfaces', 'generate' => true],
+            'contract' => ['path' => 'src/Contracts', 'generate' => false],
             'provider' => ['path' => 'src/Providers', 'generate' => true],
-            'repository' => ['path' => 'src/Repositories', 'generate' => false],
-            'resource' => ['path' => 'src/Transformers', 'generate' => false],
-            'route-provider' => ['path' => 'src/Providers', 'generate' => true],
-            'rules' => ['path' => 'src/Rules', 'generate' => false],
-            'services' => ['path' => 'src/Services', 'generate' => false],
-            'scopes' => ['path' => 'src/Models/Scopes', 'generate' => false],
-            'traits' => ['path' => 'src/Traits', 'generate' => false],
-
-            // src/Http/
-            'controller' => ['path' => 'src/Http/Controllers', 'generate' => true],
-            'filter' => ['path' => 'src/Http/Middleware', 'generate' => false],
-            'request' => ['path' => 'src/Http/Requests', 'generate' => false],
+            
+            // src/ - Additional structures
+            'action' => ['path' => 'src/Actions', 'generate' => false],
+            'cast' => ['path' => 'src/Casts', 'generate' => false],
+            'channel' => ['path' => 'src/Broadcasting', 'generate' => false],
+            'command' => ['path' => 'src/Console', 'generate' => false],
+            'component-class' => ['path' => 'src/Components', 'generate' => false],
+            'dto' => ['path' => 'src/DTOs', 'generate' => false],
+            'enum' => ['path' => 'src/Enums', 'generate' => false],
+            'event' => ['path' => 'src/Events', 'generate' => false],
+            'exception' => ['path' => 'src/Exceptions', 'generate' => false],
+            'helper' => ['path' => 'src/Helpers', 'generate' => false],
+            'job' => ['path' => 'src/Jobs', 'generate' => false],
+            'listener' => ['path' => 'src/Listeners', 'generate' => false],
+            'middleware' => ['path' => 'src/Middleware', 'generate' => false],
+            'notification' => ['path' => 'src/Notifications', 'generate' => false],
+            'observer' => ['path' => 'src/Observers', 'generate' => false],
+            'policy' => ['path' => 'src/Policies', 'generate' => false],
+            'request' => ['path' => 'src/Requests', 'generate' => false],
+            'resource' => ['path' => 'src/Resources', 'generate' => false],
+            'rule' => ['path' => 'src/Rules', 'generate' => false],
+            'scope' => ['path' => 'src/Scopes', 'generate' => false],
+            'trait' => ['path' => 'src/Traits', 'generate' => false],
 
             // config/
             'config' => ['path' => 'config', 'generate' => true],
@@ -195,15 +193,13 @@ return [
             // lang/
             'lang' => ['path' => 'lang', 'generate' => false],
 
-            // resource/
-            'assets' => ['path' => 'resources/assets', 'generate' => true],
+            // resources/
+            'view' => ['path' => 'resources/views', 'generate' => false],
             'component-view' => ['path' => 'resources/views/components', 'generate' => false],
-            'views' => ['path' => 'resources/views', 'generate' => true],
-            'inertia' => ['path' => 'resources/js/Pages', 'generate' => false],
-            'inertia-components' => ['path' => 'resources/js/Components', 'generate' => false],
+            'asset' => ['path' => 'resources/assets', 'generate' => false],
 
             // routes/
-            'routes' => ['path' => 'routes', 'generate' => true],
+            'route' => ['path' => 'routes', 'generate' => false],
 
             // tests/
             'test-feature' => ['path' => 'tests/Feature', 'generate' => true],
