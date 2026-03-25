@@ -177,11 +177,10 @@
                 "{vendor}/pixielity/laravel-framework",
                 "{vendor}/pixielity/laravel-foundation"
             ],
-            "exclude": [
-                "#/tests/#",
-                "#/Tests/#",
-                "#TestCase\\.php$#",
-                "#/Abstracts/BaseEmail\\.php$#"
+            "exclude-regex": [
+                "#/tests/#i",
+                "#TestCase\\.php$#i",
+                "#/Abstracts/BaseEmail\\.php$#i"
             ]
         }
     },
