@@ -37,7 +37,15 @@ use Spatie\RouteAttributes\ClassRouteAttributes as SpatieClassRouteAttributes;
  */
 class ClassRouteAttributes extends SpatieClassRouteAttributes
 {
-    public $class;
+    /**
+     * Create a new ClassRouteAttributes instance.
+     *
+     * @param ReflectionClass $class The reflection class to process
+     */
+    public function __construct(ReflectionClass $class)
+    {
+        parent::__construct($class);
+    }
 
     /**
      * Get route groups with proper prefix combination.
