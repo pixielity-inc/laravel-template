@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Pixielity\Serializer;
 
-use Illuminate\Container\Attributes\Singleton;
-use Pixielity\Container\Attributes\Bind;
-use Pixielity\Contracts\Framework\Serializer\Serializer as SerializerContract;
+use Pixielity\Framework\Serializer\Contracts\SerializerInterface;
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
@@ -20,9 +18,7 @@ use Throwable;
  *
  * This implementation uses PHP's native serialization functions.
  */
-#[Singleton]
-#[Bind(SerializerContract::class)]
-class Serializer implements SerializerContract
+class Serializer implements SerializerInterface
 {
     /**
      * Serialize data into a string format.
@@ -47,7 +43,9 @@ class Serializer implements SerializerContract
             return $serializedData;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
+            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
+                throw $throwable;
+            }
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(
@@ -81,7 +79,7 @@ class Serializer implements SerializerContract
     public function unserialize($string, bool $allowedClasses = false): mixed
     {
         // Validate input
-        throw_unless(is_string($string), InvalidArgumentException::class, 'Unserialize expects string as input.');
+        throw_unless(\is_string($string), InvalidArgumentException::class, 'Unserialize expects string as input.');
 
         // Check for empty string
         throw_if($string === '', InvalidArgumentException::class, 'Cannot unserialize an empty string.');
@@ -102,7 +100,9 @@ class Serializer implements SerializerContract
             return $unserializedData;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
+            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
+                throw $throwable;
+            }
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(

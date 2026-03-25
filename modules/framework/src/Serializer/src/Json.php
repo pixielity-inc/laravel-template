@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Pixielity\Serializer;
 
-use Illuminate\Container\Attributes\Singleton;
-use Pixielity\Container\Attributes\Bind;
-use Pixielity\Contracts\Framework\Serializer\Json as JsonContract;
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
+use Pixielity\Framework\Serializer\Contracts\JsonInterface;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
 use Throwable;
@@ -18,9 +16,7 @@ use Throwable;
  * This class provides methods to serialize data into JSON format
  * and unserialize JSON encoded data using PHP's native JSON functions.
  */
-#[Singleton]
-#[Bind(JsonContract::class)]
-class Json implements JsonContract
+class Json implements JsonInterface
 {
     /**
      * Encode data into a JSON string.
@@ -53,7 +49,9 @@ class Json implements JsonContract
             return $json;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
+            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
+                throw $throwable;
+            }
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(
@@ -100,7 +98,9 @@ class Json implements JsonContract
             return $data;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
+            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
+                throw $throwable;
+            }
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(
