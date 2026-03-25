@@ -289,4 +289,40 @@ class ApplicationBuilder extends BaseApplicationBuilder
 
         return $this;
     }
+
+    /**
+     * Set the project path (subdirectory for application code).
+     *
+     * Configures the subdirectory where application code is stored relative to
+     * the base path. This affects configPath(), databasePath(), resourcePath(),
+     * and langPath() methods.
+     *
+     * ## Examples:
+     * ```php
+     * // Use 'src' subdirectory (default)
+     * ApplicationBuilder::configure(basePath: __DIR__)
+     *     ->withProjectPath('src')
+     *     ->create();
+     *
+     * // Use 'app' subdirectory
+     * ApplicationBuilder::configure(basePath: __DIR__)
+     *     ->withProjectPath('app')
+     *     ->create();
+     *
+     * // Use base directory directly (no subdirectory)
+     * ApplicationBuilder::configure(basePath: __DIR__)
+     *     ->withProjectPath('')
+     *     ->create();
+     * ```
+     *
+     * @param  string  $path  The relative project path (e.g., 'src', 'app', or '' for base)
+     * @return $this
+     */
+    public function withProjectPath(string $path): static
+    {
+        /* @var Application $this->app */
+        $this->app->useProjectPath($path);
+
+        return $this;
+    }
 }

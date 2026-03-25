@@ -41,6 +41,14 @@ trait HasDirectories
     protected ?string $modulesPath = null;
 
     /**
+     * The project path (subdirectory for application code).
+     *
+     * This is the relative path from base path where application code is stored.
+     * Examples: 'src', 'app', '' (empty for base directory)
+     */
+    protected ?string $projectPath = null;
+
+    /**
      * Get the path to the monorepo packages directory.
      *
      * Returns the path to the packages directory in the monorepo structure.
@@ -112,6 +120,21 @@ trait HasDirectories
     public function useModulesPath(string $path): void
     {
         $this->modulesPath = $path;
+    }
+
+    /**
+     * Set the project path (subdirectory for application code).
+     *
+     * Internal method called by ApplicationBuilder. Use ApplicationBuilder
+     * for configuration during bootstrap.
+     *
+     * @internal
+     *
+     * @param  string  $path  The relative project path (e.g., 'src', 'app', or '' for base)
+     */
+    public function useProjectPath(string $path): void
+    {
+        $this->projectPath = $path;
     }
 
     /**
@@ -252,21 +275,27 @@ trait HasDirectories
      */
     protected function getProjectPath(): string
     {
-        // Try to get from config if available, otherwise use env()
-        // This handles both runtime and bootstrap scenarios
+        // Priority 1: Explicitly set via useProjectPath() (from withProjectPath())
+        if ($this->projectPath !== null) {
+            return $this->projectPath;
+        }
+
+        // Priority 2: Try to get from config if available
         if (isset($this['config'])) {
             $path = $this['config']->get('app.project_path');
-        } else {
-            // @rector-ignore RectorLaravel\Rector\ArrayDimFetch\ServerVariableToRequestFacadeRector
-            $path = $_ENV['APP_PROJECT_PATH'] ?? $_SERVER['APP_PROJECT_PATH'] ?? null;
+            if ($path !== null && is_string($path)) {
+                return $path;
+            }
         }
 
-        // If path is null or not a string, use default 'src'
-        // Empty string '' is valid and means no subdirectory
-        if ($path === null || !is_string($path)) {
-            return 'src';
+        // Priority 3: Try environment variables (during bootstrap before .env is loaded)
+        // @rector-ignore RectorLaravel\Rector\ArrayDimFetch\ServerVariableToRequestFacadeRector
+        $path = $_ENV['APP_PROJECT_PATH'] ?? $_SERVER['APP_PROJECT_PATH'] ?? null;
+        if ($path !== null && is_string($path)) {
+            return $path;
         }
 
-        return $path;
+        // Priority 4: Default
+        return 'src';
     }
 }
