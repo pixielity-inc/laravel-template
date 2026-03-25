@@ -13,7 +13,7 @@ return [
      * will automatically be registered.
      */
     'directories' => [
-        app_path('../modules/foundation/src/Controllers'),
+        base_path('modules/foundation/src/Controllers'),
     ],
 
     /*
