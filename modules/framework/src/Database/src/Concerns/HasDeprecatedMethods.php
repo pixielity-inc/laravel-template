@@ -61,7 +61,7 @@ trait HasDeprecatedMethods
      * Create a new instance of the model.
      *
      *
-     * @param  array  $attributes Model attributes
+     * @param  array  $attributes  Model attributes
      * @return static Created model instance
      *
      * @example
@@ -83,9 +83,9 @@ trait HasDeprecatedMethods
      * Find a model by its primary key.
      *
      *
-     * @param  mixed         $id      Primary key value
-     * @param  array<string> $columns Columns to select
-     * @return static|null   Model instance or null
+     * @param  mixed  $id  Primary key value
+     * @param  array<string>  $columns  Columns to select
+     * @return static|null Model instance or null
      *
      * @example
      * ```php
@@ -106,9 +106,9 @@ trait HasDeprecatedMethods
      * Find a model by its primary key or throw an exception.
      *
      *
-     * @param  mixed         $id      Primary key value
-     * @param  array<string> $columns Columns to select
-     * @return static        Model instance
+     * @param  mixed  $id  Primary key value
+     * @param  array<string>  $columns  Columns to select
+     * @return static Model instance
      *
      * @throws ModelNotFoundException
      *
@@ -131,9 +131,9 @@ trait HasDeprecatedMethods
      * Find multiple models by their primary keys.
      *
      *
-     * @param  array         $ids     Array of primary key values
-     * @param  array<string> $columns Columns to select
-     * @return Collection    Collection of models
+     * @param  array  $ids  Array of primary key values
+     * @param  array<string>  $columns  Columns to select
+     * @return Collection Collection of models
      *
      * @example
      * ```php
@@ -154,9 +154,9 @@ trait HasDeprecatedMethods
      * Get the first record matching the attributes.
      *
      *
-     * @param  array         $attributes Search attributes
-     * @param  array<string> $columns    Columns to select
-     * @return static|null   Model instance or null
+     * @param  array  $attributes  Search attributes
+     * @param  array<string>  $columns  Columns to select
+     * @return static|null Model instance or null
      *
      * @example
      * ```php
@@ -177,8 +177,8 @@ trait HasDeprecatedMethods
      * Execute a query and get the first result or throw an exception.
      *
      *
-     * @param  array<string> $columns Columns to select
-     * @return static        Model instance
+     * @param  array<string>  $columns  Columns to select
+     * @return static Model instance
      *
      * @throws ModelNotFoundException
      *
@@ -201,8 +201,8 @@ trait HasDeprecatedMethods
      * Create or update a record matching the attributes.
      *
      *
-     * @param  array  $attributes Attributes to match
-     * @param  array  $values     Values to update/create
+     * @param  array  $attributes  Attributes to match
+     * @param  array  $values  Values to update/create
      * @return static Created or updated model
      *
      * @example
@@ -230,8 +230,8 @@ trait HasDeprecatedMethods
      * Get the first record matching the attributes or create it.
      *
      *
-     * @param  array  $attributes Attributes to match/create
-     * @param  array  $values     Additional values for creation
+     * @param  array  $attributes  Attributes to match/create
+     * @param  array  $values  Additional values for creation
      * @return static Model instance
      *
      * @example
@@ -254,8 +254,8 @@ trait HasDeprecatedMethods
      * Get all of the models from the database.
      *
      *
-     * @param  array<string> $columns Columns to select
-     * @return Collection    Collection of all models
+     * @param  array<string>  $columns  Columns to select
+     * @return Collection Collection of all models
      *
      * @example
      * ```php
@@ -276,8 +276,8 @@ trait HasDeprecatedMethods
      * Destroy the models for the given IDs.
      *
      *
-     * @param  array|int $ids IDs to destroy
-     * @return int       Number of deleted records
+     * @param  array|int  $ids  IDs to destroy
+     * @return int Number of deleted records
      *
      * @example
      * ```php
@@ -302,8 +302,8 @@ trait HasDeprecatedMethods
      * Save the model to the database.
      *
      *
-     * @param  array $options Save options
-     * @return bool  True if saved successfully
+     * @param  array  $options  Save options
+     * @return bool True if saved successfully
      *
      * @example
      * ```php
@@ -372,9 +372,9 @@ trait HasDeprecatedMethods
      * Update the model in the database.
      *
      *
-     * @param  array $attributes Attributes to update
-     * @param  array $options    Update options
-     * @return bool  True if updated successfully
+     * @param  array  $attributes  Attributes to update
+     * @param  array  $options  Update options
+     * @return bool True if updated successfully
      *
      * @example
      * ```php

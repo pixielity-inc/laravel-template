@@ -130,7 +130,7 @@ trait HasBaseIdentifier
     /**
      * Find a model by its base identifier.
      *
-     * @param string $identifier Base identifier
+     * @param  string  $identifier  Base identifier
      */
     public static function findByBaseId(string $identifier): ?static
     {
@@ -142,7 +142,7 @@ trait HasBaseIdentifier
     /**
      * Find a model by its base identifier or fail.
      *
-     * @param string $identifier Base identifier
+     * @param  string  $identifier  Base identifier
      *
      * @throws ModelNotFoundException
      */
@@ -199,7 +199,7 @@ trait HasBaseIdentifier
     /**
      * Scope to find by base identifier.
      *
-     * @param Builder $query
+     * @param  Builder  $query
      */
     public function scopeWhereBaseId($query, string $identifier): Builder
     {
@@ -231,7 +231,7 @@ trait HasBaseIdentifier
     /**
      * Create a random base identifier.
      *
-     * @param int<1, max> $length Length of identifier (default: 16)
+     * @param  int<1, max>  $length  Length of identifier (default: 16)
      */
     protected function createBaseIdentifier(int $length = 16): string
     {
@@ -251,7 +251,7 @@ trait HasBaseIdentifier
     /**
      * Check if base identifier already exists.
      *
-     * @param string $identifier Identifier to check
+     * @param  string  $identifier  Identifier to check
      */
     protected function baseIdentifierExists(string $identifier): bool
     {

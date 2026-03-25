@@ -18,7 +18,7 @@ use Illuminate\Support\Carbon;
  *
  * @property Carbon|null $created_at The creation timestamp
  * @property Carbon|null $updated_at The last update timestamp
- * @property bool        $timestamps Whether timestamps are enabled
+ * @property bool $timestamps Whether timestamps are enabled
  *
  * @see \Illuminate\Database\Eloquent\Concerns\HasTimestamps
  */
@@ -27,24 +27,24 @@ interface HasTimestamps
     /**
      * Update the model's update timestamp.
      *
-     * @param  string|null $attribute Optional attribute to touch.
-     * @return bool        True if saved successfully, false otherwise.
+     * @param  string|null  $attribute  Optional attribute to touch.
+     * @return bool True if saved successfully, false otherwise.
      */
     public function touch($attribute = null);
 
     /**
      * Set the value of the "created at" attribute.
      *
-     * @param  mixed $value The timestamp value.
-     * @return self  Returns this instance for method chaining.
+     * @param  mixed  $value  The timestamp value.
+     * @return self Returns this instance for method chaining.
      */
     public function setCreatedAt($value);
 
     /**
      * Set the value of the "updated at" attribute.
      *
-     * @param  mixed $value The timestamp value.
-     * @return self  Returns this instance for method chaining.
+     * @param  mixed  $value  The timestamp value.
+     * @return self Returns this instance for method chaining.
      */
     public function setUpdatedAt($value);
 

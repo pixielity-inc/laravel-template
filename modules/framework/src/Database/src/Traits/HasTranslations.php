@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Builder;
 
 use function is_array;
 
+use Pixielity\Database\Attributes\Translatable;
+use Pixielity\Database\Contracts\TranslatableInterface;
 use Pixielity\Foundation\Enums\ContainerToken;
+use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
 
 /**
@@ -56,7 +59,7 @@ use Pixielity\Support\Str;
  * Dynamically reads from config/localization.php
  * All enabled locales are automatically supported for search and display.
  *
- * @see \Pixielity\Database\Contracts\TranslatableInterface
+ * @see TranslatableInterface
  * @see BaseHasTranslations
  *
  * @version 2.0.0
@@ -70,11 +73,14 @@ trait HasTranslations
     /**
      * Initialize the HasTranslations trait.
      *
-     * Only applies translations if enabled via property.
+     * Only applies translations if enabled via attribute or property.
+     * Checks in this order:
+     * 1. #[Translatable] attribute
+     * 2. $translatable property
      */
     public function initializeHasTranslations(): void
     {
-        // Check if model has translations enabled via property
+        // Check if model has translations enabled via attribute or property
         if (! $this->isTranslatable()) {
             return;
         }
@@ -85,19 +91,49 @@ trait HasTranslations
 
     /**
      * Check if model has translations enabled.
+     *
+     * Checks both #[Translatable] attribute and $translatable property.
+     *
+     * @return bool True if translations are enabled
      */
     public function isTranslatable(): bool
     {
+        // Check for #[Translatable] attribute first
+        if (Reflection::hasAttribute(static::class, Translatable::class)) {
+            return true;
+        }
+
+        // Fall back to property-based check
         return is_array($this->translatable ?? null) || $this->translatable ?? false;
     }
 
     /**
      * Get translatable fields.
      *
+     * Priority:
+     * 1. Fields from #[Translatable] attribute
+     * 2. Fields from $translatable property
+     *
      * @return array<int, string>
      */
     public function getTranslatableFields(): array
     {
+        // Check for #[Translatable] attribute first
+        if (Reflection::hasAttribute(static::class, Translatable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Translatable::class);
+
+            if ($attributes !== []) {
+                /** @var Translatable $translatable */
+                $translatable = $attributes[0]->newInstance();
+
+                // If attribute has fields, use them
+                if ($translatable->fields !== []) {
+                    return $translatable->fields;
+                }
+            }
+        }
+
+        // Fall back to property-based configuration
         if (is_array($this->translatable ?? null)) {
             return $this->translatable;
         }
@@ -128,8 +164,8 @@ trait HasTranslations
      * This is a convenience wrapper. For Spatie's full functionality,
      * use `getTranslation()` method from BaseHasTranslations.
      *
-     * @param  string      $column Column name (e.g., 'name', 'address')
-     * @param  string|null $locale Language code (e.g., 'en', 'ar'). Defaults to app locale.
+     * @param  string  $column  Column name (e.g., 'name', 'address')
+     * @param  string|null  $locale  Language code (e.g., 'en', 'ar'). Defaults to app locale.
      * @return string|null The translated value or null
      *
      * @example
@@ -167,9 +203,9 @@ trait HasTranslations
      * This is a convenience wrapper. For Spatie's full functionality,
      * use `setTranslation()` method from BaseHasTranslations.
      *
-     * @param string      $column Column name (e.g., 'name', 'address')
-     * @param string      $value  The value to set
-     * @param string|null $locale Language code (e.g., 'en', 'ar'). Defaults to app locale.
+     * @param  string  $column  Column name (e.g., 'name', 'address')
+     * @param  string  $value  The value to set
+     * @param  string|null  $locale  Language code (e.g., 'en', 'ar'). Defaults to app locale.
      *
      * @example
      * ```php
@@ -209,9 +245,9 @@ trait HasTranslations
      * ## PostgreSQL JSON Syntax:
      * Uses PostgreSQL's JSON arrow operator (->) to access nested values.
      *
-     * @param Builder $builder   Query builder instance
-     * @param string  $column    Column name (e.g., 'name', 'address', 'title')
-     * @param string  $direction Sort direction ('asc' or 'desc')
+     * @param  Builder  $builder  Query builder instance
+     * @param  string  $column  Column name (e.g., 'name', 'address', 'title')
+     * @param  string  $direction  Sort direction ('asc' or 'desc')
      *
      * @example
      * ```php
@@ -243,9 +279,9 @@ trait HasTranslations
      * This creates an OR condition for each enabled locale. Consider adding
      * a full-text search index for better performance on large datasets.
      *
-     * @param Builder $builder Query builder instance
-     * @param string  $column  Column name (e.g., 'name', 'address', 'title')
-     * @param string  $term    Search term
+     * @param  Builder  $builder  Query builder instance
+     * @param  string  $column  Column name (e.g., 'name', 'address', 'title')
+     * @param  string  $term  Search term
      *
      * @example
      * ```php
@@ -287,10 +323,10 @@ trait HasTranslations
      * Filters using the current application locale.
      * Use this for exact matches or specific comparisons.
      *
-     * @param Builder $builder  Query builder instance
-     * @param string  $column   Column name (e.g., 'name', 'address', 'title')
-     * @param string  $operator Comparison operator (e.g., '=', 'ILIKE', '!=')
-     * @param mixed   $value    Value to compare against
+     * @param  Builder  $builder  Query builder instance
+     * @param  string  $column  Column name (e.g., 'name', 'address', 'title')
+     * @param  string  $operator  Comparison operator (e.g., '=', 'ILIKE', '!=')
+     * @param  mixed  $value  Value to compare against
      *
      * @example
      * ```php
@@ -319,9 +355,9 @@ trait HasTranslations
      * Adds a select for the translatable column in the current locale.
      * Useful for API responses or exports.
      *
-     * @param Builder     $builder Query builder instance
-     * @param string      $column  Column name (e.g., 'name', 'address', 'title')
-     * @param string|null $alias   Optional alias for the selected column
+     * @param  Builder  $builder  Query builder instance
+     * @param  string  $column  Column name (e.g., 'name', 'address', 'title')
+     * @param  string|null  $alias  Optional alias for the selected column
      *
      * @example
      * ```php
@@ -362,9 +398,9 @@ trait HasTranslations
      * This creates OR conditions for each column × locale combination.
      * For better performance, consider using PostgreSQL full-text search.
      *
-     * @param Builder $builder Query builder instance
-     * @param array   $columns Array of column names to search
-     * @param string  $term    Search term
+     * @param  Builder  $builder  Query builder instance
+     * @param  array  $columns  Array of column names to search
+     * @param  string  $term  Search term
      *
      * @example
      * ```php

@@ -16,12 +16,12 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
  *
  * @property string|null $base_id The base identifier value
  *
- * @method static static|null findByBaseId(string $identifier)                   Find model by base identifier
- * @method static static      findByBaseIdOrFail(string $identifier)             Find model by base identifier or fail
- * @method        bool        isBaseIdentifiable()                               Check if model has base identifier enabled
- * @method        string      getBaseIdColumn()                                  Get the base identifier column name
- * @method        mixed       scopeWhereBaseId(mixed $query, string $identifier) Scope to find by base identifier
- * @method        string      getRouteKeyName()                                  Get the route key for the model
+ * @method static static|null findByBaseId(string $identifier) Find model by base identifier
+ * @method static static findByBaseIdOrFail(string $identifier) Find model by base identifier or fail
+ * @method bool isBaseIdentifiable() Check if model has base identifier enabled
+ * @method string getBaseIdColumn() Get the base identifier column name
+ * @method mixed scopeWhereBaseId(mixed $query, string $identifier) Scope to find by base identifier
+ * @method string getRouteKeyName() Get the route key for the model
  */
 interface HasBaseIdentifier
 {
@@ -33,7 +33,7 @@ interface HasBaseIdentifier
     /**
      * Find a model by its base identifier.
      *
-     * @param  string      $identifier Base identifier
+     * @param  string  $identifier  Base identifier
      * @return static|null The model instance, or null if not found.
      */
     public static function findByBaseId(string $identifier);
@@ -41,7 +41,7 @@ interface HasBaseIdentifier
     /**
      * Find a model by its base identifier or fail.
      *
-     * @param  string $identifier Base identifier
+     * @param  string  $identifier  Base identifier
      * @return static The model instance.
      *
      * @throws ModelNotFoundException
@@ -65,8 +65,8 @@ interface HasBaseIdentifier
     /**
      * Scope to find by base identifier.
      *
-     * @param  Builder $query      Query builder instance.
-     * @param  string  $identifier Base identifier to search for.
+     * @param  Builder  $query  Query builder instance.
+     * @param  string  $identifier  Base identifier to search for.
      * @return Builder Modified query builder.
      */
     public function scopeWhereBaseId($query, string $identifier);

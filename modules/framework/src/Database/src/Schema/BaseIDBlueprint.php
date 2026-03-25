@@ -98,7 +98,7 @@ use Pixielity\Support\Str;
  * - **Unpredictable**: No sequential pattern to exploit
  *
  * @see HasBaseIdentifier For the trait that generates base_ids
- * @see \Pixielity\Database\Model For the base model that uses base_ids
+ * @see Model For the base model that uses base_ids
  * @since 1.0.0
  */
 #[AsDatabaseBlueprint(
@@ -205,9 +205,9 @@ class BaseIDBlueprint
             /**
              * Add a base_id column to the table.
              *
-             * @param  string|null $column Column name (default: HasBaseIdentifier::BASEID)
-             * @param  int|null    $length Column length (default: 32)
-             * @return Fluent      Column definition for method chaining
+             * @param  string|null  $column  Column name (default: HasBaseIdentifier::BASEID)
+             * @param  int|null  $length  Column length (default: 32)
+             * @return Fluent Column definition for method chaining
              */
             fn (?string $column = null, ?int $length = null): Fluent => $this
                 ->string($column ?? $defaultColumn, $length ?? $defaultLength)

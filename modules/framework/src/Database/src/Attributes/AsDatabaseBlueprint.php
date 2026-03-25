@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Pixielity\Database\Attributes;
 
 use Attribute;
+use Illuminate\Database\Schema\Blueprint;
+use Pixielity\Database\Providers\DatabaseServiceProvider;
 
 /**
  * As Database Blueprint Attribute.
@@ -93,9 +95,8 @@ use Attribute;
  * Macros are registered in priority order (lowest first). Classes with the same
  * priority are registered in the order they are discovered.
  *
- * @see \Pixielity\Database\Providers\DatabaseServiceProvider
- * @see \Illuminate\Database\Schema\Blueprint
- *
+ * @see DatabaseServiceProvider
+ * @see Blueprint
  * @since 1.0.0
  */
 #[Attribute(Attribute::TARGET_CLASS)]
@@ -104,8 +105,8 @@ class AsDatabaseBlueprint
     /**
      * Create a new AsDatabaseBlueprint attribute instance.
      *
-     * @param string|null $description Optional description of what macros this class provides
-     * @param int         $priority    Registration priority (lower numbers register first)
+     * @param  string|null  $description  Optional description of what macros this class provides
+     * @param  int  $priority  Registration priority (lower numbers register first)
      */
     public function __construct(
         public readonly ?string $description = null,

@@ -218,7 +218,7 @@ trait InMemoryModel
      * Returns the SQLite connection specific to this model class.
      * Each model gets its own connection to avoid table conflicts.
      *
-     * @param  string|null     $connection Connection name (ignored)
+     * @param  string|null  $connection  Connection name (ignored)
      * @return Connection|null SQLite connection instance
      */
     public static function resolveConnection($connection = null): ?Connection
@@ -313,9 +313,9 @@ trait InMemoryModel
      * 3. Migrate data (create table + insert rows)
      * 4. Update file timestamp to match model file
      *
-     * @param string $cachePath Path to cache file
-     * @param string $modelPath Path to model file
-     * @param self   $instance  Model instance
+     * @param  string  $cachePath  Path to cache file
+     * @param  string  $modelPath  Path to model file
+     * @param  self  $instance  Model instance
      */
     protected static function rebuildCache(string $cachePath, string $modelPath, self $instance): void
     {
@@ -339,7 +339,7 @@ trait InMemoryModel
      * Creates a new SQLite connection and registers it with Laravel's
      * connection manager. Each model class gets its own connection.
      *
-     * @param string $database Path to SQLite file or ':memory:'
+     * @param  string  $database  Path to SQLite file or ':memory:'
      */
     protected static function setSqliteConnection(string $database): void
     {
@@ -488,8 +488,8 @@ trait InMemoryModel
      * - `DateTime` → `dateTime`
      * - Default → `string`
      *
-     * @param string               $tableName Table name
-     * @param array<string, mixed> $firstRow  First row of data
+     * @param  string  $tableName  Table name
+     * @param  array<string, mixed>  $firstRow  First row of data
      */
     public function createTableFromData(string $tableName, array $firstRow): void
     {
@@ -547,7 +547,7 @@ trait InMemoryModel
      * Uses the $schema property to create table structure when
      * no data rows are available.
      *
-     * @param string $tableName Table name
+     * @param  string  $tableName  Table name
      */
     public function createTableFromSchema(string $tableName): void
     {
@@ -755,8 +755,8 @@ trait InMemoryModel
      * Ensures related models use the correct database connection.
      * This is important for relationships to work properly.
      *
-     * @param  string $class Related model class name
-     * @return mixed  Related model instance
+     * @param  string  $class  Related model class name
+     * @return mixed Related model instance
      */
     protected function newRelatedInstance($class)
     {
@@ -784,7 +784,7 @@ trait InMemoryModel
      * }
      * ```
      *
-     * @param Blueprint $blueprint Table blueprint
+     * @param  Blueprint  $blueprint  Table blueprint
      */
     protected function afterMigrate(Blueprint $blueprint): void
     {
@@ -797,8 +797,8 @@ trait InMemoryModel
      * Wraps table creation in try-catch to handle race conditions
      * where multiple requests try to create the same table simultaneously.
      *
-     * @param string  $tableName Table name
-     * @param Closure $callback  Table definition callback
+     * @param  string  $tableName  Table name
+     * @param  Closure  $callback  Table definition callback
      *
      * @throws QueryException If table creation fails for reasons other than "already exists"
      */

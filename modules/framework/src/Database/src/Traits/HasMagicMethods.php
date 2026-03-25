@@ -155,8 +155,8 @@ trait HasMagicMethods
      * This method must match Laravel's Eloquent Model::__call($method, $parameters) signature.
      * Type hints will cause compatibility issues with parent class.
      *
-     * @param  string $method     Method name
-     * @param  mixed  $parameters Method arguments (no type hint - must match parent)
+     * @param  string  $method  Method name
+     * @param  mixed  $parameters  Method arguments (no type hint - must match parent)
      * @return mixed
      *
      * @noRector \Rector\TypeDeclaration\Rector\ClassMethod\ParamTypeByMethodCallTypeRector
@@ -207,8 +207,8 @@ trait HasMagicMethods
      *
      * Magento-style data getter with optional key and default value.
      *
-     * @param string|null $key     Attribute key (null = get all)
-     * @param mixed       $default Default value if key doesn't exist
+     * @param  string|null  $key  Attribute key (null = get all)
+     * @param  mixed  $default  Default value if key doesn't exist
      *
      * @example
      * ```php
@@ -231,8 +231,8 @@ trait HasMagicMethods
      *
      * Magento-style data setter supporting both single and bulk assignment.
      *
-     * @param  string|array $key   Attribute key or array of key-value pairs
-     * @param  mixed        $value Value to set (ignored if $key is array)
+     * @param  string|array  $key  Attribute key or array of key-value pairs
+     * @param  mixed  $value  Value to set (ignored if $key is array)
      * @return $this
      *
      * @example
@@ -256,7 +256,7 @@ trait HasMagicMethods
     /**
      * Check if model has data for a key.
      *
-     * @param string $key Attribute key
+     * @param  string  $key  Attribute key
      *
      * @example
      * ```php
@@ -273,7 +273,7 @@ trait HasMagicMethods
     /**
      * Unset data from the model.
      *
-     * @param  string|array|null $key Attribute key(s) to unset (null = unset all)
+     * @param  string|array|null  $key  Attribute key(s) to unset (null = unset all)
      * @return $this
      *
      * @example
@@ -304,7 +304,7 @@ trait HasMagicMethods
      *
      * Similar to setData but merges instead of replacing.
      *
-     * @param  array $data Data to merge
+     * @param  array  $data  Data to merge
      * @return $this
      *
      * @example
@@ -324,7 +324,7 @@ trait HasMagicMethods
     /**
      * Get original data (before changes).
      *
-     * @param string|null $key Attribute key (null = get all original)
+     * @param  string|null  $key  Attribute key (null = get all original)
      *
      * @example
      * ```php
@@ -345,7 +345,7 @@ trait HasMagicMethods
     /**
      * Check if data has changed.
      *
-     * @param string|array|null $keys Attribute key(s) to check (null = check any)
+     * @param  string|array|null  $keys  Attribute key(s) to check (null = check any)
      *
      * @example
      * ```php
@@ -403,7 +403,7 @@ trait HasMagicMethods
      * - 100x faster for repeated calls
      * - Cache persists across all model instances
      *
-     * @param  string $name CamelCase attribute name
+     * @param  string  $name  CamelCase attribute name
      * @return string Snake case attribute key
      */
     private function underscore(string $name): string

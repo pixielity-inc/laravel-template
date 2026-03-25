@@ -8,7 +8,9 @@ use BackedEnum;
 use DateTimeInterface;
 use Laravel\Scout\EngineManager;
 use Laravel\Scout\Engines\Engine;
-use Laravel\Scout\Searchable;
+use Laravel\Scout\Searchable as ScoutSearchable;
+use Pixielity\Database\Attributes\Searchable;
+use Pixielity\Database\Attributes\Translatable;
 use Pixielity\Support\Arr;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
@@ -112,16 +114,39 @@ use Pixielity\Support\Str;
  */
 trait HasSearch
 {
-    use Searchable;
+    use ScoutSearchable;
 
     /**
      * Boot the HasSearch trait.
      *
-     * Only registers Scout if search is enabled via property.
+     * Only registers Scout if search is enabled via attribute or property.
+     * Checks in this order:
+     * 1. #[Searchable] attribute
+     * 2. $searchable property
      */
     public static function bootHasSearch(): void
     {
-        // Check if model has search enabled via property
+        // Check for #[Searchable] attribute first
+        if (Reflection::hasAttribute(static::class, Searchable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Searchable::class);
+
+            if ($attributes !== []) {
+                /** @var Searchable $searchable */
+                $searchable = $attributes[0]->newInstance();
+
+                // If attribute explicitly disables search, don't boot
+                if (! $searchable->enabled) {
+                    return;
+                }
+
+                // Boot Scout
+                parent::bootSearchable();
+
+                return;
+            }
+        }
+
+        // Fall back to property-based check
         // Use property_exists on class name to avoid instantiation during migration
         if (! Reflection::propertyExists(static::class, 'searchable')) {
             // Default is true, so boot if property doesn't exist
@@ -164,12 +189,31 @@ trait HasSearch
     /**
      * Get the index name for the model.
      *
-     * Uses $searchableIndex property if defined, otherwise uses table name.
+     * Priority:
+     * 1. Index from #[Searchable] attribute
+     * 2. $searchableIndex property
+     * 3. Table name (default)
      *
      * @return string The search index name
      */
     public function searchableAs(): string
     {
+        // Check for #[Searchable] attribute first
+        if (Reflection::hasAttribute(static::class, Searchable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Searchable::class);
+
+            if ($attributes !== []) {
+                /** @var Searchable $searchable */
+                $searchable = $attributes[0]->newInstance();
+
+                // If attribute has custom index, use it
+                if ($searchable->index !== null) {
+                    return $searchable->index;
+                }
+            }
+        }
+
+        // Fall back to property
         if (! empty($this->searchableIndex)) {
             return $this->searchableIndex;
         }
@@ -180,26 +224,67 @@ trait HasSearch
     /**
      * Determine if the model should be searchable.
      *
-     * Checks the $searchable property flag.
-     * Override in model for custom logic.
+     * Priority:
+     * 1. Enabled flag from #[Searchable] attribute
+     * 2. $searchable property
+     * 3. True (default)
      */
     public function shouldBeSearchable(): bool
     {
+        // Check for #[Searchable] attribute first
+        if (Reflection::hasAttribute(static::class, Searchable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Searchable::class);
+
+            if ($attributes !== []) {
+                /** @var Searchable $searchable */
+                $searchable = $attributes[0]->newInstance();
+
+                return $searchable->enabled;
+            }
+        }
+
+        // Fall back to property
         return $this->searchable ?? true;
     }
 
     /**
      * Get the engine used to index the model.
      *
+     * Priority:
+     * 1. Engine from #[Searchable] attribute
+     * 2. $searchEngine property
+     * 3. Default engine from config
+     *
      * Uses the $searchEngine property.
      */
     public function searchableUsing(): Engine
     {
-        if (isset($this->searchEngine)) {
+        $engineName = null;
+
+        // Check for #[Searchable] attribute first
+        if (Reflection::hasAttribute(static::class, Searchable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Searchable::class);
+
+            if ($attributes !== []) {
+                /** @var Searchable $searchable */
+                $searchable = $attributes[0]->newInstance();
+
+                // If attribute has engine, use it
+                if ($searchable->engine !== null) {
+                    $engineName = $searchable->engine;
+                }
+            }
+        }
+
+        // Fall back to property if no engine from attribute
+        if ($engineName === null && isset($this->searchEngine)) {
             $engineName = $this->searchEngine instanceof BackedEnum
                 ? $this->searchEngine->value
                 : (string) $this->searchEngine;
+        }
 
+        // Use specified engine or default
+        if ($engineName !== null) {
             return resolve(EngineManager::class)->engine($engineName);
         }
 
@@ -242,7 +327,10 @@ trait HasSearch
     /**
      * Build search array for non-translatable models.
      *
-     * Uses $searchableAttributes if defined, otherwise all attributes.
+     * Priority:
+     * 1. Fields from #[Searchable] attribute
+     * 2. $searchableAttributes property
+     * 3. All attributes (default)
      *
      * @return array<string, mixed>
      */
@@ -250,7 +338,22 @@ trait HasSearch
     {
         $array = $this->toArray();
 
-        // If searchableAttributes is defined, only return those attributes
+        // Check for #[Searchable] attribute first
+        if (Reflection::hasAttribute(static::class, Searchable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Searchable::class);
+
+            if ($attributes !== []) {
+                /** @var Searchable $searchable */
+                $searchable = $attributes[0]->newInstance();
+
+                // If attribute has fields, use them
+                if ($searchable->fields !== []) {
+                    return Arr::intersect_key($array, Arr::flip($searchable->fields));
+                }
+            }
+        }
+
+        // Fall back to property
         if (! empty($this->searchableAttributes)) {
             return Arr::intersect_key($array, Arr::flip($this->searchableAttributes));
         }
@@ -261,10 +364,30 @@ trait HasSearch
     /**
      * Get translatable fields from model.
      *
+     * Priority:
+     * 1. Fields from #[Translatable] attribute
+     * 2. $translatable property
+     *
      * @return array<int, string>
      */
     protected function getTranslatableFields(): array
     {
+        // Check for #[Translatable] attribute first
+        if (Reflection::hasAttribute(static::class, Translatable::class)) {
+            $attributes = Reflection::getAttributes(static::class, Translatable::class);
+
+            if ($attributes !== []) {
+                /** @var Translatable $translatable */
+                $translatable = $attributes[0]->newInstance();
+
+                // If attribute has fields, use them
+                if ($translatable->fields !== []) {
+                    return $translatable->fields;
+                }
+            }
+        }
+
+        // Fall back to property
         if (is_array($this->translatable)) {
             return $this->translatable;
         }
@@ -310,7 +433,7 @@ trait HasSearch
      *
      * Makes datetime fields searchable as numbers.
      *
-     * @param  array<string, mixed> $array
+     * @param  array<string, mixed>  $array
      * @return array<string, mixed>
      */
     protected function convertDatesToTimestamps(array $array): array
@@ -326,9 +449,19 @@ trait HasSearch
 
     /**
      * Check if model has translations enabled.
+     *
+     * Checks both #[Translatable] attribute and $translatable property.
+     *
+     * @return bool True if translations are enabled
      */
     protected function isTranslatable(): bool
     {
+        // Check for #[Translatable] attribute first
+        if (Reflection::hasAttribute(static::class, Translatable::class)) {
+            return true;
+        }
+
+        // Fall back to property-based check
         return is_array($this->translatable ?? null) || $this->translatable ?? false;
     }
 }

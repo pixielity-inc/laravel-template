@@ -6,6 +6,7 @@ namespace Pixielity\Database\Attributes;
 
 use Attribute;
 use Illuminate\Database\Eloquent\Attributes\UseFactory as BaseUseFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * UseFactory Attribute - Specify Factory Class for Eloquent Models.
@@ -45,7 +46,7 @@ use Illuminate\Database\Eloquent\Attributes\UseFactory as BaseUseFactory;
  * ```
  *
  * @see BaseUseFactory Laravel's base UseFactory attribute
- * @see \Illuminate\Database\Eloquent\Factories\Factory
+ * @see Factory
  */
 #[Attribute(Attribute::TARGET_CLASS)]
 class UseFactory extends BaseUseFactory {}

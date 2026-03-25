@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Database\Providers;
 
 use Override;
-use Pixielity\Container\Concerns\HasDiscovery;
-use Pixielity\Database\Attributes\AsDatabaseBlueprint;
-use Pixielity\Discovery\Facades\Discovery;
+use Pixielity\Database\Concerns\HasDiscovery as HasDatabaseDiscovery;
 use Pixielity\Support\ServiceProvider;
 
 /**
@@ -67,7 +65,7 @@ use Pixielity\Support\ServiceProvider;
  */
 class DatabaseServiceProvider extends ServiceProvider /* implements HasMacros */
 {
-    use HasDiscovery;
+    use HasDatabaseDiscovery;
 
     /**
      * The module name.
@@ -114,51 +112,7 @@ class DatabaseServiceProvider extends ServiceProvider /* implements HasMacros */
         // Call parent register for base functionality
         parent::register();
 
-        // Discover and register tagged classes
-        $this->discoverTaggedClasses();
-
-        // Discover and register bound classes
-        $this->discoverBoundClasses();
-    }
-
-    /**
-     * Define macros for macroable classes.
-     *
-     * Automatically discovers and registers all classes marked with
-     * #[AsDatabaseBlueprint] attribute. Classes are registered in priority
-     * order (lowest first).
-     *
-     * ## How It Works:
-     * 1. Discovery finds all classes with #[AsDatabaseBlueprint]
-     * 2. Classes are sorted by priority (lower numbers first)
-     * 3. Each class is instantiated (with dependency injection)
-     * 4. The instance is invoked via __invoke() method
-     *
-     * ## Manual Registration (Alternative):
-     * If you prefer manual registration, you can still call:
-     * ```php
-     * app(BlueprintMacros::class)();
-     * ```
-     *
-     * Use this method to:
-     * - Add custom methods to Collection
-     * - Extend Request/Response classes
-     * - Add helpers to Builder classes
-     * - Extend any Macroable class
-     */
-    public function macros(): void
-    {
-        // Discover all classes with #[AsDatabaseBlueprint] attribute
-        $blueprintClasses = Discovery::attribute(AsDatabaseBlueprint::class)
-            ->get()
-            ->sortBy(fn ($item) => $item['attribute']->priority ?? 100)
-            ->pluck('class');
-
-        // Register each Blueprint macro class
-        foreach ($blueprintClasses as $class) {
-            // Instantiate with dependency injection and invoke
-            $instance = $this->app->make($class);
-            $instance();
-        }
+        // Discover and register Blueprint macros (from Database)
+        $this->discoverBlueprintMacros();
     }
 }

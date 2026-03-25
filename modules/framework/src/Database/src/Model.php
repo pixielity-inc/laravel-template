@@ -17,10 +17,10 @@ use Pixielity\Foundation\Enums\DataType;
  * Base Model.
  *
  * Abstract base class for all application models providing common functionality
- * with property-based configuration.
+ * with property-based OR attribute-based configuration.
  *
  * ## 🎯 Philosophy
- * All features are conditionally applied based on property flags.
+ * All features are conditionally applied based on property flags OR PHP attributes.
  * Zero overhead when disabled - traits check flags in boot methods.
  *
  * ## ✨ Available Features (18 Total)
@@ -50,7 +50,7 @@ use Pixielity\Foundation\Enums\DataType;
  * ```php
  * class Post extends Model
  * {
- *     // protected $fillable = ['title', 'content'];
+ *     protected $fillable = ['title', 'content'];
  * }
  *
  * // Magic methods work automatically!
@@ -65,51 +65,94 @@ use Pixielity\Foundation\Enums\DataType;
  * // GET /api/posts?filters[status][$eq]=published&sort=-created_at
  * ```
  *
- * ### Enable Multiple Features:
+ * ### Modern Attribute-Based Configuration (Recommended):
+ * ```php
+ * use Pixielity\Database\Attributes\{Auditable, Filterable, Searchable, Sortable, Translatable};
+ *
+ * #[Translatable(['title', 'content'])]
+ * #[Searchable(fields: ['title', 'content'], engine: 'meilisearch')]
+ * #[Filterable(fields: ['status', 'created_at', 'author_id'])]
+ * #[Sortable(['title', 'created_at', 'views'])]
+ * #[Auditable]
+ * class Post extends Model
+ * {
+ *     use HasTranslations, HasSearch;
+ *
+ *     protected $fillable = ['title', 'content', 'status'];
+ * }
+ * ```
+ *
+ * ### Property-Based Configuration (Legacy, Still Supported):
  * ```php
  * class Post extends Model
  * {
- *     // protected bool|array $sluggable = true;
- *     // protected bool|array $sortable = true;
- *     // protected bool|array $taggable = true;
- *     // protected bool|array $versionable = true;
- *     // protected bool|array $translatable = ['title', 'content'];
- *     // protected bool $auditable = true;
- *     // protected bool $featurable = true;
- *     // protected array $rules = ['title' => 'required|min:3'];
- *     // protected array $filterFields = ['title', 'status', 'author'];
- *     // protected array $sortFields = ['title', 'created_at'];
+ *     protected bool|array $translatable = ['title', 'content'];
+ *     protected bool $searchable = true;
+ *     protected array $searchableAttributes = ['title', 'content'];
+ *     protected SearchEngine $searchEngine = SearchEngine::MEILISEARCH;
+ *     protected bool $auditable = true;
+ *     protected array $filterFields = ['status', 'created_at'];
+ *     protected array $sortFields = ['title', 'created_at'];
  * }
  * ```
  *
- * ### Full Featured Model:
+ * ## 📚 Attribute Reference (Modern Approach)
+ *
+ * ### #[Translatable]
  * ```php
- * use Pixielity\Database\Contracts\Auditable;
- * use Pixielity\Database\Contracts\TranslatableInterface;
- * use Pixielity\Database\Enums\SearchEngine;
- * use Spatie\EloquentSortable\Sortable;
- *
- * class Post extends Model implements
- *     Auditable,
- *     TranslatableInterface,
- *     Sortable
+ * #[Translatable(['title', 'content', 'excerpt'])]
+ * class Post extends Model
  * {
- *     // Enable all features
- *     // protected bool $auditable = true;
- *     // protected bool|array $translatable = ['title', 'content'];
- *     // protected bool $searchable = true;
- *     protected SearchEngine $searchEngine = SearchEngine::MEILISEARCH();
- *     // protected array $searchableAttributes = ['status'];
- *     // protected bool|array $sortable = ['order_column_name' => 'order_column'];
- *     // protected bool|array $sluggable = ['source' => 'title'];
- *     // protected bool|array $taggable = true;
- *     // protected bool|array $versionable = ['attributes' => ['title', 'content']];
- *     // protected array $filterFields = ['title', 'status', 'author'];
- *     // protected array $sortFields = ['title', 'created_at', 'views'];
+ *     use HasTranslations;
  * }
  * ```
  *
- * ## 📚 Property Reference
+ * ### #[Searchable]
+ * ```php
+ * #[Searchable(
+ *     fields: ['title', 'content'],
+ *     engine: 'meilisearch',
+ *     index: 'posts_v2'
+ * )]
+ * class Post extends Model
+ * {
+ *     use HasSearch;
+ * }
+ * ```
+ *
+ * ### #[Filterable]
+ * ```php
+ * #[Filterable(
+ *     fields: ['title', 'status', 'created_at'],
+ *     filters: ['$eq', '$contains', '$gt', '$lt'],
+ *     restricted: [
+ *         'title' => ['$eq', '$contains'],
+ *         'status' => ['$eq', '$in'],
+ *     ],
+ *     renamed: ['created_at' => 'date']
+ * )]
+ * class Post extends Model {}
+ * ```
+ *
+ * ### #[Sortable]
+ * ```php
+ * #[Sortable(
+ *     fields: ['title', 'created_at', 'views'],
+ *     renamed: ['created_at' => 'date']
+ * )]
+ * class Post extends Model {}
+ * ```
+ *
+ * ### #[Auditable]
+ * ```php
+ * #[Auditable(
+ *     events: ['created', 'updated', 'deleted'],
+ *     exclude: ['views', 'last_viewed_at']
+ * )]
+ * class Post extends Model {}
+ * ```
+ *
+ * ## 📚 Property Reference (Legacy)
  *
  * ### Search Properties:
  * - `$searchable` (bool) - Enable/disable search (default: true)
@@ -117,23 +160,14 @@ use Pixielity\Foundation\Enums\DataType;
  * - `$searchableAttributes` (array) - Fields to index (default: all)
  * - `$searchableIndex` (string|null) - Custom index name
  *
- * ### Sortable Properties:
- * - `$sortable` (bool|array) - Enable sorting
- *   - `['order_column_name' => 'order_column']`
- *   - `['sort_when_creating' => true]`
+ * ### Filter Properties:
+ * - `$filters` (array|null) - Available filter operators
+ * - `$filterFields` (array|null) - Fields available for filtering
+ * - `$restrictedFilters` (array|null) - Restrict filters per field
+ * - `$renamedFilterFields` (array|null) - Rename fields for API
  *
- * ### Slug Properties:
- * - `$sluggable` (bool|array) - Enable slug generation
- *   - `['source' => 'title']`
- *   - `['saveTo' => 'slug']`
- *
- * ### Tag Properties:
- * - `$taggable` (bool|array) - Enable tagging
- *   - `['type' => 'posts']`
- *
- * ### Version Properties:
- * - `$versionable` (bool|array) - Enable versioning
- *   - `['attributes' => ['*']]`
+ * ### Sort Properties:
+ * - `$sortFields` (array|null) - Fields available for sorting
  *
  * ### Translation Properties:
  * - `$translatable` (bool|array) - Enable translations
@@ -142,27 +176,38 @@ use Pixielity\Foundation\Enums\DataType;
  * ### Audit Properties:
  * - `$auditable` (bool) - Enable auditing (default: false)
  *
- * ### Feature Flag Properties:
- * - `$featurable` (bool) - Enable feature flags (default: false)
- *
- * ### Validation Properties:
- * - `$rules` (array) - Validation rules for create operations
- *   - `['email' => 'required|email', 'name' => 'required|min:3']`
- * - `$rulesUpdate` (array) - Validation rules for update operations (optional)
- *   - `['email' => 'required|email', 'name' => 'sometimes|min:3']`
- * - `$customMessages` (array) - Custom validation messages
- *   - `['email.required' => 'Email is required']`
- * - `$customAttributes` (array) - Custom attribute names
- *   - `['email' => 'email address']`
- *
  * ## 🎨 Usage Examples
+ *
+ * ### Complete Modern Example:
+ * ```php
+ * use Pixielity\Database\Attributes\{Auditable, Filterable, Searchable, Sortable, Translatable};
+ *
+ * #[Translatable(['title', 'content'])]
+ * #[Searchable(fields: ['title', 'content'], engine: 'meilisearch')]
+ * #[Filterable(
+ *     fields: ['status', 'author_id', 'created_at'],
+ *     renamed: ['created_at' => 'date', 'author_id' => 'author']
+ * )]
+ * #[Sortable(fields: ['title', 'created_at', 'views'])]
+ * #[Auditable]
+ * class Post extends Model
+ * {
+ *     use HasTranslations, HasSearch;
+ *
+ *     protected $fillable = ['title', 'content', 'status', 'author_id'];
+ * }
+ *
+ * // API Usage:
+ * // GET /api/posts?filter[status][$eq]=published&filter[date][$gt]=2024-01-01&sort=-date
+ * ```
  *
  * ### Search with Translations:
  * ```php
- * class Post extends Model implements TranslatableInterface
+ * #[Translatable(['title', 'content'])]
+ * #[Searchable(['title', 'content'])]
+ * class Post extends Model
  * {
- *     // protected bool|array $translatable = ['title', 'content'];
- *     // protected bool $searchable = true;
+ *     use HasTranslations, HasSearch;
  * }
  *
  * // Automatically indexes: title_en, title_ar, content_en, content_ar
@@ -170,56 +215,12 @@ use Pixielity\Foundation\Enums\DataType;
  * Post::search('مرحبا')->get();    // Searches Arabic
  * ```
  *
- * ### Sortable with Slugs:
- * ```php
- * class MenuItem extends Model implements Sortable
- * {
- *     // protected bool|array $sortable = true;
- *     // protected bool|array $sluggable = true;
- * }
- *
- * $item->moveToStart();
- * echo $item->slug; // auto-generated
- * ```
- *
- * ### Audit with Versions:
- * ```php
- * class Document extends Model
- * {
- *     // protected bool $auditable = true;
- *     // protected bool|array $versionable = true;
- * }
- *
- * $doc->update(['title' => 'New']);
- * $audits = $doc->audits;
- * $versions = $doc->versions;
- * $doc->revertToVersion($versionId);
- * ```
- *
- * ### Model-Level Validation:
- * ```php
- * class User extends Model
- * {
- *     // protected array $rules = [
- *         'email' => 'required|email|unique:users',
- *         'password' => 'required|min:8',
- *     ];
- *
- *     // protected array $customMessages = [
- *         'email.required' => 'Email is required',
- *     ];
- * }
- *
- * $user = new User(['email' => 'invalid']);
- * $user->save(); // Throws ValidationException
- * $user->saveWithoutValidation(); // Skips validation
- * ```
- *
  * ## 🔧 Configuration Files
  *
  * - `config/scout.php` - Search engines
  * - `config/localization.php` - Languages
  * - `config/audit.php` - Auditing
+ * - `config/purity.php` - Filtering and sorting
  *
  * ## 📊 Performance
  *
@@ -230,8 +231,8 @@ use Pixielity\Foundation\Enums\DataType;
  *
  * ## 📖 Documentation
  *
- * See `src/pixielity/laravel-Common/src/Database/README.md` for complete documentation.
- * See `src/pixielity/laravel-Common/src/Database/Examples/` for examples.
+ * See `modules/framework/src/Database/src/Attributes/README.md` for attribute documentation.
+ * See `modules/framework/src/Database/README.md` for complete documentation.
  *
  * @see HasModelExtender
  *
@@ -286,83 +287,14 @@ abstract class Model extends BaseModel implements ModelInterface
     protected $keyType = DataType::INT->value;
 
     /**
-     * Enable/disable auditing for this model.
-     */
-    protected bool $auditable = false;
-
-    /**
-     * Enable/disable translations for this model.
-     *
-     * @var bool|array<int, string>
-     */
-    protected bool|array $translatable = false;
-
-    /**
-     * Enable/disable search indexing for this model.
-     */
-    protected bool $searchable = true;
-
-    /**
      * Search engine to use for this model.
      */
     protected SearchEngine|string $searchEngine = SearchEngine::COLLECTION->value;
 
     /**
-     * Attributes to index for search.
-     *
-     * @var array<int, string>
-     */
-    protected array $searchables = [];
-
-    /**
-     * Custom search index name.
-     */
-    protected ?string $searchableIndex = null;
-
-    /**
      * Enable/disable base identifier generation (random public IDs).
      */
     protected bool $baseIdentifiable = true;
-
-    /**
-     * List of available filters for Purity filtering.
-     * If not set, uses config('purity.filters').
-     *
-     * @var array<int, string>|null
-     */
-    protected ?array $filters = null;
-
-    /**
-     * List of fields available for filtering.
-     * If not set, all table columns and relations are available.
-     *
-     * @var array<int|string, string>|null
-     */
-    protected ?array $filterFields = null;
-
-    /**
-     * Restrict specific filters to specific fields.
-     * Format: ['field' => ['$eq', '$contains'], 'other_field:$eq,$gt'].
-     *
-     * @var array<string, array<int, string>|string>|null
-     */
-    protected ?array $restrictedFilters = null;
-
-    /**
-     * Rename filter fields for API (field => alias).
-     * Example: ['created_at' => 'date', 'user_id' => 'author'].
-     *
-     * @var array<string, string>|null
-     */
-    protected ?array $renamedFilterFields = null;
-
-    /**
-     * List of fields available for sorting.
-     * If not set, all table columns and relations are available.
-     *
-     * @var array<int, string>|null
-     */
-    protected ?array $sortFields = null;
 
     /**
      * The attributes that should be cast.

@@ -4,25 +4,20 @@ declare(strict_types=1);
 
 namespace Pixielity\Database\Concerns;
 
-use Abbasudo\Purity\Traits\Filterable;
-use Abbasudo\Purity\Traits\Sortable;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Pixielity\Database\Enums\SearchEngine;
 use Pixielity\Database\Traits\HasBaseIdentifier;
+use Pixielity\Database\Traits\HasFilterable;
 use Pixielity\Database\Traits\HasMagicMethods;
 use Pixielity\Database\Traits\HasSearch;
-use Pixielity\Database\Traits\HasSlugs;
 use Pixielity\Database\Traits\HasSortable;
 use Pixielity\Database\Traits\HasTranslations;
-use Pixielity\Database\Traits\HasVersions;
-use Pixielity\FeatureFlags\Traits\HasFeatures;
 use Pixielity\Foundation\Enums\ContainerToken;
 use Pixielity\Support\Arr;
 use Pixielity\Support\Reflection;
-use Spatie\Tags\HasTags;
 
 /**
  * Has Model Features Trait.
@@ -37,59 +32,41 @@ use Spatie\Tags\HasTags;
  *
  * ## Features Included:
  * - Search (Scout)
- * - Sortable
- * - Slugs
- * - Tags
- * - Versions
+ * - Filtering (Purity)
+ * - Sorting (Purity)
  * - Translations
- * - Auditing
- * - Feature Flags
  * - Magic Methods
- * - Purgeable
- * - Nullable
- * - Hashable
- * - Encryptable
- * - Defaultable
  * - Base Identifier
- * - Activity Logging
  *
  * ## Usage:
  * ```php
  * use Spatie\Permission\Models\Role as SpatieRole;
- * use Pixielity\Database\Traits\HasModelExtender;
+ * use Pixielity\Database\Concerns\HasModelExtender;
  *
  * class Role extends SpatieRole
  * {
  *     use HasModelExtender;
  *
  *     // Enable features as needed
- *     protected bool $auditable = true;
  *     protected bool|array $translatable = ['description'];
  * }
  * ```
  *
  * ## Important Notes:
- * - Call `$this->bootModelFeatures()` in your model's boot() method
  * - All feature flags work the same as base Model class
  * - Zero overhead when features are disabled
  *
- * @property bool                $auditable            Enable/disable auditing for this model
  * @property bool|array          $translatable         Enable/disable translations for this model
  * @property bool                $searchable           Enable/disable search indexing for this model
  * @property SearchEngine|string $searchEngine         Search engine to use for this model
  * @property array               $searchableAttributes Attributes to index for search
  * @property string|null         $searchableIndex      Custom search index name
- * @property bool|array          $sortable             Enable/disable sortable functionality for this model
- * @property bool|array          $sluggable            Enable/disable slug generation for this model
- * @property bool|array          $taggable             Enable/disable tagging for this model
- * @property bool|array          $versionable          Enable/disable versioning for this model
- * @property bool                $featurable           Enable/disable feature flags for this model
- * @property array               $purgeable            Attributes to remove before saving (e.g., password_confirmation)
- * @property array               $nullable             Attributes to convert empty strings to NULL
- * @property array               $hashable             Attributes to auto-hash on save (e.g., password)
- * @property array               $encryptable          Attributes to auto-encrypt/decrypt (e.g., ssn, credit_card)
- * @property bool                $defaultable          Enable/disable defaultable functionality (only one default record)
  * @property bool                $baseIdentifiable     Enable/disable base identifier generation (random public IDs)
+ * @property array|null          $filters              Available filter operators
+ * @property array|null          $filterFields         Fields available for filtering
+ * @property array|null          $restrictedFilters    Restrict specific filters to specific fields
+ * @property array|null          $renamedFilterFields  Rename filter fields for API
+ * @property array|null          $sortFields           Fields available for sorting
  *
  * @method static void    bootModelFeatures()                                                                           Boot the model features
  * @method        array   getTranslatableFields()                                                                       Get the translatable fields
@@ -100,41 +77,38 @@ use Spatie\Tags\HasTags;
  * @method        static  addFillable(array|string $attributes)                                                         Add fillable attributes to the model
  * @method        static  addDateAttribute(array|string $attributes)                                                    Add dates to be mutated to Carbon instances
  * @method        static  addCasts(array $casts)                                                                        Add casts to the model
- * @method        bool    isModified(array|string|null $attributes = null) Check if the model or any given attribute(s) have been modified
+ * @method        bool    isModified(array|string|null $attributes = null)                                              Check if the model or any given attribute(s) have been modified
  * @method        static  duplicateWithRelations(array|null $relations = null)                                          Duplicate the model with its relations
  * @method        bool    saveQuietly(array $options = [])                                                              Save the model without firing any events
- * @method        array   transform()
+ * @method        array   transform()                                                                                   Transform the model to array for repository pattern
  * @method static Builder filter((array|null) $params = null)                                                           Apply Purity filters from request query parameters
  * @method static Builder sort((array|null) $params = null)                                                             Apply Purity sorting from request query parameters
  * @method static Builder filterBy((array|string) $filters)                                                             Restrict filters to specific operators
  * @method static Builder filterFields((array|string) $fields)                                                          Restrict filterable fields
  * @method static Builder restrictedFilters((array|string) $restrictedFilters)                                          Set field-specific filter restrictions
  * @method static Builder renamedFilterFields(array $renamedFilterFields)                                               Rename filter fields for API
- * @method static Builder sortFields((array|string) $fields)                                                            Restrict sortable fields                                                                          Transform the model to array for repository pattern
+ * @method static Builder sortFields((array|string) $fields)                                                            Restrict sortable fields
  *
  * @see \Pixielity\Database\Model
  * @see HasSearch
+ * @see HasFilterable
  * @see HasSortable
- * @see HasSlugs
- * @see Traits\HasActivityLog
- * @see HasTags
- * @see HasVersions
  * @see HasTranslations
- * @see Auditable
+ *
  * @since 1.0.0
  */
 trait HasModelExtender
 {
-    use Filterable;
     use HasBaseIdentifier;
+    use HasFilterable;
     use HasMagicMethods;
     use HasSearch, HasTranslations {
         HasTranslations::getEnabledLocales insteadof HasSearch;
         HasTranslations::getTranslatableFields insteadof HasSearch;
         HasTranslations::isTranslatable insteadof HasSearch;
     }
+    use HasSortable;
     use ModelHelper;
-    use Sortable;
 
     /**
      * Bootstrap the model and its traits.
@@ -162,7 +136,7 @@ trait HasModelExtender
      * This method refreshes the model instance with the latest data from the database,
      * including all loaded relationships.
      *
-     * @param  array<string>|string|null $relations Specific relations to reload, or null for all
+     * @param  array<string>|string|null  $relations  Specific relations to reload, or null for all
      * @return $this
      *
      * @example
@@ -194,7 +168,7 @@ trait HasModelExtender
     /**
      * Reload specific relations on the model.
      *
-     * @param  array<string>|string $relations Relations to reload
+     * @param  array<string>|string  $relations  Relations to reload
      * @return $this
      *
      * @example
@@ -219,7 +193,7 @@ trait HasModelExtender
     /**
      * Add fillable attributes to the model.
      *
-     * @param  array<string>|string $attributes Attributes to add
+     * @param  array<string>|string  $attributes  Attributes to add
      * @return $this
      *
      * @example
@@ -240,7 +214,7 @@ trait HasModelExtender
     /**
      * Add dates to be mutated to Carbon instances.
      *
-     * @param  array<string>|string $attributes Attributes to add
+     * @param  array<string>|string  $attributes  Attributes to add
      * @return $this
      *
      * @example
@@ -261,7 +235,7 @@ trait HasModelExtender
     /**
      * Add casts to the model.
      *
-     * @param  array<string, string> $casts Casts to add
+     * @param  array<string, string>  $casts  Casts to add
      * @return $this
      *
      * @example
@@ -279,7 +253,7 @@ trait HasModelExtender
     /**
      * Check if the model or any given attribute(s) have been modified.
      *
-     * @param array<string>|string|null $attributes Attributes to check
+     * @param  array<string>|string|null  $attributes  Attributes to check
      *
      * @example
      * ```php
@@ -302,7 +276,7 @@ trait HasModelExtender
     /**
      * Duplicate the model with its relations.
      *
-     * @param array<string>|null $relations Relations to duplicate, or null for none
+     * @param  array<string>|null  $relations  Relations to duplicate, or null for none
      *
      * @example
      * ```php
@@ -334,7 +308,7 @@ trait HasModelExtender
     /**
      * Save the model without firing any events.
      *
-     * @param array<string, mixed> $options Save options
+     * @param  array<string, mixed>  $options  Save options
      *
      * @example
      * ```php
