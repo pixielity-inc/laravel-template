@@ -13,10 +13,6 @@ modules/
 └── ModuleName/
     ├── config/
     │   └── module-name.php          # Module-specific configuration
-    ├── database/
-    │   ├── factories/               # Model factories for testing
-    │   ├── migrations/              # Database migrations
-    │   └── seeders/                 # Database seeders
     ├── src/
     │   ├── Controllers/             # HTTP controllers (with route attributes)
     │   ├── Models/                  # Eloquent models
@@ -25,6 +21,9 @@ modules/
     │   ├── Interfaces/              # Interface contracts
     │   ├── Contracts/               # Alternative to Interfaces
     │   ├── Providers/               # Service providers
+    │   ├── Factories/               # Model factories for testing
+    │   ├── Migrations/              # Database migrations
+    │   ├── Seeders/                 # Database seeders
     │   ├── Actions/                 # Single-action classes
     │   ├── DTOs/                    # Data Transfer Objects
     │   ├── Enums/                   # Enum classes

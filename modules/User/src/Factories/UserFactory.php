@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Pixielity\User\Database\Factories;
+namespace Pixielity\User\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;

@@ -7,6 +7,7 @@ namespace Pixielity\User\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Pixielity\User\Factories\UserFactory;
 
 /**
  * User Model.
@@ -32,6 +33,14 @@ class User extends Authenticatable
 {
     use HasFactory;
     use Notifiable;
+
+    /**
+     * Create a new factory instance for the model.
+     */
+    protected static function newFactory(): UserFactory
+    {
+        return UserFactory::new();
+    }
 
     /**
      * The attributes that are mass assignable.

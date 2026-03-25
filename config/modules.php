@@ -186,20 +186,20 @@ return [
             'config' => ['path' => 'config', 'generate' => true],
 
             // database/
-            'factory' => ['path' => 'database/factories', 'generate' => true],
-            'migration' => ['path' => 'database/migrations', 'generate' => true],
-            'seeder' => ['path' => 'database/seeders', 'generate' => true],
+            'factory' => ['path' => 'src/Factories', 'generate' => true],
+            'migration' => ['path' => 'src/Migrations', 'generate' => true],
+            'seeder' => ['path' => 'src/Seeders', 'generate' => true],
 
             // lang/
-            'lang' => ['path' => 'lang', 'generate' => false],
+            'lang' => ['path' => 'i18n', 'generate' => false],
 
             // resources/
             'view' => ['path' => 'resources/views', 'generate' => false],
-            'component-view' => ['path' => 'resources/views/components', 'generate' => false],
+            // 'component-view' => ['path' => 'resources/views/components', 'generate' => false],
             'asset' => ['path' => 'resources/assets', 'generate' => false],
 
             // routes/
-            'route' => ['path' => 'routes', 'generate' => false],
+            // 'route' => ['path' => 'routes', 'generate' => false],
 
             // tests/
             'test-feature' => ['path' => 'tests/Feature', 'generate' => true],

@@ -78,3 +78,21 @@ The module creates three tables:
 - `users` - User accounts
 - `password_reset_tokens` - Password reset tokens
 - `sessions` - User sessions
+
+## Module Structure
+
+```
+User/
+├── config/
+│   └── user.php              # Module configuration
+├── src/
+│   ├── Models/               # User model
+│   ├── Providers/            # Service provider
+│   ├── Factories/            # User factory
+│   ├── Migrations/           # Database migrations
+│   └── Seeders/              # Database seeders
+├── tests/                    # Tests (to be added)
+├── composer.json
+├── module.json
+└── README.md
+```

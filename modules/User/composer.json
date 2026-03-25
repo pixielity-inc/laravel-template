@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Pixielity\\User\\": "src/"
+            "Pixielity\\User\\": "src/",
+            "Pixielity\\User\\Database\\Factories\\": "src/Factories/"
         }
     },
     "require": {
