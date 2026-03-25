@@ -2,7 +2,10 @@
 
 namespace Pixielity\Routing;
 
+use Illuminate\Support\Collection;
 use Override;
+use Pixielity\Discovery\Facades\Discovery;
+use Pixielity\Routing\Attributes\AsController;
 use Pixielity\Support\Reflection;
 use ReflectionClass;
 use Spatie\RouteAttributes\RouteRegistrar as SpatieRouteRegistrar;
@@ -117,6 +120,62 @@ class RouteRegistrar extends SpatieRouteRegistrar
         foreach ($controllerClasses as $controllerClass) {
             $this->registerController($controllerClass);
         }
+    }
+
+    /**
+     * Override Spatie's directory registration to use Discovery instead.
+     *
+     * Instead of scanning directories for PHP files, we use the Discovery package
+     * to find all classes with the #[AsController] attribute. This is more efficient
+     * and works with our custom attribute system.
+     *
+     * ## Why Override:
+     * - Uses composer-attribute-collector (faster than file scanning)
+     * - Works with our custom #[AsController] attribute
+     * - Leverages Discovery's caching system
+     * - More flexible filtering and validation
+     *
+     * ## Note:
+     * The $directories, $patterns, and $notPatterns parameters are ignored
+     * since we're using attribute-based discovery instead of file scanning.
+     *
+     * @param string|array $directories Ignored - kept for compatibility
+     * @param array        $patterns    Ignored - kept for compatibility
+     * @param array        $notPatterns Ignored - kept for compatibility
+     */
+    #[Override]
+    public function registerDirectory(string|array $directories, array $patterns = [], array $notPatterns = []): void
+    {
+        // Use Discovery to find all controllers with #[AsController] attribute
+        // This is much faster than scanning directories and works with our custom attributes
+        $this->collectGroupsFromDiscovery()
+            ->sortByDesc(fn ($item) => ! empty($item['group']['domain'] ?? null))
+            ->each(fn ($item) => $this->registerGroupedRoutes($item));
+    }
+
+    /**
+     * Collect route groups using Discovery instead of file scanning.
+     *
+     * This replaces Spatie's collectGroupsFromFiles() method to use our
+     * Discovery package with the #[AsController] attribute.
+     *
+     * @return Collection Collection of route groups with class and attribute data
+     */
+    protected function collectGroupsFromDiscovery(): Collection
+    {
+        return Discovery::attribute(AsController::class)
+            ->cached('routing.controllers')
+            ->get()
+            ->keys()
+            // Filter out any classes that don't exist (safety check)
+            ->filter(Reflection::exists(...))
+            // Map to the format expected by Spatie's registrar
+            ->map(fn ($className) => [
+                'class' => new ReflectionClass($className),
+                'classRouteAttributes' => new ClassRouteAttributes(new ReflectionClass($className)),
+            ])
+            // Expand each class into its route groups
+            ->flatMap(fn ($item) => $this->expandClassIntoGroups($item));
     }
 
     /**

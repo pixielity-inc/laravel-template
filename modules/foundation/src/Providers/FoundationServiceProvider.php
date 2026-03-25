@@ -3,10 +3,6 @@
 namespace Pixielity\Foundation\Providers;
 
 use Nwidart\Modules\Support\ModuleServiceProvider;
-use Pixielity\Discovery\Facades\Discovery;
-use Pixielity\Routing\Attributes\AsController;
-use Pixielity\Support\Reflection;
-use Pixielity\Routing\RouteRegistrar;
 
 class FoundationServiceProvider extends ModuleServiceProvider
 {
@@ -46,29 +42,39 @@ class FoundationServiceProvider extends ModuleServiceProvider
     //     $schedule->command('inspire')->hourly();
     // }
 
+    /**
+     * Register the service provider.
+     *
+     * Binds our custom RouteRegistrar so Spatie's auto-discovery uses it.
+     */
+    public function register(): void
+    {
+        parent::register();
+
+        // Bind our custom RouteRegistrar so Spatie's service provider uses it
+        // This allows us to override registerDirectory() to use Discovery
+        $this->app->bind(
+            \Spatie\RouteAttributes\RouteRegistrar::class,
+            \Pixielity\Routing\RouteRegistrar::class
+        );
+    }
+
+    /**
+     * Boot the service provider.
+     *
+     * Routes are automatically registered by Spatie's RouteAttributesServiceProvider
+     * using our custom RouteRegistrar which discovers controllers via the
+     * #[AsController] attribute instead of scanning directories.
+     *
+     * No manual registration needed - just configure directories in
+     * config/route-attributes.php and add #[AsController] to your controllers.
+     */
     public function boot(): void
     {
         parent::boot();
 
-        // Disable Spatie's automatic route registration since we're doing it manually
-        config(['route-attributes.enabled' => false]);
-
-        // Create a new instance of our RouteRegistrar
-        // Pass the router and config from the container
-        $registrar = new RouteRegistrar(
-            $this->app->make('router'),
-            $this->app->make('config')
-        );
-
-        // Use Discovery to find all controllers with #[AsController] attribute
-        // Cached for performance - cache is cleared on composer dump-autoload
-        Discovery::attribute(AsController::class)
-            ->cached('foundation.controllers')
-            ->get()
-            ->keys()
-            // Filter out any classes that don't exist (safety check)
-            ->filter(Reflection::exists(...))
-            // Register each controller with our route registrar
-            ->each($registrar->registerController(...));
+        // Spatie's auto-discovery will use our custom RouteRegistrar
+        // which overrides registerDirectory() to use Discovery with #[AsController]
+        // Configuration is in config/route-attributes.php
     }
 }
