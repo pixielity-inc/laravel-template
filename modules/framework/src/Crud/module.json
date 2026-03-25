@@ -1,0 +1,22 @@
+{
+  "name": "Crud",
+  "alias": "crud",
+  "description": "CRUD operations and repository pattern implementation for Laravel",
+  "keywords": [
+    "crud",
+    "repository",
+    "pattern",
+    "data-access",
+    "eloquent"
+  ],
+  "priority": 5,
+  "providers": [
+    "Pixielity\\Crud\\Providers\\CrudServiceProvider"
+  ],
+  "aliases": {},
+  "files": [],
+  "requires": [
+    "support",
+    "database"
+  ]
+}

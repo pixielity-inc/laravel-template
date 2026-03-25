@@ -1,0 +1,25 @@
+{
+  "name": "Database",
+  "alias": "database",
+  "description": "Database utilities, Eloquent extensions, and attribute-based model configuration",
+  "keywords": [
+    "database",
+    "eloquent",
+    "query-builder",
+    "attributes",
+    "translations",
+    "search",
+    "filtering",
+    "sorting"
+  ],
+  "priority": 2,
+  "providers": [
+    "Pixielity\\Database\\Providers\\DatabaseServiceProvider"
+  ],
+  "aliases": {},
+  "files": [],
+  "requires": [
+    "support",
+    "container"
+  ]
+}
