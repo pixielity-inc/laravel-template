@@ -30,7 +30,7 @@ class FoundationServiceProvider extends ModuleServiceProvider
      * @var string[]
      */
     protected array $providers = [
-        RouteServiceProvider::class,
+        // RouteServiceProvider removed - using route attributes instead
     ];
 
     /**

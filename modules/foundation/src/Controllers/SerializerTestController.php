@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Foundation\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Illuminate\Routing\Controller;
+use Pixielity\Routing\Controller;
 use Pixielity\Support\Facades\Json;
 use Pixielity\Support\Facades\Serializer;
 use Pixielity\Routing\Attributes\AsController;

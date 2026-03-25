@@ -131,7 +131,7 @@ use Pixielity\Routing\Concerns\InteractsWithServices;
  *
  * @since      2.0.0
  */
-abstract class BaseController extends LaravelController
+abstract class Controller extends LaravelController
 {
     /**
      * Custom interaction traits for request/response/auth handling.

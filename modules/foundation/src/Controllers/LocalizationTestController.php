@@ -6,7 +6,7 @@ namespace Pixielity\Foundation\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Pixielity\Routing\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Pixielity\Routing\Attributes\AsController;
