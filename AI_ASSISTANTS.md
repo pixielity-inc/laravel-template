@@ -1,126 +1,39 @@
 # AI Assistant Configuration
 
-This project includes configuration for multiple AI coding assistants to ensure consistent development experience across different tools.
+This project uses Kiro as the primary AI coding assistant with full IDE integration.
 
 ## Directory Structure
 
 ```
-.
-├── .kiro/              # Kiro AI configuration
-│   ├── settings/
-│   │   └── mcp.json
-│   ├── skills/
-│   └── steering/
-├── .cursor/            # Cursor IDE configuration
-│   ├── mcp.json
-│   └── skills/
-├── .claude/            # Claude Desktop configuration
-│   └── skills/
-└── .mcp.json          # Root MCP config (shared)
+.kiro/
+├── settings/
+│   └── mcp.json           # MCP server configuration
+├── skills/
+│   ├── laravel-best-practices/
+│   ├── laravel-module-structure/
+│   └── tailwindcss-development/
+├── steering/
+│   └── module-structure.md
+└── README.md
 ```
 
-## AI Assistants
+## Configuration Files
 
-### Kiro (Primary)
-**Directory:** `.kiro/`
-
-Kiro is the primary AI assistant for this project with full IDE integration.
-
-**Features:**
-- Skills: Specialized knowledge modules
-- Steering: Auto-included context
-- MCP Servers: Extended capabilities via Model Context Protocol
-- Hooks: Automated workflows
-
-**Configuration:**
-- Settings: `.kiro/settings/mcp.json`
-- Skills: `.kiro/skills/`
-- Steering: `.kiro/steering/`
-
-### Cursor IDE
-**Directory:** `.cursor/`
-
-Cursor is an AI-powered code editor.
-
-**Configuration:**
-- MCP: `.cursor/mcp.json`
-- Skills: `.cursor/skills/`
-
-### Claude Desktop
-**Directory:** `.claude/`
-
-Claude Desktop app for AI assistance.
-
-**Configuration:**
-- Skills: `.claude/skills/`
-
-## Shared Configuration
-
-### MCP Servers (`.mcp.json`)
-Root-level MCP configuration shared across assistants.
+### `.kiro/settings/mcp.json`
+Configures Model Context Protocol (MCP) servers that provide additional tools and capabilities.
 
 **Current servers:**
-- `laravel-boost` - Laravel development tools
+- `laravel-boost` - Laravel development tools and helpers
 
-```json
-{
-    "mcpServers": {
-        "laravel-boost": {
-            "command": "php",
-            "args": ["artisan", "boost:mcp"]
-        }
-    }
-}
-```
+### `.kiro/skills/`
+Specialized knowledge modules for specific topics:
+- `laravel-best-practices` - Laravel coding standards and patterns
+- `laravel-module-structure` - Module organization guidelines
+- `tailwindcss-development` - Tailwind CSS development guidelines
 
-## Skills
-
-Skills provide specialized knowledge for specific topics. They are synchronized across all AI assistants.
-
-### Available Skills
-
-1. **laravel-best-practices**
-   - Laravel coding standards
-   - Architecture patterns
-   - Security best practices
-   - Performance optimization
-
-2. **laravel-module-structure**
-   - Module organization
-   - Directory structure
-   - Naming conventions
-   - Best practices
-
-3. **tailwindcss-development**
-   - Tailwind CSS guidelines
-   - Component patterns
-   - Responsive design
-
-### Skill Locations
-
-Skills are duplicated across directories for compatibility:
-- `.kiro/skills/` - Kiro
-- `.cursor/skills/` - Cursor
-- `.claude/skills/` - Claude
-
-**Note:** When updating skills, update all three locations or use symlinks.
-
-## Steering Files (Kiro Only)
-
-Steering files in `.kiro/steering/` are automatically included in Kiro's context.
-
-**Current files:**
+### `.kiro/steering/`
+Auto-included context files that are always available:
 - `module-structure.md` - Module structure guidelines
-
-**Frontmatter options:**
-```markdown
----
-inclusion: auto          # Always included
-inclusion: manual        # Only when referenced
-inclusion: fileMatch     # When specific files are in context
-priority: 100           # Loading priority
----
-```
 
 ## MCP Servers
 
@@ -131,17 +44,18 @@ Provides Laravel-specific tools and capabilities.
 
 **Features:**
 - Laravel project analysis
-- Code generation
-- Migration helpers
+- Code generation helpers
+- Migration tools
 - Route inspection
 
-### Adding New MCP Servers
+### Managing MCP Servers
 
-1. **For Kiro:** Edit `.kiro/settings/mcp.json`
-2. **For Cursor:** Edit `.cursor/mcp.json`
-3. **For shared:** Edit `.mcp.json`
+**Via Command Palette:**
+- "MCP: Manage Servers" - Open server management UI
+- "MCP: Reconnect Servers" - Reconnect all servers
 
-Example:
+**Via Configuration:**
+Edit `.kiro/settings/mcp.json`:
 ```json
 {
     "mcpServers": {
@@ -151,83 +65,130 @@ Example:
             "env": {
                 "ENV_VAR": "value"
             },
-            "disabled": false
+            "disabled": false,
+            "autoApprove": []
         }
     }
 }
 ```
 
-## Synchronizing Skills
+## Skills
 
-To keep skills synchronized across all assistants:
+Skills provide specialized knowledge that can be referenced in prompts.
 
-### Option 1: Manual Copy
-```bash
-# Copy from Kiro to others
-cp -r .kiro/skills/* .cursor/skills/
-cp -r .kiro/skills/* .claude/skills/
+### Using Skills
+
+Reference a skill in your prompt:
+```
+Use the laravel-module-structure skill to create a new module
 ```
 
-### Option 2: Symlinks (macOS/Linux)
-```bash
-# Remove existing and create symlinks
-rm -rf .cursor/skills .claude/skills
-ln -s .kiro/skills .cursor/skills
-ln -s .kiro/skills .claude/skills
+Or use the context selector:
+```
+#laravel-module-structure
 ```
 
-### Option 3: Git Hooks
-Create a pre-commit hook to sync automatically.
+### Available Skills
+
+#### laravel-best-practices
+Comprehensive Laravel coding standards covering:
+- Architecture patterns
+- Eloquent best practices
+- Security guidelines
+- Performance optimization
+- Testing strategies
+
+#### laravel-module-structure
+Module organization guidelines including:
+- Directory structure
+- Namespace conventions
+- Database folder locations
+- Service providers
+- Route attributes
+- Factory configuration
+
+#### tailwindcss-development
+Tailwind CSS development guidelines for:
+- Component patterns
+- Responsive design
+- Utility-first approach
+- Custom configurations
+
+### Adding New Skills
+
+1. Create directory: `.kiro/skills/skill-name/`
+2. Create `SKILL.md` with frontmatter:
+```markdown
+---
+name: Skill Name
+description: Brief description
+version: 1.0.0
+tags: [tag1, tag2]
+---
+
+# Skill content here
+```
+
+## Steering Files
+
+Steering files are automatically included in the AI context without explicit reference.
+
+### Current Steering Files
+
+**module-structure.md**
+- Auto-included module structure guidelines
+- Critical rules for module organization
+- Database folder location requirements
+
+### Frontmatter Options
+
+```markdown
+---
+inclusion: auto          # Always included
+priority: 100           # Higher priority = loaded first
+---
+```
+
+Other inclusion options:
+- `manual` - Only when explicitly referenced with #filename
+- `fileMatch` - Only when specific files are in context (with fileMatchPattern)
+
+### Adding New Steering Files
+
+1. Create file: `.kiro/steering/filename.md`
+2. Add frontmatter with inclusion settings
+3. Restart Kiro or reload window
 
 ## Best Practices
 
-1. **Primary Configuration:** Use `.kiro/` as the source of truth
-2. **Sync Skills:** Keep skills synchronized across all directories
-3. **MCP Servers:** Configure in `.kiro/settings/mcp.json` for Kiro-specific features
-4. **Documentation:** Update this file when adding new assistants or configurations
-5. **Version Control:** Commit all AI configuration directories
-
-## Choosing an Assistant
-
-### Use Kiro when:
-- Full IDE integration needed
-- Using hooks and automation
-- Need steering files
-- Primary development environment
-
-### Use Cursor when:
-- Prefer Cursor IDE
-- Need Cursor-specific features
-- Collaborative coding
-
-### Use Claude Desktop when:
-- Quick questions
-- Code review
-- Documentation writing
-- Outside IDE context
-
-## Resources
-
-- [Kiro Documentation](https://kiro.dev/docs)
-- [Cursor Documentation](https://cursor.sh/docs)
-- [Claude Documentation](https://claude.ai/docs)
-- [MCP Protocol](https://modelcontextprotocol.io)
-- [Laravel Boost](https://github.com/laravel/boost)
+1. **Skills for Reference** - Use skills for detailed guidelines that may not always be needed
+2. **Steering for Critical Rules** - Use steering files for rules that should always be followed
+3. **MCP for Tools** - Use MCP servers for executable tools and capabilities
+4. **Keep Updated** - Update skills and steering files as project conventions evolve
+5. **Document Changes** - Update this file when adding new configurations
 
 ## Troubleshooting
 
 ### Skills not loading
 - Check file structure matches expected format
 - Verify SKILL.md has proper frontmatter
-- Restart the AI assistant
+- Restart Kiro
 
 ### MCP server not connecting
-- Verify command is correct
-- Check server is installed
-- Review logs in assistant settings
-- Try reconnecting: "MCP: Reconnect Servers"
+- Verify command is correct: `php artisan boost:mcp`
+- Check Laravel Boost is installed
+- Review logs in Kiro settings
+- Try "MCP: Reconnect Servers"
 
 ### Steering files not included
-- Check frontmatter inclusion setting
+- Check frontmatter inclusion setting is `auto`
 - Verify file is in `.kiro/steering/`
 - Restart Kiro
+
+## Resources
+
+- [Kiro Documentation](https://kiro.dev/docs)
+- [MCP Protocol](https://modelcontextprotocol.io)
+- [Laravel Boost](https://github.com/laravel/boost)
+- `.kiro/README.md` - Detailed Kiro configuration guide
+- `MODULE_STRUCTURE.md` - Complete module structure documentation

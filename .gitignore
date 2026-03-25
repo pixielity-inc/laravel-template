@@ -40,3 +40,8 @@ Thumbs.db
 # Build and cache directories
 /build/
 /var/
+
+# Other AI assistants (we use Kiro only)
+/.cursor/
+/.claude/
+/.windsurf/
