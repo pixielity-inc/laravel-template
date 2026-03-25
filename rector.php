@@ -98,7 +98,7 @@ return RectorConfig::configure()
         // Don't make properties readonly in DTOs (they need to be mutable)
         ReadOnlyPropertyRector::class => [
             '*/Data/*',
-            '*/DTO/*',
+            '*/Dto/*',
             '*/Dtos/*',
             '*/DataTransferObjects/*',
         ],

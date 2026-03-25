@@ -3,7 +3,6 @@
 namespace Pixielity\Foundation\Concerns;
 
 use Illuminate\Support\Env;
-use Illuminate\Support\Facades\Request;
 
 use function is_string;
 

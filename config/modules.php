@@ -153,7 +153,6 @@ return [
             'model' => ['path' => 'src/Models', 'generate' => true],
             'service' => ['path' => 'src/Services', 'generate' => true],
             'repository' => ['path' => 'src/Repositories', 'generate' => true],
-            'interface' => ['path' => 'src/Interfaces', 'generate' => true],
             'contract' => ['path' => 'src/Contracts', 'generate' => false],
             'provider' => ['path' => 'src/Providers', 'generate' => true],
 
@@ -162,7 +161,7 @@ return [
             'cast' => ['path' => 'src/Casts', 'generate' => false],
             'channel' => ['path' => 'src/Broadcasting', 'generate' => false],
             'command' => ['path' => 'src/Console', 'generate' => false],
-            'component-class' => ['path' => 'src/Components', 'generate' => false],
+            // 'component-class' => ['path' => 'src/Components', 'generate' => false],
             'dto' => ['path' => 'src/DTOs', 'generate' => false],
             'enum' => ['path' => 'src/Enums', 'generate' => false],
             'event' => ['path' => 'src/Events', 'generate' => false],
