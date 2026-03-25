@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Authentication Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade authentication for headless API backend.
+ * | Configured for token-based authentication (Sanctum/Passport).
+ * |
+ */
+
 use App\Models\User;
 
 return [
@@ -13,10 +23,12 @@ return [
     | reset "broker" for your application. You may change these values
     | as required, but they're a perfect start for most applications.
     |
+    | API BACKEND: Use 'sanctum' or 'api' guard for token-based auth
+    |
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
+        'guard' => env('AUTH_GUARD', 'sanctum'),
         'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
     ],
 
@@ -33,7 +45,9 @@ return [
     | users are actually retrieved out of your database or other storage
     | system used by the application. Typically, Eloquent is utilized.
     |
-    | Supported: "session"
+    | API BACKEND: Sanctum for SPA/mobile, Passport for OAuth2
+    |
+    | Supported: "session", "token", "sanctum", "passport"
     |
     */
 
@@ -41,6 +55,17 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'sanctum' => [
+            'driver' => 'sanctum',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => true,
         ],
     ],
 
@@ -90,14 +115,16 @@ return [
     | generating more password reset tokens. This prevents the user from
     | quickly generating a very large amount of password reset tokens.
     |
+    | SECURITY: Short expiry (15-60 min) and throttle (60-300 sec) recommended
+    |
     */
 
     'passwords' => [
         'users' => [
             'provider' => 'users',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
-            'expire' => 60,
-            'throttle' => 60,
+            'expire' => (int) env('AUTH_PASSWORD_RESET_EXPIRE', 30),
+            'throttle' => (int) env('AUTH_PASSWORD_RESET_THROTTLE', 60),
         ],
     ],
 
@@ -110,8 +137,10 @@ return [
     | window expires and users are asked to re-enter their password via the
     | confirmation screen. By default, the timeout lasts for three hours.
     |
+    | SECURITY: Shorter timeout (900-3600 sec) for sensitive operations
+    |
     */
 
-    'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
+    'password_timeout' => (int) env('AUTH_PASSWORD_TIMEOUT', 3600),
 
 ];

@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Session Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade session configuration for headless API backend.
+ * | For pure API backends, sessions may not be needed (use token auth).
+ * | If needed for admin panels or mixed apps, use Redis for performance.
+ * |
+ */
+
 use Illuminate\Support\Str;
 
 return [
@@ -13,12 +24,14 @@ return [
     | incoming requests. Laravel supports a variety of storage options to
     | persist session data. Database storage is a great default choice.
     |
+    | API BACKEND: Use 'redis' for performance, or 'cookie' for stateless
+    |
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'database'),
+    'driver' => env('SESSION_DRIVER', 'redis'),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,11 +43,13 @@ return [
     | to expire immediately when the browser is closed then you may
     | indicate that via the expire_on_close configuration option.
     |
+    | API BACKEND: Shorter lifetime (60-120 min) for better security
+    |
     */
 
     'lifetime' => (int) env('SESSION_LIFETIME', 120),
 
-    'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
+    'expire_on_close' => (bool) env('SESSION_EXPIRE_ON_CLOSE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,9 +60,11 @@ return [
     | should be encrypted before it's stored. All encryption is performed
     | automatically by Laravel and you may use the session like normal.
     |
+    | SECURITY: Enable for sensitive data, but adds overhead
+    |
     */
 
-    'encrypt' => env('SESSION_ENCRYPT', false),
+    'encrypt' => (bool) env('SESSION_ENCRYPT', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -167,9 +184,11 @@ return [
     | to the server if the browser has a HTTPS connection. This will keep
     | the cookie from being sent to you when it can't be done securely.
     |
+    | SECURITY: MUST be true in production with HTTPS
+    |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE'),
+    'secure' => (bool) env('SESSION_SECURE_COOKIE', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -180,9 +199,11 @@ return [
     | value of the cookie and the cookie will only be accessible through
     | the HTTP protocol. It's unlikely you should disable this option.
     |
+    | SECURITY: MUST be true to prevent XSS attacks
+    |
     */
 
-    'http_only' => env('SESSION_HTTP_ONLY', true),
+    'http_only' => (bool) env('SESSION_HTTP_ONLY', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -192,6 +213,8 @@ return [
     | This option determines how your cookies behave when cross-site requests
     | take place, and can be used to mitigate CSRF attacks. By default, we
     | will set this value to "lax" to permit secure cross-site requests.
+    |
+    | API BACKEND: Use 'strict' for same-origin, 'none' for cross-origin
     |
     | See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
     |
@@ -212,7 +235,7 @@ return [
     |
     */
 
-    'partitioned' => env('SESSION_PARTITIONED_COOKIE', false),
+    'partitioned' => (bool) env('SESSION_PARTITIONED_COOKIE', false),
 
     /*
     |--------------------------------------------------------------------------

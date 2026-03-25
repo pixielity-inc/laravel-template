@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Filesystem Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade filesystem configuration for headless API backend.
+ * | S3-compatible storage (MinIO/AWS S3) recommended for production.
+ * |
+ */
+
 return [
 
     /*
@@ -11,9 +21,11 @@ return [
     | by the framework. The "local" disk, as well as a variety of cloud
     | based disks are available to your application for file storage.
     |
+    | PRODUCTION: Use 's3' for scalable cloud storage
+    |
     */
 
-    'default' => env('FILESYSTEM_DISK', 'local'),
+    'default' => env('FILESYSTEM_DISK', 's3'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,9 +67,10 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
-            'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
-            'throw' => false,
-            'report' => false,
+            'use_path_style_endpoint' => (bool) env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+            'throw' => (bool) env('FILESYSTEM_THROW', false),
+            'report' => (bool) env('FILESYSTEM_REPORT', false),
+            'visibility' => env('AWS_VISIBILITY', 'private'),
         ],
 
     ],

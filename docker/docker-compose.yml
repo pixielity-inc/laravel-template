@@ -14,7 +14,7 @@
 
 include:
   # Core application
-  - path: compose.app.yml
+  # - path: compose.app.yml
 
   # Database services
   - path: services/compose.postgres.yml
@@ -32,8 +32,8 @@ include:
   - path: services/compose.mailpit.yml
 
   # WebSocket & Workers
-  - path: services/compose.reverb.yml
-  - path: services/compose.workers.yml
+  # - path: services/compose.reverb.yml
+  # - path: services/compose.workers.yml
 
 # Optional services (uncomment to enable):
   # - path: services/compose.mysql.yml

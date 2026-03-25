@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Cache Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade caching for headless API backend.
+ * | Redis recommended for performance and distributed caching.
+ * |
+ */
+
 use Illuminate\Support\Str;
 
 return [
@@ -13,9 +23,11 @@ return [
     | framework. This connection is utilized if another isn't explicitly
     | specified when running a cache operation inside the application.
     |
+    | PRODUCTION: Use 'redis' for best performance and distributed caching
+    |
     */
 
-    'default' => env('CACHE_STORE', 'database'),
+    'default' => env('CACHE_STORE', 'redis'),
 
     /*
     |--------------------------------------------------------------------------
@@ -110,9 +122,11 @@ return [
     | stores, there might be other applications using the same cache. For
     | that reason, you may prefix every cache key to avoid collisions.
     |
+    | PRODUCTION: Include environment in prefix for multi-environment setups
+    |
     */
 
-    'prefix' => env('CACHE_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '-cache-'),
+    'prefix' => env('CACHE_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '_cache'),
 
     /*
     |--------------------------------------------------------------------------
@@ -123,8 +137,10 @@ return [
     | storage. By default, no PHP classes will be unserialized from your
     | cache to prevent gadget chain attacks if your APP_KEY is leaked.
     |
+    | SECURITY: Keep false unless you explicitly need object serialization
+    |
     */
 
-    'serializable_classes' => false,
+    'serializable_classes' => env('CACHE_SERIALIZABLE_CLASSES', false),
 
 ];

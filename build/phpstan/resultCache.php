@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1774432451,
+	'lastFullAnalysisTime' => 1774434621,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.43',
@@ -23,7 +23,7 @@ return [
   ),
   'composerLocks' => 
   array (
-    '/Users/akouta/Projects/MNGO/laravel-template/composer.lock' => '925453f2f88d386e3c3a860c0f3cd54b533879647c8e6f106cde79950d321503',
+    '/Users/akouta/Projects/MNGO/laravel-template/composer.lock' => 'c4c4345d96b3527a500f66d8f825b94c525908b69a3ad10d1b2116c8e9e6a08d',
   ),
   'composerInstalled' => 
   array (
@@ -967,6 +967,18 @@ return [
           ),
           'dev_requirement' => true,
         ),
+        'modules/samplemodule' => 
+        array (
+          'pretty_version' => 'dev-main',
+          'version' => 'dev-main',
+          'reference' => 'f8d75b6991c6970b7e70f733fc609053a18837b3',
+          'type' => 'library',
+          'install_path' => '/Users/akouta/Projects/MNGO/laravel-template/vendor/composer/../modules/samplemodule',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'monolog/monolog' => 
         array (
           'pretty_version' => '3.10.0',
@@ -1418,6 +1430,18 @@ return [
           array (
           ),
           'dev_requirement' => true,
+        ),
+        'predis/predis' => 
+        array (
+          'pretty_version' => 'v3.4.2',
+          'version' => '3.4.2.0',
+          'reference' => '2033429520d8997a7815a2485f56abe6d2d0e075',
+          'type' => 'library',
+          'install_path' => '/Users/akouta/Projects/MNGO/laravel-template/vendor/composer/../predis/predis',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => false,
         ),
         'psr/cache' => 
         array (
@@ -2777,116 +2801,8 @@ return [
 	'locallyIgnoredErrorsCallback' => static function (): array { return array (
 ); },
 	'linesToIgnore' => array (
-  '/Users/akouta/Projects/MNGO/laravel-template/config/app.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/auth.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/cache.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/database.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/debugbar.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/logging.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/mail.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/modules.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/queue.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/session.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/tinker.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/factories/UserFactory.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/migrations/0001_01_01_000000_create_users_table.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/migrations/0001_01_01_000001_create_cache_table.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/migrations/0001_01_01_000002_create_jobs_table.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/seeders/DatabaseSeeder.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/src/Http/Controllers/Controller.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/src/Models/User.php' => 
-  array (
-  ),
 ),
 	'unmatchedLineIgnores' => array (
-  '/Users/akouta/Projects/MNGO/laravel-template/config/app.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/auth.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/cache.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/database.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/debugbar.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/logging.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/mail.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/modules.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/queue.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/session.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/tinker.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/factories/UserFactory.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/migrations/0001_01_01_000000_create_users_table.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/migrations/0001_01_01_000001_create_cache_table.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/migrations/0001_01_01_000002_create_jobs_table.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/database/seeders/DatabaseSeeder.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/src/Http/Controllers/Controller.php' => 
-  array (
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/src/Models/User.php' => 
-  array (
-  ),
 ),
 	'collectedDataCallback' => static function (): array { return array (
   '/Users/akouta/Projects/MNGO/laravel-template/database/seeders/DatabaseSeeder.php' => 
@@ -2926,56 +2842,56 @@ return [
 	'dependencies' => array (
   '/Users/akouta/Projects/MNGO/laravel-template/config/app.php' => 
   array (
-    'fileHash' => '78dcd36b226fd7b24057cb95f567cb6e96561c2406653892d8aef6dcea8461e4',
+    'fileHash' => '10ce94609a9883d158585b6da7189502bb0a59c5722346fc89f4d711c8d15c7b',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/auth.php' => 
   array (
-    'fileHash' => 'c7e204e9785c9f596d66fb884b493f658f2327f157646bdb4088efd6b3a7773f',
+    'fileHash' => 'f6fe94d07caefc44094dc918f56481d7fbaaae98fa4d79b6ca256840ebb3ef4d',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/cache.php' => 
   array (
-    'fileHash' => '3b7aabe59e43942d429da534f9466fdb4ae583d4276a9cf99ed6dd72b502c5a7',
+    'fileHash' => 'bedd10153075bfbd38c8ed8d433d16cab6b4632c565376981e635354267a2687',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/akouta/Projects/MNGO/laravel-template/config/cors.php' => 
+  array (
+    'fileHash' => '5b1b97cfc9d967d020f3cdd7119a300e3202a958a2d0a19c25999314be3acd69',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/database.php' => 
   array (
-    'fileHash' => 'fa62d9e5094fba4c0461bda4f8fcc107c0dc1592599afbf8a1a3ffdb803833db',
-    'dependentFiles' => 
-    array (
-    ),
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/debugbar.php' => 
-  array (
-    'fileHash' => '5b97e180b53217c26b882a4841f10a0d9c6e1f2182d48af3df4619843cb02f2f',
+    'fileHash' => 'a782222c8ad924b0398e5e8c64a60c85ebbcb2605eb8e03779596da4e80039c0',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/filesystems.php' => 
   array (
-    'fileHash' => 'e82bbcdb8ea19bc69194b627b28584abf4c8b24b569009e8e060bf3718170853',
+    'fileHash' => 'e73557165ab52496b4e51bed93c9fd4c86b5b7b182131f59427f2ebdc2880236',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/logging.php' => 
   array (
-    'fileHash' => '1450f2cde7cb4ebb7a05f5a830c83f8dcd5b1222d3fc7b9a1f3381df487e16c1',
+    'fileHash' => '35b3d1ebac06f3c4790479e58a1d395127360a94e62e6ade71b9f5bf33a116fc',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/mail.php' => 
   array (
-    'fileHash' => 'c43ff49a31c5f32ce21eb7159f2a4b3cd2f4074eaed5838d265646dbfedd3474',
+    'fileHash' => '7b014efe6a30b5fa3aeaad70a9251d6584374d7b3790c6fc14e9c2cd9ddb6252',
     'dependentFiles' => 
     array (
     ),
@@ -2989,21 +2905,14 @@ return [
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/queue.php' => 
   array (
-    'fileHash' => '6101774da7c8b79af46d0028f2b8b31a484c3f7eda10b76e5b27b6093ad364a4',
+    'fileHash' => '9e7cd20e918f4b31b5e8892e2b30172638314f74317989462d74766c6d09c1cf',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/config/session.php' => 
   array (
-    'fileHash' => '3671a42041f5e26146f7a65a9bdf47681b3a488b58a410992c91adadec16865a',
-    'dependentFiles' => 
-    array (
-    ),
-  ),
-  '/Users/akouta/Projects/MNGO/laravel-template/config/tinker.php' => 
-  array (
-    'fileHash' => '6dcdc615f564316feb5da68fa395320396548fb983c53a93da585bb681e767b9',
+    'fileHash' => '5336ed8493374330940894cac33d782aa6934f2ce9a21b9787fee5302ba7ca80',
     'dependentFiles' => 
     array (
     ),
@@ -3044,11 +2953,21 @@ return [
     array (
     ),
   ),
+  '/Users/akouta/Projects/MNGO/laravel-template/modules/SampleModule/src/Providers/SampleModuleServiceProvider.php' => 
+  array (
+    'fileHash' => 'd46a75e9bcbb1b1cc77cad251e310b4e1e89da560fd00fb775072b15b46c7975',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
   '/Users/akouta/Projects/MNGO/laravel-template/src/Http/Controllers/Controller.php' => 
   array (
     'fileHash' => '11c9cc2e593c2fb6fe98adb5100d8c31fa99d66511b738646d99e2df12e33d22',
     'dependentFiles' => 
     array (
+      0 => '/Users/akouta/Projects/MNGO/laravel-template/modules/SampleModule/routes/api.php',
+      1 => '/Users/akouta/Projects/MNGO/laravel-template/modules/SampleModule/routes/web.php',
+      2 => '/Users/akouta/Projects/MNGO/laravel-template/modules/SampleModule/src/Http/Controllers/SampleModuleController.php',
     ),
   ),
   '/Users/akouta/Projects/MNGO/laravel-template/src/Models/User.php' => 
@@ -3267,6 +3186,151 @@ return [
           array (
           ),
            'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/akouta/Projects/MNGO/laravel-template/modules/SampleModule/src/Providers/SampleModuleServiceProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'Pixielity\\SampleModule\\Providers\\SampleModuleServiceProvider',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Nwidart\\Modules\\Support\\ModuleServiceProvider',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'name',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The name of the module.
+     */',
+             'namespace' => 'Pixielity\\SampleModule\\Providers',
+             'uses' => 
+            array (
+              'schedule' => 'Illuminate\\Console\\Scheduling\\Schedule',
+              'moduleserviceprovider' => 'Nwidart\\Modules\\Support\\ModuleServiceProvider',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'nameLower',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The lowercase version of the module name.
+     */',
+             'namespace' => 'Pixielity\\SampleModule\\Providers',
+             'uses' => 
+            array (
+              'schedule' => 'Illuminate\\Console\\Scheduling\\Schedule',
+              'moduleserviceprovider' => 'Nwidart\\Modules\\Support\\ModuleServiceProvider',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'providers',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Provider classes to register.
+     *
+     * @var string[]
+     */',
+             'namespace' => 'Pixielity\\SampleModule\\Providers',
+             'uses' => 
+            array (
+              'schedule' => 'Illuminate\\Console\\Scheduling\\Schedule',
+              'moduleserviceprovider' => 'Nwidart\\Modules\\Support\\ModuleServiceProvider',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => 'array',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
           array (
           ),
         )),

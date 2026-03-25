@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Application Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade configuration for headless API backend.
+ * | Optimized for security, performance, and API-first architecture.
+ * |
+ */
+
 return [
 
     /*
@@ -24,6 +34,8 @@ return [
     | running in. This may determine how you prefer to configure various
     | services the application utilizes. Set this in your ".env" file.
     |
+    | PRODUCTION: Always set to 'production' in production environments
+    |
     */
 
     'env' => env('APP_ENV', 'production'),
@@ -36,6 +48,8 @@ return [
     | When your application is in debug mode, detailed error messages with
     | stack traces will be shown on every error that occurs within your
     | application. If disabled, a simple generic error page is shown.
+    |
+    | SECURITY: MUST be false in production to prevent information disclosure
     |
     */
 
@@ -114,13 +128,27 @@ return [
     | manage Laravel's "maintenance mode" status. The "cache" driver will
     | allow maintenance mode to be controlled across multiple machines.
     |
+    | PRODUCTION: Use 'cache' for distributed systems, 'file' for single server
+    |
     | Supported drivers: "file", "cache"
     |
     */
 
     'maintenance' => [
-        'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
-        'store' => env('APP_MAINTENANCE_STORE', 'database'),
+        'driver' => env('APP_MAINTENANCE_DRIVER', 'cache'),
+        'store' => env('APP_MAINTENANCE_STORE', 'redis'),
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Asset URL
+    |--------------------------------------------------------------------------
+    |
+    | Configure the URL used by the application when generating URLs to assets.
+    | Useful when using a CDN or serving assets from a different domain.
+    |
+    */
+
+    'asset_url' => env('ASSET_URL'),
 
 ];

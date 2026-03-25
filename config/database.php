@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Database Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade database configuration for headless API backend.
+ * | PostgreSQL recommended for production, optimized for performance.
+ * |
+ */
+
 use Illuminate\Support\Str;
 use Pdo\Mysql;
 
@@ -15,9 +25,11 @@ return [
     | the connection which will be utilized unless another connection
     | is explicitly specified when you execute a query / statement.
     |
+    | PRODUCTION: Use 'pgsql' (PostgreSQL) for production environments
+    |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,9 +70,11 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            'engine' => env('DB_ENGINE', 'InnoDB'),
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 (PHP_VERSION_ID >= 80500 ? Mysql::ATTR_SSL_CA : PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
+                PDO::ATTR_TIMEOUT => env('DB_TIMEOUT', 30),
+                PDO::ATTR_PERSISTENT => env('DB_PERSISTENT', false),
             ]) : [],
         ],
 
@@ -95,8 +109,12 @@ return [
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
-            'search_path' => 'public',
+            'search_path' => env('DB_SEARCH_PATH', 'public'),
             'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'options' => extension_loaded('pdo_pgsql') ? array_filter([
+                PDO::ATTR_TIMEOUT => env('DB_TIMEOUT', 30),
+                PDO::ATTR_PERSISTENT => env('DB_PERSISTENT', false),
+            ]) : [],
         ],
 
         'sqlsrv' => [
@@ -149,8 +167,10 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '-database-'),
-            'persistent' => env('REDIS_PERSISTENT', false),
+            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '_database'),
+            'persistent' => env('REDIS_PERSISTENT', true),
+            'timeout' => env('REDIS_TIMEOUT', 5.0),
+            'read_timeout' => env('REDIS_READ_TIMEOUT', 5.0),
         ],
 
         'default' => [

@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/Users/akouta/Projects/MNGO/laravel-template/config/app.php' => 
     array (
-      0 => '78dcd36b226fd7b24057cb95f567cb6e96561c2406653892d8aef6dcea8461e4',
+      0 => '10ce94609a9883d158585b6da7189502bb0a59c5722346fc89f4d711c8d15c7b',
       1 => 
       array (
       ),
@@ -20,7 +20,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/auth.php' => 
     array (
-      0 => 'c7e204e9785c9f596d66fb884b493f658f2327f157646bdb4088efd6b3a7773f',
+      0 => 'f6fe94d07caefc44094dc918f56481d7fbaaae98fa4d79b6ca256840ebb3ef4d',
       1 => 
       array (
       ),
@@ -33,7 +33,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/cache.php' => 
     array (
-      0 => '3b7aabe59e43942d429da534f9466fdb4ae583d4276a9cf99ed6dd72b502c5a7',
+      0 => 'bedd10153075bfbd38c8ed8d433d16cab6b4632c565376981e635354267a2687',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/akouta/Projects/MNGO/laravel-template/config/cors.php' => 
+    array (
+      0 => '5b1b97cfc9d967d020f3cdd7119a300e3202a958a2d0a19c25999314be3acd69',
       1 => 
       array (
       ),
@@ -46,20 +59,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/database.php' => 
     array (
-      0 => 'fa62d9e5094fba4c0461bda4f8fcc107c0dc1592599afbf8a1a3ffdb803833db',
-      1 => 
-      array (
-      ),
-      2 => 
-      array (
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    '/Users/akouta/Projects/MNGO/laravel-template/config/debugbar.php' => 
-    array (
-      0 => '5b97e180b53217c26b882a4841f10a0d9c6e1f2182d48af3df4619843cb02f2f',
+      0 => 'a782222c8ad924b0398e5e8c64a60c85ebbcb2605eb8e03779596da4e80039c0',
       1 => 
       array (
       ),
@@ -72,7 +72,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/filesystems.php' => 
     array (
-      0 => 'e82bbcdb8ea19bc69194b627b28584abf4c8b24b569009e8e060bf3718170853',
+      0 => 'e73557165ab52496b4e51bed93c9fd4c86b5b7b182131f59427f2ebdc2880236',
       1 => 
       array (
       ),
@@ -85,7 +85,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/logging.php' => 
     array (
-      0 => '1450f2cde7cb4ebb7a05f5a830c83f8dcd5b1222d3fc7b9a1f3381df487e16c1',
+      0 => '35b3d1ebac06f3c4790479e58a1d395127360a94e62e6ade71b9f5bf33a116fc',
       1 => 
       array (
       ),
@@ -98,7 +98,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/mail.php' => 
     array (
-      0 => 'c43ff49a31c5f32ce21eb7159f2a4b3cd2f4074eaed5838d265646dbfedd3474',
+      0 => '7b014efe6a30b5fa3aeaad70a9251d6584374d7b3790c6fc14e9c2cd9ddb6252',
       1 => 
       array (
       ),
@@ -124,7 +124,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/queue.php' => 
     array (
-      0 => '6101774da7c8b79af46d0028f2b8b31a484c3f7eda10b76e5b27b6093ad364a4',
+      0 => '9e7cd20e918f4b31b5e8892e2b30172638314f74317989462d74766c6d09c1cf',
       1 => 
       array (
       ),
@@ -137,20 +137,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/akouta/Projects/MNGO/laravel-template/config/session.php' => 
     array (
-      0 => '3671a42041f5e26146f7a65a9bdf47681b3a488b58a410992c91adadec16865a',
-      1 => 
-      array (
-      ),
-      2 => 
-      array (
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    '/Users/akouta/Projects/MNGO/laravel-template/config/tinker.php' => 
-    array (
-      0 => '6dcdc615f564316feb5da68fa395320396548fb983c53a93da585bb681e767b9',
+      0 => '5336ed8493374330940894cac33d782aa6934f2ce9a21b9787fee5302ba7ca80',
       1 => 
       array (
       ),

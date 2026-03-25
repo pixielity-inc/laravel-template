@@ -10103,8 +10103,8 @@ class Container_3f1f9d1efc extends _PHPStan_b6c48a07e\Nette\DI\Container
 				'BAT_PAGER' => '',
 				'SECURITYSESSIONID' => '186b6',
 				'COLORTERM' => 'truecolor',
-				'LINES' => '31',
-				'COLUMNS' => '113',
+				'LINES' => '25',
+				'COLUMNS' => '90',
 			],
 		];
 	}

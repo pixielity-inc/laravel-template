@@ -2,8 +2,8 @@
 
 namespace Pixielity\SampleModule\Providers;
 
-use Nwidart\Modules\Support\ModuleServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;
+use Nwidart\Modules\Support\ModuleServiceProvider;
 
 class SampleModuleServiceProvider extends ModuleServiceProvider
 {
@@ -30,14 +30,12 @@ class SampleModuleServiceProvider extends ModuleServiceProvider
      * @var string[]
      */
     protected array $providers = [
-        EventServiceProvider::class,
-        RouteServiceProvider::class,
     ];
 
     /**
      * Define module schedules.
-     * 
-     * @param $schedule
+     *
+     * @param  $schedule
      */
     // protected function configureSchedules(Schedule $schedule): void
     // {

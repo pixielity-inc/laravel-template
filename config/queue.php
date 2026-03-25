@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Queue Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade queue configuration for headless API backend.
+ * | Redis recommended for performance and reliability.
+ * |
+ */
+
 return [
 
     /*
@@ -11,9 +21,11 @@ return [
     | API, giving you convenient access to each backend using identical
     | syntax for each. The default queue connection is defined below.
     |
+    | PRODUCTION: Use 'redis' for best performance and reliability
+    |
     */
 
-    'default' => env('QUEUE_CONNECTION', 'database'),
+    'default' => env('QUEUE_CONNECTION', 'redis'),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,8 +81,8 @@ return [
             'connection' => env('REDIS_QUEUE_CONNECTION', 'default'),
             'queue' => env('REDIS_QUEUE', 'default'),
             'retry_after' => (int) env('REDIS_QUEUE_RETRY_AFTER', 90),
-            'block_for' => null,
-            'after_commit' => false,
+            'block_for' => (int) env('REDIS_QUEUE_BLOCK_FOR', 5),
+            'after_commit' => (bool) env('QUEUE_AFTER_COMMIT', false),
         ],
 
         'deferred' => [

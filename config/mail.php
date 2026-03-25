@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Mail Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade mail configuration for headless API backend.
+ * | Configure SMTP or transactional email service for production.
+ * |
+ */
+
 return [
 
     /*
@@ -12,9 +22,11 @@ return [
     | the message. All additional mailers can be configured within the
     | "mailers" array. Examples of each type of mailer are provided.
     |
+    | PRODUCTION: Use 'smtp' or transactional service (ses, postmark, etc.)
+    |
     */
 
-    'default' => env('MAIL_MAILER', 'log'),
+    'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,11 +54,12 @@ return [
             'scheme' => env('MAIL_SCHEME'),
             'url' => env('MAIL_URL'),
             'host' => env('MAIL_HOST', '127.0.0.1'),
-            'port' => env('MAIL_PORT', 2525),
+            'port' => (int) env('MAIL_PORT', 587),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
-            'timeout' => null,
+            'timeout' => (int) env('MAIL_TIMEOUT', 30),
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url((string) env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
         ],
 
         'ses' => [

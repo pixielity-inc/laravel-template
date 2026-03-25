@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * |--------------------------------------------------------------------------
+ * | Logging Configuration - Production API Backend
+ * |--------------------------------------------------------------------------
+ * |
+ * | Production-grade logging for headless API backend.
+ * | Structured logging with appropriate retention and levels.
+ * |
+ */
+
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -16,6 +26,8 @@ return [
     | messages to your logs. The value provided here should match one of
     | the channels present in the list of "channels" configured below.
     |
+    | PRODUCTION: Use 'stack' for multiple outputs or 'daily' for rotation
+    |
     */
 
     'default' => env('LOG_CHANNEL', 'stack'),
@@ -29,11 +41,13 @@ return [
     | regarding deprecated PHP and library features. This allows you to get
     | your application ready for upcoming major versions of dependencies.
     |
+    | PRODUCTION: Use 'null' to disable or 'daily' to track deprecations
+    |
     */
 
     'deprecations' => [
         'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
-        'trace' => env('LOG_DEPRECATIONS_TRACE', false),
+        'trace' => (bool) env('LOG_DEPRECATIONS_TRACE', false),
     ],
 
     /*
@@ -61,16 +75,18 @@ return [
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
-            'level' => env('LOG_LEVEL', 'debug'),
+            'level' => env('LOG_LEVEL', 'info'),
             'replace_placeholders' => true,
+            'permission' => 0644,
         ],
 
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
-            'level' => env('LOG_LEVEL', 'debug'),
-            'days' => env('LOG_DAILY_DAYS', 14),
+            'level' => env('LOG_LEVEL', 'info'),
+            'days' => (int) env('LOG_DAILY_DAYS', 14),
             'replace_placeholders' => true,
+            'permission' => 0644,
         ],
 
         'slack' => [
