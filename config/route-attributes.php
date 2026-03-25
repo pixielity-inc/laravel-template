@@ -6,13 +6,15 @@ return [
     /*
      *  Automatic registration of routes will only happen if this setting is `true`
      */
-    'enabled' => false,
+    'enabled' => true,
 
     /*
      * Controllers in these directories that have routing attributes
      * will automatically be registered.
      */
-    'directories' => [],
+    'directories' => [
+        app_path('../modules/foundation/src/Controllers'),
+    ],
 
     /*
      * This middleware will be applied to all routes.

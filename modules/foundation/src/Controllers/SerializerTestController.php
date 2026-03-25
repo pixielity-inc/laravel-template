@@ -8,6 +8,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Pixielity\Support\Facades\Json;
 use Pixielity\Support\Facades\Serializer;
+use Spatie\RouteAttributes\Attributes\Get;
+use Spatie\RouteAttributes\Attributes\Prefix;
 
 /**
  * Serializer Test Controller.
@@ -22,6 +24,7 @@ use Pixielity\Support\Facades\Serializer;
  *
  * @since   1.0.0
  */
+#[Prefix('/api/test/serializer')]
 class SerializerTestController extends Controller
 {
     /**
@@ -29,6 +32,7 @@ class SerializerTestController extends Controller
      *
      * @return JsonResponse
      */
+    #[Get('/', name: 'foundation.api.test.serializer.index')]
     public function index(): JsonResponse
     {
         return response()->json([
@@ -48,6 +52,7 @@ class SerializerTestController extends Controller
      *
      * @return JsonResponse
      */
+    #[Get('/php', name: 'foundation.api.test.serializer.php')]
     public function testPhpSerializer(): JsonResponse
     {
         $results = [];
@@ -160,6 +165,7 @@ class SerializerTestController extends Controller
      *
      * @return JsonResponse
      */
+    #[Get('/json', name: 'foundation.api.test.serializer.json')]
     public function testJsonSerializer(): JsonResponse
     {
         $results = [];
@@ -286,6 +292,7 @@ class SerializerTestController extends Controller
      *
      * @return JsonResponse
      */
+    #[Get('/all', name: 'foundation.api.test.serializer.all')]
     public function testAll(): JsonResponse
     {
         $phpTests = $this->testPhpSerializer()->getData(true);

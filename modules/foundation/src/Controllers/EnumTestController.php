@@ -8,9 +8,13 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Pixielity\Foundation\Enums\OrderStatus;
 use Pixielity\Foundation\Enums\UserStatus;
+use Spatie\RouteAttributes\Attributes\Get;
+use Spatie\RouteAttributes\Attributes\Prefix;
 
+#[Prefix('/api/test/enums')]
 class EnumTestController extends Controller
 {
+    #[Get('/', name: 'foundation.api.test.enums.index')]
     public function index(): JsonResponse
     {
         return response()->json([
@@ -23,6 +27,7 @@ class EnumTestController extends Controller
         ]);
     }
 
+    #[Get('/user-status', name: 'foundation.api.test.enums.user-status')]
     public function userStatus(): JsonResponse
     {
         $data = [];
@@ -45,6 +50,7 @@ class EnumTestController extends Controller
         ]);
     }
 
+    #[Get('/order-status', name: 'foundation.api.test.enums.order-status')]
     public function orderStatus(): JsonResponse
     {
         $data = [];
@@ -67,6 +73,7 @@ class EnumTestController extends Controller
         ]);
     }
 
+    #[Get('/all', name: 'foundation.api.test.enums.all')]
     public function all(): JsonResponse
     {
         return response()->json([

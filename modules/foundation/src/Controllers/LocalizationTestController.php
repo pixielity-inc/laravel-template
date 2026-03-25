@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
+use Spatie\RouteAttributes\Attributes\Get;
+use Spatie\RouteAttributes\Attributes\Prefix;
 
 /**
  * Localization Test Controller.
@@ -20,11 +22,13 @@ use Illuminate\Support\Facades\Config;
  * - Available locales configuration
  * - Translation functionality
  */
+#[Prefix('/api/test/localization')]
 class LocalizationTestController extends Controller
 {
     /**
      * Test index - shows all available localization tests.
      */
+    #[Get('/', name: 'foundation.api.test.localization.index')]
     public function index(): JsonResponse
     {
         return response()->json([
@@ -48,6 +52,7 @@ class LocalizationTestController extends Controller
     /**
      * Get current locale and timezone information.
      */
+    #[Get('/current', name: 'foundation.api.test.localization.current')]
     public function current(Request $request): JsonResponse
     {
         return response()->json([
@@ -80,6 +85,7 @@ class LocalizationTestController extends Controller
     /**
      * Get available locales configuration.
      */
+    #[Get('/available', name: 'foundation.api.test.localization.available')]
     public function available(): JsonResponse
     {
         $locales = Config::get('localization.locales', []);
@@ -115,6 +121,7 @@ class LocalizationTestController extends Controller
     /**
      * Test locale detection from various sources.
      */
+    #[Get('/headers', name: 'foundation.api.test.localization.headers')]
     public function testHeaders(Request $request): JsonResponse
     {
         $tests = [];
@@ -168,6 +175,7 @@ class LocalizationTestController extends Controller
     /**
      * Test timezone functionality.
      */
+    #[Get('/timezone', name: 'foundation.api.test.localization.timezone')]
     public function testTimezone(Request $request): JsonResponse
     {
         $currentTimezone = date_default_timezone_get();
@@ -223,6 +231,7 @@ class LocalizationTestController extends Controller
     /**
      * Run all localization tests.
      */
+    #[Get('/all', name: 'foundation.api.test.localization.all')]
     public function testAll(Request $request): JsonResponse
     {
         return response()->json([
