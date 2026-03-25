@@ -27,6 +27,10 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
+# Module vendor directories
+/modules/*/vendor/
+/modules/*/composer.lock
+
 # Environments folder - ignore all .env files but track .example files
 /environments/.env
 /environments/.env.*
