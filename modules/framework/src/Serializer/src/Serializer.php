@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Pixielity\Serializer;
 
-use Pixielity\Framework\Serializer\Contracts\SerializerInterface;
+use Pixielity\Serializer\Contracts\SerializerInterface;
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;

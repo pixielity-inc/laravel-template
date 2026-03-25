@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Serializer;
 
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
-use Pixielity\Framework\Serializer\Contracts\JsonInterface;
+use Pixielity\Serializer\Contracts\JsonInterface;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
 use Throwable;

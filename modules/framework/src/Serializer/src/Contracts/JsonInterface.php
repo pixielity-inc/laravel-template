@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Pixielity\Framework\Serializer\Contracts;
+namespace Pixielity\Serializer\Contracts;
 
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Illuminate\Container\Attributes\Singleton;
