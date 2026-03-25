@@ -58,7 +58,6 @@ class FoundationServiceProvider extends ModuleServiceProvider
         // Pass the router and config from the container
         $registrar = new RouteRegistrar(
             $this->app->make('router'),
-            $this->app->make('config')
         );
 
         // Use Discovery to find all controllers with #[AsController] attribute

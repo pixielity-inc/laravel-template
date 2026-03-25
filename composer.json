@@ -178,7 +178,9 @@
                 "{vendor}/pixielity/laravel-foundation/src/Controllers",
                 "{vendor}/pixielity/laravel-foundation/src/Concerns",
                 "{vendor}/pixielity/laravel-foundation/src/Contracts",
-                "{vendor}/pixielity/laravel-foundation/src/Traits"
+                "{vendor}/pixielity/laravel-foundation/src/Traits",
+                "modules/framework/src/*/src",
+                "modules/foundation/src/Controllers"
             ]
         }
     },
