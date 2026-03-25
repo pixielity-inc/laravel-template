@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Pixielity\Framework\Serializer\Contracts\JsonInterface;
+use Pixielity\Serializer\Contracts\JsonInterface;
 
 /**
  * Json Facade.

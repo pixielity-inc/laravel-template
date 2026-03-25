@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Pixielity\Framework\Serializer\Contracts\SerializerInterface;
+use Pixielity\Serializer\Contracts\SerializerInterface;
 
 /**
  * Serializer Facade.
