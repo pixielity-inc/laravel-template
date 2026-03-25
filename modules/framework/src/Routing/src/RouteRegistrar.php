@@ -4,6 +4,7 @@ namespace Pixielity\Routing;
 
 use Illuminate\Support\Collection;
 use Override;
+use Pixielity\Container\Attributes\Bind;
 use Pixielity\Discovery\Facades\Discovery;
 use Pixielity\Routing\Attributes\AsController;
 use Pixielity\Support\Reflection;
@@ -13,22 +14,26 @@ use Spatie\RouteAttributes\RouteRegistrar as SpatieRouteRegistrar;
 /**
  * Route Registrar.
  *
- * Extends Spatie's RouteRegistrar to provide a simplified interface for
- * registering controllers with route attributes. This class focuses solely
- * on registration - discovery is handled by the HasRoutes trait.
+ * Extends Spatie's RouteRegistrar to provide Discovery-based controller registration
+ * using the #[AsController] attribute instead of directory scanning.
+ *
+ * ## Automatic Binding:
+ * This class is automatically bound to Spatie\RouteAttributes\RouteRegistrar
+ * via the #[Bind] attribute, so Spatie's service provider will use our
+ * implementation instead of theirs.
  *
  * ## Purpose:
- * - Wrap Spatie's RouteRegistrar with a cleaner API
- * - Register controllers by class name (single or multiple)
- * - Integrate with Spatie's attribute-based routing system
- * - Use custom ClassRouteAttributes for proper prefix combination
+ * - Override Spatie's directory scanning with Discovery-based attribute scanning
+ * - Use custom #[AsController] attribute for controller discovery
+ * - Leverage composer-attribute-collector for performance
+ * - Integrate with our custom ClassRouteAttributes for proper prefix combination
  *
  * ## Design Philosophy:
- * This class follows the Single Responsibility Principle:
- * - **Registration Only**: This class only registers controllers
- * - **No Discovery**: Discovery is handled by HasRoutes trait
- * - **Simple Wrapper**: Wraps Spatie's registerClass() method
- * - **Custom Attributes**: Uses our ClassRouteAttributes for better prefix handling
+ * This class follows the Decorator Pattern:
+ * - **Extends Spatie**: Inherits all Spatie's routing functionality
+ * - **Overrides Discovery**: Replaces file scanning with attribute-based discovery
+ * - **Transparent**: Works seamlessly with Spatie's auto-registration
+ * - **Cached**: Uses Discovery's caching for optimal performance
  *
  * ## Features:
  * - ✅ Register single controller by class name
@@ -68,6 +73,7 @@ use Spatie\RouteAttributes\RouteRegistrar as SpatieRouteRegistrar;
  *
  * @since 1.0.0
  */
+#[Bind(SpatieRouteRegistrar::class)]
 class RouteRegistrar extends SpatieRouteRegistrar
 {
     /**
