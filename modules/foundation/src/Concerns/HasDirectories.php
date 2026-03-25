@@ -153,7 +153,7 @@ trait HasDirectories
     #[Override]
     public function environmentPath(): string
     {
-        return $this->basePath('env');
+        return $this->basePath('environments');
     }
 
     /**
