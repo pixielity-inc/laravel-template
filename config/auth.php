@@ -10,7 +10,7 @@
  * |
  */
 
-use App\Models\User;
+use Pixielity\User\Models\User;
 
 return [
 

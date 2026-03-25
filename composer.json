@@ -15,7 +15,8 @@
         "nwidart/laravel-modules": "^13.0",
         "predis/predis": "^3.4",
         "pixielity/laravel-framework": "@dev",
-        "pixielity/laravel-foundation": "@dev"
+        "pixielity/laravel-foundation": "@dev",
+        "pixielity/laravel-user": "@dev"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^4.1",

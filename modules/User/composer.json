@@ -1,0 +1,18 @@
+{
+    "name": "pixielity/laravel-user",
+    "description": "User module for Laravel applications",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pixielity\\User\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.0",
+        "illuminate/auth": "^11.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
