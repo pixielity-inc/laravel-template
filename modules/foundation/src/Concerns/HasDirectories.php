@@ -289,8 +289,7 @@ trait HasDirectories
         }
 
         // Priority 3: Try environment variables (during bootstrap before .env is loaded)
-        // @rector-ignore RectorLaravel\Rector\ArrayDimFetch\ServerVariableToRequestFacadeRector
-        $path = $_ENV['APP_PROJECT_PATH'] ?? $_SERVER['APP_PROJECT_PATH'] ?? null;
+        $path = Env::get('APP_PROJECT_PATH');
         if ($path !== null && is_string($path)) {
             return $path;
         }

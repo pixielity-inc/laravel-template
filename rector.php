@@ -45,8 +45,8 @@ return RectorConfig::configure()
     // PATHS CONFIGURATION
     // =========================================================================
     ->withPaths([
-        // __DIR__ . '/src',
         __DIR__ . '/tests',
+        __DIR__ . '/modules',
     ])
     // =========================================================================
     // SKIP CONFIGURATION
@@ -473,7 +473,7 @@ return RectorConfig::configure()
      * Cache is stored in /tmp by default.
      */
     ->withCache(
-        cacheDirectory: __DIR__ . '/var/cache/rector',  // Use default cache implementation
+        cacheDirectory: __DIR__ . '/.cache/rector',  // Use default cache implementation
     )
     /*
      * File Extensions

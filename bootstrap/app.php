@@ -13,6 +13,8 @@
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Pixielity\Foundation\Application;
+use Pixielity\Localization\Middlewares\SetLocale;
+use Pixielity\Localization\Middlewares\TimezoneMiddleware;
 
 /**
  * |--------------------------------------------------------------------------
@@ -59,8 +61,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         // Register localization middleware for API routes
         $middleware->api(append: [
-            \Pixielity\Localization\Middlewares\SetLocale::class,
-            \Pixielity\Localization\Middlewares\TimezoneMiddleware::class,
+            SetLocale::class,
+            TimezoneMiddleware::class,
         ]);
     })
 

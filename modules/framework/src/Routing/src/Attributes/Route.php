@@ -52,11 +52,11 @@ class Route extends SpatieRoute
     /**
      * Create a new Route attribute instance.
      *
-     * @param array<string>|string $methods           HTTP methods (e.g., ['GET', 'POST'], 'PURGE')
-     * @param string               $uri               Route URI (e.g., '/users', '/cache')
-     * @param string|null          $name              Optional route name
-     * @param array<string>|string $middleware        Middleware to apply
-     * @param array<string>|string $withoutMiddleware Middleware to exclude
+     * @param  array<string>|string  $methods  HTTP methods (e.g., ['GET', 'POST'], 'PURGE')
+     * @param  string  $uri  Route URI (e.g., '/users', '/cache')
+     * @param  string|null  $name  Optional route name
+     * @param  array<string>|string  $middleware  Middleware to apply
+     * @param  array<string>|string  $withoutMiddleware  Middleware to exclude
      */
     public function __construct(
         array|string $methods,

@@ -51,12 +51,12 @@ class ApiResource extends SpatieApiResource
     /**
      * Create a new ApiResource attribute instance.
      *
-     * @param string                    $resource   Resource name (e.g., 'posts', 'users')
-     * @param array<string>|string|null $except     Actions to exclude
-     * @param array<string>|string|null $only       Actions to include (exclusive)
-     * @param array<string>|string|null $names      Custom route names
-     * @param array<string>|string|null $parameters Custom parameter names
-     * @param bool|null                 $shallow    Use shallow nesting
+     * @param  string  $resource  Resource name (e.g., 'posts', 'users')
+     * @param  array<string>|string|null  $except  Actions to exclude
+     * @param  array<string>|string|null  $only  Actions to include (exclusive)
+     * @param  array<string>|string|null  $names  Custom route names
+     * @param  array<string>|string|null  $parameters  Custom parameter names
+     * @param  bool|null  $shallow  Use shallow nesting
      */
     public function __construct(
         public string $resource,

@@ -103,13 +103,13 @@ class SetLocale
     /**
      * Create a new SetLocale middleware instance.
      *
-     * @param array<string, array<string, mixed>> $locales             Available locales configuration
-     * @param bool                                $autoDetect          Whether to auto-detect locale from headers
-     * @param array<string>                       $headers             Headers to check for locale (in priority order)
-     * @param array<string>                       $queryParams         Query parameters to check for locale
-     * @param string|null                         $localizationDefault Default locale from localization config
-     * @param string|null                         $appLocale           Fallback locale from app config
-     * @param string|null                         $fallbackLocale      Fallback locale from localization config
+     * @param  array<string, array<string, mixed>>  $locales  Available locales configuration
+     * @param  bool  $autoDetect  Whether to auto-detect locale from headers
+     * @param  array<string>  $headers  Headers to check for locale (in priority order)
+     * @param  array<string>  $queryParams  Query parameters to check for locale
+     * @param  string|null  $localizationDefault  Default locale from localization config
+     * @param  string|null  $appLocale  Fallback locale from app config
+     * @param  string|null  $fallbackLocale  Fallback locale from localization config
      */
     public function __construct(
         #[Config('localization.locales', [])]
@@ -151,9 +151,9 @@ class SetLocale
      * - locale: The active locale for this request
      * - user_id: The authenticated user ID (if authenticated)
      *
-     * @param  Request                      $request The incoming HTTP request
-     * @param  Closure(Request): (Response) $next    The next middleware in the pipeline
-     * @return Response                     The HTTP response
+     * @param  Request  $request  The incoming HTTP request
+     * @param  Closure(Request): (Response)  $next  The next middleware in the pipeline
+     * @return Response The HTTP response
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -169,7 +169,7 @@ class SetLocale
         // If user is authenticated and has a locale preference, use it
         try {
             $user = $request->user();
-        } catch (\InvalidArgumentException $e) {
+        } catch (\InvalidArgumentException) {
             // Guard not defined (e.g., sanctum not installed)
             $user = null;
         }
@@ -226,7 +226,7 @@ class SetLocale
             foreach ($this->headers as $header) {
                 $locale = $request->header($header);
                 $localeStr = is_array($locale) ? ($locale[0] ?? null) : $locale;
-                
+
                 if ($localeStr) {
                     // Special handling for Accept-Language header which may contain quality values
                     if (strtolower($header) === 'accept-language') {
@@ -270,9 +270,9 @@ class SetLocale
      * The Accept-Language header format: "ar-SA,ar;q=0.9,en-US;q=0.8,en;q=0.7"
      * This method extracts locales, sorts by quality value, and finds the first match.
      *
-     * @param  string        $header           The Accept-Language header value
-     * @param  array<string> $availableLocales List of available locale codes
-     * @return string|null                     The best matching locale or null
+     * @param  string  $header  The Accept-Language header value
+     * @param  array<string>  $availableLocales  List of available locale codes
+     * @return string|null The best matching locale or null
      */
     private function parseAcceptLanguageHeader(string $header, array $availableLocales): ?string
     {
@@ -282,7 +282,7 @@ class SetLocale
 
         foreach ($locales as $locale) {
             $locale = trim($locale);
-            
+
             // Extract locale code and quality value
             // Format: "ar-SA;q=0.9" or just "ar-SA"
             if (preg_match('/^([a-zA-Z\-]+)(?:;q=([0-9.]+))?$/', $locale, $matches)) {
@@ -293,17 +293,17 @@ class SetLocale
         }
 
         // Sort by quality value (highest first)
-        usort($parsed, fn ($a, $b) => $b['quality'] <=> $a['quality']);
+        usort($parsed, fn (array $a, array $b): int => $b['quality'] <=> $a['quality']);
 
         // Find the first matching locale
         foreach ($parsed as $item) {
             $code = $item['code'];
-            
+
             // Try exact match first
             if (in_array($code, $availableLocales, true)) {
                 return $code;
             }
-            
+
             // Try base language (e.g., "ar" from "ar-SA")
             if (str_contains($code, '-')) {
                 $baseCode = explode('-', $code)[0];

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Pixielity\Serializer\Contracts;
 
-use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Illuminate\Container\Attributes\Singleton;
 use Pixielity\Container\Attributes\Bind;
+use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Pixielity\Serializer\Json;
 
 /**
@@ -30,10 +30,10 @@ interface JsonInterface
      * and converts it into a JSON formatted string. If the encoding fails,
      * an InvalidArgumentException is thrown.
      *
-     * @param  mixed        $data    Data to be serialized. Acceptable types are
-     *                               string, int, float, bool, array, or null.
-     * @param  int          $options JSON encoding options (default: JSON_THROW_ON_ERROR).
-     * @param  int<1, max>  $depth   Maximum depth (default: 512).
+     * @param  mixed  $data  Data to be serialized. Acceptable types are
+     *                       string, int, float, bool, array, or null.
+     * @param  int  $options  JSON encoding options (default: JSON_THROW_ON_ERROR).
+     * @param  int<1, max>  $depth  Maximum depth (default: 512).
      * @return string|false The JSON encoded string if successful, false on failure.
      *
      * @throws InvalidArgumentException If the data cannot be encoded into JSON.
@@ -47,12 +47,12 @@ interface JsonInterface
      * original data type. If the decoding fails due to invalid JSON,
      * an InvalidArgumentException is thrown with an error message.
      *
-     * @param  string      $string      JSON string to be unserialized.
-     * @param  bool        $associative When true, objects will be converted to associative arrays.
-     * @param  int<1, max> $depth       Maximum depth (default: 512).
-     * @param  int         $options     JSON decoding options (default: 0).
-     * @return mixed       The original data, which can be string, int, float,
-     *                     bool, array, or null.
+     * @param  string  $string  JSON string to be unserialized.
+     * @param  bool  $associative  When true, objects will be converted to associative arrays.
+     * @param  int<1, max>  $depth  Maximum depth (default: 512).
+     * @param  int  $options  JSON decoding options (default: 0).
+     * @return mixed The original data, which can be string, int, float,
+     *               bool, array, or null.
      *
      * @throws InvalidArgumentException If the string cannot be decoded
      *                                  into its original data format.
@@ -62,8 +62,8 @@ interface JsonInterface
     /**
      * Check if a string is a valid JSON formatted string.
      *
-     * @param  string $json The string to check.
-     * @return bool   True if the string is valid JSON, false otherwise.
+     * @param  string  $json  The string to check.
+     * @return bool True if the string is valid JSON, false otherwise.
      */
     public function isValid(string $json): bool;
 }

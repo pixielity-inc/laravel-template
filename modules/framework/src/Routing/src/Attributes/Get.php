@@ -53,23 +53,23 @@ use Spatie\RouteAttributes\Attributes\Get as SpatieGet;
  *
  * ### Routing (from Spatie):
  *
- * @param string      $uri  Route URI (e.g., '/', '/{id}', '/open')
- * @param string|null $name Route name (e.g., 'incidents.index')
+ * @param  string  $uri  Route URI (e.g., '/', '/{id}', '/open')
+ * @param  string|null  $name  Route name (e.g., 'incidents.index')
  *
  * ### OpenAPI:
- * @param string|null   $summary        OpenAPI summary (required for docs)
- * @param string|null   $description    OpenAPI description
- * @param array<string> $tags           OpenAPI tags (e.g., ['Incidents'])
- * @param array<array>  $parameters     Query/path parameters
- * @param string|null   $responseSchema Response schema name (e.g., 'Incident')
- * @param string        $responseType   'object', 'array', or 'paginated' (default: 'object')
- * @param int           $responseCode   HTTP response code (default: 200)
+ * @param  string|null  $summary  OpenAPI summary (required for docs)
+ * @param  string|null  $description  OpenAPI description
+ * @param  array<string>  $tags  OpenAPI tags (e.g., ['Incidents'])
+ * @param  array<array>  $parameters  Query/path parameters
+ * @param  string|null  $responseSchema  Response schema name (e.g., 'Incident')
+ * @param  string  $responseType  'object', 'array', or 'paginated' (default: 'object')
+ * @param  int  $responseCode  HTTP response code (default: 200)
  *
  * ### Authorization:
- * @param array<BackedEnum|string>|null $permissions     Permission enums or strings
- * @param string                        $permissionLogic 'any' or 'all' (default: 'all')
- * @param string|BackedEnum|null        $ability         Policy ability (e.g., 'view', 'update')
- * @param string|null                   $role            Required role
+ * @param  array<BackedEnum|string>|null  $permissions  Permission enums or strings
+ * @param  string  $permissionLogic  'any' or 'all' (default: 'all')
+ * @param  string|BackedEnum|null  $ability  Policy ability (e.g., 'view', 'update')
+ * @param  string|null  $role  Required role
  */
 #[Attribute(Attribute::TARGET_METHOD | Attribute::IS_REPEATABLE)]
 class Get extends SpatieGet

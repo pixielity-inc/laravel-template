@@ -28,26 +28,26 @@ namespace Pixielity\Routing\Concerns;
  * }
  * ```
  *
- * @method mixed       query(string $key, mixed $default = null)    Get a query parameter value
- * @method array       queries()                                    Get all query parameters
- * @method mixed       input(string $key, mixed $default = null)    Get a request body parameter value
- * @method array       inputs()                                     Get all request input data
+ * @method mixed query(string $key, mixed $default = null) Get a query parameter value
+ * @method array queries() Get all query parameters
+ * @method mixed input(string $key, mixed $default = null) Get a request body parameter value
+ * @method array inputs() Get all request input data
  * @method string|null header(string $key, ?string $default = null) Get a request header value
- * @method array       headers()                                    Get all request headers
- * @method bool        isJson()                                     Check if request is JSON
- * @method bool        wantsJson()                                  Check if request expects JSON response
- * @method array       only(array $keys)                            Get only specific input fields
- * @method array       except(array $keys)                          Get all input except specific fields
- * @method bool        has(string $key)                             Check if request has a specific input field
- * @method bool        hasAll(array $keys)                          Check if request has all specified input fields
- * @method bool        hasAny(array $keys)                          Check if request has any of the specified input fields
- * @method string|null ip()                                         Get request IP address
- * @method string|null userAgent()                                  Get request user agent
- * @method string      method()                                     Get request method
- * @method bool        isMethod(string $method)                     Check if request method matches
- * @method string      url()                                        Get request URL
- * @method string      fullUrl()                                    Get full request URL with query string
- * @method string      path()                                       Get request path
+ * @method array headers() Get all request headers
+ * @method bool isJson() Check if request is JSON
+ * @method bool wantsJson() Check if request expects JSON response
+ * @method array only(array $keys) Get only specific input fields
+ * @method array except(array $keys) Get all input except specific fields
+ * @method bool has(string $key) Check if request has a specific input field
+ * @method bool hasAll(array $keys) Check if request has all specified input fields
+ * @method bool hasAny(array $keys) Check if request has any of the specified input fields
+ * @method string|null ip() Get request IP address
+ * @method string|null userAgent() Get request user agent
+ * @method string method() Get request method
+ * @method bool isMethod(string $method) Check if request method matches
+ * @method string url() Get request URL
+ * @method string fullUrl() Get full request URL with query string
+ * @method string path() Get request path
  *
  * @category   Concerns
  *
@@ -58,8 +58,8 @@ trait InteractsWithRequest
     /**
      * Get a query parameter value.
      *
-     * @param string $key     Parameter name
-     * @param mixed  $default Default value if not found
+     * @param  string  $key  Parameter name
+     * @param  mixed  $default  Default value if not found
      */
     protected function query(string $key, mixed $default = null): mixed
     {
@@ -79,8 +79,8 @@ trait InteractsWithRequest
     /**
      * Get a request body parameter value.
      *
-     * @param string $key     Parameter name
-     * @param mixed  $default Default value if not found
+     * @param  string  $key  Parameter name
+     * @param  mixed  $default  Default value if not found
      */
     protected function input(string $key, mixed $default = null): mixed
     {
@@ -100,8 +100,8 @@ trait InteractsWithRequest
     /**
      * Get a request header value.
      *
-     * @param string      $key     Header name
-     * @param string|null $default Default value if not found
+     * @param  string  $key  Header name
+     * @param  string|null  $default  Default value if not found
      */
     protected function header(string $key, ?string $default = null): ?string
     {
@@ -141,7 +141,7 @@ trait InteractsWithRequest
     /**
      * Get only specific input fields.
      *
-     * @param  array<string>        $keys Field names to retrieve
+     * @param  array<string>  $keys  Field names to retrieve
      * @return array<string, mixed>
      */
     protected function only(array $keys): array
@@ -152,7 +152,7 @@ trait InteractsWithRequest
     /**
      * Get all input except specific fields.
      *
-     * @param  array<string>        $keys Field names to exclude
+     * @param  array<string>  $keys  Field names to exclude
      * @return array<string, mixed>
      */
     protected function except(array $keys): array
@@ -163,7 +163,7 @@ trait InteractsWithRequest
     /**
      * Check if request has a specific input field.
      *
-     * @param string $key Field name
+     * @param  string  $key  Field name
      */
     protected function has(string $key): bool
     {
@@ -173,7 +173,7 @@ trait InteractsWithRequest
     /**
      * Check if request has all specified input fields.
      *
-     * @param array<string> $keys Field names
+     * @param  array<string>  $keys  Field names
      */
     protected function hasAll(array $keys): bool
     {
@@ -183,7 +183,7 @@ trait InteractsWithRequest
     /**
      * Check if request has any of the specified input fields.
      *
-     * @param array<string> $keys Field names
+     * @param  array<string>  $keys  Field names
      */
     protected function hasAny(array $keys): bool
     {
@@ -217,7 +217,7 @@ trait InteractsWithRequest
     /**
      * Check if request method matches.
      *
-     * @param string $method HTTP method (GET, POST, etc.)
+     * @param  string  $method  HTTP method (GET, POST, etc.)
      */
     protected function isMethod(string $method): bool
     {

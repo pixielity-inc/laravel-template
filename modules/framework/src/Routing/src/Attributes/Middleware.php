@@ -46,7 +46,7 @@ class Middleware extends SpatieMiddleware
     /**
      * Create a new Middleware attribute instance.
      *
-     * @param array<string>|string $middleware Middleware to apply (e.g., 'auth', ['auth', 'verified'])
+     * @param  array<string>|string  $middleware  Middleware to apply (e.g., 'auth', ['auth', 'verified'])
      */
     public function __construct(
         array|string $middleware,

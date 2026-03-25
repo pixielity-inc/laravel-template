@@ -49,13 +49,13 @@ class Resource extends SpatieResource
     /**
      * Create a new Resource attribute instance.
      *
-     * @param string                    $resource    Resource name (e.g., 'posts', 'users')
-     * @param bool                      $apiResource Whether to use API resource (excludes create/edit)
-     * @param array<string>|string|null $except      Actions to exclude
-     * @param array<string>|string|null $only        Actions to include (exclusive)
-     * @param array<string>|string|null $names       Custom route names
-     * @param array<string>|string|null $parameters  Custom parameter names
-     * @param bool|null                 $shallow     Use shallow nesting
+     * @param  string  $resource  Resource name (e.g., 'posts', 'users')
+     * @param  bool  $apiResource  Whether to use API resource (excludes create/edit)
+     * @param  array<string>|string|null  $except  Actions to exclude
+     * @param  array<string>|string|null  $only  Actions to include (exclusive)
+     * @param  array<string>|string|null  $names  Custom route names
+     * @param  array<string>|string|null  $parameters  Custom parameter names
+     * @param  bool|null  $shallow  Use shallow nesting
      */
     public function __construct(
         public string $resource,

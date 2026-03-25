@@ -1139,7 +1139,7 @@ class Reflection extends BaseReflector
         $attributes = static::getAttributes($classOrObject, $attributeName);
 
         // Return the first matching ReflectionAttribute instance or null if not found
-        return empty($attributes) ? null : $attributes[0];
+        return $attributes === [] ? null : $attributes[0];
     }
 
     /**

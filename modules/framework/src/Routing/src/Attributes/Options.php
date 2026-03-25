@@ -49,9 +49,9 @@ class Options extends SpatieOptions
     /**
      * Create a new Options attribute instance.
      *
-     * @param string               $uri        Route URI (e.g., '/api/users')
-     * @param string|null          $name       Optional route name
-     * @param array<string>|string $middleware Middleware to apply
+     * @param  string  $uri  Route URI (e.g., '/api/users')
+     * @param  string|null  $name  Optional route name
+     * @param  array<string>|string  $middleware  Middleware to apply
      */
     public function __construct(
         string $uri,

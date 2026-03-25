@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Pixielity\Serializer;
 
-use Pixielity\Serializer\Contracts\SerializerInterface;
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
+use Pixielity\Serializer\Contracts\SerializerInterface;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
 use Throwable;
@@ -43,9 +43,7 @@ class Serializer implements SerializerInterface
             return $serializedData;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
-                throw $throwable;
-            }
+            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(
@@ -100,9 +98,7 @@ class Serializer implements SerializerInterface
             return $unserializedData;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
-                throw $throwable;
-            }
+            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(

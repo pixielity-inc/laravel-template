@@ -135,7 +135,7 @@ class CaseConverter
     public function convert(string $case, array|Collection $data): array|Collection
     {
         // Ensure the provided case is either snake or camel
-        if (! in_array($case, [self::CASE_CAMEL, self::CASE_SNAKE])) {
+        if (! in_array($case, [self::CASE_CAMEL, self::CASE_SNAKE], true)) {
             throw InvalidArgumentException::make(__('Case must be either snake or camel'));
         }
 

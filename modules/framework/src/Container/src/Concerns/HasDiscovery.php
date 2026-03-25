@@ -6,10 +6,10 @@ namespace Pixielity\Container\Concerns;
 
 use Illuminate\Container\Attributes\Scoped;
 use Illuminate\Container\Attributes\Singleton;
-use Pixielity\Foundation\Contracts\ApplicationInterface;
 use Pixielity\Container\Attributes\Bind;
 use Pixielity\Container\Attributes\Tagged;
 use Pixielity\Discovery\Facades\Discovery;
+use Pixielity\Foundation\Contracts\ApplicationInterface;
 use Pixielity\Support\Reflection;
 
 /**

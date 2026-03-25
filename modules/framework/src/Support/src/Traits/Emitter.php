@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Pixielity\Support\Traits;
 
 use Pixielity\Support\Arr;
-use Pixielity\Support\Validator;
 
 /**
  * Emitter adds event-related features to any class.

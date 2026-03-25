@@ -3,6 +3,8 @@
 namespace Pixielity\Foundation\Providers;
 
 use Nwidart\Modules\Support\ModuleServiceProvider;
+use Pixielity\Routing\Providers\RoutingServiceProvider;
+use Pixielity\Routing\RouteRegistrar;
 
 class FoundationServiceProvider extends ModuleServiceProvider
 {
@@ -51,8 +53,8 @@ class FoundationServiceProvider extends ModuleServiceProvider
      *
      * No manual registration needed - just add #[AsController] to your controllers.
      *
-     * @see \Pixielity\Routing\Providers\RoutingServiceProvider::register()
-     * @see \Pixielity\Routing\RouteRegistrar::registerDirectory()
+     * @see RoutingServiceProvider::register()
+     * @see RouteRegistrar::registerDirectory()
      */
     // public function boot(): void
     // {

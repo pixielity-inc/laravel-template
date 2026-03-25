@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Pixielity\Serializer\Contracts;
 
-use Pixielity\Foundation\Exceptions\InvalidArgumentException;
-use Illuminate\Container\Attributes\Singleton;
 use Illuminate\Container\Attributes\Bind;
+use Illuminate\Container\Attributes\Singleton;
+use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Pixielity\Serializer\Serializer;
 
 /**
@@ -31,10 +31,10 @@ interface SerializerInterface
      * and converts it into a serialized string. If the serialization fails,
      * an InvalidArgumentException is thrown.
      *
-     * @param  mixed  $data Data to be serialized. Acceptable types are
-     *                      string, int, float, bool, array, or null.
+     * @param  mixed  $data  Data to be serialized. Acceptable types are
+     *                       string, int, float, bool, array, or null.
      * @return string The serialized string if successful.
-     * @return false  If serialization fails.
+     * @return false If serialization fails.
      *
      * @throws InvalidArgumentException If the data cannot be serialized.
      */
@@ -47,10 +47,10 @@ interface SerializerInterface
      * original data type. It offers an option to allow or disallow classes during
      * the unserialization process for security and flexibility.
      *
-     * @param  string $string         The serialized string to be unserialized.
-     * @param  bool   $allowedClasses Whether to allow class instances during unserialization.
+     * @param  string  $string  The serialized string to be unserialized.
+     * @param  bool  $allowedClasses  Whether to allow class instances during unserialization.
      *                                `true` allows all classes; `false` disallows all classes.
-     * @return mixed  The unserialized data, which can be any valid PHP data type.
+     * @return mixed The unserialized data, which can be any valid PHP data type.
      *
      * @throws InvalidArgumentException If the unserialization fails due to invalid input.
      */
@@ -62,8 +62,8 @@ interface SerializerInterface
      * This method checks if the provided string is in a valid serialized format
      * without actually unserializing it, avoiding potential errors.
      *
-     * @param  string $string The string to check.
-     * @return bool   True if the string is valid serialized data, false otherwise.
+     * @param  string  $string  The string to check.
+     * @return bool True if the string is valid serialized data, false otherwise.
      */
     public function isSerialized(string $string): bool;
 }

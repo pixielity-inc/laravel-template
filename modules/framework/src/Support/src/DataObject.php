@@ -128,7 +128,7 @@ class DataObject implements DataObjectContract
      *
      * @throws Exception If the method is not supported.
      */
-    public function __call($method, $arguments): mixed
+    public function __call(string $method, array $arguments): mixed
     {
         // Determine the method's prefix (e.g., "get", "set", "uns", "has").
         $prefix = Str::substr($method, 0, 3);
@@ -296,7 +296,7 @@ class DataObject implements DataObjectContract
         if ($this->currentKey !== null) {
             // If $key is not empty, concatenate currentKey and the provided $key
             if (is_string($key)) {
-                $key = $key ? $this->currentKey . '.' . (is_string($key) ? $key : '') : $this->currentKey;
+                $key = $key !== '' && $key !== '0' ? $this->currentKey . '.' . (is_string($key) ? $key : '') : $this->currentKey;
             }
 
             // Reset currentKey to avoid using it again in subsequent operations
@@ -346,7 +346,7 @@ class DataObject implements DataObjectContract
             }
             // If the data is a string, split it by new lines and return the element at the specified index
             elseif (is_string($data)) {
-                $data = Str::explode(PHP_EOL, (string) $data);
+                $data = Str::explode(PHP_EOL, $data);
                 $data = $data[$index] ?? null;
             }
             // If the data is an instance of DataObject, recursively get the data for the index
@@ -378,7 +378,7 @@ class DataObject implements DataObjectContract
         // Use currentKey if it's already set, appending the new key if applicable
         if ($this->currentKey !== null) {
             if (is_string($key)) {
-                $key = $this->currentKey . ($key ? '.' . (is_string($key) ? $key : '') : '');
+                $key = $this->currentKey . ($key !== '' && $key !== '0' ? '.' . (is_string($key) ? $key : '') : '');
             }
 
             // Reset currentKey after use
@@ -459,7 +459,7 @@ class DataObject implements DataObjectContract
             if (isset($this->attributes[$key]) || Arr::exists($this->attributes, $key)) {
                 unset($this->attributes[$key]);
             }
-        } elseif ($key === (array) $key) {
+        } elseif ($key === $key) {
             foreach ($key as $element) {
                 $this->unsetData($element);
             }

@@ -39,10 +39,10 @@ use Pixielity\Response\Builders\Response;
  * }
  * ```
  *
- * @method Response response()                                                             Get the Response facade for advanced chaining`
- * @method Response bulkCreated(mixed $data, ?string $message = null)                      Return bulk create Response builder
- * @method Response bulkUpdated(mixed $data, ?string $message = null)                      Return bulk update Response builder
- * @method Response bulkDeleted(int $count, ?string $message = null)                       Return bulk delete Response builder
+ * @method Response response() Get the Response facade for advanced chaining`
+ * @method Response bulkCreated(mixed $data, ?string $message = null) Return bulk create Response builder
+ * @method Response bulkUpdated(mixed $data, ?string $message = null) Return bulk update Response builder
+ * @method Response bulkDeleted(int $count, ?string $message = null) Return bulk delete Response builder
  * @method Response bulkOperation(mixed $data, string $operation, ?string $message = null) Return generic bulk operation Response builder
  *
  * @category   Concerns
@@ -54,8 +54,8 @@ trait InteractsWithBulkOperations
     /**
      * Return a bulk create response.
      *
-     * @param mixed       $data    Created items
-     * @param string|null $message Optional success message
+     * @param  mixed  $data  Created items
+     * @param  string|null  $message  Optional success message
      */
     protected function bulkCreated(mixed $data, ?string $message = null): Response
     {
@@ -73,8 +73,8 @@ trait InteractsWithBulkOperations
     /**
      * Return a bulk update response.
      *
-     * @param mixed       $data    Updated items or count
-     * @param string|null $message Optional success message
+     * @param  mixed  $data  Updated items or count
+     * @param  string|null  $message  Optional success message
      */
     protected function bulkUpdated(mixed $data, ?string $message = null): Response
     {
@@ -94,8 +94,8 @@ trait InteractsWithBulkOperations
     /**
      * Return a bulk delete response.
      *
-     * @param int         $count   Number of deleted items
-     * @param string|null $message Optional success message
+     * @param  int  $count  Number of deleted items
+     * @param  string|null  $message  Optional success message
      */
     protected function bulkDeleted(int $count, ?string $message = null): Response
     {
@@ -113,9 +113,9 @@ trait InteractsWithBulkOperations
     /**
      * Return a generic bulk operation response.
      *
-     * @param mixed       $data      Operation result data
-     * @param string      $operation Operation name
-     * @param string|null $message   Optional success message
+     * @param  mixed  $data  Operation result data
+     * @param  string  $operation  Operation name
+     * @param  string|null  $message  Optional success message
      */
     protected function bulkOperation(
         mixed $data,
@@ -138,9 +138,9 @@ trait InteractsWithBulkOperations
      *
      * Use when some items succeeded and some failed.
      *
-     * @param array       $successful Successfully processed items
-     * @param array       $failed     Failed items with error messages
-     * @param string|null $message    Optional message
+     * @param  array  $successful  Successfully processed items
+     * @param  array  $failed  Failed items with error messages
+     * @param  string|null  $message  Optional message
      */
     protected function bulkPartialSuccess(
         array $successful,

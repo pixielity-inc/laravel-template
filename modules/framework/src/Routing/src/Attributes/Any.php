@@ -45,10 +45,10 @@ class Any extends SpatieAny
     /**
      * Create a new Any attribute instance.
      *
-     * @param string               $uri               Route URI (e.g., '/webhook', '/api/catch-all')
-     * @param string|null          $name              Optional route name
-     * @param array<string>|string $middleware        Middleware to apply
-     * @param array<string>|string $withoutMiddleware Middleware to exclude
+     * @param  string  $uri  Route URI (e.g., '/webhook', '/api/catch-all')
+     * @param  string|null  $name  Optional route name
+     * @param  array<string>|string  $middleware  Middleware to apply
+     * @param  array<string>|string  $withoutMiddleware  Middleware to exclude
      */
     public function __construct(
         string $uri,

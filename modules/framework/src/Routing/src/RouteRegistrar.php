@@ -94,7 +94,7 @@ class RouteRegistrar extends SpatieRouteRegistrar
      * $registrar->registerController(UserController::class);
      * ```
      *
-     * @param string $controllerClass Fully qualified controller class name
+     * @param  string  $controllerClass  Fully qualified controller class name
      */
     public function registerController(string $controllerClass): void
     {
@@ -118,7 +118,7 @@ class RouteRegistrar extends SpatieRouteRegistrar
      * ]);
      * ```
      *
-     * @param array<string> $controllerClasses Array of fully qualified controller class names
+     * @param  array<string>  $controllerClasses  Array of fully qualified controller class names
      */
     public function registerControllers(array $controllerClasses): void
     {
@@ -145,9 +145,9 @@ class RouteRegistrar extends SpatieRouteRegistrar
      * The $directories, $patterns, and $notPatterns parameters are ignored
      * since we're using attribute-based discovery instead of file scanning.
      *
-     * @param string|array $directories Ignored - kept for compatibility
-     * @param array        $patterns    Ignored - kept for compatibility
-     * @param array        $notPatterns Ignored - kept for compatibility
+     * @param  string|array  $directories  Ignored - kept for compatibility
+     * @param  array  $patterns  Ignored - kept for compatibility
+     * @param  array  $notPatterns  Ignored - kept for compatibility
      */
     #[Override]
     public function registerDirectory(string|array $directories, array $patterns = [], array $notPatterns = []): void
@@ -155,8 +155,8 @@ class RouteRegistrar extends SpatieRouteRegistrar
         // Use Discovery to find all controllers with #[AsController] attribute
         // This is much faster than scanning directories and works with our custom attributes
         $this->collectGroupsFromDiscovery()
-            ->sortByDesc(fn ($item) => ! empty($item['group']['domain'] ?? null))
-            ->each(fn ($item) => $this->registerGroupedRoutes($item));
+            ->sortByDesc(fn ($item): bool => ! empty($item['group']['domain'] ?? null))
+            ->each(fn (array $item) => $this->registerGroupedRoutes($item));
     }
 
     /**
@@ -176,12 +176,12 @@ class RouteRegistrar extends SpatieRouteRegistrar
             // Filter out any classes that don't exist (safety check)
             ->filter(Reflection::exists(...))
             // Map to the format expected by Spatie's registrar
-            ->map(fn ($className) => [
+            ->map(fn ($className): array => [
                 'class' => new ReflectionClass($className),
                 'classRouteAttributes' => new ClassRouteAttributes(new ReflectionClass($className)),
             ])
             // Expand each class into its route groups
-            ->flatMap(fn ($item) => $this->expandClassIntoGroups($item));
+            ->flatMap(fn (array $item): array => $this->expandClassIntoGroups($item));
     }
 
     /**
@@ -190,7 +190,7 @@ class RouteRegistrar extends SpatieRouteRegistrar
      * Overrides Spatie's method to use our custom ClassRouteAttributes
      * which properly combines #[Prefix] and #[Group] attributes.
      *
-     * @param string $className Fully qualified controller class name
+     * @param  string  $className  Fully qualified controller class name
      */
     #[Override]
     protected function processAttributes(string $className): void

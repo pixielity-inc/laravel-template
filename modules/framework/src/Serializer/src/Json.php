@@ -49,9 +49,7 @@ class Json implements JsonInterface
             return $json;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
-                throw $throwable;
-            }
+            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(
@@ -98,9 +96,7 @@ class Json implements JsonInterface
             return $data;
         } catch (Throwable $throwable) {
             // If it's already an InvalidArgumentException, rethrow it
-            if (Reflection::implements($throwable, InvalidArgumentException::class)) {
-                throw $throwable;
-            }
+            throw_if(Reflection::implements($throwable, InvalidArgumentException::class), $throwable);
 
             // Wrap other exceptions in InvalidArgumentException
             throw new InvalidArgumentException(

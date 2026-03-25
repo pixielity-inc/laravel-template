@@ -49,7 +49,7 @@ abstract class TestCase extends Orchestra
     /**
      * Get package providers.
      *
-     * @param  Application              $app
+     * @param  Application  $app
      * @return array<int, class-string>
      */
     protected function getPackageProviders($app): array
@@ -60,7 +60,7 @@ abstract class TestCase extends Orchestra
     /**
      * Define environment setup.
      *
-     * @param Application $app
+     * @param  Application  $app
      */
     protected function getEnvironmentSetUp($app): void
     {

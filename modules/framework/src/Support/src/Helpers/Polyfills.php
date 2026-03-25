@@ -7,7 +7,6 @@ use Pixielity\Foundation\Exceptions\NodeNotFoundException;
 use Pixielity\Support\Arr;
 use Pixielity\Support\Path;
 use Pixielity\Support\Str;
-use Pixielity\Support\Validator;
 use Symfony\Component\Process\ExecutableFinder;
 
 /*
@@ -218,12 +217,12 @@ if (! function_exists('http_build_url')) {
     {
         // If $url is a string, parse it into its components
         if (is_string($url)) {
-            $url = parse_url((string) $url);
+            $url = parse_url($url);
         }
 
         // If $replace is a string, parse it into its components
         if (is_string($replace)) {
-            $replace = parse_url((string) $replace);
+            $replace = parse_url($replace);
         }
 
         // Define the segments of the URL we care about

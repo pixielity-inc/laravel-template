@@ -75,7 +75,7 @@ class RestartAppCommand extends Command
         // Step 1: Stop the currently running server
         // We use our custom 'stop' command for consistency
         $this->newLine();
-        $this->components->task('Stopping server', function () {
+        $this->components->task('Stopping server', function (): bool {
             $exitCode = $this->call('stop');
 
             return $exitCode === self::SUCCESS;
@@ -84,7 +84,7 @@ class RestartAppCommand extends Command
         // Step 2: Start a new server instance with the provided options
         // Pass through all options from this command to the start command
         $this->newLine();
-        $this->components->task('Starting server', function () {
+        $this->components->task('Starting server', function (): bool {
             $exitCode = $this->call('start', [
                 '--host' => $this->option('host'),
                 '--port' => $this->option('port'),

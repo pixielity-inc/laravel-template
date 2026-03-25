@@ -40,12 +40,12 @@ class ClassRouteAttributes extends SpatieClassRouteAttributes
     /**
      * Store a reference to the reflection class for our custom methods.
      */
-    private ReflectionClass $reflectionClass;
+    private readonly ReflectionClass $reflectionClass;
 
     /**
      * Create a new ClassRouteAttributes instance.
      *
-     * @param ReflectionClass $class The reflection class to process
+     * @param  ReflectionClass  $class  The reflection class to process
      */
     public function __construct(ReflectionClass $class)
     {

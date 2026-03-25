@@ -36,9 +36,9 @@ class AsController
     /**
      * Create a new AsController attribute instance.
      *
-     * @param string|null          $group      Optional route group
-     * @param string|null          $prefix     Optional route prefix
-     * @param array<string>|string $middleware Optional middleware to apply
+     * @param  string|null  $group  Optional route group
+     * @param  string|null  $prefix  Optional route prefix
+     * @param  array<string>|string  $middleware  Optional middleware to apply
      */
     public function __construct(
         public ?string $group = null,

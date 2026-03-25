@@ -8,7 +8,6 @@ use Pixielity\Support\Arr;
 use Pixielity\Support\Collection;
 use Pixielity\Support\Reflection;
 use Pixielity\Support\Str;
-use Pixielity\Support\Validator;
 
 /*
  * trace_log writes a trace message to a log file.

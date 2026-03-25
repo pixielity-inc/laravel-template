@@ -12,7 +12,7 @@
     stopOnFailure="false"
     executionOrder="random"
     resolveDependencies="true"
-    cacheDirectory="build/phpunit"
+    cacheDirectory=".cache/phpunit"
     bootstrap="vendor/autoload.php"
     beStrictAboutCoverageMetadata="false"
     beStrictAboutOutputDuringTests="true"

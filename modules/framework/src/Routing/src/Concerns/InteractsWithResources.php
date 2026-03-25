@@ -34,8 +34,8 @@ use Pixielity\Response\Factories\ResponseFactory;
  * }
  * ```
  *
- * @method Response response()                                                              Get the Response facade for advanced chaining
- * @method Response resource(mixed $data, string $resourceClass, ?string $message = null)   Transform single resource
+ * @method Response response() Get the Response facade for advanced chaining
+ * @method Response resource(mixed $data, string $resourceClass, ?string $message = null) Transform single resource
  * @method Response collection(mixed $data, string $resourceClass, ?string $message = null) Transform resource collection
  *
  * @category   Concerns
@@ -47,9 +47,9 @@ trait InteractsWithResources
     /**
      * Transform data using a resource class.
      *
-     * @param mixed       $data          Data to transform
-     * @param string      $resourceClass Resource class name
-     * @param string|null $message       Optional success message
+     * @param  mixed  $data  Data to transform
+     * @param  string  $resourceClass  Resource class name
+     * @param  string|null  $message  Optional success message
      */
     protected function resource(
         mixed $data,
@@ -70,9 +70,9 @@ trait InteractsWithResources
     /**
      * Transform collection using a resource class.
      *
-     * @param mixed       $data          Collection to transform
-     * @param string      $resourceClass Resource class name
-     * @param string|null $message       Optional success message
+     * @param  mixed  $data  Collection to transform
+     * @param  string  $resourceClass  Resource class name
+     * @param  string|null  $message  Optional success message
      */
     protected function collection(
         mixed $data,
@@ -93,10 +93,10 @@ trait InteractsWithResources
     /**
      * Transform data with additional meta information.
      *
-     * @param mixed       $data          Data to transform
-     * @param string      $resourceClass Resource class name
-     * @param array       $meta          Additional meta data
-     * @param string|null $message       Optional success message
+     * @param  mixed  $data  Data to transform
+     * @param  string  $resourceClass  Resource class name
+     * @param  array  $meta  Additional meta data
+     * @param  string|null  $message  Optional success message
      */
     protected function resourceWithMeta(
         mixed $data,

@@ -53,8 +53,8 @@ trait InteractsWithResponse
     /**
      * Return a 200 OK response.
      *
-     * @param  TResponseData|null             $data    Response data
-     * @param  string|null                    $message Optional success message
+     * @param  TResponseData|null  $data  Response data
+     * @param  string|null  $message  Optional success message
      * @return ResponseBuilder<TResponseData>
      */
     protected function ok(mixed $data = null, ?string $message = null): ResponseBuilder
@@ -71,8 +71,8 @@ trait InteractsWithResponse
     /**
      * Return a 201 Created response.
      *
-     * @param  TResponseData|null             $data    Created resource data
-     * @param  string|null                    $message Optional success message
+     * @param  TResponseData|null  $data  Created resource data
+     * @param  string|null  $message  Optional success message
      * @return ResponseBuilder<TResponseData>
      */
     protected function created(mixed $data, ?string $message = null): ResponseBuilder
@@ -89,8 +89,8 @@ trait InteractsWithResponse
     /**
      * Return a 202 Accepted response.
      *
-     * @param  TResponseData|null             $data    Response data
-     * @param  string|null                    $message Optional message
+     * @param  TResponseData|null  $data  Response data
+     * @param  string|null  $message  Optional message
      * @return ResponseBuilder<TResponseData>
      */
     protected function accepted(mixed $data, ?string $message = null): ResponseBuilder
@@ -115,7 +115,7 @@ trait InteractsWithResponse
     /**
      * Return a 400 Bad Request response.
      *
-     * @param string|null $message Error message
+     * @param  string|null  $message  Error message
      */
     protected function badRequest(?string $message = null): ResponseBuilder
     {
@@ -125,7 +125,7 @@ trait InteractsWithResponse
     /**
      * Return a 401 Unauthorized response.
      *
-     * @param string|null $message Error message
+     * @param  string|null  $message  Error message
      */
     protected function unauthorized(?string $message = null): ResponseBuilder
     {
@@ -135,7 +135,7 @@ trait InteractsWithResponse
     /**
      * Return a 403 Forbidden response.
      *
-     * @param string|null $message Error message
+     * @param  string|null  $message  Error message
      */
     protected function forbidden(?string $message = null): ResponseBuilder
     {
@@ -145,7 +145,7 @@ trait InteractsWithResponse
     /**
      * Return a 404 Not Found response.
      *
-     * @param string|null $message Error message
+     * @param  string|null  $message  Error message
      */
     protected function notFound(?string $message = null): ResponseBuilder
     {
@@ -155,7 +155,7 @@ trait InteractsWithResponse
     /**
      * Return a 409 Conflict response.
      *
-     * @param string|null $message Error message
+     * @param  string|null  $message  Error message
      */
     protected function conflict(?string $message = null): ResponseBuilder
     {
@@ -165,8 +165,8 @@ trait InteractsWithResponse
     /**
      * Return a 422 Unprocessable Entity response.
      *
-     * @param array|null  $errors  Validation errors
-     * @param string|null $message Error message
+     * @param  array|null  $errors  Validation errors
+     * @param  string|null  $message  Error message
      */
     protected function unprocessable(?array $errors = null, ?string $message = null): ResponseBuilder
     {
@@ -176,7 +176,7 @@ trait InteractsWithResponse
     /**
      * Return a 500 Internal Server Error response.
      *
-     * @param string|null $message Error message
+     * @param  string|null  $message  Error message
      */
     protected function serverError(?string $message = null): ResponseBuilder
     {

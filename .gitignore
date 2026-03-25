@@ -37,9 +37,8 @@ Thumbs.db
 !/environments/.env.*.example
 !/environments/.env.example
 
-# Build and cache directories
-/build/
-/var/
+# Cache directories
+/.cache/
 
 # Other AI assistants (we use Kiro only)
 /.cursor/

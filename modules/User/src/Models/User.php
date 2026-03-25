@@ -14,16 +14,16 @@ use Pixielity\User\Factories\UserFactory;
  *
  * Represents an authenticated user in the system.
  *
- * @property int         $id
- * @property string      $name
- * @property string      $email
+ * @property int $id
+ * @property string $name
+ * @property string $email
  * @property string|null $email_verified_at
- * @property string      $password
+ * @property string $password
  * @property string|null $remember_token
  * @property string|null $locale
  * @property string|null $timezone
- * @property string      $created_at
- * @property string      $updated_at
+ * @property string $created_at
+ * @property string $updated_at
  *
  * @category   Models
  *
@@ -70,6 +70,7 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    #[\Override]
     protected function casts(): array
     {
         return [

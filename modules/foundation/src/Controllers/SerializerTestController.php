@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Pixielity\Foundation\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Pixielity\Routing\Controller;
-use Pixielity\Support\Facades\Json;
-use Pixielity\Support\Facades\Serializer;
 use Pixielity\Routing\Attributes\AsController;
 use Pixielity\Routing\Attributes\Get;
 use Pixielity\Routing\Attributes\Group;
 use Pixielity\Routing\Attributes\Prefix;
+use Pixielity\Routing\Controller;
+use Pixielity\Support\Facades\Json;
+use Pixielity\Support\Facades\Serializer;
 
 /**
  * Serializer Test Controller.
@@ -33,8 +33,6 @@ class SerializerTestController extends Controller
 {
     /**
      * Test all serializer functionality.
-     *
-     * @return JsonResponse
      */
     #[Get('/', name: 'foundation.api.test.serializer.index')]
     public function index(): JsonResponse
@@ -53,8 +51,6 @@ class SerializerTestController extends Controller
      * Test PHP Serializer functionality.
      *
      * Tests serialize(), unserialize(), and isSerialized() methods.
-     *
-     * @return JsonResponse
      */
     #[Get('/php', name: 'foundation.api.test.serializer.php')]
     public function testPhpSerializer(): JsonResponse
@@ -166,8 +162,6 @@ class SerializerTestController extends Controller
      * Test JSON Serializer functionality.
      *
      * Tests encode(), decode(), and isValid() methods.
-     *
-     * @return JsonResponse
      */
     #[Get('/json', name: 'foundation.api.test.serializer.json')]
     public function testJsonSerializer(): JsonResponse
@@ -293,8 +287,6 @@ class SerializerTestController extends Controller
 
     /**
      * Run all serializer tests.
-     *
-     * @return JsonResponse
      */
     #[Get('/all', name: 'foundation.api.test.serializer.all')]
     public function testAll(): JsonResponse
@@ -318,15 +310,19 @@ class SerializerTestController extends Controller
      * Check if all tests passed.
      *
      * @param  array<string, mixed>  $results
-     * @return bool
      */
     private function checkAllPassed(array $results): bool
     {
         foreach ($results as $key => $result) {
-            if ($key === 'is_serialized_checks' || $key === 'is_valid_checks' || $key === 'decode_format_test') {
+            if ($key === 'is_serialized_checks') {
                 continue;
             }
-
+            if ($key === 'is_valid_checks') {
+                continue;
+            }
+            if ($key === 'decode_format_test') {
+                continue;
+            }
             if (isset($result['match']) && $result['match'] === false) {
                 return false;
             }

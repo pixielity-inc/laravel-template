@@ -40,17 +40,17 @@ use Illuminate\Contracts\Auth\Authenticatable;
  * }
  * ```
  *
- * @method Authenticatable|null user(?string $guard = null)                                                 Get the authenticated user
- * @method int|string|null      userId(?string $guard = null)                                               Get the authenticated user's ID
- * @method bool                 isAuthenticated(?string $guard = null)                                      Check if user is authenticated
- * @method bool                 isGuest(?string $guard = null) Check if user is a guest (not authenticated)
- * @method Authenticatable      userOrFail(?string $guard = null)                                           Get the authenticated user or fail
- * @method bool                 hasRole(string $role, ?string $guard = null)                                Check if authenticated user has a specific role
- * @method bool                 hasAnyRole(array $roles, ?string $guard = null)                             Check if authenticated user has any of the specified roles
- * @method bool                 hasAllRoles(array $roles, ?string $guard = null)                            Check if authenticated user has all of the specified roles
- * @method bool                 hasPermission(string $permission, ?string $guard = null)                    Check if authenticated user has a specific permission
- * @method bool                 hasAnyPermission(array $permissions, ?string $guard = null)                 Check if authenticated user has any of the specified permissions
- * @method bool                 hasAllPermissions(array $permissions, ?string $guard = null)                Check if authenticated user has all of the specified permissions
+ * @method Authenticatable|null user(?string $guard = null) Get the authenticated user
+ * @method int|string|null userId(?string $guard = null) Get the authenticated user's ID
+ * @method bool isAuthenticated(?string $guard = null) Check if user is authenticated
+ * @method bool isGuest(?string $guard = null) Check if user is a guest (not authenticated)
+ * @method Authenticatable userOrFail(?string $guard = null) Get the authenticated user or fail
+ * @method bool hasRole(string $role, ?string $guard = null) Check if authenticated user has a specific role
+ * @method bool hasAnyRole(array $roles, ?string $guard = null) Check if authenticated user has any of the specified roles
+ * @method bool hasAllRoles(array $roles, ?string $guard = null) Check if authenticated user has all of the specified roles
+ * @method bool hasPermission(string $permission, ?string $guard = null) Check if authenticated user has a specific permission
+ * @method bool hasAnyPermission(array $permissions, ?string $guard = null) Check if authenticated user has any of the specified permissions
+ * @method bool hasAllPermissions(array $permissions, ?string $guard = null) Check if authenticated user has all of the specified permissions
  *
  * @category   Concerns
  *
@@ -61,7 +61,7 @@ trait InteractsWithAuth
     /**
      * Get the authenticated user.
      *
-     * @param string|null $guard Guard name (optional)
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function user(?string $guard = null): ?Authenticatable
     {
@@ -71,7 +71,7 @@ trait InteractsWithAuth
     /**
      * Get the authenticated user's ID.
      *
-     * @param string|null $guard Guard name (optional)
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function userId(?string $guard = null): int|string|null
     {
@@ -81,7 +81,7 @@ trait InteractsWithAuth
     /**
      * Check if user is authenticated.
      *
-     * @param string|null $guard Guard name (optional)
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function isAuthenticated(?string $guard = null): bool
     {
@@ -91,7 +91,7 @@ trait InteractsWithAuth
     /**
      * Check if user is a guest (not authenticated).
      *
-     * @param string|null $guard Guard name (optional)
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function isGuest(?string $guard = null): bool
     {
@@ -103,7 +103,7 @@ trait InteractsWithAuth
      *
      * Throws AuthenticationException if not authenticated.
      *
-     * @param string|null $guard Guard name (optional)
+     * @param  string|null  $guard  Guard name (optional)
      *
      * @throws AuthenticationException
      */
@@ -130,8 +130,8 @@ trait InteractsWithAuth
      *
      * Requires user model to have hasRole() method.
      *
-     * @param string      $role  Role name
-     * @param string|null $guard Guard name (optional)
+     * @param  string  $role  Role name
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function hasRole(string $role, ?string $guard = null): bool
     {
@@ -150,8 +150,8 @@ trait InteractsWithAuth
      *
      * Requires user model to have hasAnyRole() method.
      *
-     * @param array<string> $roles Role names
-     * @param string|null   $guard Guard name (optional)
+     * @param  array<string>  $roles  Role names
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function hasAnyRole(array $roles, ?string $guard = null): bool
     {
@@ -170,8 +170,8 @@ trait InteractsWithAuth
      *
      * Requires user model to have hasAllRoles() method.
      *
-     * @param array<string> $roles Role names
-     * @param string|null   $guard Guard name (optional)
+     * @param  array<string>  $roles  Role names
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function hasAllRoles(array $roles, ?string $guard = null): bool
     {
@@ -190,8 +190,8 @@ trait InteractsWithAuth
      *
      * Requires user model to have hasPermission() method.
      *
-     * @param string      $permission Permission name
-     * @param string|null $guard      Guard name (optional)
+     * @param  string  $permission  Permission name
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function hasPermission(string $permission, ?string $guard = null): bool
     {
@@ -210,8 +210,8 @@ trait InteractsWithAuth
      *
      * Requires user model to have hasAnyPermission() method.
      *
-     * @param array<string> $permissions Permission names
-     * @param string|null   $guard       Guard name (optional)
+     * @param  array<string>  $permissions  Permission names
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function hasAnyPermission(array $permissions, ?string $guard = null): bool
     {
@@ -230,8 +230,8 @@ trait InteractsWithAuth
      *
      * Requires user model to have hasAllPermissions() method.
      *
-     * @param array<string> $permissions Permission names
-     * @param string|null   $guard       Guard name (optional)
+     * @param  array<string>  $permissions  Permission names
+     * @param  string|null  $guard  Guard name (optional)
      */
     protected function hasAllPermissions(array $permissions, ?string $guard = null): bool
     {

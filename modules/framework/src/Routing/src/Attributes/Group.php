@@ -37,10 +37,10 @@ class Group extends SpatieGroup
     /**
      * Create a new Group attribute instance.
      *
-     * @param string|null          $prefix Optional prefix for all routes in the group
-     * @param string|null          $domain Optional domain constraint for the group
-     * @param string|null          $as     Optional name prefix for all routes in the group
-     * @param array<string,string> $where  Optional parameter constraints (e.g., ['id' => '[0-9]+'])
+     * @param  string|null  $prefix  Optional prefix for all routes in the group
+     * @param  string|null  $domain  Optional domain constraint for the group
+     * @param  string|null  $as  Optional name prefix for all routes in the group
+     * @param  array<string,string>  $where  Optional parameter constraints (e.g., ['id' => '[0-9]+'])
      */
     public function __construct(
         ?string $prefix = null,

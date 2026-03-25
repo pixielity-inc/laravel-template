@@ -41,8 +41,8 @@ class Defaults extends SpatieDefaults
     /**
      * Create a new Defaults attribute instance.
      *
-     * @param string $param Parameter name to set default for
-     * @param mixed  $value Default value for the parameter
+     * @param  string  $param  Parameter name to set default for
+     * @param  mixed  $value  Default value for the parameter
      */
     public function __construct(
         string $param,

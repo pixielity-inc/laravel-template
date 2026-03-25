@@ -95,8 +95,8 @@ class TimezoneMiddleware
     /**
      * Create a new middleware instance.
      *
-     * @param string $headerName      Timezone header name
-     * @param string $defaultTimezone Default timezone
+     * @param  string  $headerName  Timezone header name
+     * @param  string  $defaultTimezone  Default timezone
      */
     public function __construct(
         #[Config('app.timezone_header')]
@@ -108,8 +108,8 @@ class TimezoneMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  Request  $request The incoming request
-     * @param  Closure  $next    The next middleware
+     * @param  Request  $request  The incoming request
+     * @param  Closure  $next  The next middleware
      * @return Response The response
      */
     public function handle(Request $request, Closure $next): Response
@@ -161,8 +161,8 @@ class TimezoneMiddleware
     /**
      * Check if a timezone is valid.
      *
-     * @param  string $timezone Timezone identifier
-     * @return bool   True if valid, false otherwise
+     * @param  string  $timezone  Timezone identifier
+     * @return bool True if valid, false otherwise
      */
     protected function isValidTimezone(string $timezone): bool
     {

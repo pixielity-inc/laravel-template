@@ -6,13 +6,13 @@ namespace Pixielity\Foundation\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Pixielity\Routing\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Pixielity\Routing\Attributes\AsController;
 use Pixielity\Routing\Attributes\Get;
 use Pixielity\Routing\Attributes\Group;
 use Pixielity\Routing\Attributes\Prefix;
+use Pixielity\Routing\Controller;
 
 /**
  * Localization Test Controller.
@@ -151,9 +151,9 @@ class LocalizationTestController extends Controller
         // Test 3: Query parameter detection
         $queryParams = Config::get('localization.query_params', []);
         $queryTests = [];
-        foreach ($queryParams as $param) {
-            $value = $request->query($param);
-            $queryTests[$param] = [
+        foreach ($queryParams as $queryParam) {
+            $value = $request->query($queryParam);
+            $queryTests[$queryParam] = [
                 'value' => $value,
                 'present' => $value !== null,
             ];
@@ -253,17 +253,15 @@ class LocalizationTestController extends Controller
     private function detectLocaleSource(Request $request): string
     {
         // Check user preference
-        if ($user = $request->user()) {
-            if (property_exists($user, 'locale') && $user->locale) {
-                return 'user_preference';
-            }
+        if (($user = $request->user()) && (property_exists($user, 'locale') && $user->locale)) {
+            return 'user_preference';
         }
 
         // Check query parameters
         $queryParams = Config::get('localization.query_params', []);
-        foreach ($queryParams as $param) {
-            if ($request->query($param)) {
-                return "query_param:{$param}";
+        foreach ($queryParams as $queryParam) {
+            if ($request->query($queryParam)) {
+                return "query_param:{$queryParam}";
             }
         }
 
@@ -288,11 +286,12 @@ class LocalizationTestController extends Controller
      */
     private function isValidLocale(?string $locale): bool
     {
-        if (!$locale) {
+        if (! $locale) {
             return false;
         }
 
         $locales = Config::get('localization.locales', []);
+
         return isset($locales[$locale]) && ($locales[$locale]['enabled'] ?? false);
     }
 
@@ -303,6 +302,7 @@ class LocalizationTestController extends Controller
     {
         try {
             new \DateTimeZone($timezone);
+
             return true;
         } catch (\Exception) {
             return false;

@@ -12,6 +12,7 @@ class OctaneServiceProvider extends LaravelOctaneServiceProvider
     /**
      * Bootstrap any application services.
      */
+    #[\Override]
     public function boot(): void
     {
         // Register console commands

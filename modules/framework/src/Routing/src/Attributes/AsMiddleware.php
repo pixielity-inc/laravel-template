@@ -3,6 +3,8 @@
 namespace Pixielity\Routing\Attributes;
 
 use Attribute;
+use Pixielity\Discovery\Facades\Discovery;
+use Pixielity\ServiceProvider\Concerns\HasMiddleware;
 
 /**
  * AsMiddleware Attribute.
@@ -133,8 +135,8 @@ use Attribute;
  * - Discovery package - Handles attribute scanning
  * - Router - Laravel's routing system
  *
- * @see \Pixielity\ServiceProvider\Concerns\HasMiddleware
- * @see \Pixielity\Discovery\Facades\Discovery
+ * @see HasMiddleware
+ * @see Discovery
  * @since 1.0.0
  */
 #[Attribute(Attribute::TARGET_CLASS)]
@@ -143,10 +145,10 @@ class AsMiddleware
     /**
      * Create a new AsMiddleware attribute instance.
      *
-     * @param string        $alias    Middleware alias for route usage (e.g., 'auth', 'cache')
-     * @param array<string> $groups   Middleware groups to register with (['api'], ['web'], ['api', 'web'], or [])
-     * @param int           $priority Execution priority (lower = earlier, 0-100)
-     * @param bool          $enabled  Whether middleware is enabled (allows conditional registration)
+     * @param  string  $alias  Middleware alias for route usage (e.g., 'auth', 'cache')
+     * @param  array<string>  $groups  Middleware groups to register with (['api'], ['web'], ['api', 'web'], or [])
+     * @param  int  $priority  Execution priority (lower = earlier, 0-100)
+     * @param  bool  $enabled  Whether middleware is enabled (allows conditional registration)
      */
     public function __construct(
         public readonly string $alias,

@@ -42,11 +42,11 @@ use Pixielity\Response\Builders\Response;
  * }
  * ```
  *
- * @method Response response()                                                                                              Get the Response facade for advanced chaining`
- * @method int      getPage()                                                                                               Get page number from request
- * @method int      getPerPage()                                                                                            Get per page value from request
- * @method void     validatePagination(int $page, int $perPage)                                                             Validate pagination parameters
- * @method Response paginate(Builder $query, ?int $perPage = null)                                                          Paginate query and return Response builder
+ * @method Response response() Get the Response facade for advanced chaining`
+ * @method int getPage() Get page number from request
+ * @method int getPerPage() Get per page value from request
+ * @method void validatePagination(int $page, int $perPage) Validate pagination parameters
+ * @method Response paginate(Builder $query, ?int $perPage = null) Paginate query and return Response builder
  * @method Response paginatedResponse((LengthAwarePaginator|CursorPaginator|Paginator) $paginator, ?string $message = null) Return paginated Response builder
  *
  * @category   Concerns
@@ -75,7 +75,7 @@ trait InteractsWithPagination
      * - Example: `/api/users?page=2`
      * - Default: 1
      *
-     * @param  int $default Default page number (defaults to 1)
+     * @param  int  $default  Default page number (defaults to 1)
      * @return int Page number from request or default
      */
     protected function getPage(int $default = PaginatorConstants::DEFAULT_PAGE): int
@@ -104,7 +104,7 @@ trait InteractsWithPagination
      * - Default: 50
      * - Maximum: 100 (enforced by validatePagination)
      *
-     * @param  int $default Default per page value (defaults to 50)
+     * @param  int  $default  Default per page value (defaults to 50)
      * @return int Items per page from request or default
      */
     protected function getPerPage(int $default = PaginatorConstants::DEFAULT_PER_PAGE): int
@@ -136,8 +136,8 @@ trait InteractsWithPagination
      * - Provides clear error messages
      * - Protects against malicious requests
      *
-     * @param int $page    Page number (must be >= 1)
-     * @param int $perPage Items per page (must be 1-100)
+     * @param  int  $page  Page number (must be >= 1)
+     * @param  int  $perPage  Items per page (must be 1-100)
      *
      * @throws BadRequestException If validation fails
      */
@@ -171,8 +171,8 @@ trait InteractsWithPagination
     /**
      * Paginate a query and return Response builder.
      *
-     * @param  Builder  $builder Eloquent query builder
-     * @param  int|null $perPage Items per page (null = use request value)
+     * @param  Builder  $builder  Eloquent query builder
+     * @param  int|null  $perPage  Items per page (null = use request value)
      * @return Response Response builder
      */
     protected function paginate(Builder $builder, ?int $perPage = null): Response
@@ -191,9 +191,9 @@ trait InteractsWithPagination
     /**
      * Return a paginated Response builder.
      *
-     * @param  LengthAwarePaginator|CursorPaginator|Paginator $paginator Paginator instance
-     * @param  string|null                                    $message   Optional success message
-     * @return Response                                       Response builder
+     * @param  LengthAwarePaginator|CursorPaginator|Paginator  $paginator  Paginator instance
+     * @param  string|null  $message  Optional success message
+     * @return Response Response builder
      */
     protected function paginatedResponse(
         LengthAwarePaginator|CursorPaginator|Paginator $paginator,

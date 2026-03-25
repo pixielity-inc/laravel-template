@@ -156,7 +156,7 @@ return [
             'interface' => ['path' => 'src/Interfaces', 'generate' => true],
             'contract' => ['path' => 'src/Contracts', 'generate' => false],
             'provider' => ['path' => 'src/Providers', 'generate' => true],
-            
+
             // src/ - Additional structures
             'action' => ['path' => 'src/Actions', 'generate' => false],
             'cast' => ['path' => 'src/Casts', 'generate' => false],

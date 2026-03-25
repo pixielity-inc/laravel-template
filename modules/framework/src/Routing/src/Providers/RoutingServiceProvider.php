@@ -275,7 +275,7 @@ class RoutingServiceProvider extends ServiceProvider
      * - Route attributes are registered
      * - Custom RouteRegistrar is automatically bound via #[Bind] attribute
      *
-     * @see \Pixielity\Routing\RouteRegistrar The #[Bind] attribute handles the binding
+     * @see RouteRegistrar The #[Bind] attribute handles the binding
      */
     #[Override]
     public function register(): void
