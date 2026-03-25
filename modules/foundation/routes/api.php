@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Pixielity\Foundation\Controllers\EnumTestController;
+use Pixielity\Foundation\Controllers\LocalizationTestController;
 use Pixielity\Foundation\Controllers\RootController;
 use Pixielity\Foundation\Controllers\SerializerTestController;
 
@@ -27,4 +28,14 @@ Route::prefix('test/serializer')->group(function () {
     Route::get('/php', [SerializerTestController::class, 'testPhpSerializer'])->name('foundation.api.test.serializer.php');
     Route::get('/json', [SerializerTestController::class, 'testJsonSerializer'])->name('foundation.api.test.serializer.json');
     Route::get('/all', [SerializerTestController::class, 'testAll'])->name('foundation.api.test.serializer.all');
+});
+
+// Localization test routes
+Route::prefix('test/localization')->group(function () {
+    Route::get('/', [LocalizationTestController::class, 'index'])->name('foundation.api.test.localization.index');
+    Route::get('/current', [LocalizationTestController::class, 'current'])->name('foundation.api.test.localization.current');
+    Route::get('/available', [LocalizationTestController::class, 'available'])->name('foundation.api.test.localization.available');
+    Route::get('/headers', [LocalizationTestController::class, 'testHeaders'])->name('foundation.api.test.localization.headers');
+    Route::get('/timezone', [LocalizationTestController::class, 'testTimezone'])->name('foundation.api.test.localization.timezone');
+    Route::get('/all', [LocalizationTestController::class, 'testAll'])->name('foundation.api.test.localization.all');
 });
