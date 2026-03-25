@@ -171,6 +171,13 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "composer-attribute-collector": {
+            "include": [
+                "src",
+                "{vendor}/pixielity/laravel-framework",
+                "{vendor}/pixielity/laravel-foundation"
+            ]
         }
     },
     "repositories": [

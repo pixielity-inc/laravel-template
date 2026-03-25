@@ -196,8 +196,16 @@ class LocalizationServiceProvider extends ServiceProvider
     // #[Override]
     public function boot(): void
     {
-        // Call parent boot to automatically load configuration
-        // parent::boot();
+        // Publish configuration file
+        $this->publishes([
+            __DIR__ . '/../../config/localization.php' => config_path('localization.php'),
+        ], 'localization-config');
+
+        // Merge configuration
+        $this->mergeConfigFrom(
+            __DIR__ . '/../../config/localization.php',
+            'localization'
+        );
     }
 
     /**
