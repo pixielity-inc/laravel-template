@@ -13,8 +13,7 @@
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
         "nwidart/laravel-modules": "^13.0",
-        "predis/predis": "^3.4",
-        "modules/samplemodule": "@dev"
+        "predis/predis": "^3.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^4.1",
@@ -182,15 +181,6 @@
             "dont-discover": []
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./modules/*",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "253f265dbe2bc218d2f69869869d639d",
+    "content-hash": "c22880d24c560221287ac33f49ef8a93",
     "packages": [
         {
             "name": "brick/math",
@@ -7921,44 +7921,6 @@
             "time": "2024-05-16T03:13:13+00:00"
         },
         {
-            "name": "modules/samplemodule",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./modules/SampleModule",
-                "reference": "f8d75b6991c6970b7e70f733fc609053a18837b3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [],
-                    "aliases": []
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pixielity\\SampleModule\\": "src/",
-                    "Pixielity\\SampleModule\\Database\\Factories\\": "database/factories/",
-                    "Pixielity\\SampleModule\\Database\\Seeders\\": "database/seeders/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Pixielity\\SampleModule\\Tests\\": "tests/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Nicolas Widart",
-                    "email": "n.widart@gmail.com"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
             "name": "myclabs/deep-copy",
             "version": "1.13.4",
             "source": {
@@ -13469,9 +13431,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "modules/samplemodule": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
