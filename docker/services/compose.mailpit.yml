@@ -14,6 +14,7 @@
 services:
   mailpit:
     env_file:
+      - ../../environments/.env
       - ../../environments/.env.docker
     image: axllent/mailpit:latest
     container_name: laravel-mailpit

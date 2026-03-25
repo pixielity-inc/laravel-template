@@ -13,6 +13,7 @@
 services:
   meilisearch:
     env_file:
+      - ../../environments/.env
       - ../../environments/.env.docker
     image: getmeili/meilisearch:v1.11
     container_name: laravel-meilisearch

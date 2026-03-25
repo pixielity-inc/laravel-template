@@ -16,6 +16,7 @@
 services:
   reverb:
     env_file:
+      - ../../environments/.env
       - ../../environments/.env.docker
     build:
       context: ../..

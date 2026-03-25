@@ -14,6 +14,7 @@
 services:
   elasticsearch:
     env_file:
+      - ../../environments/.env
       - ../../environments/.env.docker
     image: docker.elastic.co/elasticsearch/elasticsearch:8.16.1
     container_name: laravel-elasticsearch
@@ -38,6 +39,7 @@ services:
 
   elasticvue:
     env_file:
+      - ../../environments/.env
       - ../../environments/.env.docker
     image: cars10/elasticvue:latest
     container_name: laravel-elasticvue

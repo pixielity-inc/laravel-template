@@ -13,6 +13,7 @@
 services:
   redis:
     env_file:
+      - ../../environments/.env
       - ../../environments/.env.docker
     image: redis:7-alpine
     container_name: laravel-redis
