@@ -176,6 +176,12 @@
             "include": [
                 "{vendor}/pixielity/laravel-framework",
                 "{vendor}/pixielity/laravel-foundation"
+            ],
+            "exclude": [
+                "#/tests/#",
+                "#/Tests/#",
+                "#TestCase\\.php$#",
+                "#/Abstracts/BaseEmail\\.php$#"
             ]
         }
     },
