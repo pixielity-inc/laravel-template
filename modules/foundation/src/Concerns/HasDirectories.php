@@ -255,13 +255,15 @@ trait HasDirectories
         // Try to get from config if available, otherwise use env()
         // This handles both runtime and bootstrap scenarios
         if (isset($this['config'])) {
-            $path = $this['config']->get('app.project_path', 'src');
+            $path = $this['config']->get('app.project_path');
         } else {
             // @rector-ignore RectorLaravel\Rector\ArrayDimFetch\ServerVariableToRequestFacadeRector
-            $path = $_ENV['APP_PROJECT_PATH'] ?? $_SERVER['APP_PROJECT_PATH'] ?? 'src';
+            $path = $_ENV['APP_PROJECT_PATH'] ?? $_SERVER['APP_PROJECT_PATH'] ?? null;
         }
 
-        // Ensure we always return a string
-        return is_string($path) ? $path : 'src';
+        // Filter out empty strings and null values
+        $path = !empty($path) && is_string($path) ? $path : 'src';
+
+        return $path;
     }
 }

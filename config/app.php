@@ -83,6 +83,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Project Path
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the base directory where your application code
+    | is stored. By default, Laravel uses 'src', but this template uses
+    | a modular structure with code in 'modules/*/src/'.
+    |
+    | Set to empty string or null to use the default 'src' directory.
+    |
+    */
+
+    'project_path' => env('APP_PROJECT_PATH', 'src'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Locale Configuration
     |--------------------------------------------------------------------------
     |
