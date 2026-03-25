@@ -11,11 +11,11 @@ use Pixielity\Database\Contracts\HasBaseIdentifier;
 use Pixielity\Support\Str;
 
 /**
- * Blueprint Macros.
+ * Base ID Blueprint Macros.
  *
- * Custom Blueprint macros for common database patterns.
- * These macros extend Laravel's Blueprint class with additional
- * column types and patterns commonly used across the application.
+ * Custom Blueprint macros for adding base_id columns to database tables.
+ * Base IDs provide secure, non-sequential public-facing identifiers that
+ * prevent enumeration attacks and hide internal database IDs.
  *
  * ## Available Macros:
  * - `baseId()` - Add a base_id column for public-facing identifiers
@@ -85,16 +85,24 @@ use Pixielity\Support\Str;
  * ## Why BaseID?
  * BaseIDs provide public-facing identifiers that:
  * - Hide internal auto-increment IDs from users
- * - Prevent enumeration attacks
+ * - Prevent enumeration attacks (can't guess other IDs)
  * - Are URL-safe and human-readable
  * - Can be generated using base64 encoding
+ * - Shorter than UUIDs (16-20 chars vs 36 chars)
+ * - Faster lookups than UUIDs (indexed string vs UUID type)
  *
- * @see HasBaseIdentifier For the trait that generates baseids
- * @see \Pixielity\Database\Model For the base model that uses baseids
+ * ## Security Benefits:
+ * - **Prevents enumeration**: Random IDs prevent scraping/guessing
+ * - **Hides metrics**: Can't tell how many records exist
+ * - **GDPR friendly**: Harder to correlate data across systems
+ * - **Unpredictable**: No sequential pattern to exploit
+ *
+ * @see HasBaseIdentifier For the trait that generates base_ids
+ * @see \Pixielity\Database\Model For the base model that uses base_ids
  * @since 1.0.0
  */
 #[AsDatabaseBlueprint(
-    description: 'Core Blueprint macros for common database patterns',
+    description: 'Base ID Blueprint macros for secure public identifiers',
     priority: 10
 )]
 class BlueprintMacros
@@ -103,12 +111,12 @@ class BlueprintMacros
      * Default base_id column length.
      *
      * 32 characters is enough for base64-encoded random strings
-     * while keeping the column size reasonable.
+     * while keeping the column size reasonable for indexing.
      */
     public const DEFAULT_BASEID_LENGTH = 32;
 
     /**
-     * Register all Blueprint macros.
+     * Register all base_id Blueprint macros.
      *
      * This method is automatically called by the DatabaseServiceProvider
      * via the #[AsDatabaseBlueprint] attribute discovery system.
