@@ -5,7 +5,6 @@ namespace Pixielity\Routing;
 use Override;
 use Pixielity\Support\Reflection;
 use ReflectionClass;
-use Spatie\RouteAttributes\ClassRouteAttributes;
 use Spatie\RouteAttributes\RouteRegistrar as SpatieRouteRegistrar;
 
 /**
