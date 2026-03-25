@@ -51,9 +51,15 @@ class FoundationServiceProvider extends ModuleServiceProvider
     {
         parent::boot();
 
-        // Get the RouteRegistrar from the container
-        // This is our custom registrar that extends Spatie's
-        $registrar = $this->app->make(RouteRegistrar::class);
+        // Disable Spatie's automatic route registration since we're doing it manually
+        config(['route-attributes.enabled' => false]);
+
+        // Create a new instance of our RouteRegistrar
+        // Pass the router and config from the container
+        $registrar = new RouteRegistrar(
+            $this->app->make('router'),
+            $this->app->make('config')
+        );
 
         // Use Discovery to find all controllers with #[AsController] attribute
         // get() returns a collection with metadata, keys() gives us just the class names
@@ -62,7 +68,7 @@ class FoundationServiceProvider extends ModuleServiceProvider
             ->keys()
             // Filter out any classes that don't exist (safety check)
             ->filter(fn (string $controller): bool => Reflection::exists($controller))
-            // Register each controller with Spatie's route system
+            // Register each controller with our route registrar
             ->each(fn (string $controller) => $registrar->registerController($controller));
     }
 }
