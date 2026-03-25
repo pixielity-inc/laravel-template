@@ -1,0 +1,141 @@
+{
+  "name": "pixielity/laravel-discovery",
+  "description": "Powerful class discovery system for Laravel with attribute-based scanning, directory traversal, and monorepo support",
+  "keywords": [
+    "laravel",
+    "discovery",
+    "class-discovery",
+    "attribute",
+    "reflection",
+    "monorepo",
+    "composer",
+    "php8",
+    "dependency-injection"
+  ],
+  "homepage": "https://gitlab.com/pixielity/laravel/discovery",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pixielity Team",
+      "email": "dev@pixielity.com"
+    }
+  ],
+  "require": {
+    "php": "^8.4|^8.5",
+    "symfony/finder": "^7.0",
+    "illuminate/container": "^12.0|^13.0",
+    "illuminate/support": "^12.0|^13.0",
+    "laravel/prompts": "^0.3.12",
+    "olvlvl/composer-attribute-collector": "^2.1"
+  },
+  "require-dev": {
+    "driftingly/rector-laravel": "^2.1",
+    "rector/rector": "^2.3",
+    "larastan/larastan": "^3.9",
+    "laravel/pint": "^1.27",
+    "mockery/mockery": "^1.6",
+    "orchestra/testbench": "^9.0|^10.0",
+    "phpstan/phpstan": "^2.0",
+    "phpunit/phpunit": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pixielity\\Discovery\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Workbench\\App\\": "workbench/app/",
+      "Pixielity\\Discovery\\Tests\\": "tests/",
+      "Workbench\\Database\\Seeders\\": "workbench/database/seeders/",
+      "Workbench\\Database\\Factories\\": "workbench/database/factories/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test:coverage": "vendor/bin/phpunit --coverage-html coverage",
+    "test:filter": "vendor/bin/phpunit --filter",
+    "analyse": "vendor/bin/phpstan analyse --memory-limit=2G",
+    "analyse:baseline": "vendor/bin/phpstan analyse --memory-limit=2G --generate-baseline",
+    "format": "@php vendor/bin/pint --ansi",
+    "format:test": "@php vendor/bin/pint --test --ansi",
+    "format:fix": "@php vendor/bin/pint --ansi",
+    "rector": "vendor/rector/rector/bin/rector process --dry-run",
+    "rector:fix": "vendor/rector/rector/bin/rector process",
+    "quality": [
+      "@format:test",
+      "@analyse"
+    ],
+    "quality:fix": [
+      "@format:fix",
+      "@rector:fix"
+    ],
+    "ci": [
+      "@test",
+      "@quality"
+    ],
+    "post-autoload-dump": [
+      "@clear",
+      "@prepare"
+    ],
+    "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+    "prepare": "@php vendor/bin/testbench package:discover --ansi",
+    "build": "@php vendor/bin/testbench workbench:build --ansi",
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "@build",
+      "@php vendor/bin/testbench serve --ansi"
+    ]
+  },
+  "scripts-descriptions": {
+    "test": "Run the test suite",
+    "test:coverage": "Run tests with HTML coverage report",
+    "test:filter": "Run specific tests by filter pattern",
+    "analyse": "Run PHPStan static analysis",
+    "analyse:baseline": "Generate PHPStan baseline file",
+    "format": "Check code style with Laravel Pint",
+    "format:test": "Check code style without fixing",
+    "format:fix": "Fix code style issues with Laravel Pint",
+    "rector": "Preview Rector refactoring changes",
+    "rector:fix": "Apply Rector refactoring changes",
+    "quality": "Run all quality checks (format + analyse)",
+    "quality:fix": "Fix all quality issues (format + rector)",
+    "ci": "Run all CI checks (tests + quality)",
+    "clear": "Clear Testbench skeleton files",
+    "prepare": "Discover Testbench packages",
+    "build": "Build Testbench workbench",
+    "serve": "Start Testbench development server"
+  },
+  "extra": {
+    "laravel": {
+      "aliases": {
+        "Discovery": "Pixielity\\Discovery\\Facades\\Discovery"
+      }
+    },
+    "composer-attribute-collector": {
+      "include": [
+        "src",
+        "tests/Fixtures"
+      ]
+    },
+    "branch-alias": {
+      "dev-main": "1.1.x-dev"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": true,
+      "olvlvl/composer-attribute-collector": true
+    },
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "support": {
+    "issues": "https://gitlab.com/pixielity/laravel/discovery/-/issues",
+    "source": "https://gitlab.com/pixielity/laravel/discovery"
+  }
+}
