@@ -57,6 +57,9 @@ parameters:
         # App namespace
         - '#App\\#'
 
+        # Illuminate
+        - '#Illuminate\\#'
+
         # PHPUnit test framework
         - '#PHPUnit\\#'
 

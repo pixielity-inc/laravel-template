@@ -2,11 +2,10 @@
 
 namespace Pixielity\Octane\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Laravel\Octane\OctaneServiceProvider as LaravelOctaneServiceProvider;
 use Pixielity\Octane\Console\Commands\RestartAppCommand;
 use Pixielity\Octane\Console\Commands\StartAppCommand;
 use Pixielity\Octane\Console\Commands\StopAppCommand;
-use Laravel\Octane\OctaneServiceProvider as LaravelOctaneServiceProvider;
 
 class OctaneServiceProvider extends LaravelOctaneServiceProvider
 {

@@ -48,6 +48,7 @@ use Pixielity\Enum\Enum;
  * ```
  *
  * @author  Pixielity Development Team
+ *
  * @since   1.0.0
  */
 #[Meta([Description::class, Label::class])]
