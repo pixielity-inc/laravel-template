@@ -75,11 +75,11 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "php artisan octane:start --server=frankenphp --watch"
-        ],
-        "dev:traditional": [
-            "Composer\\Config::disableProcessTimeout",
             "php artisan serve"
+        ],
+        "dev:octane": [
+            "Composer\\Config::disableProcessTimeout",
+            "php artisan octane:start --server=frankenphp --watch"
         ],
         "dev:full": [
             "Composer\\Config::disableProcessTimeout",
