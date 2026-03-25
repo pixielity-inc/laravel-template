@@ -43,8 +43,12 @@ modules/
     ├── tests/
     │   ├── Feature/                 # Feature tests
     │   └── Unit/                    # Unit tests
+    ├── .gitignore                   # Module-specific git ignores
+    ├── CHANGELOG.md                 # Version history
     ├── composer.json                # Module dependencies
+    ├── LICENSE                      # License file
     ├── module.json                  # Module metadata
+    ├── phpunit.xml                  # PHPUnit configuration
     └── README.md                    # Module documentation
 ```
 

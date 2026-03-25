@@ -35,19 +35,17 @@ return [
     |
     */
     'stubs' => [
-        'enabled' => false,
-        'path' => base_path('vendor/modules/laravel-modules/src/Commands/stubs'),
+        'enabled' => true,
+        'path' => base_path('stubs/modules'),
         'files' => [
-            // 'routes/web' => 'routes/web.php',
-            // 'routes/api' => 'routes/api.php',
-            // 'views/index' => 'resources/views/index.blade.php',
-            // 'views/master' => 'resources/views/components/layouts/master.blade.php',
             'scaffold/config' => 'config/config.php',
             'composer' => 'composer.json',
-            // 'assets/js/app' => 'resources/assets/js/app.js',
-            // 'assets/sass/app' => 'resources/assets/sass/app.scss',
-            // 'vite' => 'vite.config.js',
-            'package' => 'package.json',
+            'module' => 'module.json',
+            'readme' => 'README.md',
+            'changelog' => 'CHANGELOG.md',
+            'license' => 'LICENSE',
+            'gitignore' => '.gitignore',
+            'phpunit' => 'phpunit.xml',
         ],
         'replacements' => [
             /**
