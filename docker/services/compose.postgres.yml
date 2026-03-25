@@ -14,7 +14,6 @@
 services:
   postgres:
     env_file:
-      - ../../environments/.env
       - ../../environments/.env.docker
       - ../../environments/.env
     image: postgres:16-alpine
@@ -39,7 +38,6 @@ services:
 
   pgadmin:
     env_file:
-      - ../../environments/.env
       - ../../environments/.env.docker
       - ../../environments/.env
     image: dpage/pgadmin4:latest
@@ -53,11 +51,18 @@ services:
       PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
     volumes:
       - pgadmin_data:/var/lib/pgadmin
+      - ../pgadmin/servers.json:/pgadmin4/servers.json:ro
+      - ../pgadmin/pgpass:/pgpass:ro
     depends_on:
       - postgres
     restart: unless-stopped
     networks:
       - laravel
+    entrypoint: >
+      /bin/sh -c "
+      chmod 600 /pgpass;
+      /entrypoint.sh
+      "
 
 volumes:
   postgres_data:
