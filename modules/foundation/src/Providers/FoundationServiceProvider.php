@@ -47,8 +47,11 @@ class FoundationServiceProvider extends ModuleServiceProvider
     //     $schedule->command('inspire')->hourly();
     // }
 
-    public function register(): void {
-         // Get the RouteRegistrar from the container
+    public function boot(): void
+    {
+        parent::boot();
+
+        // Get the RouteRegistrar from the container
         // This is our custom registrar that extends Spatie's
         $registrar = $this->app->make(RouteRegistrar::class);
 
