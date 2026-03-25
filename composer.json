@@ -190,6 +190,11 @@
             "url": "./modules/*"
         }
     ],
+    "autoload": {
+        "files": [
+            "vendor/attributes.php"
+        ]
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
