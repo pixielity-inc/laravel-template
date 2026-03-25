@@ -43,38 +43,19 @@ class FoundationServiceProvider extends ModuleServiceProvider
     // }
 
     /**
-     * Register the service provider.
-     *
-     * Binds our custom RouteRegistrar so Spatie's auto-discovery uses it.
-     */
-    public function register(): void
-    {
-        parent::register();
-
-        // Bind our custom RouteRegistrar so Spatie's service provider uses it
-        // This allows us to override registerDirectory() to use Discovery
-        $this->app->bind(
-            \Spatie\RouteAttributes\RouteRegistrar::class,
-            \Pixielity\Routing\RouteRegistrar::class
-        );
-    }
-
-    /**
      * Boot the service provider.
      *
      * Routes are automatically registered by Spatie's RouteAttributesServiceProvider
-     * using our custom RouteRegistrar which discovers controllers via the
-     * #[AsController] attribute instead of scanning directories.
+     * using our custom RouteRegistrar (bound in RoutingServiceProvider) which
+     * discovers controllers via the #[AsController] attribute.
      *
-     * No manual registration needed - just configure directories in
-     * config/route-attributes.php and add #[AsController] to your controllers.
+     * No manual registration needed - just add #[AsController] to your controllers.
+     *
+     * @see \Pixielity\Routing\Providers\RoutingServiceProvider::register()
+     * @see \Pixielity\Routing\RouteRegistrar::registerDirectory()
      */
-    public function boot(): void
-    {
-        parent::boot();
-
-        // Spatie's auto-discovery will use our custom RouteRegistrar
-        // which overrides registerDirectory() to use Discovery with #[AsController]
-        // Configuration is in config/route-attributes.php
-    }
+    // public function boot(): void
+    // {
+    //     parent::boot();
+    // }
 }

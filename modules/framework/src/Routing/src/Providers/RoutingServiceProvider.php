@@ -273,11 +273,20 @@ class RoutingServiceProvider extends ServiceProvider
      * - BaseController is made available for extension
      * - Controller concerns (traits) are auto-discovered
      * - Route attributes are registered
+     * - Custom RouteRegistrar is bound to override Spatie's implementation
      */
     #[Override]
     public function register(): void
     {
         // Call parent register for base functionality
         parent::register();
+
+        // Bind our custom RouteRegistrar so Spatie's service provider uses it
+        // This allows us to override registerDirectory() to use Discovery with #[AsController]
+        // instead of scanning directories for PHP files
+        $this->app->bind(
+            \Spatie\RouteAttributes\RouteRegistrar::class,
+            \Pixielity\Routing\RouteRegistrar::class
+        );
     }
 }
