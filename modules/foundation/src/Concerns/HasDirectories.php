@@ -261,8 +261,11 @@ trait HasDirectories
             $path = $_ENV['APP_PROJECT_PATH'] ?? $_SERVER['APP_PROJECT_PATH'] ?? null;
         }
 
-        // Filter out empty strings and null values
-        $path = !empty($path) && is_string($path) ? $path : 'src';
+        // If path is null or not a string, use default 'src'
+        // Empty string '' is valid and means no subdirectory
+        if ($path === null || !is_string($path)) {
+            return 'src';
+        }
 
         return $path;
     }
