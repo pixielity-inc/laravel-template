@@ -3792,7 +3792,7 @@
             "dist": {
                 "type": "path",
                 "url": "./modules/framework",
-                "reference": "f27874db0268cf5f79e000f19a68136ab32a6c44"
+                "reference": "a60f9ad83dee2dbc61b3c3002593928bc38f20bb"
             },
             "require": {
                 "abbasudo/laravel-purity": "^3.0",
@@ -3814,6 +3814,8 @@
             "replace": {
                 "pixielity/laravel-container": "self.version",
                 "pixielity/laravel-enum": "self.version",
+                "pixielity/laravel-localization": "self.version",
+                "pixielity/laravel-routing": "self.version",
                 "pixielity/laravel-serializer": "self.version",
                 "pixielity/laravel-support": "self.version"
             },
@@ -3836,7 +3838,9 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Pixielity\\Container\\Providers\\ContainerServiceProvider"
+                        "Pixielity\\Routing\\Providers\\RoutingServiceProvider",
+                        "Pixielity\\Container\\Providers\\ContainerServiceProvider",
+                        "Pixielity\\Localization\\Providers\\LocalizationServiceProvider"
                     ],
                     "aliases": []
                 }
@@ -3845,17 +3849,21 @@
                 "psr-4": {
                     "Pixielity\\": "src/",
                     "Pixielity\\Enum\\": "src/Enum/src/",
+                    "Pixielity\\Routing\\": "src/Routing/src/",
                     "Pixielity\\Support\\": "src/Support/src/",
                     "Pixielity\\Container\\": "src/Container/src/",
-                    "Pixielity\\Serializer\\": "src/Serializer/src/"
+                    "Pixielity\\Serializer\\": "src/Serializer/src/",
+                    "Pixielity\\Localization\\": "src/Localization/src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
                     "Pixielity\\Enum\\Tests\\": "src/Enum/tests/",
+                    "Pixielity\\Routing\\Tests\\": "src/Routing/tests/",
                     "Pixielity\\Support\\Tests\\": "src/Support/tests/",
                     "Pixielity\\Container\\Tests\\": "src/Container/tests/",
-                    "Pixielity\\Serializer\\Tests\\": "src/Serializer/tests/"
+                    "Pixielity\\Serializer\\Tests\\": "src/Serializer/tests/",
+                    "Pixielity\\Localization\\Tests\\": "src/Localization/tests/"
                 }
             },
             "scripts": {

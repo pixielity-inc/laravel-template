@@ -6,7 +6,7 @@ namespace Pixielity\Serializer\Contracts;
 
 use Pixielity\Foundation\Exceptions\InvalidArgumentException;
 use Illuminate\Container\Attributes\Singleton;
-use Pixielity\Container\Attributes\Bind;
+use Illuminate\Container\Attributes\Bind;
 use Pixielity\Serializer\Serializer;
 
 /**
