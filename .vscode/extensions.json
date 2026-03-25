@@ -1,0 +1,31 @@
+{
+  "recommendations": [
+    // Laravel Development
+    "bmewburn.vscode-intelephense-client",
+    "amiralizadeh9480.laravel-extra-intellisense",
+    "onecentlin.laravel-blade",
+    "shufo.vscode-blade-formatter",
+    "onecentlin.laravel5-snippets",
+    
+    // PHP Development
+    "xdebug.php-debug",
+    "zobo.php-intellisense",
+    
+    // Tailwind CSS
+    "bradlc.vscode-tailwindcss",
+    
+    // Code Quality
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    
+    // Docker
+    "ms-azuretools.vscode-docker",
+    
+    // Git
+    "eamodio.gitlens",
+    
+    // Utilities
+    "mikestead.dotenv",
+    "emeraldwalk.runonsave"
+  ]
+}

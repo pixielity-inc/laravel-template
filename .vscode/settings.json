@@ -1,0 +1,144 @@
+{
+  // ============================================================================
+  // Laravel Blade Configuration
+  // ============================================================================
+  
+  // Associate .blade.php files with blade language mode
+  "files.associations": {
+    "*.blade.php": "blade",
+    "*.php": "php"
+  },
+
+  // Emmet support for Blade templates
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "blade.php": "html"
+  },
+
+  // ============================================================================
+  // PHP Language Server Configuration
+  // ============================================================================
+  
+  // Disable PHP validation for Blade files (prevents false syntax errors)
+  "php.validate.enable": true,
+  "php.validate.executablePath": null,
+  
+  // Exclude Blade files from PHP validation
+  "php.validate.exclude": [
+    "**/*.blade.php"
+  ],
+
+  // ============================================================================
+  // Intelephense Configuration (if using)
+  // ============================================================================
+  
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/.svn/**",
+    "**/.hg/**",
+    "**/CVS/**",
+    "**/.DS_Store/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**/{Tests,tests}/**",
+    "**/.history/**",
+    "**/vendor/**/vendor/**"
+  ],
+
+  // Don't validate Blade syntax with Intelephense
+  "intelephense.diagnostics.enable": true,
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+
+  // ============================================================================
+  // Tailwind CSS Configuration
+  // ============================================================================
+  
+  // Enable Tailwind CSS IntelliSense for Blade files
+  "tailwindCSS.includeLanguages": {
+    "blade": "html",
+    "blade.php": "html"
+  },
+
+  // Disable Tailwind CSS suggestions for canonical classes
+  "tailwindCSS.lint.cssConflict": "warning",
+  "tailwindCSS.lint.invalidApply": "error",
+  "tailwindCSS.lint.invalidConfigPath": "error",
+  "tailwindCSS.lint.invalidScreen": "error",
+  "tailwindCSS.lint.invalidTailwindDirective": "error",
+  "tailwindCSS.lint.invalidVariant": "error",
+  "tailwindCSS.lint.recommendedVariantOrder": "warning",
+
+  // ============================================================================
+  // Editor Configuration
+  // ============================================================================
+  
+  // Format on save
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+
+  // Language-specific formatting
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": false // Use Pint instead
+  },
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+    "editor.formatOnSave": true,
+    "editor.autoClosingBrackets": "always"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ============================================================================
+  // File Exclusions
+  // ============================================================================
+  
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/vendor": false,
+    "**/.phpunit.result.cache": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/storage": true,
+    "**/public/build": true,
+    "**/public/hot": true,
+    "**/.phpunit.result.cache": true
+  },
+
+  // ============================================================================
+  // Laravel Specific
+  // ============================================================================
+  
+  // Laravel Extra Intellisense
+  "LaravelExtraIntellisense.phpCommand": "php artisan",
+
+  // ============================================================================
+  // Code Quality
+  // ============================================================================
+  
+  // Run Pint on save (if you have the extension)
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.php$",
+        "notMatch": "[\\\\\\/]vendor[\\\\\\/]",
+        "cmd": "vendor/bin/pint ${file}",
+        "isAsync": true
+      }
+    ]
+  }
+}
