@@ -7,7 +7,7 @@ namespace Pixielity\Database\Providers;
 use Override;
 use Pixielity\Database\Attributes\AsDatabaseBlueprint;
 use Pixielity\Discovery\Facades\Discovery;
-use Pixielity\ServiceProvider\Contracts\HasMacros;
+// use Pixielity\ServiceProvider\Contracts\HasMacros;
 use Pixielity\Support\ServiceProvider;
 
 /**
@@ -21,7 +21,7 @@ use Pixielity\Support\ServiceProvider;
  * - Model traits and repositories
  *
  * ## Blueprint Macros:
- * - `$table->baseId()` - Adds a baseid column for public-facing identifiers
+ * - `$table->baseId()` - Adds a base_id column for public-facing identifiers
  *
  * ## Usage:
  *
@@ -39,7 +39,7 @@ use Pixielity\Support\ServiceProvider;
  *
  * @since      1.0.0
  */
-class DatabaseServiceProvider extends ServiceProvider implements HasMacros
+class DatabaseServiceProvider extends ServiceProvider /* implements HasMacros */
 {
     protected string $moduleName = 'Database';
 
@@ -52,11 +52,11 @@ class DatabaseServiceProvider extends ServiceProvider implements HasMacros
      * It's the place to perform any actions that depend on other services
      * being available.
      */
-    #[Override]
+    // #[Override]
     public function boot(): void
     {
         // Call parent boot to automatically load configuration
-        parent::boot();
+        // parent::boot();
     }
 
     /**

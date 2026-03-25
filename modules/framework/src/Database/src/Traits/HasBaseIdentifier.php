@@ -38,13 +38,13 @@ use Pixielity\Support\Str;
  * }
  *
  * // Migration
- * $table->string('baseid', 32)->unique()->index();
+ * $table->string('base_id', 32)->unique()->index();
  * ```
  *
  * ### Creating Records:
  * ```php
  * $user = User::create(['name' => 'John', 'email' => 'john@example.com']);
- * echo $user->baseid;  // "Xy9kL2mN4pQ8rT5vW"
+ * echo $user->base_id;  // "Xy9kL2mN4pQ8rT5vW"
  * ```
  *
  * ### Finding by Base ID:
@@ -55,17 +55,17 @@ use Pixielity\Support\Str;
  * ### Using in URLs:
  * ```php
  * // Route
- * Route::get('/users/{baseid}', [UserController::class, 'show']);
+ * Route::get('/users/{base_id}', [UserController::class, 'show']);
  *
  * // Controller
- * public function show($baseid)
+ * public function show($base_id)
  * {
- *     $user = User::findByBaseId($baseid);
+ *     $user = User::findByBaseId($base_id);
  *     return view('users.show', compact('user'));
  * }
  *
  * // View
- * <a href="{{ route('users.show', $user->baseid) }}">View Profile</a>
+ * <a href="{{ route('users.show', $user->base_id) }}">View Profile</a>
  * // Generates: /users/Xy9kL2mN4pQ8rT5vW
  * ```
  *
@@ -155,10 +155,13 @@ trait HasBaseIdentifier
 
     /**
      * Get the base identifier column name (static version).
+     *
+     * @psalm-suppress UndefinedConstant
      */
     protected static function getBaseIdColumnStatic(): string
     {
-        return defined('static::BASEID') ? static::BASEID : HasBaseIdentifierInterface::BASEID;
+        // @phpstan-ignore-next-line - static::BASEID may not exist on all models
+        return \defined('static::BASEID') ? static::BASEID : HasBaseIdentifierInterface::BASEID;
     }
 
     /**

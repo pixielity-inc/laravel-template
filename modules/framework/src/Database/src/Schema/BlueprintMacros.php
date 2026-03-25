@@ -18,7 +18,7 @@ use Pixielity\Support\Str;
  * column types and patterns commonly used across the application.
  *
  * ## Available Macros:
- * - `baseId()` - Add a baseid column for public-facing identifiers
+ * - `baseId()` - Add a base_id column for public-facing identifiers
  *
  * ## Registration:
  * This class is automatically discovered and registered via the
@@ -30,7 +30,7 @@ use Pixielity\Support\Str;
  * ```php
  * Schema::create('users', function (Blueprint $table) {
  *     $table->id();
- *     $table->baseId(); // Adds baseid column with defaults
+ *     $table->baseId(); // Adds base_id column with defaults
  *     $table->string('email')->unique();
  *     $table->timestamps();
  * });
@@ -60,7 +60,7 @@ use Pixielity\Support\Str;
  * ```php
  * Schema::create('orders', function (Blueprint $table) {
  *     $table->id();
- *     $table->baseId(HasBaseIdentifier::BASEID, 64); // Longer baseid
+ *     $table->baseId(HasBaseIdentifier::BASEID, 64); // Longer base_id
  *     $table->decimal('total');
  *     $table->timestamps();
  * });
@@ -70,16 +70,16 @@ use Pixielity\Support\Str;
  *
  * ### MySQL:
  * ```sql
- * `baseid` VARCHAR(32) NULL,
- * UNIQUE KEY `users_baseid_unique` (`baseid`),
- * KEY `users_baseid_index` (`baseid`)
+ * `base_id` VARCHAR(32) NULL,
+ * UNIQUE KEY `users_base_id_unique` (`base_id`),
+ * KEY `users_base_id_index` (`base_id`)
  * ```
  *
  * ### PostgreSQL:
  * ```sql
- * "baseid" VARCHAR(32) NULL,
- * CONSTRAINT "users_baseid_unique" UNIQUE ("baseid"),
- * CREATE INDEX "users_baseid_index" ON "users" ("baseid")
+ * "base_id" VARCHAR(32) NULL,
+ * CONSTRAINT "users_base_id_unique" UNIQUE ("base_id"),
+ * CREATE INDEX "users_base_id_index" ON "users" ("base_id")
  * ```
  *
  * ## Why BaseID?
@@ -100,7 +100,7 @@ use Pixielity\Support\Str;
 class BlueprintMacros
 {
     /**
-     * Default baseid column length.
+     * Default base_id column length.
      *
      * 32 characters is enough for base64-encoded random strings
      * while keeping the column size reasonable.
@@ -121,7 +121,7 @@ class BlueprintMacros
     /**
      * Register the baseId macro.
      *
-     * Adds a baseid column for public-facing identifiers.
+     * Adds a base_id column for public-facing identifiers.
      * This creates a string column that is:
      * - 32 characters long by default (configurable)
      * - Unique (enforced at database level)
@@ -136,7 +136,7 @@ class BlueprintMacros
      * - **Indexed**: Yes (for performance)
      *
      * ## Parameters:
-     * - `$column`: Column name (default: 'baseid' from HasBaseIdentifier::BASEID)
+     * - `$column`: Column name (default: 'base_id' from HasBaseIdentifier::BASEID)
      * - `$length`: Column length (default: 32 characters)
      *
      * ## Usage Examples:
@@ -174,14 +174,14 @@ class BlueprintMacros
      *
      * ## Generated SQL (MySQL):
      * ```sql
-     * `baseid` VARCHAR(32) NULL,
-     * UNIQUE KEY `users_baseid_unique` (`baseid`),
-     * KEY `users_baseid_index` (`baseid`)
+     * `base_id` VARCHAR(32) NULL,
+     * UNIQUE KEY `users_base_id_unique` (`base_id`),
+     * KEY `users_base_id_index` (`base_id`)
      * ```
      *
      * ## Performance Considerations:
-     * - The unique constraint ensures no duplicate baseids
-     * - The index provides fast lookups by baseid
+     * - The unique constraint ensures no duplicate base_ids
+     * - The index provides fast lookups by base_id
      * - VARCHAR(32) is optimal for base64-encoded 24-byte random strings
      */
     protected function registerBaseIdMacro(): void
@@ -195,7 +195,7 @@ class BlueprintMacros
             Str::camel(HasBaseIdentifier::BASEID),
 
             /**
-             * Add a baseid column to the table.
+             * Add a base_id column to the table.
              *
              * @param  string|null $column Column name (default: HasBaseIdentifier::BASEID)
              * @param  int|null    $length Column length (default: 32)

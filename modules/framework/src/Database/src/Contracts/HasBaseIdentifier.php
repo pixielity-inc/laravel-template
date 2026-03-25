@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
  * Base identifiers provide secure, non-sequential IDs for public use.
  *
  *
- * @property string|null $baseid The base identifier value
+ * @property string|null $base_id The base identifier value
  *
  * @method static static|null findByBaseId(string $identifier)                   Find model by base identifier
  * @method static static      findByBaseIdOrFail(string $identifier)             Find model by base identifier or fail
@@ -28,7 +28,7 @@ interface HasBaseIdentifier
     /**
      * Default base identifier column name.
      */
-    public const BASEID = 'baseid';
+    public const BASEID = 'base_id';
 
     /**
      * Find a model by its base identifier.
