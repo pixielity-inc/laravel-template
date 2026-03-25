@@ -219,8 +219,17 @@ class SetLocale
             foreach ($this->headers as $header) {
                 $locale = $request->header($header);
                 $localeStr = is_array($locale) ? ($locale[0] ?? null) : $locale;
-                if ($localeStr && in_array($localeStr, $availableLocales, true)) {
-                    return $this->setLocaleAndContinue($localeStr, $request, $next);
+                
+                if ($localeStr) {
+                    // Special handling for Accept-Language header which may contain quality values
+                    if (strtolower($header) === 'accept-language') {
+                        $detectedLocale = $this->parseAcceptLanguageHeader($localeStr, $availableLocales);
+                        if ($detectedLocale) {
+                            return $this->setLocaleAndContinue($detectedLocale, $request, $next);
+                        }
+                    } elseif (in_array($localeStr, $availableLocales, true)) {
+                        return $this->setLocaleAndContinue($localeStr, $request, $next);
+                    }
                 }
             }
         }
@@ -246,5 +255,57 @@ class SetLocale
         Log::withContext(['locale' => $locale]);
 
         return $next($request);
+    }
+
+    /**
+     * Parse Accept-Language header and find the best matching locale.
+     *
+     * The Accept-Language header format: "ar-SA,ar;q=0.9,en-US;q=0.8,en;q=0.7"
+     * This method extracts locales, sorts by quality value, and finds the first match.
+     *
+     * @param  string        $header           The Accept-Language header value
+     * @param  array<string> $availableLocales List of available locale codes
+     * @return string|null                     The best matching locale or null
+     */
+    private function parseAcceptLanguageHeader(string $header, array $availableLocales): ?string
+    {
+        // Split by comma to get individual locale entries
+        $locales = explode(',', $header);
+        $parsed = [];
+
+        foreach ($locales as $locale) {
+            $locale = trim($locale);
+            
+            // Extract locale code and quality value
+            // Format: "ar-SA;q=0.9" or just "ar-SA"
+            if (preg_match('/^([a-zA-Z\-]+)(?:;q=([0-9.]+))?$/', $locale, $matches)) {
+                $code = $matches[1];
+                $quality = isset($matches[2]) ? (float) $matches[2] : 1.0;
+                $parsed[] = ['code' => $code, 'quality' => $quality];
+            }
+        }
+
+        // Sort by quality value (highest first)
+        usort($parsed, fn ($a, $b) => $b['quality'] <=> $a['quality']);
+
+        // Find the first matching locale
+        foreach ($parsed as $item) {
+            $code = $item['code'];
+            
+            // Try exact match first
+            if (in_array($code, $availableLocales, true)) {
+                return $code;
+            }
+            
+            // Try base language (e.g., "ar" from "ar-SA")
+            if (str_contains($code, '-')) {
+                $baseCode = explode('-', $code)[0];
+                if (in_array($baseCode, $availableLocales, true)) {
+                    return $baseCode;
+                }
+            }
+        }
+
+        return null;
     }
 }
