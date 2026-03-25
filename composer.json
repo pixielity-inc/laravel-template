@@ -174,7 +174,6 @@
         },
         "composer-attribute-collector": {
             "include": [
-                "src",
                 "{vendor}/pixielity/laravel-framework",
                 "{vendor}/pixielity/laravel-foundation"
             ]
