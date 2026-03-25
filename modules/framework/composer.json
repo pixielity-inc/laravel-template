@@ -71,37 +71,17 @@
     "psr-4": {
       "Pixielity\\": "src/",
       "Pixielity\\Enum\\": "src/Enum/src/",
-      "Pixielity\\Uuid\\": "src/Uuid/src/",
       "Pixielity\\Support\\": "src/Support/src/",
-      "Pixielity\\Logging\\": "src/Logging/src/",
-      "Pixielity\\Actions\\": "src/Actions/src/",
-      "Pixielity\\Routing\\": "src/Routing/src/",
-      "Pixielity\\Response\\": "src/Response/src/",
-      "Pixielity\\Database\\": "src/Database/src/",
-      "Pixielity\\Workflow\\": "src/Workflow/src/",
       "Pixielity\\Container\\": "src/Container/src/",
-      "Pixielity\\ColorThief\\": "src/ColorThief/src/",
-      "Pixielity\\Serializer\\": "src/Serializer/src/",
-      "Pixielity\\Localization\\": "src/Localization/src/",
-      "Pixielity\\ServiceProvider\\": "src/ServiceProvider/src/"
+      "Pixielity\\Serializer\\": "src/Serializer/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
       "Pixielity\\Enum\\Tests\\": "src/Enum/tests/",
-      "Pixielity\\Uuid\\Tests\\": "src/Uuid/tests/",
       "Pixielity\\Support\\Tests\\": "src/Support/tests/",
-      "Pixielity\\Logging\\Tests\\": "src/Logging/tests/",
-      "Pixielity\\Actions\\Tests\\": "src/Actions/tests/",
-      "Pixielity\\Routing\\Tests\\": "src/Routing/tests/",
-      "Pixielity\\Response\\Tests\\": "src/Response/tests/",
-      "Pixielity\\Database\\Tests\\": "src/Database/tests/",
-      "Pixielity\\Workflow\\Tests\\": "src/Workflow/tests/",
       "Pixielity\\Container\\Tests\\": "src/Container/tests/",
-      "Pixielity\\ColorThief\\Tests\\": "src/ColorThief/tests/",
-      "Pixielity\\Serializer\\Tests\\": "src/Serializer/tests/",
-      "Pixielity\\Localization\\Tests\\": "src/Localization/tests/",
-      "Pixielity\\ServiceProvider\\Tests\\": "src/ServiceProvider/tests/"
+      "Pixielity\\Serializer\\Tests\\": "src/Serializer/tests/"
     }
   },
   "scripts": {
@@ -150,34 +130,16 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Pixielity\\Actions\\Providers\\ActionsServiceProvider",
-        "Pixielity\\Routing\\Providers\\RoutingServiceProvider",
-        "Pixielity\\Response\\Providers\\ResponseServiceProvider",
-        "Pixielity\\Database\\Providers\\DatabaseServiceProvider",
-        "Pixielity\\Container\\Providers\\ContainerServiceProvider",
-        "Pixielity\\ColorThief\\Providers\\ColorThiefServiceProvider",
-        "Pixielity\\Localization\\Providers\\LocalizationServiceProvider"
+        "Pixielity\\Container\\Providers\\ContainerServiceProvider"
       ],
-      "aliases": {
-        "Response": "Pixielity\\Response\\Facades\\Response"
-      }
+      "aliases": {}
     }
   },
   "replace": {
-    "pixielity/laravel-uuid": "self.version",
     "pixielity/laravel-enum": "self.version",
     "pixielity/laravel-support": "self.version",
-    "pixielity/laravel-actions": "self.version",
-    "pixielity/laravel-logging": "self.version",
-    "pixielity/laravel-routing": "self.version",
-    "pixielity/laravel-response": "self.version",
-    "pixielity/laravel-database": "self.version",
-    "pixielity/laravel-workflow": "self.version",
     "pixielity/laravel-container": "self.version",
-    "pixielity/laravel-serializer": "self.version",
-    "pixielity/laravel-color-thief": "self.version",
-    "pixielity/laravel-localization": "self.version",
-    "pixielity/laravel-service-provider": "self.version"
+    "pixielity/laravel-serializer": "self.version"
   },
   "config": {
     "optimize-autoloader": true,

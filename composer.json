@@ -14,7 +14,8 @@
         "laravel/tinker": "^3.0",
         "nwidart/laravel-modules": "^13.0",
         "predis/predis": "^3.4",
-        "pixielity/foundation": "@dev"
+        "pixielity/laravel-framework": "@dev",
+        "pixielity/laravel-foundation": "@dev"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^4.1",
