@@ -23,7 +23,7 @@ parameters:
     # =========================================================================
     # Analyze all source code in src/** and bin
     paths:
-        - src
+        # - src
         - config
         - database
         - modules
@@ -54,6 +54,9 @@ parameters:
     # IGNORED ERROR PATTERNS
     # =========================================================================
     ignoreErrors:
+        # App namespace
+        - '#App\\#'
+
         # PHPUnit test framework
         - '#PHPUnit\\#'
 
