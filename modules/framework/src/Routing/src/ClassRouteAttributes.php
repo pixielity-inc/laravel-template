@@ -38,6 +38,11 @@ use Spatie\RouteAttributes\ClassRouteAttributes as SpatieClassRouteAttributes;
 class ClassRouteAttributes extends SpatieClassRouteAttributes
 {
     /**
+     * Store a reference to the reflection class for our custom methods.
+     */
+    private ReflectionClass $reflectionClass;
+
+    /**
      * Create a new ClassRouteAttributes instance.
      *
      * @param ReflectionClass $class The reflection class to process
@@ -45,6 +50,7 @@ class ClassRouteAttributes extends SpatieClassRouteAttributes
     public function __construct(ReflectionClass $class)
     {
         parent::__construct($class);
+        $this->reflectionClass = $class;
     }
 
     /**
@@ -63,7 +69,7 @@ class ClassRouteAttributes extends SpatieClassRouteAttributes
         $groups = [];
 
         /** @var ReflectionClass[] $attributes */
-        $attributes = $this->class->getAttributes(Group::class, ReflectionAttribute::IS_INSTANCEOF);
+        $attributes = $this->reflectionClass->getAttributes(Group::class, ReflectionAttribute::IS_INSTANCEOF);
 
         if (count($attributes) > 0) {
             // Get standalone prefix if it exists
