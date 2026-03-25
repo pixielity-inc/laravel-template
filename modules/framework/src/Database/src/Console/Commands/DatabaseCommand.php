@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Pixielity\Database\Console\Commands;
 
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
 use function in_array;
 
-use Pixielity\Foundation\Console\Commands\BaseCommand;
 use Pixielity\Support\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Throwable;
@@ -160,7 +160,7 @@ use Throwable;
     name: 'db',
     description: 'Database management operations (create, migrate, fresh, seed, rollback, etc.)'
 )]
-class DatabaseCommand extends BaseCommand
+class DatabaseCommand extends Command
 {
     /**
      * The name and signature of the console command.
