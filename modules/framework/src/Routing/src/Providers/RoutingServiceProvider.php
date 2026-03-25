@@ -282,8 +282,5 @@ class RoutingServiceProvider extends ServiceProvider
     {
         // Call parent register for base functionality
         parent::register();
-
-        // RouteRegistrar binding is handled automatically via the #[Bind] attribute
-        // See: modules/framework/src/Routing/src/RouteRegistrar.php
     }
 }

@@ -167,7 +167,14 @@ class SetLocale
 
         // Priority 1: User preference (highest priority)
         // If user is authenticated and has a locale preference, use it
-        if ($user = $request->user()) {
+        try {
+            $user = $request->user();
+        } catch (\InvalidArgumentException $e) {
+            // Guard not defined (e.g., sanctum not installed)
+            $user = null;
+        }
+
+        if ($user) {
             $userLocale = is_object($user) && Reflection::propertyExists($user, 'locale') ? $user->locale : null;
             if ($userLocale && in_array($userLocale, $availableLocales, true)) {
                 $selectedLocale = $userLocale;
