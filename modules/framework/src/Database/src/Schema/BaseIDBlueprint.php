@@ -105,7 +105,7 @@ use Pixielity\Support\Str;
     description: 'Base ID Blueprint macros for secure public identifiers',
     priority: 10
 )]
-class BlueprintMacros
+class BaseIDBlueprint
 {
     /**
      * Default base_id column length.

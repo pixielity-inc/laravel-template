@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Database\Providers;
 
 use Override;
+use Pixielity\Container\Concerns\HasDiscovery;
 use Pixielity\Database\Attributes\AsDatabaseBlueprint;
 use Pixielity\Discovery\Facades\Discovery;
 use Pixielity\Support\ServiceProvider;
@@ -12,11 +13,14 @@ use Pixielity\Support\ServiceProvider;
 /**
  * Database Service Provider.
  *
- * Registers database utilities and Blueprint macros for Laravel migrations.
+ * Registers database utilities, Blueprint macros, and automatically discovers
+ * tagged/bound classes for Laravel migrations and database operations.
  *
  * ## Features:
  * - Custom Blueprint macros for common database patterns
  * - Automatic repository injection via #[UseRepository] attribute
+ * - Automatic discovery of tagged classes via #[Tagged]
+ * - Automatic discovery of bound classes via #[Bind]
  * - Database utilities and extensions
  * - Model traits and repositories
  *
@@ -28,9 +32,21 @@ use Pixielity\Support\ServiceProvider;
  * ```php
  * class UserService
  * {
- *     #[UseRepository(User::class)]
- *     private UserRepository $users;
+ *     public function __construct(
+ *         #[UseRepository(User::class)]
+ *         private UserRepository $users
+ *     ) {}
  * }
+ * ```
+ *
+ * ## Automatic Discovery:
+ * Classes marked with #[Tagged] or #[Bind] are automatically discovered and registered:
+ * ```php
+ * #[Tagged('repositories')]
+ * class UserRepository { }
+ *
+ * #[Bind(RepositoryInterface::class)]
+ * class UserRepository implements RepositoryInterface { }
  * ```
  *
  * ## Usage:
@@ -51,8 +67,25 @@ use Pixielity\Support\ServiceProvider;
  */
 class DatabaseServiceProvider extends ServiceProvider /* implements HasMacros */
 {
+    use HasDiscovery;
+
+    /**
+     * The module name.
+     *
+     * Used for:
+     * - Identifying the module in logs and error messages
+     * - Namespacing translations: `trans('featureflags::message')`
+     * - Namespacing config: `config('featureflags.config_name')`
+     */
     protected string $moduleName = 'Database';
 
+    /**
+     * The module namespace.
+     *
+     * Used for:
+     * - Auto-discovering commands in `Pixielity\Database\Console\Commands\`
+     * - Resolving class names for dependency injection
+     */
     protected string $moduleNamespace = 'Pixielity\Database';
 
     /**
@@ -80,6 +113,12 @@ class DatabaseServiceProvider extends ServiceProvider /* implements HasMacros */
     {
         // Call parent register for base functionality
         parent::register();
+
+        // Discover and register tagged classes
+        $this->discoverTaggedClasses();
+
+        // Discover and register bound classes
+        $this->discoverBoundClasses();
     }
 
     /**
