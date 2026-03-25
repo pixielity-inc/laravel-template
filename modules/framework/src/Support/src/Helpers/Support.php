@@ -34,7 +34,7 @@ if (! function_exists('trace_log')) {
             if (Reflection::implements($message, Exception::class)) {
                 // Set the logging level to 'error' for exceptions.
                 $level = 'error';
-            } elseif (Validator::isArray($message) || Validator::isObject($message)) {
+            } elseif (is_array($message) || is_object($message)) {
                 // Convert arrays and objects to a string for logging.
                 $message = print_r($message, true);
             }
@@ -97,14 +97,14 @@ if (! function_exists('trace_sql')) {
             foreach ($bindings as $i => $binding) {
                 if (Reflection::implements($binding, DateTime::class)) {
                     $bindings[$i] = $binding->format("'Y-m-d H:i:s'");
-                } elseif (Validator::isString($binding)) {
+                } elseif (is_string($binding)) {
                     $bindings[$i] = Str::format("'%s'", $binding);
                 }
             }
 
             // Prepare the SQL query for logging.
             $query = Str::replace(['%', '?'], ['%%', '%s'], $query);
-            $query = vStr::format($query, $bindings);
+            $query = Str::format($query, $bindings);
 
             // Log the formatted query.
             logger()->info($query);

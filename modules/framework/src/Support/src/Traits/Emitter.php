@@ -79,7 +79,7 @@ trait Emitter
     public function unbindEvent($event = null): void
     {
         // If an array of events is provided, recursively unbind each event.
-        if (Validator::isArray($event)) {
+        if (is_array($event)) {
             foreach ($event as $_event) {
                 $this->unbindEvent($_event);
             }
@@ -113,7 +113,7 @@ trait Emitter
     public function fireEvent(string $event, array $params = [], bool $halt = false)
     {
         // Ensure parameters are always an array.
-        if (! Validator::isArray($params)) {
+        if (! is_array($params)) {
             $params = [$params];
         }
 

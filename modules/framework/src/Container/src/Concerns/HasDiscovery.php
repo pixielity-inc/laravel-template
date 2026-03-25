@@ -6,7 +6,7 @@ namespace Pixielity\Container\Concerns;
 
 use Illuminate\Container\Attributes\Scoped;
 use Illuminate\Container\Attributes\Singleton;
-use Illuminate\Contracts\Foundation\Application;
+use Pixielity\Foundation\Contracts\ApplicationInterface;
 use Pixielity\Container\Attributes\Bind;
 use Pixielity\Container\Attributes\Tagged;
 use Pixielity\Discovery\Facades\Discovery;
@@ -88,7 +88,7 @@ use Pixielity\Support\Reflection;
  * - **Type Safe**: Uses reflection to validate classes exist
  * - **Clean Code**: Eliminates boilerplate registration code
  *
- * @property Application $app The application instance
+ * @property ApplicationInterface $app The application instance
  *
  * @since 1.0.0
  */

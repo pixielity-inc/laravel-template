@@ -7,7 +7,7 @@ namespace Pixielity\Support;
 use function in_array;
 
 use JsonException;
-use Pixielity\Contracts\Foundation\DataObject as DataObjectContract;
+use Pixielity\Foundation\Contracts\DataObject as DataObjectContract;
 use Pixielity\Foundation\Exceptions\Exception;
 use ReflectionException;
 use Spatie\LaravelData\Data;
@@ -157,7 +157,7 @@ class DataObject implements DataObjectContract
     {
         return Arr::filter(
             $this->attributes,
-            fn ($v): bool => \is_scalar($v) || Validator::isArray($v),
+            fn ($v): bool => \is_scalar($v) || is_array($v),
         );
     }
 
@@ -237,7 +237,7 @@ class DataObject implements DataObjectContract
         // Iterate through each item, wrapping it in DataObject if it's an array
         foreach ($this->getData() as $key => $value) {
             // Wrap each item in DataObject if it's an array
-            if (Validator::isArray($value)) {
+            if (is_array($value)) {
                 $value = self::make($value);
             }
 
@@ -269,7 +269,7 @@ class DataObject implements DataObjectContract
         }
 
         // Check if the key is empty or not a string, then check if the object has any data
-        if ($key === '' || $key === '0' || ! Validator::isString($key)) {
+        if ($key === '' || $key === '0' || ! is_string($key)) {
             return $this->attributes !== [];
         }
 
@@ -295,7 +295,7 @@ class DataObject implements DataObjectContract
         // If currentKey is set, prepend it to the provided key (if any)
         if ($this->currentKey !== null) {
             // If $key is not empty, concatenate currentKey and the provided $key
-            if (Validator::isString($key)) {
+            if (is_string($key)) {
                 $key = $key ? $this->currentKey . '.' . (is_string($key) ? $key : '') : $this->currentKey;
             }
 
@@ -309,7 +309,7 @@ class DataObject implements DataObjectContract
         }
 
         // If the key is an array, recursively retrieve data for each key in the array
-        if (Validator::isArray($key)) {
+        if (is_array($key)) {
             $result = [];
 
             // Loop through each key in the array and get the corresponding data
@@ -327,13 +327,13 @@ class DataObject implements DataObjectContract
 
         // If no data is found for the key and the key contains a '/' (which implies nested keys)
         /** @var non-empty-string $key */
-        if ($data === null && Validator::isString($key) && Str::contains($key, DIRECTORY_SEPARATOR)) {
+        if ($data === null && is_string($key) && Str::contains($key, DIRECTORY_SEPARATOR)) {
             // Process the key with slashes (e.g., 'a/b/c') as nested keys and retrieve the data
             $data = $this->getDataByPath($key);
         }
 
         // If no data is found for the key and the key contains a '.' (dot notation), process it as nested keys
-        if ($data === null && Validator::isString($key) && Str::contains($key, '.')) {
+        if ($data === null && is_string($key) && Str::contains($key, '.')) {
             // Process the key with dot notation (e.g., 'a.b.c') as nested keys and retrieve the data
             $data = $this->getDataByDotNotation($key);
         }
@@ -341,11 +341,11 @@ class DataObject implements DataObjectContract
         // If an index is specified, process the data accordingly
         if ($index !== null) {
             // If the data is an array, return the element at the specified index
-            if (Validator::isArray($data)) {
+            if (is_array($data)) {
                 $data = $data[$index] ?? null;
             }
             // If the data is a string, split it by new lines and return the element at the specified index
-            elseif (Validator::isString($data)) {
+            elseif (is_string($data)) {
                 $data = Str::explode(PHP_EOL, (string) $data);
                 $data = $data[$index] ?? null;
             }
@@ -377,7 +377,7 @@ class DataObject implements DataObjectContract
     {
         // Use currentKey if it's already set, appending the new key if applicable
         if ($this->currentKey !== null) {
-            if (Validator::isString($key)) {
+            if (is_string($key)) {
                 $key = $this->currentKey . ($key ? '.' . (is_string($key) ? $key : '') : '');
             }
 
@@ -386,7 +386,7 @@ class DataObject implements DataObjectContract
         }
 
         // If $key is an array, completely overwrite the existing data
-        if (Validator::isArray($key)) {
+        if (is_array($key)) {
             /* @var array<string, mixed> $key */
             $this->attributes = $key;
         } else {
@@ -406,7 +406,7 @@ class DataObject implements DataObjectContract
                 }
                 // Recursively assign the nested data
                 $this->attributes[$firstKey] = $this->_setNestedData($this->attributes[$firstKey], $remainingKey, $value);
-            } elseif (isset($this->attributes[$keyString]) && Validator::isArray($this->attributes[$keyString]) && Validator::isArray($value)) {
+            } elseif (isset($this->attributes[$keyString]) && is_array($this->attributes[$keyString]) && is_array($value)) {
                 // Handle non-nested keys: merge or directly assign the value
                 // Merge existing data and new value if both are arrays
                 $this->attributes[$keyString] = Arr::merge($this->attributes[$keyString], $value);
@@ -455,7 +455,7 @@ class DataObject implements DataObjectContract
     {
         if ($key === null) {
             $this->setData([]);
-        } elseif (Validator::isString($key)) {
+        } elseif (is_string($key)) {
             if (isset($this->attributes[$key]) || Arr::exists($this->attributes, $key)) {
                 unset($this->attributes[$key]);
             }
@@ -599,7 +599,7 @@ class DataObject implements DataObjectContract
         foreach ($data as $key => $value) {
             if (is_scalar($value)) {
                 $debug[$key] = $value;
-            } elseif (Validator::isArray($value)) {
+            } elseif (is_array($value)) {
                 $debug[$key] = $this->debug($value, $objects);
             } elseif (Reflection::implements($value, self::class)) {
                 $debug[$key . ' (' . $value::class . ')'] = $value->debug(null, $objects);
@@ -678,10 +678,10 @@ class DataObject implements DataObjectContract
 
         // Traverse each part of the key to reach the nested data
         foreach ($keys as $part) {
-            if (Validator::isArray($currentData) && isset($currentData[$part])) {
+            if (is_array($currentData) && isset($currentData[$part])) {
                 // If current data is an array, move to the next nested level
                 $currentData = $currentData[$part];
-            } elseif (Validator::isObject($currentData) && isset($currentData->{$part})) {
+            } elseif (is_object($currentData) && isset($currentData->{$part})) {
                 // If current data is an object, access its property
                 $currentData = $currentData->{$part};
             } else {
@@ -724,7 +724,7 @@ class DataObject implements DataObjectContract
         if ($remainingKey !== '' && $remainingKey !== '0') {
             // If there's more key path left, recursively handle deeper levels
             $data[$firstKey] = $this->_setNestedData($data[$firstKey], $remainingKey, $value);
-        } elseif (Validator::isArray($data[$firstKey]) && Validator::isArray($value)) {
+        } elseif (is_array($data[$firstKey]) && is_array($value)) {
             // Merge or overwrite the value based on its type
             // Merge arrays if both the current data and value are arrays
             $data[$firstKey] = Arr::merge($data[$firstKey], $value);

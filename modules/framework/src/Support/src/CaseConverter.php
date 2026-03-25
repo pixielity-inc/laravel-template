@@ -140,7 +140,7 @@ class CaseConverter
         }
 
         // If the data is not an array or collection, return it as is
-        if (! Validator::isArray($data) && ! (is_object($data) && Reflection::implements($data, Collection::class))) {
+        if (! is_array($data) && ! (is_object($data) && Reflection::implements($data, Collection::class))) {
             return $data;
         }
 
@@ -150,14 +150,14 @@ class CaseConverter
         // Iterate over each key-value pair in the collection
         $data = $collection->mapWithKeys(function ($value, $key) use ($case): array {
             // Handle array with numeric indexes (indexed arrays)
-            if (Validator::isArray($value) && ! $this->isMetadata($key)) {
+            if (is_array($value) && ! $this->isMetadata($key)) {
                 // If it's a subarray (with indexed keys), recursively convert its keys
                 // Also handle arrays of objects like 'departure', 'destination'
                 if (Arr::values($value) === $value) {
                     // Indexed array, apply conversion recursively on values that are arrays/collections
                     $value = Arr::map($value, function (mixed $item) use ($case): mixed {
                         // Only convert if the item is an array or collection
-                        if (Validator::isArray($item) || (is_object($item) && Reflection::implements($item, Collection::class))) {
+                        if (is_array($item) || (is_object($item) && Reflection::implements($item, Collection::class))) {
                             return $this->convert($case, $item);
                         }
 

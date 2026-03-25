@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Pixielity\Foundation\Solutions;
 
-use Pixielity\Contracts\Foundation\Solution as SolutionContract;
+use Pixielity\Foundation\Contracts\SolutionInterface;
 use Spatie\ErrorSolutions\Contracts\BaseSolution as SpatieBaseSolution;
 
 /**
@@ -12,7 +12,7 @@ use Spatie\ErrorSolutions\Contracts\BaseSolution as SpatieBaseSolution;
  *
  * Provides functionality to manage a solution's title, description, and documentation links.
  */
-class Solution extends SpatieBaseSolution implements SolutionContract
+class Solution extends SpatieBaseSolution implements SolutionInterface
 {
     /**
      * Set the solution's data based on the provided associative array.

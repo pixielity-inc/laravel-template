@@ -542,7 +542,7 @@ class Reflection extends BaseReflector
         $constant = static::getClass($classOrObject)->getConstant($name);
 
         // Return the constant value if it exists and is not empty, otherwise return null
-        return Validator::isEmpty($constant) ? null : $constant;
+        return empty($constant) ? null : $constant;
     }
 
     /**
@@ -1139,7 +1139,7 @@ class Reflection extends BaseReflector
         $attributes = static::getAttributes($classOrObject, $attributeName);
 
         // Return the first matching ReflectionAttribute instance or null if not found
-        return Validator::isEmpty($attributes) ? null : $attributes[0];
+        return empty($attributes) ? null : $attributes[0];
     }
 
     /**

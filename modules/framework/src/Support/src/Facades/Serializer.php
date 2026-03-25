@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Pixielity\Contracts\Framework\Serializer\Serializer as SerializerContract;
+use Pixielity\Framework\Serializer\Contracts\SerializerInterface;
 
 /**
  * Serializer Facade.
@@ -15,20 +15,17 @@ use Pixielity\Contracts\Framework\Serializer\Serializer as SerializerContract;
  * @method static ?string serialize(mixed $data) Serializer the given data into a serialized string format.
  * @method static mixed unserialize($string, bool $allowedClasses = false) Unserialize the given serialized string back into its original data format.
  *
- * @see SerializerContract
+ * @see SerializerInterface
  */
 class Serializer extends Facade
 {
     /**
-     * Get the accessor for the facade.
+     * Get the registered name of the component.
      *
-     * This method must be implemented by subclasses to return the accessor string
-     * corresponding to the underlying service or class the facade represents.
-     *
-     * @return string The accessor for the facade.
+     * @return string
      */
-    protected static function getAccessor(): string
+    protected static function getFacadeAccessor(): string
     {
-        return SerializerContract::class;
+        return SerializerInterface::class;
     }
 }

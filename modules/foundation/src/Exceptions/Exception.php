@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\App;
 use function is_string;
 
 use JsonException;
-use Pixielity\Contracts\Foundation\Solution as SolutionContract;
+use Pixielity\Foundation\Contracts\SolutionInterface;
 use Pixielity\Foundation\Enums\ContainerToken;
 use Pixielity\Foundation\Solutions\Solution;
 use Pixielity\Support\Reflection;
@@ -67,7 +67,7 @@ class Exception extends PhpException implements Arrayable, Jsonable
      * @param  Throwable|null  $previous  The previous exception for chaining.
      * @param  string|int|null  $code  A specific error code.
      * @param  array<string, mixed>|null  $context  Additional context information.
-     * @param  SolutionContract|null  $solution  Solution provider for error resolution.
+     * @param  SolutionInterface|null  $solution  Solution provider for error resolution.
      */
     public function __construct(
         ?string $message = null,
@@ -221,10 +221,10 @@ class Exception extends PhpException implements Arrayable, Jsonable
      *
      * Provides helpful information for resolving the error.
      */
-    public function getSolution(): SolutionContract
+    public function getSolution(): SolutionInterface
     {
         // Return existing solution if set
-        if (Reflection::implements($this->solution, SolutionContract::class)) {
+        if (Reflection::implements($this->solution, SolutionInterface::class)) {
             return $this->solution;
         }
 
@@ -258,10 +258,10 @@ class Exception extends PhpException implements Arrayable, Jsonable
     protected function solution(): array
     {
         return [
-            SolutionContract::TITLE => $this->getType(),
-            SolutionContract::DESCRIPTION => $this->getMessage(),
-            SolutionContract::LINKS => [
-                SolutionContract::DOCUMENTATION => 'https://docs.pixielity.com/errors/' . Str::lower($this->type),
+            SolutionInterface::TITLE => $this->getType(),
+            SolutionInterface::DESCRIPTION => $this->getMessage(),
+            SolutionInterface::LINKS => [
+                SolutionInterface::DOCUMENTATION => 'https://docs.pixielity.com/errors/' . Str::lower($this->type),
             ],
         ];
     }

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Pixielity\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Pixielity\Contracts\Framework\Serializer\Json as JsonContract;
+use Pixielity\Framework\Serializer\Contracts\JsonInterface;
 
 /**
  * Json Facade.
@@ -16,7 +16,7 @@ use Pixielity\Contracts\Framework\Serializer\Json as JsonContract;
  * @method static mixed decode(string $string, bool $associative = false, int $depth = 512, int $options = 0) Decode the given JSON string back into its original data format.
  * @method static bool isValid(string $json) Check if the given string is a valid JSON formatted string.
  *
- * @see JsonContract
+ * @see JsonInterface
  */
 class Json extends Facade
 {
@@ -25,6 +25,6 @@ class Json extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return JsonContract::class;
+        return JsonInterface::class;
     }
 }

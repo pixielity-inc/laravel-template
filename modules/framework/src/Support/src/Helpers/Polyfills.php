@@ -217,12 +217,12 @@ if (! function_exists('http_build_url')) {
     function http_build_url($url, $replace = [], $flags = HTTP_URL_REPLACE, &$newUrl = []): string
     {
         // If $url is a string, parse it into its components
-        if (Validator::isString($url)) {
+        if (is_string($url)) {
             $url = parse_url((string) $url);
         }
 
         // If $replace is a string, parse it into its components
-        if (Validator::isString($replace)) {
+        if (is_string($replace)) {
             $replace = parse_url((string) $replace);
         }
 
@@ -308,18 +308,18 @@ if (! function_exists('http_build_url')) {
         $urlString = '';
 
         // Append scheme if present
-        if (! Validator::isEmpty($url['scheme'])) {
+        if (! empty($url['scheme'])) {
             // Add scheme (e.g., http://)
             $urlString .= $url['scheme'] . '://';
         }
 
         // Append user info if present
-        if (! Validator::isEmpty($url['user'])) {
+        if (! empty($url['user'])) {
             // Add username
             $urlString .= $url['user'];
 
             // Append password if present
-            if (! Validator::isEmpty($url['pass'])) {
+            if (! empty($url['pass'])) {
                 // Add password
                 $urlString .= ':' . $url['pass'];
             }
@@ -329,31 +329,31 @@ if (! function_exists('http_build_url')) {
         }
 
         // Append host if present
-        if (! Validator::isEmpty($url['host'])) {
+        if (! empty($url['host'])) {
             // Add host
             $urlString .= $url['host'];
         }
 
         // Append port if present
-        if (! Validator::isEmpty($url['port'])) {
+        if (! empty($url['port'])) {
             // Add port
             $urlString .= ':' . $url['port'];
         }
 
         // Append path if present
-        if (! Validator::isEmpty($url['path'])) {
+        if (! empty($url['path'])) {
             // Add path with separator
             $urlString .= ((Str::substr((string) $url['path'], 0, 1) !== SP) ? SP : '') . $url['path'];
         }
 
         // Append query string if present
-        if (! Validator::isEmpty($url['query'])) {
+        if (! empty($url['query'])) {
             // Add query string
             $urlString .= '?' . $url['query'];
         }
 
         // Append fragment if present
-        if (! Validator::isEmpty($url['fragment'])) {
+        if (! empty($url['fragment'])) {
             // Add fragment
             $urlString .= '#' . $url['fragment'];
         }

@@ -178,7 +178,7 @@ class Arr extends BaseArr
         // Use array_walk_recursive to apply a function to each value in the array.
         array_walk_recursive($arr, function (&$value, $key): void {
             // Check if the current value is a string.
-            if (Validator::isString($value)) {
+            if (is_string($value)) {
                 // Translate the string using Lang facade.
                 $translated = __($value);
                 $value = is_string($translated) ? $translated : (is_array($translated) ? (json_encode($translated) ?: $value) : (string) $translated);
@@ -318,7 +318,7 @@ class Arr extends BaseArr
     public static function flip(array $array): array
     {
         // Filter the array to include only string or integer values.
-        $filteredArray = array_filter($array, fn ($value): bool => Validator::isString($value) || Validator::isInt($value));
+        $filteredArray = array_filter($array, fn ($value): bool => is_string($value) || Validator::isInt($value));
 
         // Perform the flip operation on the filtered array.
         return array_flip($filteredArray);
