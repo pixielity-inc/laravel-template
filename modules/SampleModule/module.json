@@ -1,0 +1,11 @@
+{
+    "name": "SampleModule",
+    "alias": "samplemodule",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Pixielity\\SampleModule\\Providers\\SampleModuleServiceProvider"
+    ],
+    "files": []
+}
