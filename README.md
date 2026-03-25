@@ -160,3 +160,9 @@ composer quality:fix        # Run all fixes
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Documentation
+
+- [Module Structure Guide](MODULE_STRUCTURE.md) - Standardized module organization
+- [AI Assistant Configuration](AI_ASSISTANTS.md) - Kiro AI setup and usage
+- [Kiro Quick Start](.kiro/QUICK_START.md) - Quick reference for Kiro features

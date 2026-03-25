@@ -1,5 +1,7 @@
 # Module Structure Guide
 
+> **For AI Assistants:** This documentation is also available as a Kiro skill at `.kiro/skills/laravel-module-structure/SKILL.md` and auto-included via `.kiro/steering/module-structure.md`
+
 This document describes the standardized module structure used in this Laravel application.
 
 ## Overview

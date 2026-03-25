@@ -7,6 +7,8 @@ tags: [laravel, modules, architecture, structure]
 
 # Laravel Module Structure Skill
 
+> **Note:** This skill is based on `MODULE_STRUCTURE.md` in the project root. For human-readable documentation, refer to that file.
+
 This skill provides guidelines for creating and organizing Laravel modules in this project.
 
 ## Module Directory Structure
