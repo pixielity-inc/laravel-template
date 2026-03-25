@@ -174,13 +174,8 @@
         },
         "composer-attribute-collector": {
             "include": [
-                "{vendor}/pixielity/laravel-framework",
-                "{vendor}/pixielity/laravel-foundation"
-            ],
-            "exclude-regex": [
-                "#/tests/#i",
-                "#TestCase\\.php$#i",
-                "#/Abstracts/BaseEmail\\.php$#i"
+                "{vendor}/pixielity/laravel-framework/src/*/src",
+                "{vendor}/pixielity/laravel-foundation/src"
             ]
         }
     },
