@@ -60,9 +60,8 @@ services:
       - laravel
     entrypoint: >
       /bin/sh -c "
-      cp /var/lib/pgadmin/pgpass /tmp/pgpass;
-      chmod 600 /tmp/pgpass;
-      chown pgadmin:pgadmin /tmp/pgpass;
+      cp /var/lib/pgadmin/pgpass /tmp/pgpass 2>/dev/null || true;
+      chmod 600 /tmp/pgpass 2>/dev/null || true;
       export PGPASSFILE=/tmp/pgpass;
       /entrypoint.sh
       "
