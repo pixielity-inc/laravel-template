@@ -11,33 +11,33 @@ use Pixielity\Enum\Enum;
 /**
  * Defines various file extensions as enumerations.
  *
- * @method static string TXT() Returns the TXT enum instance
- * @method static string SVG() Returns the SVG enum instance
- * @method static string DOC() Returns the DOC enum instance
- * @method static string DOCX() Returns the DOCX enum instance
- * @method static string PDF() Returns the PDF enum instance
- * @method static string JPG() Returns the JPG enum instance
- * @method static string JPEG() Returns the JPEG enum instance
- * @method static string PNG() Returns the PNG enum instance
- * @method static string GIF() Returns the GIF enum instance
- * @method static string MP4() Returns the MP4 enum instance
- * @method static string MOV() Returns the MOV enum instance
- * @method static string AVI() Returns the AVI enum instance
- * @method static string MP3() Returns the MP3 enum instance
- * @method static string WAV() Returns the WAV enum instance
- * @method static string ZIP() Returns the ZIP enum instance
- * @method static string TAR() Returns the TAR enum instance
- * @method static string GZ() Returns the GZ enum instance
- * @method static string PHP() Returns the PHP enum instance
- * @method static string TTF() Returns the TTF enum instance
- * @method static string WOFF() Returns the WOFF enum instance
- * @method static string WOFF2() Returns the WOFF2 enum instance
- * @method static string LOG() Returns the LOG enum instance
- * @method static string XML() Returns the XML enum instance
- * @method static string JSON() Returns the JSON enum instance
- * @method static string CSV() Returns the CSV enum instance
- * @method static string WEBP() Returns the WEBP enum instance
- * @method static string FLF() Returns the FLF enum instance
+ * @method static TXT() Returns the TXT enum instance
+ * @method static SVG() Returns the SVG enum instance
+ * @method static DOC() Returns the DOC enum instance
+ * @method static DOCX() Returns the DOCX enum instance
+ * @method static PDF() Returns the PDF enum instance
+ * @method static JPG() Returns the JPG enum instance
+ * @method static JPEG() Returns the JPEG enum instance
+ * @method static PNG() Returns the PNG enum instance
+ * @method static GIF() Returns the GIF enum instance
+ * @method static MP4() Returns the MP4 enum instance
+ * @method static MOV() Returns the MOV enum instance
+ * @method static AVI() Returns the AVI enum instance
+ * @method static MP3() Returns the MP3 enum instance
+ * @method static WAV() Returns the WAV enum instance
+ * @method static ZIP() Returns the ZIP enum instance
+ * @method static TAR() Returns the TAR enum instance
+ * @method static GZ() Returns the GZ enum instance
+ * @method static PHP() Returns the PHP enum instance
+ * @method static TTF() Returns the TTF enum instance
+ * @method static WOFF() Returns the WOFF enum instance
+ * @method static WOFF2() Returns the WOFF2 enum instance
+ * @method static LOG() Returns the LOG enum instance
+ * @method static XML() Returns the XML enum instance
+ * @method static JSON() Returns the JSON enum instance
+ * @method static CSV() Returns the CSV enum instance
+ * @method static WEBP() Returns the WEBP enum instance
+ * @method static FLF() Returns the FLF enum instance
  */
 enum FileExtension: string
 {

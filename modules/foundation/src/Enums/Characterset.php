@@ -11,14 +11,14 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing various character sets for Google Fonts.
  *
- * @method static string CYRILLIC() Returns the CYRILLIC enum instance
- * @method static string CYRILLIC_EXT() Returns the CYRILLIC_EXT enum instance
- * @method static string GREEK() Returns the GREEK enum instance
- * @method static string GREEK_EXT() Returns the GREEK_EXT enum instance
- * @method static string KHMER() Returns the KHMER enum instance
- * @method static string LATIN() Returns the LATIN enum instance
- * @method static string LATIN_EXT() Returns the LATIN_EXT enum instance
- * @method static string VIETNAMESE() Returns the VIETNAMESE enum instance
+ * @method static CYRILLIC() Returns the CYRILLIC enum instance
+ * @method static CYRILLIC_EXT() Returns the CYRILLIC_EXT enum instance
+ * @method static GREEK() Returns the GREEK enum instance
+ * @method static GREEK_EXT() Returns the GREEK_EXT enum instance
+ * @method static KHMER() Returns the KHMER enum instance
+ * @method static LATIN() Returns the LATIN enum instance
+ * @method static LATIN_EXT() Returns the LATIN_EXT enum instance
+ * @method static VIETNAMESE() Returns the VIETNAMESE enum instance
  */
 enum Characterset: string
 {

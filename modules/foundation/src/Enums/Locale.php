@@ -12,569 +12,569 @@ use Pixielity\Enum\Enum;
  *
  * @enum {string}
  *
- * @method static string AF_NA() Returns the AF_NA enum instance
- * @method static string AF_ZA() Returns the AF_ZA enum instance
- * @method static string AK() Returns the AK enum instance
- * @method static string AK_GH() Returns the AK_GH enum instance
- * @method static string SQ_AL() Returns the SQ_AL enum instance
- * @method static string SQ_XK() Returns the SQ_XK enum instance
- * @method static string SQ_MK() Returns the SQ_MK enum instance
- * @method static string AM_ET() Returns the AM_ET enum instance
- * @method static string AR_DZ() Returns the AR_DZ enum instance
- * @method static string AR_BH() Returns the AR_BH enum instance
- * @method static string AR_TD() Returns the AR_TD enum instance
- * @method static string AR_KM() Returns the AR_KM enum instance
- * @method static string AR_DJ() Returns the AR_DJ enum instance
- * @method static string AR_EG() Returns the AR_EG enum instance
- * @method static string AR_ER() Returns the AR_ER enum instance
- * @method static string AR_IQ() Returns the AR_IQ enum instance
- * @method static string AR_IL() Returns the AR_IL enum instance
- * @method static string AR_JO() Returns the AR_JO enum instance
- * @method static string AR_KW() Returns the AR_KW enum instance
- * @method static string AR_LB() Returns the AR_LB enum instance
- * @method static string AR_LY() Returns the AR_LY enum instance
- * @method static string AR_MR() Returns the AR_MR enum instance
- * @method static string AR_MA() Returns the AR_MA enum instance
- * @method static string AR_OM() Returns the AR_OM enum instance
- * @method static string AR_PS() Returns the AR_PS enum instance
- * @method static string AR_QA() Returns the AR_QA enum instance
- * @method static string AR_SA() Returns the AR_SA enum instance
- * @method static string AR_SO() Returns the AR_SO enum instance
- * @method static string AR_SS() Returns the AR_SS enum instance
- * @method static string AR_SD() Returns the AR_SD enum instance
- * @method static string AR_SY() Returns the AR_SY enum instance
- * @method static string AR_TN() Returns the AR_TN enum instance
- * @method static string AR_AE() Returns the AR_AE enum instance
- * @method static string AR_EH() Returns the AR_EH enum instance
- * @method static string AR_YE() Returns the AR_YE enum instance
- * @method static string HY_AM() Returns the HY_AM enum instance
- * @method static string AS_IN() Returns the AS_IN enum instance
- * @method static string AZ_AZ() Returns the AZ_AZ enum instance
- * @method static string AZ_CYRL_AZ() Returns the AZ_CYRL_AZ enum instance
- * @method static string AZ_CYRL() Returns the AZ_CYRL enum instance
- * @method static string AZ_LATN_AZ() Returns the AZ_LATN_AZ enum instance
- * @method static string AZ_LATN() Returns the AZ_LATN enum instance
- * @method static string BM() Returns the BM enum instance
- * @method static string BM_LATN_ML() Returns the BM_LATN_ML enum instance
- * @method static string BM_LATN() Returns the BM_LATN enum instance
- * @method static string EU_ES() Returns the EU_ES enum instance
- * @method static string BE_BY() Returns the BE_BY enum instance
- * @method static string BN_BD() Returns the BN_BD enum instance
- * @method static string BN_IN() Returns the BN_IN enum instance
- * @method static string BS_BA() Returns the BS_BA enum instance
- * @method static string BS_CYRL_BA() Returns the BS_CYRL_BA enum instance
- * @method static string BS_CYRL() Returns the BS_CYRL enum instance
- * @method static string BS_LATN_BA() Returns the BS_LATN_BA enum instance
- * @method static string BS_LATN() Returns the BS_LATN enum instance
- * @method static string BR_FR() Returns the BR_FR enum instance
- * @method static string BG_BG() Returns the BG_BG enum instance
- * @method static string MY() Returns the MY enum instance
- * @method static string MY_MM() Returns the MY_MM enum instance
- * @method static string CA_AD() Returns the CA_AD enum instance
- * @method static string CA_FR() Returns the CA_FR enum instance
- * @method static string CA_IT() Returns the CA_IT enum instance
- * @method static string CA_ES() Returns the CA_ES enum instance
- * @method static string ZH() Returns the ZH enum instance
- * @method static string ZH_CN() Returns the ZH_CN enum instance
- * @method static string ZH_HK() Returns the ZH_HK enum instance
- * @method static string ZH_MO() Returns the ZH_MO enum instance
- * @method static string ZH_HANS_CN() Returns the ZH_HANS_CN enum instance
- * @method static string ZH_HANS_HK() Returns the ZH_HANS_HK enum instance
- * @method static string ZH_HANS_MO() Returns the ZH_HANS_MO enum instance
- * @method static string ZH_HANS_SG() Returns the ZH_HANS_SG enum instance
- * @method static string ZH_HANS() Returns the ZH_HANS enum instance
- * @method static string ZH_SG() Returns the ZH_SG enum instance
- * @method static string ZH_TW() Returns the ZH_TW enum instance
- * @method static string ZH_HANT_HK() Returns the ZH_HANT_HK enum instance
- * @method static string ZH_HANT_MO() Returns the ZH_HANT_MO enum instance
- * @method static string ZH_HANT_TW() Returns the ZH_HANT_TW enum instance
- * @method static string ZH_HANT() Returns the ZH_HANT enum instance
- * @method static string KW() Returns the KW enum instance
- * @method static string KW_GB() Returns the KW_GB enum instance
- * @method static string HR_BA() Returns the HR_BA enum instance
- * @method static string HR_HR() Returns the HR_HR enum instance
- * @method static string CS_CZ() Returns the CS_CZ enum instance
- * @method static string DA_DK() Returns the DA_DK enum instance
- * @method static string DA_GL() Returns the DA_GL enum instance
- * @method static string NL_AW() Returns the NL_AW enum instance
- * @method static string NL_BE() Returns the NL_BE enum instance
- * @method static string NL_BQ() Returns the NL_BQ enum instance
- * @method static string NL_CW() Returns the NL_CW enum instance
- * @method static string NL_NL() Returns the NL_NL enum instance
- * @method static string NL_SX() Returns the NL_SX enum instance
- * @method static string NL_SR() Returns the NL_SR enum instance
- * @method static string DZ() Returns the DZ enum instance
- * @method static string DZ_BT() Returns the DZ_BT enum instance
- * @method static string EN_AS() Returns the EN_AS enum instance
- * @method static string EN_AI() Returns the EN_AI enum instance
- * @method static string EN_AG() Returns the EN_AG enum instance
- * @method static string EN_AU() Returns the EN_AU enum instance
- * @method static string EN_BS() Returns the EN_BS enum instance
- * @method static string EN_BB() Returns the EN_BB enum instance
- * @method static string EN_BE() Returns the EN_BE enum instance
- * @method static string EN_BZ() Returns the EN_BZ enum instance
- * @method static string EN_BM() Returns the EN_BM enum instance
- * @method static string EN_BW() Returns the EN_BW enum instance
- * @method static string EN_IO() Returns the EN_IO enum instance
- * @method static string EN_VG() Returns the EN_VG enum instance
- * @method static string EN_CM() Returns the EN_CM enum instance
- * @method static string EN_CA() Returns the EN_CA enum instance
- * @method static string EN_KY() Returns the EN_KY enum instance
- * @method static string EN_CX() Returns the EN_CX enum instance
- * @method static string EN_CC() Returns the EN_CC enum instance
- * @method static string EN_CK() Returns the EN_CK enum instance
- * @method static string EN_DG() Returns the EN_DG enum instance
- * @method static string EN_DM() Returns the EN_DM enum instance
- * @method static string EN_ER() Returns the EN_ER enum instance
- * @method static string EN_FK() Returns the EN_FK enum instance
- * @method static string EN_FJ() Returns the EN_FJ enum instance
- * @method static string EN_GM() Returns the EN_GM enum instance
- * @method static string EN_GH() Returns the EN_GH enum instance
- * @method static string EN_GI() Returns the EN_GI enum instance
- * @method static string EN_GD() Returns the EN_GD enum instance
- * @method static string EN_GU() Returns the EN_GU enum instance
- * @method static string EN_GG() Returns the EN_GG enum instance
- * @method static string EN_GY() Returns the EN_GY enum instance
- * @method static string EN_HK() Returns the EN_HK enum instance
- * @method static string EN_IN() Returns the EN_IN enum instance
- * @method static string EN_IE() Returns the EN_IE enum instance
- * @method static string EN_IM() Returns the EN_IM enum instance
- * @method static string EN_JM() Returns the EN_JM enum instance
- * @method static string EN_JE() Returns the EN_JE enum instance
- * @method static string EN_KE() Returns the EN_KE enum instance
- * @method static string EN_KI() Returns the EN_KI enum instance
- * @method static string EN_LS() Returns the EN_LS enum instance
- * @method static string EN_LR() Returns the EN_LR enum instance
- * @method static string EN_MO() Returns the EN_MO enum instance
- * @method static string EN_MG() Returns the EN_MG enum instance
- * @method static string EN_MW() Returns the EN_MW enum instance
- * @method static string EN_MY() Returns the EN_MY enum instance
- * @method static string EN_MT() Returns the EN_MT enum instance
- * @method static string EN_MH() Returns the EN_MH enum instance
- * @method static string EN_MU() Returns the EN_MU enum instance
- * @method static string EN_FM() Returns the EN_FM enum instance
- * @method static string EN_MS() Returns the EN_MS enum instance
- * @method static string EN_NA() Returns the EN_NA enum instance
- * @method static string EN_NR() Returns the EN_NR enum instance
- * @method static string EN_NZ() Returns the EN_NZ enum instance
- * @method static string EN_NG() Returns the EN_NG enum instance
- * @method static string EN_NU() Returns the EN_NU enum instance
- * @method static string EN_NF() Returns the EN_NF enum instance
- * @method static string EN_MP() Returns the EN_MP enum instance
- * @method static string EN_PK() Returns the EN_PK enum instance
- * @method static string EN_PW() Returns the EN_PW enum instance
- * @method static string EN_PG() Returns the EN_PG enum instance
- * @method static string EN_PH() Returns the EN_PH enum instance
- * @method static string EN_PN() Returns the EN_PN enum instance
- * @method static string EN_PR() Returns the EN_PR enum instance
- * @method static string EN_WS() Returns the EN_WS enum instance
- * @method static string EN_SC() Returns the EN_SC enum instance
- * @method static string EN_SL() Returns the EN_SL enum instance
- * @method static string EN_SG() Returns the EN_SG enum instance
- * @method static string EN_SX() Returns the EN_SX enum instance
- * @method static string EN_SB() Returns the EN_SB enum instance
- * @method static string EN_ZA() Returns the EN_ZA enum instance
- * @method static string EN_SS() Returns the EN_SS enum instance
- * @method static string EN_SH() Returns the EN_SH enum instance
- * @method static string EN_KN() Returns the EN_KN enum instance
- * @method static string EN_LC() Returns the EN_LC enum instance
- * @method static string EN_VC() Returns the EN_VC enum instance
- * @method static string EN_SD() Returns the EN_SD enum instance
- * @method static string EN_SZ() Returns the EN_SZ enum instance
- * @method static string EN_TZ() Returns the EN_TZ enum instance
- * @method static string EN_TK() Returns the EN_TK enum instance
- * @method static string EN_TT() Returns the EN_TT enum instance
- * @method static string EN_TC() Returns the EN_TC enum instance
- * @method static string EN_TV() Returns the EN_TV enum instance
- * @method static string EN_UM() Returns the EN_UM enum instance
- * @method static string EN_VI() Returns the EN_VI enum instance
- * @method static string EN_UG() Returns the EN_UG enum instance
- * @method static string EN_GB() Returns the EN_GB enum instance
- * @method static string EN_US() Returns the EN_US enum instance
- * @method static string EN_VU() Returns the EN_VU enum instance
- * @method static string EN_ZM() Returns the EN_ZM enum instance
- * @method static string EN_ZW() Returns the EN_ZW enum instance
- * @method static string ET_EE() Returns the ET_EE enum instance
- * @method static string EE() Returns the EE enum instance
- * @method static string EE_GH() Returns the EE_GH enum instance
- * @method static string EE_TG() Returns the EE_TG enum instance
- * @method static string FO_FO() Returns the FO_FO enum instance
- * @method static string FI_FI() Returns the FI_FI enum instance
- * @method static string FR_DZ() Returns the FR_DZ enum instance
- * @method static string FR_BE() Returns the FR_BE enum instance
- * @method static string FR_BJ() Returns the FR_BJ enum instance
- * @method static string FR_BF() Returns the FR_BF enum instance
- * @method static string FR_BI() Returns the FR_BI enum instance
- * @method static string FR_CM() Returns the FR_CM enum instance
- * @method static string FR_CA() Returns the FR_CA enum instance
- * @method static string FR_CF() Returns the FR_CF enum instance
- * @method static string FR_TD() Returns the FR_TD enum instance
- * @method static string FR_KM() Returns the FR_KM enum instance
- * @method static string FR_CG() Returns the FR_CG enum instance
- * @method static string FR_CD() Returns the FR_CD enum instance
- * @method static string FR_CI() Returns the FR_CI enum instance
- * @method static string FR_DJ() Returns the FR_DJ enum instance
- * @method static string FR_GQ() Returns the FR_GQ enum instance
- * @method static string FR_FR() Returns the FR_FR enum instance
- * @method static string FR_GF() Returns the FR_GF enum instance
- * @method static string FR_PF() Returns the FR_PF enum instance
- * @method static string FR_GA() Returns the FR_GA enum instance
- * @method static string FR_GP() Returns the FR_GP enum instance
- * @method static string FR_GN() Returns the FR_GN enum instance
- * @method static string FR_HT() Returns the FR_HT enum instance
- * @method static string FR_LU() Returns the FR_LU enum instance
- * @method static string FR_MG() Returns the FR_MG enum instance
- * @method static string FR_ML() Returns the FR_ML enum instance
- * @method static string FR_MQ() Returns the FR_MQ enum instance
- * @method static string FR_MR() Returns the FR_MR enum instance
- * @method static string FR_MU() Returns the FR_MU enum instance
- * @method static string FR_YT() Returns the FR_YT enum instance
- * @method static string FR_MC() Returns the FR_MC enum instance
- * @method static string FR_MA() Returns the FR_MA enum instance
- * @method static string FR_NC() Returns the FR_NC enum instance
- * @method static string FR_NE() Returns the FR_NE enum instance
- * @method static string FR_RE() Returns the FR_RE enum instance
- * @method static string FR_SN() Returns the FR_SN enum instance
- * @method static string FR_SC() Returns the FR_SC enum instance
- * @method static string FR_BL() Returns the FR_BL enum instance
- * @method static string FR_MF() Returns the FR_MF enum instance
- * @method static string FR_PM() Returns the FR_PM enum instance
- * @method static string FR_CH() Returns the FR_CH enum instance
- * @method static string FR_SY() Returns the FR_SY enum instance
- * @method static string FR_TG() Returns the FR_TG enum instance
- * @method static string FR_TN() Returns the FR_TN enum instance
- * @method static string FR_VU() Returns the FR_VU enum instance
- * @method static string FR_WF() Returns the FR_WF enum instance
- * @method static string FF() Returns the FF enum instance
- * @method static string FF_CM() Returns the FF_CM enum instance
- * @method static string FF_GN() Returns the FF_GN enum instance
- * @method static string FF_MR() Returns the FF_MR enum instance
- * @method static string FF_SN() Returns the FF_SN enum instance
- * @method static string GL_ES() Returns the GL_ES enum instance
- * @method static string LG() Returns the LG enum instance
- * @method static string LG_UG() Returns the LG_UG enum instance
- * @method static string KA_GE() Returns the KA_GE enum instance
- * @method static string DE_AT() Returns the DE_AT enum instance
- * @method static string DE_BE() Returns the DE_BE enum instance
- * @method static string DE_DE() Returns the DE_DE enum instance
- * @method static string DE_LI() Returns the DE_LI enum instance
- * @method static string DE_LU() Returns the DE_LU enum instance
- * @method static string DE_CH() Returns the DE_CH enum instance
- * @method static string EL_CY() Returns the EL_CY enum instance
- * @method static string EL_GR() Returns the EL_GR enum instance
- * @method static string GU_IN() Returns the GU_IN enum instance
- * @method static string HA() Returns the HA enum instance
- * @method static string HA_GH() Returns the HA_GH enum instance
- * @method static string HA_LATN_GH() Returns the HA_LATN_GH enum instance
- * @method static string HA_LATN_NE() Returns the HA_LATN_NE enum instance
- * @method static string HA_LATN_NG() Returns the HA_LATN_NG enum instance
- * @method static string HA_LATN() Returns the HA_LATN enum instance
- * @method static string HA_NE() Returns the HA_NE enum instance
- * @method static string HA_NG() Returns the HA_NG enum instance
- * @method static string HE_IL() Returns the HE_IL enum instance
- * @method static string HI_IN() Returns the HI_IN enum instance
- * @method static string HU_HU() Returns the HU_HU enum instance
- * @method static string IS_IS() Returns the IS_IS enum instance
- * @method static string SQ() Returns the SQ enum instance
- * @method static string AR() Returns the AR enum instance
- * @method static string AS() Returns the AS enum instance
- * @method static string ES() Returns the ES enum instance
- * @method static string EO() Returns the EO enum instance
- * @method static string ET() Returns the ET enum instance
- * @method static string EN() Returns the EN enum instance
- * @method static string EN_TO() Returns the EN_TO enum instance
- * @method static string EN_RW() Returns the EN_RW enum instance
- * @method static string IG() Returns the IG enum instance
- * @method static string IG_NG() Returns the IG_NG enum instance
- * @method static string CS() Returns the CS enum instance
- * @method static string FR() Returns the FR enum instance
- * @method static string FR_RW() Returns the FR_RW enum instance
- * @method static string FI() Returns the FI enum instance
- * @method static string FY() Returns the FY enum instance
- * @method static string HE() Returns the HE enum instance
- * @method static string HI() Returns the HI enum instance
- * @method static string HU() Returns the HU enum instance
- * @method static string KM() Returns the KM enum instance
- * @method static string KN() Returns the KN enum instance
- * @method static string CA() Returns the CA enum instance
- * @method static string KO() Returns the KO enum instance
- * @method static string HR() Returns the HR enum instance
- * @method static string PL() Returns the PL enum instance
- * @method static string PT() Returns the PT enum instance
- * @method static string PA() Returns the PA enum instance
- * @method static string SR() Returns the SR enum instance
- * @method static string IS() Returns the IS enum instance
- * @method static string SK() Returns the SK enum instance
- * @method static string SO() Returns the SO enum instance
- * @method static string SV() Returns the SV enum instance
- * @method static string SW() Returns the SW enum instance
- * @method static string IT() Returns the IT enum instance
- * @method static string TA() Returns the TA enum instance
- * @method static string TH() Returns the TH enum instance
- * @method static string TE() Returns the TE enum instance
- * @method static string TR() Returns the TR enum instance
- * @method static string EU() Returns the EU enum instance
- * @method static string BE() Returns the BE enum instance
- * @method static string BN() Returns the BN enum instance
- * @method static string DE() Returns the DE enum instance
- * @method static string DA() Returns the DA enum instance
- * @method static string GL() Returns the GL enum instance
- * @method static string CY() Returns the CY enum instance
- * @method static string GD() Returns the GD enum instance
- * @method static string EL() Returns the EL enum instance
- * @method static string LO() Returns the LO enum instance
- * @method static string LT() Returns the LT enum instance
- * @method static string ML() Returns the ML enum instance
- * @method static string MS() Returns the MS enum instance
- * @method static string MT() Returns the MT enum instance
- * @method static string MR() Returns the MR enum instance
- * @method static string MK() Returns the MK enum instance
- * @method static string MN() Returns the MN enum instance
- * @method static string NE() Returns the NE enum instance
- * @method static string NL() Returns the NL enum instance
- * @method static string NO() Returns the NO enum instance
- * @method static string AF() Returns the AF enum instance
- * @method static string LV() Returns the LV enum instance
- * @method static string RO() Returns the RO enum instance
- * @method static string HY() Returns the HY enum instance
- * @method static string SL() Returns the SL enum instance
- * @method static string VI() Returns the VI enum instance
- * @method static string UK() Returns the UK enum instance
- * @method static string ID() Returns the ID enum instance
- * @method static string GA() Returns the GA enum instance
- * @method static string RU() Returns the RU enum instance
- * @method static string UG() Returns the UG enum instance
- * @method static string JA() Returns the JA enum instance
- * @method static string LN() Returns the LN enum instance
- * @method static string PS() Returns the PS enum instance
- * @method static string ID_ID() Returns the ID_ID enum instance
- * @method static string KY() Returns the KY enum instance
- * @method static string AM() Returns the AM enum instance
- * @method static string TI() Returns the TI enum instance
- * @method static string AZ() Returns the AZ enum instance
- * @method static string BR() Returns the BR enum instance
- * @method static string BS() Returns the BS enum instance
- * @method static string FO() Returns the FO enum instance
- * @method static string GU() Returns the GU enum instance
- * @method static string KA() Returns the KA enum instance
- * @method static string NN() Returns the NN enum instance
- * @method static string FA() Returns the FA enum instance
- * @method static string SH() Returns the SH enum instance
- * @method static string SI() Returns the SI enum instance
- * @method static string YI() Returns the YI enum instance
- * @method static string UR() Returns the UR enum instance
- * @method static string UZ() Returns the UZ enum instance
- * @method static string ZU() Returns the ZU enum instance
- * @method static string OR() Returns the OR enum instance
- * @method static string GA_IE() Returns the GA_IE enum instance
- * @method static string IT_IT() Returns the IT_IT enum instance
- * @method static string IT_SM() Returns the IT_SM enum instance
- * @method static string IT_CH() Returns the IT_CH enum instance
- * @method static string JA_JP() Returns the JA_JP enum instance
- * @method static string KL() Returns the KL enum instance
- * @method static string KL_GL() Returns the KL_GL enum instance
- * @method static string KN_IN() Returns the KN_IN enum instance
- * @method static string KS() Returns the KS enum instance
- * @method static string KS_ARAB_IN() Returns the KS_ARAB_IN enum instance
- * @method static string KS_ARAB() Returns the KS_ARAB enum instance
- * @method static string KS_IN() Returns the KS_IN enum instance
- * @method static string KK() Returns the KK enum instance
- * @method static string KK_CYRL_KZ() Returns the KK_CYRL_KZ enum instance
- * @method static string KK_CYRL() Returns the KK_CYRL enum instance
- * @method static string KK_KZ() Returns the KK_KZ enum instance
- * @method static string KM_KH() Returns the KM_KH enum instance
- * @method static string KI() Returns the KI enum instance
- * @method static string KI_KE() Returns the KI_KE enum instance
- * @method static string RW() Returns the RW enum instance
- * @method static string RW_RW() Returns the RW_RW enum instance
- * @method static string KO_KP() Returns the KO_KP enum instance
- * @method static string KO_KR() Returns the KO_KR enum instance
- * @method static string KY_CYRL_KG() Returns the KY_CYRL_KG enum instance
- * @method static string KY_CYRL() Returns the KY_CYRL enum instance
- * @method static string KY_KG() Returns the KY_KG enum instance
- * @method static string LO_LA() Returns the LO_LA enum instance
- * @method static string LV_LV() Returns the LV_LV enum instance
- * @method static string LN_AO() Returns the LN_AO enum instance
- * @method static string LN_CF() Returns the LN_CF enum instance
- * @method static string LN_CG() Returns the LN_CG enum instance
- * @method static string LN_CD() Returns the LN_CD enum instance
- * @method static string LT_LT() Returns the LT_LT enum instance
- * @method static string LU() Returns the LU enum instance
- * @method static string LU_CD() Returns the LU_CD enum instance
- * @method static string LB() Returns the LB enum instance
- * @method static string LB_LU() Returns the LB_LU enum instance
- * @method static string MK_MK() Returns the MK_MK enum instance
- * @method static string MG() Returns the MG enum instance
- * @method static string MG_MG() Returns the MG_MG enum instance
- * @method static string MS_BN() Returns the MS_BN enum instance
- * @method static string MS_LATN_BN() Returns the MS_LATN_BN enum instance
- * @method static string MS_LATN_MY() Returns the MS_LATN_MY enum instance
- * @method static string MS_LATN_SG() Returns the MS_LATN_SG enum instance
- * @method static string MS_LATN() Returns the MS_LATN enum instance
- * @method static string MS_MY() Returns the MS_MY enum instance
- * @method static string MS_SG() Returns the MS_SG enum instance
- * @method static string ML_IN() Returns the ML_IN enum instance
- * @method static string MT_MT() Returns the MT_MT enum instance
- * @method static string GV() Returns the GV enum instance
- * @method static string GV_IM() Returns the GV_IM enum instance
- * @method static string MR_IN() Returns the MR_IN enum instance
- * @method static string MN_CYRL_MN() Returns the MN_CYRL_MN enum instance
- * @method static string MN_CYRL() Returns the MN_CYRL enum instance
- * @method static string MN_MN() Returns the MN_MN enum instance
- * @method static string NE_IN() Returns the NE_IN enum instance
- * @method static string NE_NP() Returns the NE_NP enum instance
- * @method static string ND() Returns the ND enum instance
- * @method static string ND_ZW() Returns the ND_ZW enum instance
- * @method static string SE() Returns the SE enum instance
- * @method static string SE_FI() Returns the SE_FI enum instance
- * @method static string SE_NO() Returns the SE_NO enum instance
- * @method static string SE_SE() Returns the SE_SE enum instance
- * @method static string NO_NO() Returns the NO_NO enum instance
- * @method static string NB() Returns the NB enum instance
- * @method static string NB_NO() Returns the NB_NO enum instance
- * @method static string NB_SJ() Returns the NB_SJ enum instance
- * @method static string NN_NO() Returns the NN_NO enum instance
- * @method static string OR_IN() Returns the OR_IN enum instance
- * @method static string OM() Returns the OM enum instance
- * @method static string OM_ET() Returns the OM_ET enum instance
- * @method static string OM_KE() Returns the OM_KE enum instance
- * @method static string OS() Returns the OS enum instance
- * @method static string OS_GE() Returns the OS_GE enum instance
- * @method static string OS_RU() Returns the OS_RU enum instance
- * @method static string PS_AF() Returns the PS_AF enum instance
- * @method static string FA_AF() Returns the FA_AF enum instance
- * @method static string FA_IR() Returns the FA_IR enum instance
- * @method static string PL_PL() Returns the PL_PL enum instance
- * @method static string PT_AO() Returns the PT_AO enum instance
- * @method static string PT_BR() Returns the PT_BR enum instance
- * @method static string PT_CV() Returns the PT_CV enum instance
- * @method static string PT_GW() Returns the PT_GW enum instance
- * @method static string PT_MO() Returns the PT_MO enum instance
- * @method static string PT_MZ() Returns the PT_MZ enum instance
- * @method static string PT_PT() Returns the PT_PT enum instance
- * @method static string PT_ST() Returns the PT_ST enum instance
- * @method static string PT_TL() Returns the PT_TL enum instance
- * @method static string PA_ARAB_PK() Returns the PA_ARAB_PK enum instance
- * @method static string PA_ARAB() Returns the PA_ARAB enum instance
- * @method static string PA_GURU_IN() Returns the PA_GURU_IN enum instance
- * @method static string PA_GURU() Returns the PA_GURU enum instance
- * @method static string PA_IN() Returns the PA_IN enum instance
- * @method static string PA_PK() Returns the PA_PK enum instance
- * @method static string QU() Returns the QU enum instance
- * @method static string QU_BO() Returns the QU_BO enum instance
- * @method static string QU_EC() Returns the QU_EC enum instance
- * @method static string QU_PE() Returns the QU_PE enum instance
- * @method static string RO_MD() Returns the RO_MD enum instance
- * @method static string RO_RO() Returns the RO_RO enum instance
- * @method static string RM() Returns the RM enum instance
- * @method static string RM_CH() Returns the RM_CH enum instance
- * @method static string RN() Returns the RN enum instance
- * @method static string RN_BI() Returns the RN_BI enum instance
- * @method static string RU_BY() Returns the RU_BY enum instance
- * @method static string RU_KZ() Returns the RU_KZ enum instance
- * @method static string RU_KG() Returns the RU_KG enum instance
- * @method static string RU_MD() Returns the RU_MD enum instance
- * @method static string RU_RU() Returns the RU_RU enum instance
- * @method static string RU_UA() Returns the RU_UA enum instance
- * @method static string SG() Returns the SG enum instance
- * @method static string SG_CF() Returns the SG_CF enum instance
- * @method static string GD_GB() Returns the GD_GB enum instance
- * @method static string SR_BA() Returns the SR_BA enum instance
- * @method static string SR_CYRL_BA() Returns the SR_CYRL_BA enum instance
- * @method static string SR_CYRL_XK() Returns the SR_CYRL_XK enum instance
- * @method static string SR_CYRL_ME() Returns the SR_CYRL_ME enum instance
- * @method static string SR_CYRL_RS() Returns the SR_CYRL_RS enum instance
- * @method static string SR_CYRL() Returns the SR_CYRL enum instance
- * @method static string SR_XK() Returns the SR_XK enum instance
- * @method static string SR_LATN_BA() Returns the SR_LATN_BA enum instance
- * @method static string SR_LATN_XK() Returns the SR_LATN_XK enum instance
- * @method static string SR_LATN_ME() Returns the SR_LATN_ME enum instance
- * @method static string SR_LATN_RS() Returns the SR_LATN_RS enum instance
- * @method static string SR_LATN() Returns the SR_LATN enum instance
- * @method static string SR_ME() Returns the SR_ME enum instance
- * @method static string SR_RS() Returns the SR_RS enum instance
- * @method static string SH_BA() Returns the SH_BA enum instance
- * @method static string SN() Returns the SN enum instance
- * @method static string SN_ZW() Returns the SN_ZW enum instance
- * @method static string II() Returns the II enum instance
- * @method static string II_CN() Returns the II_CN enum instance
- * @method static string SI_LK() Returns the SI_LK enum instance
- * @method static string SK_SK() Returns the SK_SK enum instance
- * @method static string SL_SI() Returns the SL_SI enum instance
- * @method static string SO_DJ() Returns the SO_DJ enum instance
- * @method static string SO_ET() Returns the SO_ET enum instance
- * @method static string SO_KE() Returns the SO_KE enum instance
- * @method static string SO_SO() Returns the SO_SO enum instance
- * @method static string ES_AR() Returns the ES_AR enum instance
- * @method static string ES_BO() Returns the ES_BO enum instance
- * @method static string ES_IC() Returns the ES_IC enum instance
- * @method static string ES_EA() Returns the ES_EA enum instance
- * @method static string ES_CL() Returns the ES_CL enum instance
- * @method static string ES_CO() Returns the ES_CO enum instance
- * @method static string ES_CR() Returns the ES_CR enum instance
- * @method static string ES_CU() Returns the ES_CU enum instance
- * @method static string ES_DO() Returns the ES_DO enum instance
- * @method static string ES_EC() Returns the ES_EC enum instance
- * @method static string ES_SV() Returns the ES_SV enum instance
- * @method static string ES_GQ() Returns the ES_GQ enum instance
- * @method static string ES_GT() Returns the ES_GT enum instance
- * @method static string ES_HN() Returns the ES_HN enum instance
- * @method static string ES_MX() Returns the ES_MX enum instance
- * @method static string ES_NI() Returns the ES_NI enum instance
- * @method static string ES_PA() Returns the ES_PA enum instance
- * @method static string ES_PY() Returns the ES_PY enum instance
- * @method static string ES_PE() Returns the ES_PE enum instance
- * @method static string ES_PH() Returns the ES_PH enum instance
- * @method static string ES_PR() Returns the ES_PR enum instance
- * @method static string ES_ES() Returns the ES_ES enum instance
- * @method static string ES_US() Returns the ES_US enum instance
- * @method static string ES_UY() Returns the ES_UY enum instance
- * @method static string ES_VE() Returns the ES_VE enum instance
- * @method static string SW_KE() Returns the SW_KE enum instance
- * @method static string SW_TZ() Returns the SW_TZ enum instance
- * @method static string SW_UG() Returns the SW_UG enum instance
- * @method static string SV_AX() Returns the SV_AX enum instance
- * @method static string SV_FI() Returns the SV_FI enum instance
- * @method static string SV_SE() Returns the SV_SE enum instance
- * @method static string TL() Returns the TL enum instance
- * @method static string TL_PH() Returns the TL_PH enum instance
- * @method static string TA_IN() Returns the TA_IN enum instance
- * @method static string TA_MY() Returns the TA_MY enum instance
- * @method static string TA_SG() Returns the TA_SG enum instance
- * @method static string TA_LK() Returns the TA_LK enum instance
- * @method static string TE_IN() Returns the TE_IN enum instance
- * @method static string TH_TH() Returns the TH_TH enum instance
- * @method static string BO() Returns the BO enum instance
- * @method static string BO_CN() Returns the BO_CN enum instance
- * @method static string BO_IN() Returns the BO_IN enum instance
- * @method static string TI_ER() Returns the TI_ER enum instance
- * @method static string TI_ET() Returns the TI_ET enum instance
- * @method static string TO() Returns the TO enum instance
- * @method static string TO_TO() Returns the TO_TO enum instance
- * @method static string TR_CY() Returns the TR_CY enum instance
- * @method static string TR_TR() Returns the TR_TR enum instance
- * @method static string UK_UA() Returns the UK_UA enum instance
- * @method static string UR_IN() Returns the UR_IN enum instance
- * @method static string UR_PK() Returns the UR_PK enum instance
- * @method static string BG() Returns the BG enum instance
- * @method static string UG_ARAB_CN() Returns the UG_ARAB_CN enum instance
- * @method static string UG_ARAB() Returns the UG_ARAB enum instance
- * @method static string UG_CN() Returns the UG_CN enum instance
- * @method static string UZ_AF() Returns the UZ_AF enum instance
- * @method static string UZ_ARAB_AF() Returns the UZ_ARAB_AF enum instance
- * @method static string UZ_ARAB() Returns the UZ_ARAB enum instance
- * @method static string UZ_CYRL_UZ() Returns the UZ_CYRL_UZ enum instance
- * @method static string UZ_CYRL() Returns the UZ_CYRL enum instance
- * @method static string UZ_LATN_UZ() Returns the UZ_LATN_UZ enum instance
- * @method static string UZ_LATN() Returns the UZ_LATN enum instance
- * @method static string UZ_UZ() Returns the UZ_UZ enum instance
- * @method static string VI_VN() Returns the VI_VN enum instance
- * @method static string CY_GB() Returns the CY_GB enum instance
- * @method static string FY_NL() Returns the FY_NL enum instance
- * @method static string YO() Returns the YO enum instance
- * @method static string YO_BJ() Returns the YO_BJ enum instance
- * @method static string YO_NG() Returns the YO_NG enum instance
- * @method static string ZU_ZA() Returns the ZU_ZA enum instance
+ * @method static AF_NA() Returns the AF_NA enum instance
+ * @method static AF_ZA() Returns the AF_ZA enum instance
+ * @method static AK() Returns the AK enum instance
+ * @method static AK_GH() Returns the AK_GH enum instance
+ * @method static SQ_AL() Returns the SQ_AL enum instance
+ * @method static SQ_XK() Returns the SQ_XK enum instance
+ * @method static SQ_MK() Returns the SQ_MK enum instance
+ * @method static AM_ET() Returns the AM_ET enum instance
+ * @method static AR_DZ() Returns the AR_DZ enum instance
+ * @method static AR_BH() Returns the AR_BH enum instance
+ * @method static AR_TD() Returns the AR_TD enum instance
+ * @method static AR_KM() Returns the AR_KM enum instance
+ * @method static AR_DJ() Returns the AR_DJ enum instance
+ * @method static AR_EG() Returns the AR_EG enum instance
+ * @method static AR_ER() Returns the AR_ER enum instance
+ * @method static AR_IQ() Returns the AR_IQ enum instance
+ * @method static AR_IL() Returns the AR_IL enum instance
+ * @method static AR_JO() Returns the AR_JO enum instance
+ * @method static AR_KW() Returns the AR_KW enum instance
+ * @method static AR_LB() Returns the AR_LB enum instance
+ * @method static AR_LY() Returns the AR_LY enum instance
+ * @method static AR_MR() Returns the AR_MR enum instance
+ * @method static AR_MA() Returns the AR_MA enum instance
+ * @method static AR_OM() Returns the AR_OM enum instance
+ * @method static AR_PS() Returns the AR_PS enum instance
+ * @method static AR_QA() Returns the AR_QA enum instance
+ * @method static AR_SA() Returns the AR_SA enum instance
+ * @method static AR_SO() Returns the AR_SO enum instance
+ * @method static AR_SS() Returns the AR_SS enum instance
+ * @method static AR_SD() Returns the AR_SD enum instance
+ * @method static AR_SY() Returns the AR_SY enum instance
+ * @method static AR_TN() Returns the AR_TN enum instance
+ * @method static AR_AE() Returns the AR_AE enum instance
+ * @method static AR_EH() Returns the AR_EH enum instance
+ * @method static AR_YE() Returns the AR_YE enum instance
+ * @method static HY_AM() Returns the HY_AM enum instance
+ * @method static AS_IN() Returns the AS_IN enum instance
+ * @method static AZ_AZ() Returns the AZ_AZ enum instance
+ * @method static AZ_CYRL_AZ() Returns the AZ_CYRL_AZ enum instance
+ * @method static AZ_CYRL() Returns the AZ_CYRL enum instance
+ * @method static AZ_LATN_AZ() Returns the AZ_LATN_AZ enum instance
+ * @method static AZ_LATN() Returns the AZ_LATN enum instance
+ * @method static BM() Returns the BM enum instance
+ * @method static BM_LATN_ML() Returns the BM_LATN_ML enum instance
+ * @method static BM_LATN() Returns the BM_LATN enum instance
+ * @method static EU_ES() Returns the EU_ES enum instance
+ * @method static BE_BY() Returns the BE_BY enum instance
+ * @method static BN_BD() Returns the BN_BD enum instance
+ * @method static BN_IN() Returns the BN_IN enum instance
+ * @method static BS_BA() Returns the BS_BA enum instance
+ * @method static BS_CYRL_BA() Returns the BS_CYRL_BA enum instance
+ * @method static BS_CYRL() Returns the BS_CYRL enum instance
+ * @method static BS_LATN_BA() Returns the BS_LATN_BA enum instance
+ * @method static BS_LATN() Returns the BS_LATN enum instance
+ * @method static BR_FR() Returns the BR_FR enum instance
+ * @method static BG_BG() Returns the BG_BG enum instance
+ * @method static MY() Returns the MY enum instance
+ * @method static MY_MM() Returns the MY_MM enum instance
+ * @method static CA_AD() Returns the CA_AD enum instance
+ * @method static CA_FR() Returns the CA_FR enum instance
+ * @method static CA_IT() Returns the CA_IT enum instance
+ * @method static CA_ES() Returns the CA_ES enum instance
+ * @method static ZH() Returns the ZH enum instance
+ * @method static ZH_CN() Returns the ZH_CN enum instance
+ * @method static ZH_HK() Returns the ZH_HK enum instance
+ * @method static ZH_MO() Returns the ZH_MO enum instance
+ * @method static ZH_HANS_CN() Returns the ZH_HANS_CN enum instance
+ * @method static ZH_HANS_HK() Returns the ZH_HANS_HK enum instance
+ * @method static ZH_HANS_MO() Returns the ZH_HANS_MO enum instance
+ * @method static ZH_HANS_SG() Returns the ZH_HANS_SG enum instance
+ * @method static ZH_HANS() Returns the ZH_HANS enum instance
+ * @method static ZH_SG() Returns the ZH_SG enum instance
+ * @method static ZH_TW() Returns the ZH_TW enum instance
+ * @method static ZH_HANT_HK() Returns the ZH_HANT_HK enum instance
+ * @method static ZH_HANT_MO() Returns the ZH_HANT_MO enum instance
+ * @method static ZH_HANT_TW() Returns the ZH_HANT_TW enum instance
+ * @method static ZH_HANT() Returns the ZH_HANT enum instance
+ * @method static KW() Returns the KW enum instance
+ * @method static KW_GB() Returns the KW_GB enum instance
+ * @method static HR_BA() Returns the HR_BA enum instance
+ * @method static HR_HR() Returns the HR_HR enum instance
+ * @method static CS_CZ() Returns the CS_CZ enum instance
+ * @method static DA_DK() Returns the DA_DK enum instance
+ * @method static DA_GL() Returns the DA_GL enum instance
+ * @method static NL_AW() Returns the NL_AW enum instance
+ * @method static NL_BE() Returns the NL_BE enum instance
+ * @method static NL_BQ() Returns the NL_BQ enum instance
+ * @method static NL_CW() Returns the NL_CW enum instance
+ * @method static NL_NL() Returns the NL_NL enum instance
+ * @method static NL_SX() Returns the NL_SX enum instance
+ * @method static NL_SR() Returns the NL_SR enum instance
+ * @method static DZ() Returns the DZ enum instance
+ * @method static DZ_BT() Returns the DZ_BT enum instance
+ * @method static EN_AS() Returns the EN_AS enum instance
+ * @method static EN_AI() Returns the EN_AI enum instance
+ * @method static EN_AG() Returns the EN_AG enum instance
+ * @method static EN_AU() Returns the EN_AU enum instance
+ * @method static EN_BS() Returns the EN_BS enum instance
+ * @method static EN_BB() Returns the EN_BB enum instance
+ * @method static EN_BE() Returns the EN_BE enum instance
+ * @method static EN_BZ() Returns the EN_BZ enum instance
+ * @method static EN_BM() Returns the EN_BM enum instance
+ * @method static EN_BW() Returns the EN_BW enum instance
+ * @method static EN_IO() Returns the EN_IO enum instance
+ * @method static EN_VG() Returns the EN_VG enum instance
+ * @method static EN_CM() Returns the EN_CM enum instance
+ * @method static EN_CA() Returns the EN_CA enum instance
+ * @method static EN_KY() Returns the EN_KY enum instance
+ * @method static EN_CX() Returns the EN_CX enum instance
+ * @method static EN_CC() Returns the EN_CC enum instance
+ * @method static EN_CK() Returns the EN_CK enum instance
+ * @method static EN_DG() Returns the EN_DG enum instance
+ * @method static EN_DM() Returns the EN_DM enum instance
+ * @method static EN_ER() Returns the EN_ER enum instance
+ * @method static EN_FK() Returns the EN_FK enum instance
+ * @method static EN_FJ() Returns the EN_FJ enum instance
+ * @method static EN_GM() Returns the EN_GM enum instance
+ * @method static EN_GH() Returns the EN_GH enum instance
+ * @method static EN_GI() Returns the EN_GI enum instance
+ * @method static EN_GD() Returns the EN_GD enum instance
+ * @method static EN_GU() Returns the EN_GU enum instance
+ * @method static EN_GG() Returns the EN_GG enum instance
+ * @method static EN_GY() Returns the EN_GY enum instance
+ * @method static EN_HK() Returns the EN_HK enum instance
+ * @method static EN_IN() Returns the EN_IN enum instance
+ * @method static EN_IE() Returns the EN_IE enum instance
+ * @method static EN_IM() Returns the EN_IM enum instance
+ * @method static EN_JM() Returns the EN_JM enum instance
+ * @method static EN_JE() Returns the EN_JE enum instance
+ * @method static EN_KE() Returns the EN_KE enum instance
+ * @method static EN_KI() Returns the EN_KI enum instance
+ * @method static EN_LS() Returns the EN_LS enum instance
+ * @method static EN_LR() Returns the EN_LR enum instance
+ * @method static EN_MO() Returns the EN_MO enum instance
+ * @method static EN_MG() Returns the EN_MG enum instance
+ * @method static EN_MW() Returns the EN_MW enum instance
+ * @method static EN_MY() Returns the EN_MY enum instance
+ * @method static EN_MT() Returns the EN_MT enum instance
+ * @method static EN_MH() Returns the EN_MH enum instance
+ * @method static EN_MU() Returns the EN_MU enum instance
+ * @method static EN_FM() Returns the EN_FM enum instance
+ * @method static EN_MS() Returns the EN_MS enum instance
+ * @method static EN_NA() Returns the EN_NA enum instance
+ * @method static EN_NR() Returns the EN_NR enum instance
+ * @method static EN_NZ() Returns the EN_NZ enum instance
+ * @method static EN_NG() Returns the EN_NG enum instance
+ * @method static EN_NU() Returns the EN_NU enum instance
+ * @method static EN_NF() Returns the EN_NF enum instance
+ * @method static EN_MP() Returns the EN_MP enum instance
+ * @method static EN_PK() Returns the EN_PK enum instance
+ * @method static EN_PW() Returns the EN_PW enum instance
+ * @method static EN_PG() Returns the EN_PG enum instance
+ * @method static EN_PH() Returns the EN_PH enum instance
+ * @method static EN_PN() Returns the EN_PN enum instance
+ * @method static EN_PR() Returns the EN_PR enum instance
+ * @method static EN_WS() Returns the EN_WS enum instance
+ * @method static EN_SC() Returns the EN_SC enum instance
+ * @method static EN_SL() Returns the EN_SL enum instance
+ * @method static EN_SG() Returns the EN_SG enum instance
+ * @method static EN_SX() Returns the EN_SX enum instance
+ * @method static EN_SB() Returns the EN_SB enum instance
+ * @method static EN_ZA() Returns the EN_ZA enum instance
+ * @method static EN_SS() Returns the EN_SS enum instance
+ * @method static EN_SH() Returns the EN_SH enum instance
+ * @method static EN_KN() Returns the EN_KN enum instance
+ * @method static EN_LC() Returns the EN_LC enum instance
+ * @method static EN_VC() Returns the EN_VC enum instance
+ * @method static EN_SD() Returns the EN_SD enum instance
+ * @method static EN_SZ() Returns the EN_SZ enum instance
+ * @method static EN_TZ() Returns the EN_TZ enum instance
+ * @method static EN_TK() Returns the EN_TK enum instance
+ * @method static EN_TT() Returns the EN_TT enum instance
+ * @method static EN_TC() Returns the EN_TC enum instance
+ * @method static EN_TV() Returns the EN_TV enum instance
+ * @method static EN_UM() Returns the EN_UM enum instance
+ * @method static EN_VI() Returns the EN_VI enum instance
+ * @method static EN_UG() Returns the EN_UG enum instance
+ * @method static EN_GB() Returns the EN_GB enum instance
+ * @method static EN_US() Returns the EN_US enum instance
+ * @method static EN_VU() Returns the EN_VU enum instance
+ * @method static EN_ZM() Returns the EN_ZM enum instance
+ * @method static EN_ZW() Returns the EN_ZW enum instance
+ * @method static ET_EE() Returns the ET_EE enum instance
+ * @method static EE() Returns the EE enum instance
+ * @method static EE_GH() Returns the EE_GH enum instance
+ * @method static EE_TG() Returns the EE_TG enum instance
+ * @method static FO_FO() Returns the FO_FO enum instance
+ * @method static FI_FI() Returns the FI_FI enum instance
+ * @method static FR_DZ() Returns the FR_DZ enum instance
+ * @method static FR_BE() Returns the FR_BE enum instance
+ * @method static FR_BJ() Returns the FR_BJ enum instance
+ * @method static FR_BF() Returns the FR_BF enum instance
+ * @method static FR_BI() Returns the FR_BI enum instance
+ * @method static FR_CM() Returns the FR_CM enum instance
+ * @method static FR_CA() Returns the FR_CA enum instance
+ * @method static FR_CF() Returns the FR_CF enum instance
+ * @method static FR_TD() Returns the FR_TD enum instance
+ * @method static FR_KM() Returns the FR_KM enum instance
+ * @method static FR_CG() Returns the FR_CG enum instance
+ * @method static FR_CD() Returns the FR_CD enum instance
+ * @method static FR_CI() Returns the FR_CI enum instance
+ * @method static FR_DJ() Returns the FR_DJ enum instance
+ * @method static FR_GQ() Returns the FR_GQ enum instance
+ * @method static FR_FR() Returns the FR_FR enum instance
+ * @method static FR_GF() Returns the FR_GF enum instance
+ * @method static FR_PF() Returns the FR_PF enum instance
+ * @method static FR_GA() Returns the FR_GA enum instance
+ * @method static FR_GP() Returns the FR_GP enum instance
+ * @method static FR_GN() Returns the FR_GN enum instance
+ * @method static FR_HT() Returns the FR_HT enum instance
+ * @method static FR_LU() Returns the FR_LU enum instance
+ * @method static FR_MG() Returns the FR_MG enum instance
+ * @method static FR_ML() Returns the FR_ML enum instance
+ * @method static FR_MQ() Returns the FR_MQ enum instance
+ * @method static FR_MR() Returns the FR_MR enum instance
+ * @method static FR_MU() Returns the FR_MU enum instance
+ * @method static FR_YT() Returns the FR_YT enum instance
+ * @method static FR_MC() Returns the FR_MC enum instance
+ * @method static FR_MA() Returns the FR_MA enum instance
+ * @method static FR_NC() Returns the FR_NC enum instance
+ * @method static FR_NE() Returns the FR_NE enum instance
+ * @method static FR_RE() Returns the FR_RE enum instance
+ * @method static FR_SN() Returns the FR_SN enum instance
+ * @method static FR_SC() Returns the FR_SC enum instance
+ * @method static FR_BL() Returns the FR_BL enum instance
+ * @method static FR_MF() Returns the FR_MF enum instance
+ * @method static FR_PM() Returns the FR_PM enum instance
+ * @method static FR_CH() Returns the FR_CH enum instance
+ * @method static FR_SY() Returns the FR_SY enum instance
+ * @method static FR_TG() Returns the FR_TG enum instance
+ * @method static FR_TN() Returns the FR_TN enum instance
+ * @method static FR_VU() Returns the FR_VU enum instance
+ * @method static FR_WF() Returns the FR_WF enum instance
+ * @method static FF() Returns the FF enum instance
+ * @method static FF_CM() Returns the FF_CM enum instance
+ * @method static FF_GN() Returns the FF_GN enum instance
+ * @method static FF_MR() Returns the FF_MR enum instance
+ * @method static FF_SN() Returns the FF_SN enum instance
+ * @method static GL_ES() Returns the GL_ES enum instance
+ * @method static LG() Returns the LG enum instance
+ * @method static LG_UG() Returns the LG_UG enum instance
+ * @method static KA_GE() Returns the KA_GE enum instance
+ * @method static DE_AT() Returns the DE_AT enum instance
+ * @method static DE_BE() Returns the DE_BE enum instance
+ * @method static DE_DE() Returns the DE_DE enum instance
+ * @method static DE_LI() Returns the DE_LI enum instance
+ * @method static DE_LU() Returns the DE_LU enum instance
+ * @method static DE_CH() Returns the DE_CH enum instance
+ * @method static EL_CY() Returns the EL_CY enum instance
+ * @method static EL_GR() Returns the EL_GR enum instance
+ * @method static GU_IN() Returns the GU_IN enum instance
+ * @method static HA() Returns the HA enum instance
+ * @method static HA_GH() Returns the HA_GH enum instance
+ * @method static HA_LATN_GH() Returns the HA_LATN_GH enum instance
+ * @method static HA_LATN_NE() Returns the HA_LATN_NE enum instance
+ * @method static HA_LATN_NG() Returns the HA_LATN_NG enum instance
+ * @method static HA_LATN() Returns the HA_LATN enum instance
+ * @method static HA_NE() Returns the HA_NE enum instance
+ * @method static HA_NG() Returns the HA_NG enum instance
+ * @method static HE_IL() Returns the HE_IL enum instance
+ * @method static HI_IN() Returns the HI_IN enum instance
+ * @method static HU_HU() Returns the HU_HU enum instance
+ * @method static IS_IS() Returns the IS_IS enum instance
+ * @method static SQ() Returns the SQ enum instance
+ * @method static AR() Returns the AR enum instance
+ * @method static AS() Returns the AS enum instance
+ * @method static ES() Returns the ES enum instance
+ * @method static EO() Returns the EO enum instance
+ * @method static ET() Returns the ET enum instance
+ * @method static EN() Returns the EN enum instance
+ * @method static EN_TO() Returns the EN_TO enum instance
+ * @method static EN_RW() Returns the EN_RW enum instance
+ * @method static IG() Returns the IG enum instance
+ * @method static IG_NG() Returns the IG_NG enum instance
+ * @method static CS() Returns the CS enum instance
+ * @method static FR() Returns the FR enum instance
+ * @method static FR_RW() Returns the FR_RW enum instance
+ * @method static FI() Returns the FI enum instance
+ * @method static FY() Returns the FY enum instance
+ * @method static HE() Returns the HE enum instance
+ * @method static HI() Returns the HI enum instance
+ * @method static HU() Returns the HU enum instance
+ * @method static KM() Returns the KM enum instance
+ * @method static KN() Returns the KN enum instance
+ * @method static CA() Returns the CA enum instance
+ * @method static KO() Returns the KO enum instance
+ * @method static HR() Returns the HR enum instance
+ * @method static PL() Returns the PL enum instance
+ * @method static PT() Returns the PT enum instance
+ * @method static PA() Returns the PA enum instance
+ * @method static SR() Returns the SR enum instance
+ * @method static IS() Returns the IS enum instance
+ * @method static SK() Returns the SK enum instance
+ * @method static SO() Returns the SO enum instance
+ * @method static SV() Returns the SV enum instance
+ * @method static SW() Returns the SW enum instance
+ * @method static IT() Returns the IT enum instance
+ * @method static TA() Returns the TA enum instance
+ * @method static TH() Returns the TH enum instance
+ * @method static TE() Returns the TE enum instance
+ * @method static TR() Returns the TR enum instance
+ * @method static EU() Returns the EU enum instance
+ * @method static BE() Returns the BE enum instance
+ * @method static BN() Returns the BN enum instance
+ * @method static DE() Returns the DE enum instance
+ * @method static DA() Returns the DA enum instance
+ * @method static GL() Returns the GL enum instance
+ * @method static CY() Returns the CY enum instance
+ * @method static GD() Returns the GD enum instance
+ * @method static EL() Returns the EL enum instance
+ * @method static LO() Returns the LO enum instance
+ * @method static LT() Returns the LT enum instance
+ * @method static ML() Returns the ML enum instance
+ * @method static MS() Returns the MS enum instance
+ * @method static MT() Returns the MT enum instance
+ * @method static MR() Returns the MR enum instance
+ * @method static MK() Returns the MK enum instance
+ * @method static MN() Returns the MN enum instance
+ * @method static NE() Returns the NE enum instance
+ * @method static NL() Returns the NL enum instance
+ * @method static NO() Returns the NO enum instance
+ * @method static AF() Returns the AF enum instance
+ * @method static LV() Returns the LV enum instance
+ * @method static RO() Returns the RO enum instance
+ * @method static HY() Returns the HY enum instance
+ * @method static SL() Returns the SL enum instance
+ * @method static VI() Returns the VI enum instance
+ * @method static UK() Returns the UK enum instance
+ * @method static ID() Returns the ID enum instance
+ * @method static GA() Returns the GA enum instance
+ * @method static RU() Returns the RU enum instance
+ * @method static UG() Returns the UG enum instance
+ * @method static JA() Returns the JA enum instance
+ * @method static LN() Returns the LN enum instance
+ * @method static PS() Returns the PS enum instance
+ * @method static ID_ID() Returns the ID_ID enum instance
+ * @method static KY() Returns the KY enum instance
+ * @method static AM() Returns the AM enum instance
+ * @method static TI() Returns the TI enum instance
+ * @method static AZ() Returns the AZ enum instance
+ * @method static BR() Returns the BR enum instance
+ * @method static BS() Returns the BS enum instance
+ * @method static FO() Returns the FO enum instance
+ * @method static GU() Returns the GU enum instance
+ * @method static KA() Returns the KA enum instance
+ * @method static NN() Returns the NN enum instance
+ * @method static FA() Returns the FA enum instance
+ * @method static SH() Returns the SH enum instance
+ * @method static SI() Returns the SI enum instance
+ * @method static YI() Returns the YI enum instance
+ * @method static UR() Returns the UR enum instance
+ * @method static UZ() Returns the UZ enum instance
+ * @method static ZU() Returns the ZU enum instance
+ * @method static OR() Returns the OR enum instance
+ * @method static GA_IE() Returns the GA_IE enum instance
+ * @method static IT_IT() Returns the IT_IT enum instance
+ * @method static IT_SM() Returns the IT_SM enum instance
+ * @method static IT_CH() Returns the IT_CH enum instance
+ * @method static JA_JP() Returns the JA_JP enum instance
+ * @method static KL() Returns the KL enum instance
+ * @method static KL_GL() Returns the KL_GL enum instance
+ * @method static KN_IN() Returns the KN_IN enum instance
+ * @method static KS() Returns the KS enum instance
+ * @method static KS_ARAB_IN() Returns the KS_ARAB_IN enum instance
+ * @method static KS_ARAB() Returns the KS_ARAB enum instance
+ * @method static KS_IN() Returns the KS_IN enum instance
+ * @method static KK() Returns the KK enum instance
+ * @method static KK_CYRL_KZ() Returns the KK_CYRL_KZ enum instance
+ * @method static KK_CYRL() Returns the KK_CYRL enum instance
+ * @method static KK_KZ() Returns the KK_KZ enum instance
+ * @method static KM_KH() Returns the KM_KH enum instance
+ * @method static KI() Returns the KI enum instance
+ * @method static KI_KE() Returns the KI_KE enum instance
+ * @method static RW() Returns the RW enum instance
+ * @method static RW_RW() Returns the RW_RW enum instance
+ * @method static KO_KP() Returns the KO_KP enum instance
+ * @method static KO_KR() Returns the KO_KR enum instance
+ * @method static KY_CYRL_KG() Returns the KY_CYRL_KG enum instance
+ * @method static KY_CYRL() Returns the KY_CYRL enum instance
+ * @method static KY_KG() Returns the KY_KG enum instance
+ * @method static LO_LA() Returns the LO_LA enum instance
+ * @method static LV_LV() Returns the LV_LV enum instance
+ * @method static LN_AO() Returns the LN_AO enum instance
+ * @method static LN_CF() Returns the LN_CF enum instance
+ * @method static LN_CG() Returns the LN_CG enum instance
+ * @method static LN_CD() Returns the LN_CD enum instance
+ * @method static LT_LT() Returns the LT_LT enum instance
+ * @method static LU() Returns the LU enum instance
+ * @method static LU_CD() Returns the LU_CD enum instance
+ * @method static LB() Returns the LB enum instance
+ * @method static LB_LU() Returns the LB_LU enum instance
+ * @method static MK_MK() Returns the MK_MK enum instance
+ * @method static MG() Returns the MG enum instance
+ * @method static MG_MG() Returns the MG_MG enum instance
+ * @method static MS_BN() Returns the MS_BN enum instance
+ * @method static MS_LATN_BN() Returns the MS_LATN_BN enum instance
+ * @method static MS_LATN_MY() Returns the MS_LATN_MY enum instance
+ * @method static MS_LATN_SG() Returns the MS_LATN_SG enum instance
+ * @method static MS_LATN() Returns the MS_LATN enum instance
+ * @method static MS_MY() Returns the MS_MY enum instance
+ * @method static MS_SG() Returns the MS_SG enum instance
+ * @method static ML_IN() Returns the ML_IN enum instance
+ * @method static MT_MT() Returns the MT_MT enum instance
+ * @method static GV() Returns the GV enum instance
+ * @method static GV_IM() Returns the GV_IM enum instance
+ * @method static MR_IN() Returns the MR_IN enum instance
+ * @method static MN_CYRL_MN() Returns the MN_CYRL_MN enum instance
+ * @method static MN_CYRL() Returns the MN_CYRL enum instance
+ * @method static MN_MN() Returns the MN_MN enum instance
+ * @method static NE_IN() Returns the NE_IN enum instance
+ * @method static NE_NP() Returns the NE_NP enum instance
+ * @method static ND() Returns the ND enum instance
+ * @method static ND_ZW() Returns the ND_ZW enum instance
+ * @method static SE() Returns the SE enum instance
+ * @method static SE_FI() Returns the SE_FI enum instance
+ * @method static SE_NO() Returns the SE_NO enum instance
+ * @method static SE_SE() Returns the SE_SE enum instance
+ * @method static NO_NO() Returns the NO_NO enum instance
+ * @method static NB() Returns the NB enum instance
+ * @method static NB_NO() Returns the NB_NO enum instance
+ * @method static NB_SJ() Returns the NB_SJ enum instance
+ * @method static NN_NO() Returns the NN_NO enum instance
+ * @method static OR_IN() Returns the OR_IN enum instance
+ * @method static OM() Returns the OM enum instance
+ * @method static OM_ET() Returns the OM_ET enum instance
+ * @method static OM_KE() Returns the OM_KE enum instance
+ * @method static OS() Returns the OS enum instance
+ * @method static OS_GE() Returns the OS_GE enum instance
+ * @method static OS_RU() Returns the OS_RU enum instance
+ * @method static PS_AF() Returns the PS_AF enum instance
+ * @method static FA_AF() Returns the FA_AF enum instance
+ * @method static FA_IR() Returns the FA_IR enum instance
+ * @method static PL_PL() Returns the PL_PL enum instance
+ * @method static PT_AO() Returns the PT_AO enum instance
+ * @method static PT_BR() Returns the PT_BR enum instance
+ * @method static PT_CV() Returns the PT_CV enum instance
+ * @method static PT_GW() Returns the PT_GW enum instance
+ * @method static PT_MO() Returns the PT_MO enum instance
+ * @method static PT_MZ() Returns the PT_MZ enum instance
+ * @method static PT_PT() Returns the PT_PT enum instance
+ * @method static PT_ST() Returns the PT_ST enum instance
+ * @method static PT_TL() Returns the PT_TL enum instance
+ * @method static PA_ARAB_PK() Returns the PA_ARAB_PK enum instance
+ * @method static PA_ARAB() Returns the PA_ARAB enum instance
+ * @method static PA_GURU_IN() Returns the PA_GURU_IN enum instance
+ * @method static PA_GURU() Returns the PA_GURU enum instance
+ * @method static PA_IN() Returns the PA_IN enum instance
+ * @method static PA_PK() Returns the PA_PK enum instance
+ * @method static QU() Returns the QU enum instance
+ * @method static QU_BO() Returns the QU_BO enum instance
+ * @method static QU_EC() Returns the QU_EC enum instance
+ * @method static QU_PE() Returns the QU_PE enum instance
+ * @method static RO_MD() Returns the RO_MD enum instance
+ * @method static RO_RO() Returns the RO_RO enum instance
+ * @method static RM() Returns the RM enum instance
+ * @method static RM_CH() Returns the RM_CH enum instance
+ * @method static RN() Returns the RN enum instance
+ * @method static RN_BI() Returns the RN_BI enum instance
+ * @method static RU_BY() Returns the RU_BY enum instance
+ * @method static RU_KZ() Returns the RU_KZ enum instance
+ * @method static RU_KG() Returns the RU_KG enum instance
+ * @method static RU_MD() Returns the RU_MD enum instance
+ * @method static RU_RU() Returns the RU_RU enum instance
+ * @method static RU_UA() Returns the RU_UA enum instance
+ * @method static SG() Returns the SG enum instance
+ * @method static SG_CF() Returns the SG_CF enum instance
+ * @method static GD_GB() Returns the GD_GB enum instance
+ * @method static SR_BA() Returns the SR_BA enum instance
+ * @method static SR_CYRL_BA() Returns the SR_CYRL_BA enum instance
+ * @method static SR_CYRL_XK() Returns the SR_CYRL_XK enum instance
+ * @method static SR_CYRL_ME() Returns the SR_CYRL_ME enum instance
+ * @method static SR_CYRL_RS() Returns the SR_CYRL_RS enum instance
+ * @method static SR_CYRL() Returns the SR_CYRL enum instance
+ * @method static SR_XK() Returns the SR_XK enum instance
+ * @method static SR_LATN_BA() Returns the SR_LATN_BA enum instance
+ * @method static SR_LATN_XK() Returns the SR_LATN_XK enum instance
+ * @method static SR_LATN_ME() Returns the SR_LATN_ME enum instance
+ * @method static SR_LATN_RS() Returns the SR_LATN_RS enum instance
+ * @method static SR_LATN() Returns the SR_LATN enum instance
+ * @method static SR_ME() Returns the SR_ME enum instance
+ * @method static SR_RS() Returns the SR_RS enum instance
+ * @method static SH_BA() Returns the SH_BA enum instance
+ * @method static SN() Returns the SN enum instance
+ * @method static SN_ZW() Returns the SN_ZW enum instance
+ * @method static II() Returns the II enum instance
+ * @method static II_CN() Returns the II_CN enum instance
+ * @method static SI_LK() Returns the SI_LK enum instance
+ * @method static SK_SK() Returns the SK_SK enum instance
+ * @method static SL_SI() Returns the SL_SI enum instance
+ * @method static SO_DJ() Returns the SO_DJ enum instance
+ * @method static SO_ET() Returns the SO_ET enum instance
+ * @method static SO_KE() Returns the SO_KE enum instance
+ * @method static SO_SO() Returns the SO_SO enum instance
+ * @method static ES_AR() Returns the ES_AR enum instance
+ * @method static ES_BO() Returns the ES_BO enum instance
+ * @method static ES_IC() Returns the ES_IC enum instance
+ * @method static ES_EA() Returns the ES_EA enum instance
+ * @method static ES_CL() Returns the ES_CL enum instance
+ * @method static ES_CO() Returns the ES_CO enum instance
+ * @method static ES_CR() Returns the ES_CR enum instance
+ * @method static ES_CU() Returns the ES_CU enum instance
+ * @method static ES_DO() Returns the ES_DO enum instance
+ * @method static ES_EC() Returns the ES_EC enum instance
+ * @method static ES_SV() Returns the ES_SV enum instance
+ * @method static ES_GQ() Returns the ES_GQ enum instance
+ * @method static ES_GT() Returns the ES_GT enum instance
+ * @method static ES_HN() Returns the ES_HN enum instance
+ * @method static ES_MX() Returns the ES_MX enum instance
+ * @method static ES_NI() Returns the ES_NI enum instance
+ * @method static ES_PA() Returns the ES_PA enum instance
+ * @method static ES_PY() Returns the ES_PY enum instance
+ * @method static ES_PE() Returns the ES_PE enum instance
+ * @method static ES_PH() Returns the ES_PH enum instance
+ * @method static ES_PR() Returns the ES_PR enum instance
+ * @method static ES_ES() Returns the ES_ES enum instance
+ * @method static ES_US() Returns the ES_US enum instance
+ * @method static ES_UY() Returns the ES_UY enum instance
+ * @method static ES_VE() Returns the ES_VE enum instance
+ * @method static SW_KE() Returns the SW_KE enum instance
+ * @method static SW_TZ() Returns the SW_TZ enum instance
+ * @method static SW_UG() Returns the SW_UG enum instance
+ * @method static SV_AX() Returns the SV_AX enum instance
+ * @method static SV_FI() Returns the SV_FI enum instance
+ * @method static SV_SE() Returns the SV_SE enum instance
+ * @method static TL() Returns the TL enum instance
+ * @method static TL_PH() Returns the TL_PH enum instance
+ * @method static TA_IN() Returns the TA_IN enum instance
+ * @method static TA_MY() Returns the TA_MY enum instance
+ * @method static TA_SG() Returns the TA_SG enum instance
+ * @method static TA_LK() Returns the TA_LK enum instance
+ * @method static TE_IN() Returns the TE_IN enum instance
+ * @method static TH_TH() Returns the TH_TH enum instance
+ * @method static BO() Returns the BO enum instance
+ * @method static BO_CN() Returns the BO_CN enum instance
+ * @method static BO_IN() Returns the BO_IN enum instance
+ * @method static TI_ER() Returns the TI_ER enum instance
+ * @method static TI_ET() Returns the TI_ET enum instance
+ * @method static TO() Returns the TO enum instance
+ * @method static TO_TO() Returns the TO_TO enum instance
+ * @method static TR_CY() Returns the TR_CY enum instance
+ * @method static TR_TR() Returns the TR_TR enum instance
+ * @method static UK_UA() Returns the UK_UA enum instance
+ * @method static UR_IN() Returns the UR_IN enum instance
+ * @method static UR_PK() Returns the UR_PK enum instance
+ * @method static BG() Returns the BG enum instance
+ * @method static UG_ARAB_CN() Returns the UG_ARAB_CN enum instance
+ * @method static UG_ARAB() Returns the UG_ARAB enum instance
+ * @method static UG_CN() Returns the UG_CN enum instance
+ * @method static UZ_AF() Returns the UZ_AF enum instance
+ * @method static UZ_ARAB_AF() Returns the UZ_ARAB_AF enum instance
+ * @method static UZ_ARAB() Returns the UZ_ARAB enum instance
+ * @method static UZ_CYRL_UZ() Returns the UZ_CYRL_UZ enum instance
+ * @method static UZ_CYRL() Returns the UZ_CYRL enum instance
+ * @method static UZ_LATN_UZ() Returns the UZ_LATN_UZ enum instance
+ * @method static UZ_LATN() Returns the UZ_LATN enum instance
+ * @method static UZ_UZ() Returns the UZ_UZ enum instance
+ * @method static VI_VN() Returns the VI_VN enum instance
+ * @method static CY_GB() Returns the CY_GB enum instance
+ * @method static FY_NL() Returns the FY_NL enum instance
+ * @method static YO() Returns the YO enum instance
+ * @method static YO_BJ() Returns the YO_BJ enum instance
+ * @method static YO_NG() Returns the YO_NG enum instance
+ * @method static ZU_ZA() Returns the ZU_ZA enum instance
  */
 enum Locale: string
 {

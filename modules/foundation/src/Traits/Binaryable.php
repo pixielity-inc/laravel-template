@@ -10,11 +10,11 @@ use Illuminate\Support\ProcessUtils;
  * Provides methods to retrieve paths for common binaries used in the application.
  *
  * This trait includes methods for retrieving the executable paths for common binaries,
- * including PHP, Magento, Node.js, NPM, Yarn, and TSX. The paths are determined using
+ * including PHP, Laravel, Node.js, NPM, Yarn, and TSX. The paths are determined using
  * respective helper methods or fallback defaults where applicable.
  *
  * @method string phpBinary(): Retrieves the PHP binary path.
- * @method string magentoBinary(): Retrieves the Magento binary path.
+ * @method string laravelBinary(): Retrieves the Laravel binary path.
  * @method string nodeBinary(): Retrieves the Node.js binary path.
  * @method string npmBinary(): Retrieves the NPM binary path.
  * @method string yarnBinary(): Retrieves the Yarn binary path.
@@ -37,16 +37,16 @@ trait Binaryable
     }
 
     /**
-     * Get the Magento binary path.
+     * Get the Laravel binary path.
      *
-     * This method checks if the `MAGENTO_BINARY` constant is defined. If not, it defaults to `DEFAULT_MAGENTO_BINARY`.
+     * This method checks if the `LARAVEL_BINARY` constant is defined. If not, it defaults to `DEFAULT_LARAVEL_BINARY`.
      *
-     * @return string The path to the Magento binary.
+     * @return string The path to the Laravel binary.
      */
-    public static function magentoBinary(): string
+    public static function laravelBinary(): string
     {
-        // Use ExecutableFinder to locate the Magento binary or default to the constant value.
-        return ProcessUtils::escapeArgument(magento_binary());
+        // Use ExecutableFinder to locate the Laravel binary or default to the constant value.
+        return ProcessUtils::escapeArgument(laravel_binary());
     }
 
     /**

@@ -26,13 +26,13 @@ use Pixielity\Enum\Enum;
  *
  * @since 1.0.0
  *
- * @method static string FILE() Returns the FILE enum instance
- * @method static string COOKIE() Returns the COOKIE enum instance
- * @method static string DATABASE() Returns the DATABASE enum instance
- * @method static string MEMCACHED() Returns the MEMCACHED enum instance
- * @method static string REDIS() Returns the REDIS enum instance
- * @method static string DYNAMODB() Returns the DYNAMODB enum instance
- * @method static string ARRAY() Returns the ARRAY enum instance
+ * @method static FILE() Returns the FILE enum instance
+ * @method static COOKIE() Returns the COOKIE enum instance
+ * @method static DATABASE() Returns the DATABASE enum instance
+ * @method static MEMCACHED() Returns the MEMCACHED enum instance
+ * @method static REDIS() Returns the REDIS enum instance
+ * @method static DYNAMODB() Returns the DYNAMODB enum instance
+ * @method static ARRAY() Returns the ARRAY enum instance
  */
 enum SessionDriver: string
 {

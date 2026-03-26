@@ -69,16 +69,16 @@ use Pixielity\Enum\Enum;
  *
  * @version 1.0.0
  *
- * @method static string VIEW_ANY() Returns the VIEW_ANY enum instance
- * @method static string VIEW() Returns the VIEW enum instance
- * @method static string CREATE() Returns the CREATE enum instance
- * @method static string UPDATE() Returns the UPDATE enum instance
- * @method static string DELETE() Returns the DELETE enum instance
- * @method static string RESTORE() Returns the RESTORE enum instance
- * @method static string FORCE_DELETE() Returns the FORCE_DELETE enum instance
- * @method static string MANAGE() Returns the MANAGE enum instance
- * @method static string ATTACH() Returns the ATTACH enum instance
- * @method static string DETACH() Returns the DETACH enum instance
+ * @method static VIEW_ANY() Returns the VIEW_ANY enum instance
+ * @method static VIEW() Returns the VIEW enum instance
+ * @method static CREATE() Returns the CREATE enum instance
+ * @method static UPDATE() Returns the UPDATE enum instance
+ * @method static DELETE() Returns the DELETE enum instance
+ * @method static RESTORE() Returns the RESTORE enum instance
+ * @method static FORCE_DELETE() Returns the FORCE_DELETE enum instance
+ * @method static MANAGE() Returns the MANAGE enum instance
+ * @method static ATTACH() Returns the ATTACH enum instance
+ * @method static DETACH() Returns the DETACH enum instance
  */
 enum PolicyAbility: string
 {

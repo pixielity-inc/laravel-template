@@ -227,7 +227,7 @@ use Pixielity\Foundation\Enums\DataType;
  * - **Zero overhead when disabled** - Traits check property flags in boot()
  * - **Lazy loading** - Features only load when used
  * - **Cached attributes** - Composer caches attribute collection
- * - **Optimized queries** - All packages use efficient queries
+ * - **Optimized queries** - All modules use efficient queries
  *
  * ## 📖 Documentation
  *
@@ -301,7 +301,6 @@ abstract class Model extends BaseModel implements ModelInterface
      *
      * @return array<string, string>
      */
-    #[Override]
     protected function casts(): array
     {
         return [];

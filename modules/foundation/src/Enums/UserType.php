@@ -11,10 +11,10 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing user types.
  *
- * @method static string USER() Returns the USER enum instance
- * @method static string CUSTOMER() Returns the CUSTOMER enum instance
- * @method static string GUEST() Returns the GUEST enum instance
- * @method static string ADMIN() Returns the ADMIN enum instance
+ * @method static USER() Returns the USER enum instance
+ * @method static CUSTOMER() Returns the CUSTOMER enum instance
+ * @method static GUEST() Returns the GUEST enum instance
+ * @method static ADMIN() Returns the ADMIN enum instance
  */
 enum UserType: string
 {

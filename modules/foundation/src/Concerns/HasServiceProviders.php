@@ -69,7 +69,6 @@ trait HasServiceProviders
      * @param  bool  $force  Force registration even if already registered
      * @return ServiceProvider The registered service provider instance
      */
-    #[Override]
     public function register($provider, $force = false)
     {
         // Call parent registration first
@@ -96,7 +95,6 @@ trait HasServiceProviders
      * 3. Boot each provider in priority order
      * 4. Fire booted callbacks
      */
-    #[Override]
     public function boot(): void
     {
         if ($this->isBooted()) {

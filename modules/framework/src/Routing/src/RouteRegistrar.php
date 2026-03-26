@@ -149,7 +149,6 @@ class RouteRegistrar extends SpatieRouteRegistrar
      * @param  array  $patterns  Ignored - kept for compatibility
      * @param  array  $notPatterns  Ignored - kept for compatibility
      */
-    #[Override]
     public function registerDirectory(string|array $directories, array $patterns = [], array $notPatterns = []): void
     {
         // Use Discovery to find all controllers with #[AsController] attribute
@@ -192,7 +191,6 @@ class RouteRegistrar extends SpatieRouteRegistrar
      *
      * @param  string  $className  Fully qualified controller class name
      */
-    #[Override]
     protected function processAttributes(string $className): void
     {
         if (! Reflection::exists($className)) {

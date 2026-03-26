@@ -142,23 +142,6 @@ interface ApplicationInterface extends BaseApplication
     public function hasDebugModeEnabled(): bool;
 
     /**
-     * Get the path to the monorepo packages directory.
-     *
-     * Returns the path to the packages directory in the monorepo structure.
-     * This provides a single source of truth for package paths.
-     *
-     * ## Example:
-     * ```php
-     * $app->packagesPath('Discovery/src'); // Returns: /path/to/packages/Discovery/src
-     * $app->packagesPath('*\/src/Settings'); // Returns: /path/to/packages/*\/src/Settings
-     * ```
-     *
-     * @param  string  $path  Optional path to append
-     * @return string The full path to the packages directory
-     */
-    public function packagesPath(string $path = ''): string;
-
-    /**
      * Get the path to the monorepo modules directory.
      *
      * Returns the path to the modules directory in the monorepo structure.

@@ -35,30 +35,30 @@ use Pixielity\Support\Str;
  * ];
  * ```
  *
- * @method static string INTEGER() Returns the INTEGER enum instance
- * @method static string INT() Returns the INT enum instance
- * @method static string FLOAT() Returns the FLOAT enum instance
- * @method static string DOUBLE() Returns the DOUBLE enum instance
- * @method static string REAL() Returns the REAL enum instance
- * @method static string STRING() Returns the STRING enum instance
- * @method static string BOOLEAN() Returns the BOOLEAN enum instance
- * @method static string BOOL() Returns the BOOL enum instance
- * @method static string DATETIME() Returns the DATETIME enum instance
- * @method static string IMMUTABLE_DATETIME() Returns the IMMUTABLE_DATETIME enum instance
- * @method static string DATE() Returns the DATE enum instance
- * @method static string IMMUTABLE_DATE() Returns the IMMUTABLE_DATE enum instance
- * @method static string TIMESTAMP() Returns the TIMESTAMP enum instance
- * @method static string TIME() Returns the TIME enum instance
- * @method static string ARRAY() Returns the ARRAY enum instance
- * @method static string OBJECT() Returns the OBJECT enum instance
- * @method static string COLLECTION() Returns the COLLECTION enum instance
- * @method static string JSON() Returns the JSON enum instance
- * @method static string ENCRYPTED() Returns the ENCRYPTED enum instance
- * @method static string ENCRYPTED_ARRAY() Returns the ENCRYPTED_ARRAY enum instance
- * @method static string ENCRYPTED_COLLECTION() Returns the ENCRYPTED_COLLECTION enum instance
- * @method static string ENCRYPTED_OBJECT() Returns the ENCRYPTED_OBJECT enum instance
- * @method static string HASHED() Returns the HASHED enum instance
- * @method static string DECIMAL() Returns the DECIMAL enum instance
+ * @method static INTEGER() Returns the INTEGER enum instance
+ * @method static INT() Returns the INT enum instance
+ * @method static FLOAT() Returns the FLOAT enum instance
+ * @method static DOUBLE() Returns the DOUBLE enum instance
+ * @method static REAL() Returns the REAL enum instance
+ * @method static STRING() Returns the STRING enum instance
+ * @method static BOOLEAN() Returns the BOOLEAN enum instance
+ * @method static BOOL() Returns the BOOL enum instance
+ * @method static DATETIME() Returns the DATETIME enum instance
+ * @method static IMMUTABLE_DATETIME() Returns the IMMUTABLE_DATETIME enum instance
+ * @method static DATE() Returns the DATE enum instance
+ * @method static IMMUTABLE_DATE() Returns the IMMUTABLE_DATE enum instance
+ * @method static TIMESTAMP() Returns the TIMESTAMP enum instance
+ * @method static TIME() Returns the TIME enum instance
+ * @method static ARRAY() Returns the ARRAY enum instance
+ * @method static OBJECT() Returns the OBJECT enum instance
+ * @method static COLLECTION() Returns the COLLECTION enum instance
+ * @method static JSON() Returns the JSON enum instance
+ * @method static ENCRYPTED() Returns the ENCRYPTED enum instance
+ * @method static ENCRYPTED_ARRAY() Returns the ENCRYPTED_ARRAY enum instance
+ * @method static ENCRYPTED_COLLECTION() Returns the ENCRYPTED_COLLECTION enum instance
+ * @method static ENCRYPTED_OBJECT() Returns the ENCRYPTED_OBJECT enum instance
+ * @method static HASHED() Returns the HASHED enum instance
+ * @method static DECIMAL() Returns the DECIMAL enum instance
  *
  * @see https://laravel.com/docs/eloquent-mutators#attribute-casting
  * @since 1.0.0

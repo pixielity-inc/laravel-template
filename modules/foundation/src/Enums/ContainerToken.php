@@ -11,29 +11,29 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing Laravel service container binding tokens.
  *
- * @method static string APP() Returns the APP enum instance
- * @method static string CONFIG() Returns the CONFIG enum instance
- * @method static string DB() Returns the DB enum instance
- * @method static string CACHE() Returns the CACHE enum instance
- * @method static string EVENTS() Returns the EVENTS enum instance
- * @method static string FILES() Returns the FILES enum instance
- * @method static string LOG() Returns the LOG enum instance
- * @method static string QUEUE() Returns the QUEUE enum instance
- * @method static string REDIS() Returns the REDIS enum instance
- * @method static string REQUEST() Returns the REQUEST enum instance
- * @method static string ROUTER() Returns the ROUTER enum instance
- * @method static string SESSION() Returns the SESSION enum instance
- * @method static string URL() Returns the URL enum instance
- * @method static string VALIDATOR() Returns the VALIDATOR enum instance
- * @method static string VIEW() Returns the VIEW enum instance
- * @method static string AUTH() Returns the AUTH enum instance
- * @method static string HASH() Returns the HASH enum instance
- * @method static string MAIL() Returns the MAIL enum instance
- * @method static string NOTIFICATION() Returns the NOTIFICATION enum instance
- * @method static string STORAGE() Returns the STORAGE enum instance
- * @method static string TRANSLATOR() Returns the TRANSLATOR enum instance
- * @method static string ENV() Returns the ENV enum instance
- * @method static string EVENT() Returns the EVENT enum instance
+ * @method static APP() Returns the APP enum instance
+ * @method static CONFIG() Returns the CONFIG enum instance
+ * @method static DB() Returns the DB enum instance
+ * @method static CACHE() Returns the CACHE enum instance
+ * @method static EVENTS() Returns the EVENTS enum instance
+ * @method static FILES() Returns the FILES enum instance
+ * @method static LOG() Returns the LOG enum instance
+ * @method static QUEUE() Returns the QUEUE enum instance
+ * @method static REDIS() Returns the REDIS enum instance
+ * @method static REQUEST() Returns the REQUEST enum instance
+ * @method static ROUTER() Returns the ROUTER enum instance
+ * @method static SESSION() Returns the SESSION enum instance
+ * @method static URL() Returns the URL enum instance
+ * @method static VALIDATOR() Returns the VALIDATOR enum instance
+ * @method static VIEW() Returns the VIEW enum instance
+ * @method static AUTH() Returns the AUTH enum instance
+ * @method static HASH() Returns the HASH enum instance
+ * @method static MAIL() Returns the MAIL enum instance
+ * @method static NOTIFICATION() Returns the NOTIFICATION enum instance
+ * @method static STORAGE() Returns the STORAGE enum instance
+ * @method static TRANSLATOR() Returns the TRANSLATOR enum instance
+ * @method static ENV() Returns the ENV enum instance
+ * @method static EVENT() Returns the EVENT enum instance
  */
 enum ContainerToken: string
 {

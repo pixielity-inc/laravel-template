@@ -29,15 +29,15 @@ use Pixielity\Enum\Enum;
  *
  * @since 1.0.0
  *
- * @method static string SMTP() Returns the SMTP enum instance
- * @method static string SES() Returns the SES enum instance
- * @method static string POSTMARK() Returns the POSTMARK enum instance
- * @method static string RESEND() Returns the RESEND enum instance
- * @method static string SENDMAIL() Returns the SENDMAIL enum instance
- * @method static string LOG() Returns the LOG enum instance
- * @method static string ARRAY() Returns the ARRAY enum instance
- * @method static string FAILOVER() Returns the FAILOVER enum instance
- * @method static string ROUNDROBIN() Returns the ROUNDROBIN enum instance
+ * @method static SMTP() Returns the SMTP enum instance
+ * @method static SES() Returns the SES enum instance
+ * @method static POSTMARK() Returns the POSTMARK enum instance
+ * @method static RESEND() Returns the RESEND enum instance
+ * @method static SENDMAIL() Returns the SENDMAIL enum instance
+ * @method static LOG() Returns the LOG enum instance
+ * @method static ARRAY() Returns the ARRAY enum instance
+ * @method static FAILOVER() Returns the FAILOVER enum instance
+ * @method static ROUNDROBIN() Returns the ROUNDROBIN enum instance
  */
 enum MailDriver: string
 {

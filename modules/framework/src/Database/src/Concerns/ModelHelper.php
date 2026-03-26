@@ -40,7 +40,7 @@ use Pixielity\Support\Str;
  * - Works with custom table names
  * - IDE autocomplete support
  *
- * @method static string getTableName() Get the table name associated with the model
+ * @method static getTableName() Get the table name associated with the model
  */
 trait ModelHelper
 {

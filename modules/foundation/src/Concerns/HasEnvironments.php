@@ -41,7 +41,6 @@ trait HasEnvironments
      *
      * @return bool True if in production environment, false otherwise
      */
-    #[Override]
     public function isProduction(): bool
     {
         return $this->environment('production') === true;
@@ -62,7 +61,6 @@ trait HasEnvironments
      *
      * @return bool True if in local environment, false otherwise
      */
-    #[Override]
     public function isLocal(): bool
     {
         return $this->environment('local') === true;
@@ -127,7 +125,6 @@ trait HasEnvironments
      *
      * @return bool True if debug mode is enabled, false otherwise
      */
-    #[Override]
     public function hasDebugModeEnabled(): bool
     {
         return (bool) $this['config']->get('app.debug');

@@ -221,8 +221,8 @@ class DatabaseCommand extends Command
      * Checks if the provided action is one of the valid database operations.
      * Displays error message with valid actions if validation fails.
      *
-     * @param  string $action Action to validate
-     * @return bool   True if valid, false otherwise
+     * @param  string  $action  Action to validate
+     * @return bool True if valid, false otherwise
      */
     protected function validateAction(string $action): bool
     {
@@ -256,8 +256,8 @@ class DatabaseCommand extends Command
      * This should never be reached due to validateAction(), but provides
      * a safety net for the match expression.
      *
-     * @param  string $action Invalid action
-     * @return int    Command exit code (FAILURE)
+     * @param  string  $action  Invalid action
+     * @return int Command exit code (FAILURE)
      */
     protected function handleInvalidAction(string $action): int
     {
@@ -718,8 +718,8 @@ class DatabaseCommand extends Command
      * Displays a warning and prompts for confirmation unless --force is used.
      * This is a helper method for operations that delete data.
      *
-     * @param  string $operation Description of the operation
-     * @return bool   True if confirmed or forced, false otherwise
+     * @param  string  $operation  Description of the operation
+     * @return bool True if confirmed or forced, false otherwise
      */
     protected function confirmDestructiveOperation(string $operation): bool
     {

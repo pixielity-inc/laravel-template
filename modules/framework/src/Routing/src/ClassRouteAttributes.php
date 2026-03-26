@@ -63,7 +63,6 @@ class ClassRouteAttributes extends SpatieClassRouteAttributes
      *
      * @psalm-suppress NoInterfaceProperties
      */
-    #[Override]
     public function groups(): array
     {
         $groups = [];

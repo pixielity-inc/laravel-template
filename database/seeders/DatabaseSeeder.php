@@ -64,7 +64,7 @@ use Pixielity\Database\Seeder;
  * - 50: Transactional data (Visits, Incidents)
  * - 100: Default (no specific order required)
  *
- * @see \Pixielity\Database\Seeder Base seeder with auto-discovery
+ * @see Seeder Base seeder with auto-discovery
  */
 class DatabaseSeeder extends Seeder
 {
@@ -88,4 +88,3 @@ class DatabaseSeeder extends Seeder
         // ]);
     }
 }
-

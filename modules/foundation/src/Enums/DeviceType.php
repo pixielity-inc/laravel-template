@@ -11,10 +11,10 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing different types of devices.
  *
- * @method static string MOBILE() Returns the MOBILE enum instance
- * @method static string TABLET() Returns the TABLET enum instance
- * @method static string DESKTOP() Returns the DESKTOP enum instance
- * @method static string UNKNOWN() Returns the UNKNOWN enum instance
+ * @method static MOBILE() Returns the MOBILE enum instance
+ * @method static TABLET() Returns the TABLET enum instance
+ * @method static DESKTOP() Returns the DESKTOP enum instance
+ * @method static UNKNOWN() Returns the UNKNOWN enum instance
  */
 enum DeviceType: string
 {

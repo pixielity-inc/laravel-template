@@ -95,15 +95,15 @@ use Throwable;
  * @since      1.0.0
  *
  * @method mixed getData(string|array $key = '', ?int $index = null) Get attribute(s) value
- * @method self  setData(string|array $key, mixed $value = null) Set attribute(s)     value
- * @method self  addData(array $data)                                                 Add data without overwriting
- * @method self  unsetData(null|string|array $key = null) Unset attribute(s)
- * @method bool  hasData(string $key = '')                                            Check if attribute exists
- * @method bool  isEmpty()                                                            Check if model has no attributes
- * @method self  each(callable $callback)                                             Iterate over attributes
- * @method mixed getDataByKey(string $key)                                            Get attribute by exact key
+ * @method self setData(string|array $key, mixed $value = null) Set attribute(s) value
+ * @method self addData(array $data) Add data without overwriting
+ * @method self unsetData(null|string|array $key = null) Unset attribute(s)
+ * @method bool hasData(string $key = '') Check if attribute exists
+ * @method bool isEmpty() Check if model has no attributes
+ * @method self each(callable $callback) Iterate over attributes
+ * @method mixed getDataByKey(string $key) Get attribute by exact key
  * @method mixed getDataByPath(string $path) Get attribute by path (a/b/c)
- * @method self  key(mixed ...$keys)                                                  Build dynamic key for chaining
+ * @method self key(mixed ...$keys) Build dynamic key for chaining
  */
 class DataObjectModel extends Model
 {
@@ -120,11 +120,10 @@ class DataObjectModel extends Model
      * 1. DataObject magic methods (get*, set*, has*, uns*)
      * 2. Eloquent scopes, relations, and other magic methods
      *
-     * @param  string $method     Method name
-     * @param  array  $parameters Method parameters
+     * @param  string  $method  Method name
+     * @param  array  $parameters  Method parameters
      * @return mixed
      */
-    #[Override]
     public function __call($method, $parameters)
     {
         // Check if DataObject can handle this method
@@ -148,10 +147,9 @@ class DataObjectModel extends Model
      *
      * Syncs DataObject before getting to ensure consistency.
      *
-     * @param  string $key Attribute key
+     * @param  string  $key  Attribute key
      * @return mixed
      */
-    #[Override]
     public function getAttribute($key)
     {
         $this->syncToDataObject();
@@ -164,11 +162,10 @@ class DataObjectModel extends Model
      *
      * Syncs to DataObject after setting to keep them in sync.
      *
-     * @param  string $key   Attribute key
-     * @param  mixed  $value Attribute value
+     * @param  string  $key  Attribute key
+     * @param  mixed  $value  Attribute value
      * @return mixed
      */
-    #[Override]
     public function setAttribute($key, $value)
     {
         $result = parent::setAttribute($key, $value);
@@ -185,7 +182,6 @@ class DataObjectModel extends Model
      *
      * @return array<string, mixed>
      */
-    #[Override]
     public function toArray()
     {
         $this->syncFromDataObject();
@@ -199,10 +195,9 @@ class DataObjectModel extends Model
      * Syncs from DataObject before saving to ensure all changes
      * made through DataObject methods are persisted.
      *
-     * @param  array<string, mixed> $options Save options
+     * @param  array<string, mixed>  $options  Save options
      * @return bool
      */
-    #[Override]
     public function save(array $options = [])
     {
         $this->syncFromDataObject();
@@ -217,7 +212,6 @@ class DataObjectModel extends Model
      *
      * @return array<string, mixed>
      */
-    #[Override]
     public function getAttributes()
     {
         $this->syncFromDataObject();
@@ -230,10 +224,9 @@ class DataObjectModel extends Model
      *
      * Syncs to DataObject after filling to keep them in sync.
      *
-     * @param  array<string, mixed> $attributes Attributes to fill
+     * @param  array<string, mixed>  $attributes  Attributes to fill
      * @return $this
      */
-    #[Override]
     public function fill(array $attributes)
     {
         $result = parent::fill($attributes);
@@ -249,7 +242,6 @@ class DataObjectModel extends Model
      *
      * @return $this
      */
-    #[Override]
     public function refresh()
     {
         $result = parent::refresh();
@@ -263,7 +255,7 @@ class DataObjectModel extends Model
     /**
      * Check if method is a setter method that modifies data.
      *
-     * @param string $method Method name
+     * @param  string  $method  Method name
      */
     protected function isSetterMethod(string $method): bool
     {

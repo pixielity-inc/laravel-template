@@ -11,11 +11,11 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing different types of executables.
  *
- * @method static string NPM() Returns the NPM enum instance
- * @method static string YARN() Returns the YARN enum instance
- * @method static string TSX() Returns the TSX enum instance
- * @method static string NODE() Returns the NODE enum instance
- * @method static string PHP() Returns the PHP enum instance
+ * @method static NPM() Returns the NPM enum instance
+ * @method static YARN() Returns the YARN enum instance
+ * @method static TSX() Returns the TSX enum instance
+ * @method static NODE() Returns the NODE enum instance
+ * @method static PHP() Returns the PHP enum instance
  */
 enum ExecutableType: string
 {

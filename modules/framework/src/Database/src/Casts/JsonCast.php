@@ -21,10 +21,10 @@ class JsonCast implements CastsAttributes
     /**
      * Cast the given value from storage to its appropriate type.
      *
-     * @param  Model      $model      The model instance.
-     * @param  string     $key        The attribute key.
-     * @param  mixed      $value      The stored value.
-     * @param  array      $attributes The model's attributes.
+     * @param  Model  $model  The model instance.
+     * @param  string  $key  The attribute key.
+     * @param  mixed  $value  The stored value.
+     * @param  array  $attributes  The model's attributes.
      * @return array|null The decoded JSON value as an array, or null if the value is empty.
      */
     public function get($model, $key, $value, $attributes)
@@ -35,10 +35,10 @@ class JsonCast implements CastsAttributes
     /**
      * Prepare the given value for storage as a JSON string.
      *
-     * @param  Model  $model      The model instance.
-     * @param  string $key        The attribute key.
-     * @param  mixed  $value      The value to be stored.
-     * @param  array  $attributes The model's attributes.
+     * @param  Model  $model  The model instance.
+     * @param  string  $key  The attribute key.
+     * @param  mixed  $value  The value to be stored.
+     * @param  array  $attributes  The model's attributes.
      * @return string The encoded JSON string.
      */
     public function set($model, $key, $value, $attributes)

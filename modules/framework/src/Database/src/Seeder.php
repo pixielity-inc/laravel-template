@@ -53,8 +53,8 @@ abstract class Seeder extends BaseSeeder
      * Seeder constructor.
      * Initializes the seeder count from environment variable.
      *
-     * @param int                      $seederCount         Number of records to seed
-     * @param array<int, class-string> $moduleSeederClasses Registered module seeders
+     * @param  int  $seederCount  Number of records to seed
+     * @param  array<int, class-string>  $moduleSeederClasses  Registered module seeders
      */
     public function __construct(
         #[Config('database.seeder_count')]
@@ -89,7 +89,7 @@ abstract class Seeder extends BaseSeeder
     /**
      * Get the priority of a seeder class.
      *
-     * @param class-string $seederClass
+     * @param  class-string  $seederClass
      */
     private function getSeederPriority(string $seederClass): int
     {

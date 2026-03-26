@@ -29,11 +29,11 @@ use Pixielity\Enum\Enum;
  * }
  * ```
  *
- * @method static string MYSQL() Returns the MYSQL enum instance
- * @method static string MARIADB() Returns the MARIADB enum instance
- * @method static string PGSQL() Returns the PGSQL enum instance
- * @method static string SQLITE() Returns the SQLITE enum instance
- * @method static string SQLSRV() Returns the SQLSRV enum instance
+ * @method static MYSQL() Returns the MYSQL enum instance
+ * @method static MARIADB() Returns the MARIADB enum instance
+ * @method static PGSQL() Returns the PGSQL enum instance
+ * @method static SQLITE() Returns the SQLITE enum instance
+ * @method static SQLSRV() Returns the SQLSRV enum instance
  *
  * @since 1.0.0
  */

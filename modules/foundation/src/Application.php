@@ -29,7 +29,7 @@ use Pixielity\Foundation\Traits\Binaryable;
  * - ✅ Configurable project path via APP_PROJECT_PATH environment variable
  * - ✅ Custom environment file location (env/ directory)
  * - ✅ Overridden path methods for custom structure
- * - ✅ Monorepo packages and modules path management
+ * - ✅ Monorepo modules and modules path management
  * - ✅ Priority-based service provider registration and booting
  * - ✅ Environment detection helpers (isProduction, isLocal, isStaging, isTesting)
  * - ✅ Debug mode detection helper (hasDebugModeEnabled)
@@ -45,7 +45,6 @@ use Pixielity\Foundation\Traits\Binaryable;
  * │   ├── resources/          # Views, assets, lang files
  * │   ├── routes/             # Route files
  * │   └── i18n/               # Language files
- * ├── packages/               # Monorepo packages
  * ├── modules/                # Monorepo modules
  * ├── public/                 # Public web root
  * ├── storage/                # Storage directory
@@ -65,7 +64,6 @@ use Pixielity\Foundation\Traits\Binaryable;
  * ```php
  * // In bootstrap/app.php
  * return Application::configure(dirname(__DIR__))
- *     ->withPackagesPath(dirname(__DIR__, 3) . '/packages')
  *     ->withModulesPath(dirname(__DIR__, 3) . '/modules')
  *     ->withRouting()
  *     ->create();
@@ -92,7 +90,7 @@ use Pixielity\Foundation\Traits\Binaryable;
  * @method string nodeBinary()
  * @method string npmBinary()
  * @method string phpBinary()
- * @method string magentoBinary()
+ * @method string laravelBinary()
  */
 class Application extends BaseApplication implements ApplicationInterface
 {
@@ -122,7 +120,6 @@ class Application extends BaseApplication implements ApplicationInterface
      * ```php
      * // In bootstrap/app.php
      * return Application::configure(dirname(__DIR__))
-     *     ->withPackagesPath(dirname(__DIR__, 3) . '/packages')
      *     ->withModulesPath(dirname(__DIR__, 3) . '/modules')
      *     ->withRouting()
      *     ->create();
@@ -131,7 +128,6 @@ class Application extends BaseApplication implements ApplicationInterface
      * @param  string|null  $basePath  The base path of the application (auto-detected if null)
      * @return ApplicationBuilder The configured application builder instance
      */
-    #[Override]
     public static function configure(?string $basePath = null): ApplicationBuilder
     {
         // Determine the base path - use provided value or auto-detect from vendor directory

@@ -26,12 +26,12 @@ use Pixielity\Enum\Enum;
  *
  * @since 1.0.0
  *
- * @method static string SYNC() Returns the SYNC enum instance
- * @method static string DATABASE() Returns the DATABASE enum instance
- * @method static string BEANSTALKD() Returns the BEANSTALKD enum instance
- * @method static string SQS() Returns the SQS enum instance
- * @method static string REDIS() Returns the REDIS enum instance
- * @method static string NULL() Returns the NULL enum instance
+ * @method static SYNC() Returns the SYNC enum instance
+ * @method static DATABASE() Returns the DATABASE enum instance
+ * @method static BEANSTALKD() Returns the BEANSTALKD enum instance
+ * @method static SQS() Returns the SQS enum instance
+ * @method static REDIS() Returns the REDIS enum instance
+ * @method static NULL() Returns the NULL enum instance
  */
 enum QueueDriver: string
 {

@@ -23,9 +23,7 @@ class SoftDeleteScope extends BaseSoftDeletingScope
      * apply the scope to a given Eloquent query builder.
      *
      * @param  BuilderBase<ModelBase>  $builder
-     * @param  ModelBase  $model
      */
-    #[Override]
     public function apply(BuilderBase $builder, ModelBase $model): void
     {
         if ($model->isSoftDeleteEnabled()) {

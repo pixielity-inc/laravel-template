@@ -16,8 +16,8 @@ use Pixielity\Enum\Enum;
  *
  * @since 1.0.0
  *
- * @method static string ASC() Returns the ASC enum instance
- * @method static string DESC() Returns the DESC enum instance
+ * @method static ASC() Returns the ASC enum instance
+ * @method static DESC() Returns the DESC enum instance
  */
 enum SortOrder: string
 {

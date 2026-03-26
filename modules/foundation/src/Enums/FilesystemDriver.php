@@ -29,10 +29,10 @@ use Pixielity\Enum\Enum;
  *
  * @since 1.0.0
  *
- * @method static string LOCAL() Returns the LOCAL enum instance
- * @method static string S3() Returns the S3 enum instance
- * @method static string FTP() Returns the FTP enum instance
- * @method static string SFTP() Returns the SFTP enum instance
+ * @method static LOCAL() Returns the LOCAL enum instance
+ * @method static S3() Returns the S3 enum instance
+ * @method static FTP() Returns the FTP enum instance
+ * @method static SFTP() Returns the SFTP enum instance
  */
 enum FilesystemDriver: string
 {

@@ -42,15 +42,15 @@
         "illuminate/container": "^12.0|^13.0",
         "illuminate/database": "^12.0|^13.0",
         "illuminate/support": "^12.0|^13.0",
-        "laravel/framework": "^12.0|^13.0",
         "ksubileau/color-thief-php": "^2.0",
+        "laravel/framework": "^12.0|^13.0",
         "laravel/scout": "^10.0",
         "league/fractal": "*",
-        "olvlvl/composer-attribute-collector": "^2.1",
+        "prettus/l5-repository": "@dev",
         "spatie/laravel-data": "^4.0",
-        "laravel-workflow/laravel-workflow": "*",
-        "spatie/laravel-route-attributes": "^1.18",
-        "spatie/laravel-translatable": "^6.0"
+        "spatie/laravel-health": "^1.39",
+        "spatie/laravel-translatable": "^6.0",
+        "zircote/swagger-php": "^6.0"
     },
     "require-dev": {
         "driftingly/rector-laravel": "^2.1",
@@ -70,9 +70,11 @@
     "autoload": {
         "psr-4": {
             "Pixielity\\": "src/",
+            "Pixielity\\Crud\\": "src/Crud/src/",
             "Pixielity\\Enum\\": "src/Enum/src/",
             "Pixielity\\Routing\\": "src/Routing/src/",
             "Pixielity\\Support\\": "src/Support/src/",
+            "Pixielity\\Database\\": "src/Database/src/",
             "Pixielity\\Container\\": "src/Container/src/",
             "Pixielity\\Serializer\\": "src/Serializer/src/",
             "Pixielity\\Localization\\": "src/Localization/src/"
@@ -81,8 +83,10 @@
     "autoload-dev": {
         "psr-4": {
             "Pixielity\\Enum\\Tests\\": "src/Enum/tests/",
+            "Pixielity\\Crud\\Tests\\": "src/Crud/tests/",
             "Pixielity\\Routing\\Tests\\": "src/Routing/tests/",
             "Pixielity\\Support\\Tests\\": "src/Support/tests/",
+            "Pixielity\\Database\\Tests\\": "src/Database/tests/",
             "Pixielity\\Container\\Tests\\": "src/Container/tests/",
             "Pixielity\\Serializer\\Tests\\": "src/Serializer/tests/",
             "Pixielity\\Localization\\Tests\\": "src/Localization/tests/"
@@ -134,7 +138,9 @@
     "extra": {
         "laravel": {
             "providers": [
-              "Pixielity\\Routing\\Providers\\RoutingServiceProvider",
+                "Pixielity\\Crud\\Providers\\CrudServiceProvider",
+                "Pixielity\\Routing\\Providers\\RoutingServiceProvider",
+                "Pixielity\\Database\\Providers\\DatabaseServiceProvider",
                 "Pixielity\\Container\\Providers\\ContainerServiceProvider",
                 "Pixielity\\Localization\\Providers\\LocalizationServiceProvider"
             ],
@@ -143,8 +149,10 @@
     },
     "replace": {
         "pixielity/laravel-enum": "self.version",
+        "pixielity/laravel-crud": "self.version",
         "pixielity/laravel-routing": "self.version",
         "pixielity/laravel-support": "self.version",
+        "pixielity/laravel-database": "self.version",
         "pixielity/laravel-container": "self.version",
         "pixielity/laravel-serializer": "self.version",
         "pixielity/laravel-localization": "self.version"

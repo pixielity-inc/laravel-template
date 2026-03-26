@@ -84,7 +84,7 @@ use Pixielity\Support\Reflection;
  * ## Benefits Over Manual Registration:
  * - **No Manual Updates**: Add new tagged classes without updating service providers
  * - **Performance**: Uses composer's cached attribute data via Discovery
- * - **Monorepo Friendly**: Automatically discovers classes across packages
+ * - **Monorepo Friendly**: Automatically discovers classes across modules
  * - **Type Safe**: Uses reflection to validate classes exist
  * - **Clean Code**: Eliminates boilerplate registration code
  *
@@ -98,7 +98,7 @@ trait HasDiscovery
      * Discover and register all classes with #[Tagged] attribute.
      *
      * Uses the Discovery facade to find all classes decorated with the #[Tagged]
-     * attribute across the entire application (packages and modules). Groups them
+     * attribute across the entire application (modules). Groups them
      * by tag name and registers them with the service container.
      *
      * ## Discovery Process:
@@ -120,7 +120,7 @@ trait HasDiscovery
      *     parent::register();
      *
      *     // Discovers and registers all classes with #[Tagged] attribute
-     *     // across all packages and modules
+     *     // across all modules
      *     $this->discoverTaggedClasses();
      * }
      * ```

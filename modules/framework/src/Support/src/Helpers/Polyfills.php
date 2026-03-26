@@ -398,13 +398,13 @@ if (! function_exists('php_binary')) {
     }
 }
 
-if (! function_exists('magento_binary')) {
+if (! function_exists('laravel_binary')) {
     /**
      * Determine the Magento Binary.
      */
-    function magento_binary(): string
+    function laravel_binary(): string
     {
-        return 'bin/magento';
+        return 'artisan';
     }
 }
 

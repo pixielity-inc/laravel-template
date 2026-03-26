@@ -12,11 +12,11 @@ use Pixielity\Enum\Enum;
  * Enum representing common model actions/events.
  * Used to define events that can occur on models such as saving, loading, deleting, etc.
  *
- * @method static string SAVE() Returns the SAVE enum instance
- * @method static string DELETE() Returns the DELETE enum instance
- * @method static string LOAD() Returns the LOAD enum instance
- * @method static string MASS_DELETE() Returns the MASS_DELETE enum instance
- * @method static string DUPLICATE() Returns the DUPLICATE enum instance
+ * @method static SAVE() Returns the SAVE enum instance
+ * @method static DELETE() Returns the DELETE enum instance
+ * @method static LOAD() Returns the LOAD enum instance
+ * @method static MASS_DELETE() Returns the MASS_DELETE enum instance
+ * @method static DUPLICATE() Returns the DUPLICATE enum instance
  */
 enum EventType: string
 {

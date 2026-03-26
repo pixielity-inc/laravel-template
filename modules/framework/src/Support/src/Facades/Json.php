@@ -12,7 +12,7 @@ use Pixielity\Serializer\Contracts\JsonInterface;
  *
  * Provides a static interface to the serialization and deserialization methods defined in the JsonInterface.
  *
- * @method static string|false encode(mixed $data, int $options = 0, int $depth = 512) Encode the given data into a JSON string format.
+ * @method static|false encode(mixed $data, int $options = 0, int $depth = 512) Encode the given data into a JSON string format.
  * @method static mixed decode(string $string, bool $associative = false, int $depth = 512, int $options = 0) Decode the given JSON string back into its original data format.
  * @method static bool isValid(string $json) Check if the given string is a valid JSON formatted string.
  *

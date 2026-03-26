@@ -50,7 +50,6 @@ use Pixielity\Support\Concerns\HasLaravelPaths;
  * ## Laravel-Specific Methods (from HasLaravelPaths trait):
  * ```php
  * // Monorepo navigation
- * Path::packages(__DIR__);           // /monorepo/packages
  * Path::modules(__DIR__);            // /monorepo/modules
  * Path::monorepoRoot(__DIR__);       // /monorepo
  *

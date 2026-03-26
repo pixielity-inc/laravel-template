@@ -8,14 +8,13 @@ use Illuminate\Foundation\Configuration\ApplicationBuilder as BaseApplicationBui
  * Application Builder.
  *
  * Extends Laravel's ApplicationBuilder to add monorepo-specific configuration
- * methods for packages and modules paths.
+ * methods for modules paths.
  *
  * ## Purpose:
  * Provides a fluent interface for configuring the application with custom
  * monorepo paths during bootstrap.
  *
  * ## Features:
- * - ✅ Configure packages directory path
  * - ✅ Configure modules directory path
  * - ✅ Fluent chainable API
  * - ✅ Integrates with Laravel's Application::configure()
@@ -24,7 +23,6 @@ use Illuminate\Foundation\Configuration\ApplicationBuilder as BaseApplicationBui
  * ```php
  * // In bootstrap/app.php
  * return ApplicationBuilder::configure(basePath: dirname(__DIR__))
- *     ->withPackagesPath(dirname(__DIR__, 3) . '/packages')
  *     ->withModulesPath(dirname(__DIR__, 3) . '/modules')
  *     ->withRouting(
  *         web: __DIR__.'/../routes/web.php',
@@ -47,7 +45,6 @@ class ApplicationBuilder extends BaseApplicationBuilder
      * ## Example:
      * ```php
      * return ApplicationBuilder::make(dirname(__DIR__))
-     *     ->withPackagesPath(dirname(__DIR__, 3) . '/packages')
      *     ->withModulesPath(dirname(__DIR__, 3) . '/modules')
      *     ->withKernels()
      *     ->withEvents()
@@ -76,7 +73,6 @@ class ApplicationBuilder extends BaseApplicationBuilder
      * ## Example:
      * ```php
      * return ApplicationBuilder::configure(dirname(__DIR__))
-     *     ->withPackagesPath(dirname(__DIR__, 3) . '/packages')
      *     ->withModulesPath(dirname(__DIR__, 3) . '/modules')
      *     ->withRouting(...)
      *     ->create();
@@ -99,30 +95,6 @@ class ApplicationBuilder extends BaseApplicationBuilder
             ->withEvents()
             ->withCommands()
             ->withProviders();
-    }
-
-    /**
-     * Set the packages base path for the monorepo.
-     *
-     * Configures where the monorepo packages are located. This path is used
-     * by app()->packagesPath() throughout the application.
-     *
-     * ## Example:
-     * ```php
-     * ApplicationBuilder::configure(basePath: __DIR__)
-     *     ->withPackagesPath(__DIR__ . '/../../packages')
-     *     ->create();
-     * ```
-     *
-     * @param  string  $path  The absolute path to the packages directory
-     * @return $this
-     */
-    public function withPackagesPath(string $path): static
-    {
-        /* @var Application $this->app */
-        $this->app->usePackagesPath($path);
-
-        return $this;
     }
 
     /**

@@ -11,7 +11,7 @@ namespace Pixielity\Database\Contracts;
  * for common operations like getting the table name statically.
  *
  *
- * @method static string getTableName() Get the table name associated with the model
+ * @method static getTableName() Get the table name associated with the model
  */
 interface HasModelHelpers
 {

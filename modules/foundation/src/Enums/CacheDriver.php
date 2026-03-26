@@ -29,14 +29,14 @@ use Pixielity\Enum\Enum;
  * }
  * ```
  *
- * @method static string ARRAY() Returns the ARRAY enum instance
- * @method static string DATABASE() Returns the DATABASE enum instance
- * @method static string FILE() Returns the FILE enum instance
- * @method static string MEMCACHED() Returns the MEMCACHED enum instance
- * @method static string REDIS() Returns the REDIS enum instance
- * @method static string DYNAMODB() Returns the DYNAMODB enum instance
- * @method static string OCTANE() Returns the OCTANE enum instance
- * @method static string NULL() Returns the NULL enum instance
+ * @method static ARRAY() Returns the ARRAY enum instance
+ * @method static DATABASE() Returns the DATABASE enum instance
+ * @method static FILE() Returns the FILE enum instance
+ * @method static MEMCACHED() Returns the MEMCACHED enum instance
+ * @method static REDIS() Returns the REDIS enum instance
+ * @method static DYNAMODB() Returns the DYNAMODB enum instance
+ * @method static OCTANE() Returns the OCTANE enum instance
+ * @method static NULL() Returns the NULL enum instance
  *
  * @since 1.0.0
  */

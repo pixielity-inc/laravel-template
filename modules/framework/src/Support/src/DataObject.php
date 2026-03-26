@@ -7,7 +7,7 @@ namespace Pixielity\Support;
 use function in_array;
 
 use JsonException;
-use Pixielity\Foundation\Contracts\DataObject as DataObjectContract;
+use Pixielity\Foundation\Contracts\DataObjectInterface;
 use Pixielity\Foundation\Exceptions\Exception;
 use ReflectionException;
 use Spatie\LaravelData\Data;
@@ -27,7 +27,7 @@ use Spatie\LaravelData\Data;
  *
  * @method mixed __call(string $method, array $arguments) Magic method handler
  */
-class DataObject implements DataObjectContract
+class DataObject implements DataObjectInterface
 {
     /**
      * Setter/Getter underscore transformation cache.

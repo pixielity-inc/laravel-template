@@ -12,14 +12,14 @@ use Pixielity\Enum\Enum;
  * Status Enum
  * Enum representing various status constants with string backing values.
  *
- * @method static string ENABLED() Returns 'enabled'
- * @method static string DISABLED() Returns 'disabled'
- * @method static string ACTIVE() Returns 'active'
- * @method static string INACTIVE() Returns 'inactive'
- * @method static string TRUE() Returns 'true'
- * @method static string FALSE() Returns 'false'
- * @method static string YES() Returns 'yes'
- * @method static string NO() Returns 'no'
+ * @method static ENABLED() Returns 'enabled'
+ * @method static DISABLED() Returns 'disabled'
+ * @method static ACTIVE() Returns 'active'
+ * @method static INACTIVE() Returns 'inactive'
+ * @method static TRUE() Returns 'true'
+ * @method static FALSE() Returns 'false'
+ * @method static YES() Returns 'yes'
+ * @method static NO() Returns 'no'
  */
 enum Status: string
 {

@@ -30,11 +30,6 @@ use Override;
 trait HasDirectories
 {
     /**
-     * The base path to the monorepo packages directory.
-     */
-    protected ?string $packagesPath = null;
-
-    /**
      * The base path to the monorepo modules directory.
      */
     protected ?string $modulesPath = null;
@@ -46,43 +41,6 @@ trait HasDirectories
      * Examples: 'src', 'app', '' (empty for base directory)
      */
     protected ?string $projectPath = null;
-
-    /**
-     * Get the path to the monorepo packages directory.
-     *
-     * Returns the path to the packages directory in the monorepo structure.
-     * This provides a single source of truth for package paths.
-     *
-     * ## Example:
-     * ```php
-     * $app->packagesPath('Discovery/src'); // Returns: /path/to/packages/Discovery/src
-     * $app->packagesPath('*\/src/Settings'); // Returns: /path/to/packages/*\/src/Settings
-     * ```
-     *
-     * @param  string  $path  Optional path to append
-     * @return string The full path to the packages directory
-     */
-    public function packagesPath(string $path = ''): string
-    {
-        $basePath = $this->packagesPath ?? $this->basePath('../../packages');
-
-        return $this->joinPaths($basePath, $path);
-    }
-
-    /**
-     * Set the packages base path for the monorepo.
-     *
-     * Internal method called by ApplicationBuilder. Use ApplicationBuilder
-     * for configuration during bootstrap.
-     *
-     * @internal
-     *
-     * @param  string  $path  The base path to the packages directory
-     */
-    public function usePackagesPath(string $path): void
-    {
-        $this->packagesPath = $path;
-    }
 
     /**
      * Get the path to the monorepo modules directory.
@@ -149,7 +107,6 @@ trait HasDirectories
      *
      * @return string The path to the environment directory
      */
-    #[Override]
     public function environmentPath(): string
     {
         return $this->basePath('environments');
@@ -169,7 +126,6 @@ trait HasDirectories
      * @param  string  $path  Optional path to append
      * @return string The full path to the application directory
      */
-    #[Override]
     public function path($path = ''): string
     {
         return $this->joinPaths($this->basePath($this->getProjectPath()), $path);
@@ -188,7 +144,6 @@ trait HasDirectories
      * @param  string  $path  Optional path to append
      * @return string The full path to the config directory
      */
-    #[Override]
     public function configPath($path = ''): string
     {
         return $this->joinPaths($this->basePath($this->getProjectPath() . '/config'), $path);
@@ -208,7 +163,6 @@ trait HasDirectories
      * @param  string  $path  Optional path to append
      * @return string The full path to the database directory
      */
-    #[Override]
     public function databasePath($path = ''): string
     {
         return $this->joinPaths($this->basePath($this->getProjectPath() . '/database'), $path);
@@ -228,7 +182,6 @@ trait HasDirectories
      * @param  string  $path  Optional path to append
      * @return string The full path to the resources directory
      */
-    #[Override]
     public function resourcePath($path = ''): string
     {
         return $this->joinPaths($this->basePath($this->getProjectPath() . '/resources'), $path);
@@ -248,7 +201,6 @@ trait HasDirectories
      * @param  string  $path  Optional path to append
      * @return string The full path to the language directory
      */
-    #[Override]
     public function langPath($path = ''): string
     {
         return $this->joinPaths($this->basePath($this->getProjectPath() . '/i18n'), $path);

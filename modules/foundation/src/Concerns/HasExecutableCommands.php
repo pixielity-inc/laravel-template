@@ -75,6 +75,6 @@ trait HasExecutableCommands
      */
     public function formatCommandString($string): string
     {
-        return Str::format('%s %s %s', $this->phpBinary(), $this->magentoBinary(), $string);
+        return Str::format('%s %s %s', $this->phpBinary(), $this->laravelBinary(), $string);
     }
 }

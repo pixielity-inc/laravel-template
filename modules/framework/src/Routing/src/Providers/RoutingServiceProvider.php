@@ -277,7 +277,6 @@ class RoutingServiceProvider extends ServiceProvider
      *
      * @see RouteRegistrar The #[Bind] attribute handles the binding
      */
-    #[Override]
     public function register(): void
     {
         // Call parent register for base functionality

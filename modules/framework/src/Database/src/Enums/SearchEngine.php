@@ -13,11 +13,11 @@ use Pixielity\Enum\Enum;
  *
  * Defines available search engines for Laravel Scout.
  *
- * @method static string COLLECTION()  Returns the COLLECTION enum instance
- * @method static string DATABASE()    Returns the DATABASE enum instance
- * @method static string MEILISEARCH() Returns the MEILISEARCH enum instance
- * @method static string ALGOLIA()     Returns the ALGOLIA enum instance
- * @method static string TYPESENSE()   Returns the TYPESENSE enum instance
+ * @method static COLLECTION() Returns the COLLECTION enum instance
+ * @method static DATABASE() Returns the DATABASE enum instance
+ * @method static MEILISEARCH() Returns the MEILISEARCH enum instance
+ * @method static ALGOLIA() Returns the ALGOLIA enum instance
+ * @method static TYPESENSE() Returns the TYPESENSE enum instance
  *
  * @see https://laravel.com/docs/scout#configuration
  * @since 1.0.0

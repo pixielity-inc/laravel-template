@@ -106,7 +106,6 @@ class DatabaseServiceProvider extends ServiceProvider /* implements HasMacros */
      * This method is called during the registration phase, before boot().
      * Use this to bind services into the container.
      */
-    #[Override]
     public function register(): void
     {
         // Call parent register for base functionality

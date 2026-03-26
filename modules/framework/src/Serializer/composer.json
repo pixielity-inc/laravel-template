@@ -18,8 +18,7 @@
   ],
   "require": {
     "php": "^8.4|^8.5",
-    "league/fractal": "*",
-    "pixielity/laravel-support": "*"
+    "league/fractal": "*"
   },
   "autoload": {
     "psr-4": {

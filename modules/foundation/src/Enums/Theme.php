@@ -12,9 +12,9 @@ use Pixielity\Enum\Enum;
  * Enum representing application theme modes.
  * Used to specify the visual theme preference for the user interface.
  *
- * @method static string LIGHT() Returns the LIGHT enum instance
- * @method static string DARK() Returns the DARK enum instance
- * @method static string SYSTEM() Returns the SYSTEM enum instance
+ * @method static LIGHT() Returns the LIGHT enum instance
+ * @method static DARK() Returns the DARK enum instance
+ * @method static SYSTEM() Returns the SYSTEM enum instance
  */
 enum Theme: string
 {

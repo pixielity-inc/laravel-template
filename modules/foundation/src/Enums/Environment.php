@@ -11,11 +11,11 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing different environment types.
  *
- * @method static string TEST() Returns the TEST enum instance
- * @method static string STAGING() Returns the STAGING enum instance
- * @method static string PRODUCTION() Returns the PRODUCTION enum instance
- * @method static string DEVELOPMENT() Returns the DEVELOPMENT enum instance
- * @method static string LOCAL() Returns the LOCAL enum instance
+ * @method static TEST() Returns the TEST enum instance
+ * @method static STAGING() Returns the STAGING enum instance
+ * @method static PRODUCTION() Returns the PRODUCTION enum instance
+ * @method static DEVELOPMENT() Returns the DEVELOPMENT enum instance
+ * @method static LOCAL() Returns the LOCAL enum instance
  *
  * @enum {string}
  */

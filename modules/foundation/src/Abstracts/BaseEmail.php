@@ -108,7 +108,6 @@ abstract class BaseEmail extends ReactMailable
      *
      * @param  string  $locale  Locale code (e.g., 'en', 'ar', 'fr')
      */
-    #[Override]
     public function locale($locale): self
     {
         $this->locale = $locale;
@@ -141,7 +140,6 @@ abstract class BaseEmail extends ReactMailable
      *
      * @return array<string, mixed>
      */
-    #[Override]
     public function buildViewData(): array
     {
         // Get theme value (convert enum to string if needed)

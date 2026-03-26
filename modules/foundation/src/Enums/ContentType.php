@@ -11,38 +11,38 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing common content types.
  *
- * @method static string TEXT_PLAIN() Returns the TEXT_PLAIN enum instance
- * @method static string APPLICATION_JSON() Returns the APPLICATION_JSON enum instance
- * @method static string APPLICATION_XML() Returns the APPLICATION_XML enum instance
- * @method static string APPLICATION_FORM_URL_ENCODED() Returns the APPLICATION_FORM_URL_ENCODED enum instance
- * @method static string APPLICATION_X_PHP() Returns the APPLICATION_X_PHP enum instance
- * @method static string APPLICATION_VND_HZN_3D_CROSSWORD() Returns the APPLICATION_VND_HZN_3D_CROSSWORD enum instance
- * @method static string APPLICATION_VND_MSEQ() Returns the APPLICATION_VND_MSEQ enum instance
- * @method static string APPLICATION_VND_3M_POST_IT_NOTES() Returns the APPLICATION_VND_3M_POST_IT_NOTES enum instance
- * @method static string APPLICATION_VND_3GPP_PIC_BW_LARGE() Returns the APPLICATION_VND_3GPP_PIC_BW_LARGE enum instance
- * @method static string APPLICATION_VND_3GPP_PIC_BW_SMALL() Returns the APPLICATION_VND_3GPP_PIC_BW_SMALL enum instance
- * @method static string APPLICATION_VND_3GPP_PIC_BW_VAR() Returns the APPLICATION_VND_3GPP_PIC_BW_VAR enum instance
- * @method static string APPLICATION_VND_3GPP2_TCAP() Returns the APPLICATION_VND_3GPP2_TCAP enum instance
- * @method static string APPLICATION_X_7Z_COMPRESSED() Returns the APPLICATION_X_7Z_COMPRESSED enum instance
- * @method static string APPLICATION_X_ABIWORD() Returns the APPLICATION_X_ABIWORD enum instance
- * @method static string APPLICATION_X_ACE_COMPRESSED() Returns the APPLICATION_X_ACE_COMPRESSED enum instance
- * @method static string APPLICATION_VND_AMERICANDYNAMICS_ACC() Returns the APPLICATION_VND_AMERICANDYNAMICS_ACC enum instance
- * @method static string APPLICATION_VND_ACUCORP() Returns the APPLICATION_VND_ACUCORP enum instance
- * @method static string APPLICATION_X_AUTHORWARE_BIN() Returns the APPLICATION_X_AUTHORWARE_BIN enum instance
- * @method static string APPLICATION_X_AUTHORWARE_MAP() Returns the APPLICATION_X_AUTHORWARE_MAP enum instance
- * @method static string APPLICATION_X_AUTHORWARE_SEG() Returns the APPLICATION_X_AUTHORWARE_SEG enum instance
- * @method static string APPLICATION_VND_ADOBE_AIR_APPLICATION_INSTALLER_PACKAGE_ZIP() Returns the APPLICATION_VND_ADOBE_AIR_APPLICATION_INSTALLER_PACKAGE_ZIP enum instance
- * @method static string APPLICATION_X_SHOCKWAVE_FLASH() Returns the APPLICATION_X_SHOCKWAVE_FLASH enum instance
- * @method static string APPLICATION_VND_ADOBE_FXP() Returns the APPLICATION_VND_ADOBE_FXP enum instance
- * @method static string APPLICATION_PDF() Returns the APPLICATION_PDF enum instance
- * @method static string APPLICATION_VND_CUPS_PPD() Returns the APPLICATION_VND_CUPS_PPD enum instance
- * @method static string APPLICATION_X_DIRECTOR() Returns the APPLICATION_X_DIRECTOR enum instance
- * @method static string APPLICATION_VND_ADOBE_XDP_XML() Returns the APPLICATION_VND_ADOBE_XDP_XML enum instance
- * @method static string APPLICATION_VND_ADOBE_XFDF() Returns the APPLICATION_VND_ADOBE_XFDF enum instance
- * @method static string APPLICATION_VND_AHEAD_SPACE() Returns the APPLICATION_VND_AHEAD_SPACE enum instance
- * @method static string APPLICATION_VND_AIRZIP_FILESECURE_AZF() Returns the APPLICATION_VND_AIRZIP_FILESECURE_AZF enum instance
- * @method static string APPLICATION_VND_AIRZIP_FILESECURE_AZS() Returns the APPLICATION_VND_AIRZIP_FILESECURE_AZS enum instance
- * @method static string APPLICATION_VND_AMAZON_EBOOK() Returns the APPLICATION_VND_AMAZON_EBOOK enum instance
+ * @method static TEXT_PLAIN() Returns the TEXT_PLAIN enum instance
+ * @method static APPLICATION_JSON() Returns the APPLICATION_JSON enum instance
+ * @method static APPLICATION_XML() Returns the APPLICATION_XML enum instance
+ * @method static APPLICATION_FORM_URL_ENCODED() Returns the APPLICATION_FORM_URL_ENCODED enum instance
+ * @method static APPLICATION_X_PHP() Returns the APPLICATION_X_PHP enum instance
+ * @method static APPLICATION_VND_HZN_3D_CROSSWORD() Returns the APPLICATION_VND_HZN_3D_CROSSWORD enum instance
+ * @method static APPLICATION_VND_MSEQ() Returns the APPLICATION_VND_MSEQ enum instance
+ * @method static APPLICATION_VND_3M_POST_IT_NOTES() Returns the APPLICATION_VND_3M_POST_IT_NOTES enum instance
+ * @method static APPLICATION_VND_3GPP_PIC_BW_LARGE() Returns the APPLICATION_VND_3GPP_PIC_BW_LARGE enum instance
+ * @method static APPLICATION_VND_3GPP_PIC_BW_SMALL() Returns the APPLICATION_VND_3GPP_PIC_BW_SMALL enum instance
+ * @method static APPLICATION_VND_3GPP_PIC_BW_VAR() Returns the APPLICATION_VND_3GPP_PIC_BW_VAR enum instance
+ * @method static APPLICATION_VND_3GPP2_TCAP() Returns the APPLICATION_VND_3GPP2_TCAP enum instance
+ * @method static APPLICATION_X_7Z_COMPRESSED() Returns the APPLICATION_X_7Z_COMPRESSED enum instance
+ * @method static APPLICATION_X_ABIWORD() Returns the APPLICATION_X_ABIWORD enum instance
+ * @method static APPLICATION_X_ACE_COMPRESSED() Returns the APPLICATION_X_ACE_COMPRESSED enum instance
+ * @method static APPLICATION_VND_AMERICANDYNAMICS_ACC() Returns the APPLICATION_VND_AMERICANDYNAMICS_ACC enum instance
+ * @method static APPLICATION_VND_ACUCORP() Returns the APPLICATION_VND_ACUCORP enum instance
+ * @method static APPLICATION_X_AUTHORWARE_BIN() Returns the APPLICATION_X_AUTHORWARE_BIN enum instance
+ * @method static APPLICATION_X_AUTHORWARE_MAP() Returns the APPLICATION_X_AUTHORWARE_MAP enum instance
+ * @method static APPLICATION_X_AUTHORWARE_SEG() Returns the APPLICATION_X_AUTHORWARE_SEG enum instance
+ * @method static APPLICATION_VND_ADOBE_AIR_APPLICATION_INSTALLER_PACKAGE_ZIP() Returns the APPLICATION_VND_ADOBE_AIR_APPLICATION_INSTALLER_PACKAGE_ZIP enum instance
+ * @method static APPLICATION_X_SHOCKWAVE_FLASH() Returns the APPLICATION_X_SHOCKWAVE_FLASH enum instance
+ * @method static APPLICATION_VND_ADOBE_FXP() Returns the APPLICATION_VND_ADOBE_FXP enum instance
+ * @method static APPLICATION_PDF() Returns the APPLICATION_PDF enum instance
+ * @method static APPLICATION_VND_CUPS_PPD() Returns the APPLICATION_VND_CUPS_PPD enum instance
+ * @method static APPLICATION_X_DIRECTOR() Returns the APPLICATION_X_DIRECTOR enum instance
+ * @method static APPLICATION_VND_ADOBE_XDP_XML() Returns the APPLICATION_VND_ADOBE_XDP_XML enum instance
+ * @method static APPLICATION_VND_ADOBE_XFDF() Returns the APPLICATION_VND_ADOBE_XFDF enum instance
+ * @method static APPLICATION_VND_AHEAD_SPACE() Returns the APPLICATION_VND_AHEAD_SPACE enum instance
+ * @method static APPLICATION_VND_AIRZIP_FILESECURE_AZF() Returns the APPLICATION_VND_AIRZIP_FILESECURE_AZF enum instance
+ * @method static APPLICATION_VND_AIRZIP_FILESECURE_AZS() Returns the APPLICATION_VND_AIRZIP_FILESECURE_AZS enum instance
+ * @method static APPLICATION_VND_AMAZON_EBOOK() Returns the APPLICATION_VND_AMAZON_EBOOK enum instance
  */
 enum ContentType: string
 {

@@ -21,8 +21,7 @@
     }
   ],
   "require": {
-    "php": "^8.5",
-    "pixielity/laravel-support": "*",
+    "php": "^8.4|^8.5",
     "pixielity/laravel-routing": "*"
   },
   "autoload": {

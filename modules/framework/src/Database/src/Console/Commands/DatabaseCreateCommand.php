@@ -12,13 +12,13 @@ use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
 
+use Illuminate\Console\Command;
 use Illuminate\Container\Attributes\Config;
 
 use function Laravel\Prompts\text;
 
 use PDO;
 use PDOException;
-use Illuminate\Console\Command;
 use Pixielity\Support\Str;
 
 use function preg_match;
@@ -298,9 +298,9 @@ class DatabaseCreateCommand extends Command
      * Displays the database details and prompts for confirmation unless
      * the --force flag is used.
      *
-     * @param  string                                                                                                 $databaseName Database name
-     * @param  array{connection: string, host: string, port: int, driver: string, username: string, password: string} $config       Database configuration
-     * @return bool                                                                                                   True if confirmed or forced, false otherwise
+     * @param  string  $databaseName  Database name
+     * @param  array{connection: string, host: string, port: int, driver: string, username: string, password: string}  $config  Database configuration
+     * @return bool True if confirmed or forced, false otherwise
      */
     protected function confirmCreation(string $databaseName, array $config): bool
     {
@@ -333,8 +333,8 @@ class DatabaseCreateCommand extends Command
      * Routes to the correct creation method based on the database driver.
      * Supports PostgreSQL and MySQL.
      *
-     * @param string                                                                                                 $databaseName Database name
-     * @param array{connection: string, host: string, port: int, driver: string, username: string, password: string} $config       Database configuration
+     * @param  string  $databaseName  Database name
+     * @param  array{connection: string, host: string, port: int, driver: string, username: string, password: string}  $config  Database configuration
      *
      * @throws Exception If driver is not supported
      */
@@ -374,11 +374,11 @@ class DatabaseCreateCommand extends Command
      * checks if the target database already exists, and creates it with UTF8
      * encoding if it doesn't exist.
      *
-     * @param string $host         Database server hostname
-     * @param int    $port         Database server port
-     * @param string $username     Database username
-     * @param string $password     Database password
-     * @param string $databaseName Name of database to create
+     * @param  string  $host  Database server hostname
+     * @param  int  $port  Database server port
+     * @param  string  $username  Database username
+     * @param  string  $password  Database password
+     * @param  string  $databaseName  Name of database to create
      *
      * @throws PDOException If connection or creation fails
      */
@@ -412,11 +412,11 @@ class DatabaseCreateCommand extends Command
      * the target database already exists, and creates it with utf8mb4 character
      * set and unicode collation if it doesn't exist.
      *
-     * @param string $host         Database server hostname
-     * @param int    $port         Database server port
-     * @param string $username     Database username
-     * @param string $password     Database password
-     * @param string $databaseName Name of database to create
+     * @param  string  $host  Database server hostname
+     * @param  int  $port  Database server port
+     * @param  string  $username  Database username
+     * @param  string  $password  Database password
+     * @param  string  $databaseName  Name of database to create
      *
      * @throws PDOException If connection or creation fails
      */
@@ -451,7 +451,7 @@ class DatabaseCreateCommand extends Command
      * Shows success message, optionally updates the env/.env file,
      * and displays next steps for the user.
      *
-     * @param string $databaseName Created database name
+     * @param  string  $databaseName  Created database name
      */
     protected function displaySuccess(string $databaseName): void
     {
@@ -476,7 +476,7 @@ class DatabaseCreateCommand extends Command
      * with the new database name. If DB_DATABASE doesn't exist, it adds it
      * after the DB_CONNECTION line.
      *
-     * @param string $databaseName New database name to set
+     * @param  string  $databaseName  New database name to set
      */
     protected function updateEnvFile(string $databaseName): void
     {

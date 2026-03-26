@@ -1,394 +1,269 @@
-# Docker Services for Laravel Headless Starter
-
-This directory contains modular Docker Compose configurations for various services. Mix and match services based on your application needs.
+# Docker Setup Guide
 
 ## Quick Start
 
-### Option 1: Full Stack (Easiest)
-```bash
-# Start everything with one command
-docker-compose -f docker/docker-compose.yml up -d
+### Using Composer Scripts (Recommended)
 
-# Access management UIs:
-# - App: http://localhost:8000
-# - pgAdmin: http://localhost:5050 (admin@admin.com / admin)
-# - MinIO Console: http://localhost:9001 (minioadmin / minioadmin)
-# - Mailpit: http://localhost:8025
+```bash
+# Check if ports are available
+composer docker:check
+
+# Start containers (with port checking)
+composer docker:up
+
+# Start containers (kill conflicting processes)
+composer docker:up:kill
+
+# Start with OrbStack domains (macOS only)
+composer docker:up:orbstack
+
+# Stop containers
+composer docker:down
+
+# Stop and remove all data
+composer docker:down:clean
+
+# View logs
+composer docker:logs
+
+# View running containers
+composer docker:ps
+
+# Restart containers
+composer docker:restart
 ```
 
-### Option 2: Modular (Recommended for Production)
+### Using Scripts Directly
+
 ```bash
-# Basic app only
-cd docker && docker-compose up -d
+# Check ports
+./bin/docker-check-ports
+./bin/docker-check-ports --kill              # Kill conflicts
+./bin/docker-check-ports --kill --yes        # Kill without confirmation
 
-# App with specific services
-cd docker && docker-compose -f docker-compose.yml \
-  -f services/compose.redis.yml \
-  -f services/compose.postgres.yml \
-  -f services/compose.workers.yml up -d
+# Start containers
+./bin/docker-up
+./bin/docker-up --kill                       # Kill conflicts and start
+./bin/docker-up --orbstack                   # Use OrbStack (macOS)
+./bin/docker-up --skip-check                 # Skip port checking
+
+# Stop containers
+./bin/docker-down
+./bin/docker-down --volumes                  # Remove volumes (deletes data!)
 ```
-
-## Management UIs
-
-All database and storage services include web-based management interfaces:
-
-| Service | Management UI | URL | Credentials |
-|---------|--------------|-----|-------------|
-| PostgreSQL | pgAdmin | http://localhost:5050 | admin@admin.com / admin |
-| MySQL | phpMyAdmin | http://localhost:8081 | Uses DB credentials |
-| Elasticsearch | ElasticVue | http://localhost:8080 | No auth required |
-| MinIO | MinIO Console | http://localhost:9001 | minioadmin / minioadmin |
-| RabbitMQ | Management UI | http://localhost:15672 | guest / guest |
-| Mailpit | Web UI | http://localhost:8025 | No auth required |
 
 ## Available Services
 
-### Core Services
+| Service | Port | URL | Description |
+|---------|------|-----|-------------|
+| Application | 8000 | http://localhost:8000 | Laravel app |
+| PostgreSQL | 5432 | localhost:5432 | Database |
+| pgAdmin | 5050 | http://localhost:5050 | Database UI |
+| Redis | 6379 | localhost:6379 | Cache/Queue |
+| MinIO | 9000 | http://localhost:9000 | S3 Storage |
+| MinIO Console | 9001 | http://localhost:9001 | Storage UI |
+| Meilisearch | 7700 | http://localhost:7700 | Search Engine |
+| Mailpit | 8025 | http://localhost:8025 | Email Testing |
+| Mailpit SMTP | 1025 | localhost:1025 | SMTP Server |
 
-#### `docker-compose.yml` - Laravel Application
-- **Port**: 8000
-- **Description**: Main Laravel application with Octane + FrankenPHP
-- **Always required**: Yes
+## Configuration
 
-#### `docker-compose.yml` - Complete Stack
-- **Description**: All services pre-configured for development
-- **Use case**: Quick start, development, testing
-- **Includes**: App, PostgreSQL, Redis, MinIO, Meilisearch, Mailpit, Reverb, Workers
+### Environment Files
 
-### Database Services
+- `docker/.env.docker` - Docker infrastructure settings (ports, container names)
+- `.env` - Laravel application settings
 
-#### `services/compose.postgres.yml` - PostgreSQL + pgAdmin
-- **Ports**: 5432 (PostgreSQL), 5050 (pgAdmin)
-- **Description**: Production-grade relational database with web UI
-- **Use case**: Primary database for production
-- **Management**: http://localhost:5050
+### Enabling Optional Services
 
-#### `services/compose.mysql.yml` - MySQL + phpMyAdmin
-- **Ports**: 3306 (MySQL), 8081 (phpMyAdmin)
-- **Description**: Alternative relational database with web UI
-- **Use case**: If you prefer MySQL over PostgreSQL
-- **Management**: http://localhost:8081
+Edit `docker/docker-compose.yml` and uncomment the services you need:
 
-#### `services/compose.mongodb.yml` - MongoDB
-- **Port**: 27017
-- **Description**: NoSQL document database
-- **Use case**: Document storage, flexible schemas
-
-### Caching & Sessions
-
-#### `services/compose.redis.yml` - Redis
-- **Port**: 6379
-- **Description**: In-memory data store
-- **Use case**: Caching, sessions, queues
-- **Recommended**: Yes for production
-
-### Search Engines
-
-#### `services/compose.meilisearch.yml` - Meilisearch
-- **Port**: 7700
-- **Description**: Fast, typo-tolerant search
-- **Use case**: Full-text search, autocomplete
-- **Best for**: Small to medium datasets, simple search
-
-#### `services/compose.elasticsearch.yml` - Elasticsearch + ElasticVue
-- **Ports**: 9200 (Elasticsearch), 8080 (ElasticVue)
-- **Description**: Advanced search and analytics with web UI
-- **Use case**: Complex queries, large datasets, analytics
-- **Management**: http://localhost:8080
-
-### Storage
-
-#### `services/compose.minio.yml` - MinIO
-- **Ports**: 9000 (API), 9001 (Console)
-- **Description**: S3-compatible object storage
-- **Use case**: File uploads, media storage
-- **Console**: http://localhost:9001
-
-### Message Brokers
-
-#### `services/compose.kafka.yml` - Apache Kafka (KRaft)
-- **Port**: 9092
-- **Description**: Event streaming platform
-- **Use case**: Event sourcing, real-time data pipelines
-- **Best for**: High-throughput event streaming
-
-#### `services/compose.rabbitmq.yml` - RabbitMQ
-- **Ports**: 5672 (AMQP), 15672 (Management)
-- **Description**: Message broker with web UI
-- **Use case**: Task queues, pub/sub messaging
-- **Management**: http://localhost:15672 (guest/guest)
-
-### Real-time & WebSockets
-
-#### `services/compose.reverb.yml` - Laravel Reverb
-- **Port**: 8080
-- **Description**: Laravel's official WebSocket server
-- **Use case**: Real-time notifications, chat, live updates
-- **Native Laravel**: Built specifically for Laravel applications
-
-### Development Tools
-
-#### `services/compose.mailpit.yml` - Mailpit
-- **Ports**: 1025 (SMTP), 8025 (Web UI)
-- **Description**: Email testing tool
-- **Use case**: Test emails without sending
-- **Web UI**: http://localhost:8025
-
-### Background Processing
-
-#### `services/compose.workers.yml` - Queue Workers & Scheduler
-- **Description**: Background job processing and cron scheduler
-- **Services**:
-  - `queue-worker`: Processes queued jobs (2 workers by default)
-  - `scheduler`: Runs Laravel scheduled tasks every minute
-- **Use case**: Background jobs, scheduled tasks, async processing
-- **Recommended**: Yes for production
-
-## Common Configurations
-
-### Development Setup
-```bash
-cd docker
-docker-compose -f docker-compose.yml \
-  -f services/compose.redis.yml \
-  -f services/compose.postgres.yml \
-  -f services/compose.mailpit.yml \
-  -f services/compose.workers.yml up -d
+```yaml
+# Optional services (uncomment to enable):
+  # - path: services/compose.mysql.yml
+  # - path: services/compose.mongodb.yml
+  # - path: services/compose.elasticsearch.yml
+  # - path: services/compose.kafka.yml
+  # - path: services/compose.rabbitmq.yml
 ```
 
-### Production-like Setup
-```bash
-cd docker
-docker-compose -f docker-compose.yml \
-  -f services/compose.redis.yml \
-  -f services/compose.postgres.yml \
-  -f services/compose.minio.yml \
-  -f services/compose.meilisearch.yml \
-  -f services/compose.workers.yml up -d
-```
+## Port Conflicts
 
-### Full Stack with All Services
-```bash
-cd docker
-docker-compose -f docker-compose.yml \
-  -f services/compose.redis.yml \
-  -f services/compose.postgres.yml \
-  -f services/compose.minio.yml \
-  -f services/compose.meilisearch.yml \
-  -f services/compose.kafka.yml \
-  -f services/compose.mailpit.yml \
-  -f services/compose.reverb.yml \
-  -f services/compose.workers.yml up -d
-```
+If you get port conflicts:
 
-## Environment Variables
+1. **Check which ports are in use:**
+   ```bash
+   composer docker:check
+   ```
 
-**Simple approach: Use your existing `.env` file with Docker service names!**
+2. **Automatically kill conflicting processes:**
+   ```bash
+   composer docker:up:kill
+   ```
 
-### Quick Setup
+3. **Manually kill specific process:**
+   ```bash
+   kill -9 <PID>
+   ```
+
+## OrbStack (macOS)
+
+If using OrbStack on macOS, you can access services via domains:
 
 ```bash
-# 1. Copy template (if you don't have .env yet)
-cp environments/.env.local .env
+# Start with OrbStack domains
+composer docker:up:orbstack
 
-# 2. Update ONLY these host names for Docker:
-DB_HOST=postgres          # Change from 127.0.0.1
-REDIS_HOST=redis          # Change from 127.0.0.1
-MAIL_HOST=mailpit         # Change from 127.0.0.1 (if using Mailpit)
-REVERB_HOST=reverb        # Change from localhost (if using Reverb)
-
-# 3. Start Docker
-docker-compose -f docker/docker-compose.yml up -d
+# Access services
+http://laravel.local        # Application
+http://pgadmin.local        # pgAdmin
+http://mailpit.local        # Mailpit
+http://minio.local          # MinIO Console
 ```
 
-### Docker Service Names (Hosts)
-
-When using Docker, change these hosts in your `.env`:
-
-| Service | Local Host | Docker Host |
-|---------|-----------|-------------|
-| PostgreSQL | `127.0.0.1` | `postgres` |
-| MySQL | `127.0.0.1` | `mysql` |
-| Redis | `127.0.0.1` | `redis` |
-| MinIO | `127.0.0.1` | `minio` |
-| Meilisearch | `127.0.0.1` | `meilisearch` |
-| Mailpit | `127.0.0.1` | `mailpit` |
-| Reverb | `localhost` | `reverb` |
-
-### Complete Docker Configuration Reference
-
-See `environments/.env.docker.example` for all Docker-specific values. Key changes:
-
+Configure domains in `docker/.env.docker`:
 ```env
-# Database
-DB_CONNECTION=pgsql
-DB_HOST=postgres
-DB_DATABASE=laravel
-DB_USERNAME=laravel
-DB_PASSWORD=secret
-
-# Redis
-REDIS_HOST=redis
-REDIS_PASSWORD=redis_password
-CACHE_STORE=redis
-SESSION_DRIVER=redis
-QUEUE_CONNECTION=redis
-
-# Mail (Mailpit)
-MAIL_MAILER=smtp
-MAIL_HOST=mailpit
-MAIL_PORT=1025
-
-# Reverb
-BROADCAST_CONNECTION=reverb
-REVERB_HOST=reverb
-REVERB_PORT=8080
-
-# MinIO (optional)
-FILESYSTEM_DISK=s3
-AWS_ENDPOINT=http://minio:9000
-AWS_ACCESS_KEY_ID=minioadmin
-AWS_SECRET_ACCESS_KEY=minioadmin
-AWS_USE_PATH_STYLE_ENDPOINT=true
-
-# Meilisearch (optional)
-MEILISEARCH_HOST=http://meilisearch:7700
-MEILISEARCH_KEY=masterKey
+DOMAIN_LTD=.local
+APP_DOMAIN=laravel
+PGADMIN_DOMAIN=pgadmin
 ```
-
-### Switching Between Local and Docker
-
-**Going from Local to Docker:**
-```bash
-# Change hosts to Docker service names
-sed -i '' 's/DB_HOST=127.0.0.1/DB_HOST=postgres/' .env
-sed -i '' 's/REDIS_HOST=127.0.0.1/REDIS_HOST=redis/' .env
-```
-
-**Going from Docker to Local:**
-```bash
-# Change hosts back to localhost
-sed -i '' 's/DB_HOST=postgres/DB_HOST=127.0.0.1/' .env
-sed -i '' 's/REDIS_HOST=redis/REDIS_HOST=127.0.0.1/' .env
-```
-
-## Management Commands
-
-```bash
-# Start services
-cd docker && docker-compose -f docker-compose.yml -f services/compose.redis.yml up -d
-
-# Stop services
-cd docker && docker-compose -f docker-compose.yml -f services/compose.redis.yml down
-
-# View logs
-cd docker && docker-compose -f docker-compose.yml -f services/compose.redis.yml logs -f
-
-# View logs for specific service
-cd docker && docker-compose logs -f redis
-
-# Restart a service
-cd docker && docker-compose restart redis
-
-# Remove volumes (WARNING: deletes data)
-cd docker && docker-compose -f docker-compose.yml -f services/compose.redis.yml down -v
-
-# Scale queue workers
-cd docker && docker-compose -f services/compose.workers.yml up -d --scale queue-worker=4
-```
-
-## Service Selection Guide
-
-| Need | Recommended Service |
-|------|-------------------|
-| Database | PostgreSQL or MySQL |
-| Caching | Redis |
-| File Storage | MinIO |
-| Simple Search | Meilisearch |
-| Advanced Search | Elasticsearch |
-| Event Streaming | Kafka |
-| Task Queues | RabbitMQ or Redis |
-| WebSockets | Laravel Reverb |
-| Email Testing | Mailpit |
-| NoSQL | MongoDB |
-| Queue Workers | compose.workers.yml |
-| Scheduler | compose.workers.yml |
-
-## Performance Tips
-
-1. **Limit services**: Only run services you actually need
-2. **Resource limits**: Add memory/CPU limits in production
-3. **Persistent volumes**: Use named volumes for data persistence
-4. **Networks**: Services communicate via the `laravel` network
-5. **Health checks**: All services include health checks for reliability
-6. **Scale workers**: Adjust `QUEUE_WORKERS` based on load
 
 ## Troubleshooting
 
-### Port conflicts
-If a port is already in use, change it via environment variables:
-```env
-REDIS_PORT=6380
-DB_PORT=5433
-PGADMIN_PORT=5051
+### Containers won't start
+
+1. Check ports:
+   ```bash
+   composer docker:check
+   ```
+
+2. Check Docker is running:
+   ```bash
+   docker ps
+   ```
+
+3. View logs:
+   ```bash
+   composer docker:logs
+   ```
+
+### Reset everything
+
+```bash
+# Stop and remove all containers and volumes
+composer docker:down:clean
+
+# Start fresh
+composer docker:up
 ```
 
 ### Permission issues
+
 ```bash
-chmod -R 775 ../storage
+# Fix storage permissions
+chmod -R 775 storage bootstrap/cache
+chown -R $USER:$USER storage bootstrap/cache
 ```
 
-### Reset everything
+## Development Workflow
+
+### Initial Setup
+
 ```bash
-cd docker
-docker-compose -f docker-compose.yml down -v
-docker-compose -f docker-compose.yml up -d
+# 1. Copy environment files
+cp .env.example .env
+
+# 2. Start Docker containers
+composer docker:up
+
+# 3. Install dependencies
+composer install
+
+# 4. Generate app key
+php artisan key:generate
+
+# 5. Run migrations
+php artisan migrate
 ```
 
-### Can't access management UIs
-Make sure the services are running:
+### Daily Development
+
 ```bash
-cd docker && docker-compose ps
+# Start containers
+composer docker:up
+
+# Work on your code...
+
+# View logs
+composer docker:logs
+
+# Stop containers (keeps data)
+composer docker:down
 ```
 
-### Database connection issues
-Ensure the database service is healthy:
+### Clean Restart
+
 ```bash
-cd docker && docker-compose logs postgres
+# Stop and remove everything
+composer docker:down:clean
+
+# Start fresh
+composer docker:up
+
+# Re-run migrations
+php artisan migrate:fresh --seed
 ```
 
-## Production Considerations
+## Platform-Specific Notes
 
-1. **Use secrets management** for passwords (Docker secrets, Vault, etc.)
-2. **Enable authentication** on all services
-3. **Use SSL/TLS** for external connections
-4. **Set resource limits** to prevent resource exhaustion
-5. **Regular backups** of database volumes
-6. **Monitor** service health and performance
-7. **Disable debug mode** (`APP_DEBUG=false`)
-8. **Use strong passwords** for all services
-9. **Restrict network access** using firewall rules
-10. **Keep images updated** regularly
+### macOS
+- Use Docker Desktop or OrbStack
+- OrbStack is faster and uses less resources
+- Use `composer docker:up:orbstack` for domain support
 
-## Directory Structure
+### Linux
+- Native Docker support
+- Best performance
+- Use `composer docker:up`
 
+### Windows
+- Use Docker Desktop with WSL2
+- Run commands in WSL2 terminal
+- Line endings handled by `.gitattributes`
+
+## Advanced Usage
+
+### Custom Compose Files
+
+```bash
+# Use specific compose file
+docker-compose -f docker/docker-compose.yml -f docker/services/compose.mysql.yml up -d
 ```
-docker/
-├── docker-compose.yml          # Base Laravel app
-├── docker-compose.yml     # Complete stack (all services)
-├── Dockerfile                  # Laravel app image
-├── services/                   # Modular service files
-│   ├── compose.postgres.yml
-│   ├── compose.mysql.yml
-│   ├── compose.redis.yml
-│   ├── compose.minio.yml
-│   ├── compose.meilisearch.yml
-│   ├── compose.elasticsearch.yml
-│   ├── compose.kafka.yml
-│   ├── compose.rabbitmq.yml
-│   ├── compose.mongodb.yml
-│   ├── compose.mailpit.yml
-│   ├── compose.reverb.yml
-│   └── compose.workers.yml
-└── README.md                   # This file
+
+### Build Application Container
+
+```bash
+composer docker:build
 ```
+
+### View Container Stats
+
+```bash
+docker stats
+```
+
+### Execute Commands in Container
+
+```bash
+# Run artisan command
+docker-compose -f docker/docker-compose.yml exec app php artisan migrate
+
+# Access shell
+docker-compose -f docker/docker-compose.yml exec app bash
+```
+
+## Support
+
+For issues or questions:
+1. Check logs: `composer docker:logs`
+2. Check port conflicts: `composer docker:check`
+3. Try clean restart: `composer docker:down:clean && composer docker:up`

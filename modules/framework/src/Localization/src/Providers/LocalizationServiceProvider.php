@@ -219,7 +219,6 @@ class LocalizationServiceProvider extends ServiceProvider
      * - Locale detection utilities are registered
      * - Middlewares are registered (SetLocale, TimezoneMiddleware)
      */
-    #[Override]
     public function register(): void
     {
         // Call parent register for base functionality

@@ -29,13 +29,13 @@ use Pixielity\Enum\Enum;
  *
  * @since 1.0.0
  *
- * @method static string SINGLE() Returns the SINGLE enum instance
- * @method static string DAILY() Returns the DAILY enum instance
- * @method static string SLACK() Returns the SLACK enum instance
- * @method static string SYSLOG() Returns the SYSLOG enum instance
- * @method static string ERRORLOG() Returns the ERRORLOG enum instance
- * @method static string MONOLOG() Returns the MONOLOG enum instance
- * @method static string STACK() Returns the STACK enum instance
+ * @method static SINGLE() Returns the SINGLE enum instance
+ * @method static DAILY() Returns the DAILY enum instance
+ * @method static SLACK() Returns the SLACK enum instance
+ * @method static SYSLOG() Returns the SYSLOG enum instance
+ * @method static ERRORLOG() Returns the ERRORLOG enum instance
+ * @method static MONOLOG() Returns the MONOLOG enum instance
+ * @method static STACK() Returns the STACK enum instance
  */
 enum LogDriver: string
 {

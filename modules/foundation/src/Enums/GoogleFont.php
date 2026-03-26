@@ -11,849 +11,849 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing various styles.
  *
- * @method static string ABEEZEE() Returns the ABEEZEE enum instance
- * @method static string ABEL() Returns the ABEL enum instance
- * @method static string ABHAYA_LIBRE() Returns the ABHAYA_LIBRE enum instance
- * @method static string ABRIL_FATFACE() Returns the ABRIL_FATFACE enum instance
- * @method static string ACLONICA() Returns the ACLONICA enum instance
- * @method static string ACME() Returns the ACME enum instance
- * @method static string ACTOR() Returns the ACTOR enum instance
- * @method static string ADAMINA() Returns the ADAMINA enum instance
- * @method static string ADVENT_PRO() Returns the ADVENT_PRO enum instance
- * @method static string AGUAFINA_SCRIPT() Returns the AGUAFINA_SCRIPT enum instance
- * @method static string AKRONIM() Returns the AKRONIM enum instance
- * @method static string ALADIN() Returns the ALADIN enum instance
- * @method static string ALDRICH() Returns the ALDRICH enum instance
- * @method static string ALEF() Returns the ALEF enum instance
- * @method static string ALEGREYA() Returns the ALEGREYA enum instance
- * @method static string ALEGREYA_SC() Returns the ALEGREYA_SC enum instance
- * @method static string ALEGREYA_SANS() Returns the ALEGREYA_SANS enum instance
- * @method static string ALEGREYA_SANS_SC() Returns the ALEGREYA_SANS_SC enum instance
- * @method static string ALEX_BRUSH() Returns the ALEX_BRUSH enum instance
- * @method static string ALFA_SLAB_ONE() Returns the ALFA_SLAB_ONE enum instance
- * @method static string ALICE() Returns the ALICE enum instance
- * @method static string ALIKE() Returns the ALIKE enum instance
- * @method static string ALIKE_ANGULAR() Returns the ALIKE_ANGULAR enum instance
- * @method static string ALLAN() Returns the ALLAN enum instance
- * @method static string ALLERTA() Returns the ALLERTA enum instance
- * @method static string ALLERTA_STENCIL() Returns the ALLERTA_STENCIL enum instance
- * @method static string ALLURA() Returns the ALLURA enum instance
- * @method static string ALMENDRA() Returns the ALMENDRA enum instance
- * @method static string ALMENDRA_DISPLAY() Returns the ALMENDRA_DISPLAY enum instance
- * @method static string ALMENDRA_SC() Returns the ALMENDRA_SC enum instance
- * @method static string AMARANTE() Returns the AMARANTE enum instance
- * @method static string AMARANTH() Returns the AMARANTH enum instance
- * @method static string AMATIC_SC() Returns the AMATIC_SC enum instance
- * @method static string AMETHYSTA() Returns the AMETHYSTA enum instance
- * @method static string AMIKO() Returns the AMIKO enum instance
- * @method static string AMIRI() Returns the AMIRI enum instance
- * @method static string AMITA() Returns the AMITA enum instance
- * @method static string ANAHEIM() Returns the ANAHEIM enum instance
- * @method static string ANDADA() Returns the ANDADA enum instance
- * @method static string ANDIKA() Returns the ANDIKA enum instance
- * @method static string ANGKOR() Returns the ANGKOR enum instance
- * @method static string ANNIE_USE_YOUR_TELESCOPE() Returns the ANNIE_USE_YOUR_TELESCOPE enum instance
- * @method static string ANONYMOUS_PRO() Returns the ANONYMOUS_PRO enum instance
- * @method static string ANTIC() Returns the ANTIC enum instance
- * @method static string ANTIC_DIDONE() Returns the ANTIC_DIDONE enum instance
- * @method static string ANTIC_SLAB() Returns the ANTIC_SLAB enum instance
- * @method static string ANTON() Returns the ANTON enum instance
- * @method static string ARAPEY() Returns the ARAPEY enum instance
- * @method static string ARBUTUS() Returns the ARBUTUS enum instance
- * @method static string ARBUTUS_SLAB() Returns the ARBUTUS_SLAB enum instance
- * @method static string ARCHITECTS_DAUGHTER() Returns the ARCHITECTS_DAUGHTER enum instance
- * @method static string ARCHIVO() Returns the ARCHIVO enum instance
- * @method static string ARCHIVO_BLACK() Returns the ARCHIVO_BLACK enum instance
- * @method static string ARCHIVO_NARROW() Returns the ARCHIVO_NARROW enum instance
- * @method static string AREF_RUQAA() Returns the AREF_RUQAA enum instance
- * @method static string ARIMA_MADURAI() Returns the ARIMA_MADURAI enum instance
- * @method static string ARIMO() Returns the ARIMO enum instance
- * @method static string ARIZONIA() Returns the ARIZONIA enum instance
- * @method static string ARMATA() Returns the ARMATA enum instance
- * @method static string ARSENAL() Returns the ARSENAL enum instance
- * @method static string ARTIFIKA() Returns the ARTIFIKA enum instance
- * @method static string ARVO() Returns the ARVO enum instance
- * @method static string ARYA() Returns the ARYA enum instance
- * @method static string ASAP() Returns the ASAP enum instance
- * @method static string ASAP_CONDENSED() Returns the ASAP_CONDENSED enum instance
- * @method static string ASAR() Returns the ASAR enum instance
- * @method static string ASSET() Returns the ASSET enum instance
- * @method static string ASSISTANT() Returns the ASSISTANT enum instance
- * @method static string ASTLOCH() Returns the ASTLOCH enum instance
- * @method static string ASUL() Returns the ASUL enum instance
- * @method static string ATHITI() Returns the ATHITI enum instance
- * @method static string ATMA() Returns the ATMA enum instance
- * @method static string ATOMIC_AGE() Returns the ATOMIC_AGE enum instance
- * @method static string AUBREY() Returns the AUBREY enum instance
- * @method static string AUDIOWIDE() Returns the AUDIOWIDE enum instance
- * @method static string AUTOUR_ONE() Returns the AUTOUR_ONE enum instance
- * @method static string AVERAGE() Returns the AVERAGE enum instance
- * @method static string AVERAGE_SANS() Returns the AVERAGE_SANS enum instance
- * @method static string AVERIA_GRUESA_LIBRE() Returns the AVERIA_GRUESA_LIBRE enum instance
- * @method static string AVERIA_LIBRE() Returns the AVERIA_LIBRE enum instance
- * @method static string AVERIA_SANS_LIBRE() Returns the AVERIA_SANS_LIBRE enum instance
- * @method static string AVERIA_SERIF_LIBRE() Returns the AVERIA_SERIF_LIBRE enum instance
- * @method static string BAD_SCRIPT() Returns the BAD_SCRIPT enum instance
- * @method static string BAHIANA() Returns the BAHIANA enum instance
- * @method static string BALOO() Returns the BALOO enum instance
- * @method static string BALOO_BHAI() Returns the BALOO_BHAI enum instance
- * @method static string BALOO_BHAIJAAN() Returns the BALOO_BHAIJAAN enum instance
- * @method static string BALOO_BHAINA() Returns the BALOO_BHAINA enum instance
- * @method static string BALOO_CHETTAN() Returns the BALOO_CHETTAN enum instance
- * @method static string BALOO_DA() Returns the BALOO_DA enum instance
- * @method static string BALOO_PAAJI() Returns the BALOO_PAAJI enum instance
- * @method static string BALOO_TAMMA() Returns the BALOO_TAMMA enum instance
- * @method static string BALOO_TAMMUDU() Returns the BALOO_TAMMUDU enum instance
- * @method static string BALOO_THAMBI() Returns the BALOO_THAMBI enum instance
- * @method static string BALTHAZAR() Returns the BALTHAZAR enum instance
- * @method static string BANGERS() Returns the BANGERS enum instance
- * @method static string BARLOW() Returns the BARLOW enum instance
- * @method static string BARLOW_CONDENSED() Returns the BARLOW_CONDENSED enum instance
- * @method static string BARLOW_SEMI_CONDENSED() Returns the BARLOW_SEMI_CONDENSED enum instance
- * @method static string BARRIO() Returns the BARRIO enum instance
- * @method static string BASIC() Returns the BASIC enum instance
- * @method static string BATTAMBANG() Returns the BATTAMBANG enum instance
- * @method static string BAUMANS() Returns the BAUMANS enum instance
- * @method static string BAYON() Returns the BAYON enum instance
- * @method static string BELGRANO() Returns the BELGRANO enum instance
- * @method static string BELLEFAIR() Returns the BELLEFAIR enum instance
- * @method static string BELLEZA() Returns the BELLEZA enum instance
- * @method static string BENCHNINE() Returns the BENCHNINE enum instance
- * @method static string BENTHAM() Returns the BENTHAM enum instance
- * @method static string BERKSHIRE_SWASH() Returns the BERKSHIRE_SWASH enum instance
- * @method static string BEVAN() Returns the BEVAN enum instance
- * @method static string BIGELOW_RULES() Returns the BIGELOW_RULES enum instance
- * @method static string BIGSHOT_ONE() Returns the BIGSHOT_ONE enum instance
- * @method static string BILBO() Returns the BILBO enum instance
- * @method static string BILBO_SWASH_CAPS() Returns the BILBO_SWASH_CAPS enum instance
- * @method static string BIORHYME() Returns the BIORHYME enum instance
- * @method static string BIORHYME_EXPANDED() Returns the BIORHYME_EXPANDED enum instance
- * @method static string BIRYANI() Returns the BIRYANI enum instance
- * @method static string BITTER() Returns the BITTER enum instance
- * @method static string BLACK_OPS_ONE() Returns the BLACK_OPS_ONE enum instance
- * @method static string BOKOR() Returns the BOKOR enum instance
- * @method static string BONBON() Returns the BONBON enum instance
- * @method static string BOOGALOO() Returns the BOOGALOO enum instance
- * @method static string BOWLBY_ONE() Returns the BOWLBY_ONE enum instance
- * @method static string BOWLBY_ONE_SC() Returns the BOWLBY_ONE_SC enum instance
- * @method static string BRAWLER() Returns the BRAWLER enum instance
- * @method static string BREE_SERIF() Returns the BREE_SERIF enum instance
- * @method static string BUBBLEGUM_SANS() Returns the BUBBLEGUM_SANS enum instance
- * @method static string BUBBLER_ONE() Returns the BUBBLER_ONE enum instance
- * @method static string BUDA() Returns the BUDA enum instance
- * @method static string BUENARD() Returns the BUENARD enum instance
- * @method static string BUNGEE() Returns the BUNGEE enum instance
- * @method static string BUNGEE_HAIRLINE() Returns the BUNGEE_HAIRLINE enum instance
- * @method static string BUNGEE_INLINE() Returns the BUNGEE_INLINE enum instance
- * @method static string BUNGEE_OUTLINE() Returns the BUNGEE_OUTLINE enum instance
- * @method static string BUNGEE_SHADE() Returns the BUNGEE_SHADE enum instance
- * @method static string BUTCHERMAN() Returns the BUTCHERMAN enum instance
- * @method static string BUTTERFLY_KIDS() Returns the BUTTERFLY_KIDS enum instance
- * @method static string CABIN() Returns the CABIN enum instance
- * @method static string CABIN_CONDENSED() Returns the CABIN_CONDENSED enum instance
- * @method static string CABIN_SKETCH() Returns the CABIN_SKETCH enum instance
- * @method static string CAESAR_DRESSING() Returns the CAESAR_DRESSING enum instance
- * @method static string CAGLIOSTRO() Returns the CAGLIOSTRO enum instance
- * @method static string CAIRO() Returns the CAIRO enum instance
- * @method static string CALLIGRAFFITTI() Returns the CALLIGRAFFITTI enum instance
- * @method static string CAMBAY() Returns the CAMBAY enum instance
- * @method static string CAMBO() Returns the CAMBO enum instance
- * @method static string CANDAL() Returns the CANDAL enum instance
- * @method static string CANTARELL() Returns the CANTARELL enum instance
- * @method static string CANTATA_ONE() Returns the CANTATA_ONE enum instance
- * @method static string CANTORA_ONE() Returns the CANTORA_ONE enum instance
- * @method static string CAPRIOLA() Returns the CAPRIOLA enum instance
- * @method static string CARDO() Returns the CARDO enum instance
- * @method static string CARME() Returns the CARME enum instance
- * @method static string CARROIS_GOTHIC() Returns the CARROIS_GOTHIC enum instance
- * @method static string CARROIS_GOTHIC_SC() Returns the CARROIS_GOTHIC_SC enum instance
- * @method static string CARTER_ONE() Returns the CARTER_ONE enum instance
- * @method static string CATAMARAN() Returns the CATAMARAN enum instance
- * @method static string CAUDEX() Returns the CAUDEX enum instance
- * @method static string CAVEAT() Returns the CAVEAT enum instance
- * @method static string CAVEAT_BRUSH() Returns the CAVEAT_BRUSH enum instance
- * @method static string CEDARVILLE_CURSIVE() Returns the CEDARVILLE_CURSIVE enum instance
- * @method static string CEVICHE_ONE() Returns the CEVICHE_ONE enum instance
- * @method static string CHANGA() Returns the CHANGA enum instance
- * @method static string CHANGA_ONE() Returns the CHANGA_ONE enum instance
- * @method static string CHANGO() Returns the CHANGO enum instance
- * @method static string CHATHURA() Returns the CHATHURA enum instance
- * @method static string CHAU_PHILOMENE_ONE() Returns the CHAU_PHILOMENE_ONE enum instance
- * @method static string CHELA_ONE() Returns the CHELA_ONE enum instance
- * @method static string CHELSEA_MARKET() Returns the CHELSEA_MARKET enum instance
- * @method static string CHENLA() Returns the CHENLA enum instance
- * @method static string CHERRY_CREAM_SODA() Returns the CHERRY_CREAM_SODA enum instance
- * @method static string CHERRY_SWASH() Returns the CHERRY_SWASH enum instance
- * @method static string CHEWY() Returns the CHEWY enum instance
- * @method static string CHICLE() Returns the CHICLE enum instance
- * @method static string CHIVO() Returns the CHIVO enum instance
- * @method static string CHONBURI() Returns the CHONBURI enum instance
- * @method static string CINZEL() Returns the CINZEL enum instance
- * @method static string CINZEL_DECORATIVE() Returns the CINZEL_DECORATIVE enum instance
- * @method static string CLICKER_SCRIPT() Returns the CLICKER_SCRIPT enum instance
- * @method static string CODA() Returns the CODA enum instance
- * @method static string CODA_CAPTION() Returns the CODA_CAPTION enum instance
- * @method static string CODYSTAR() Returns the CODYSTAR enum instance
- * @method static string COINY() Returns the COINY enum instance
- * @method static string COMBO() Returns the COMBO enum instance
- * @method static string COMFORTAA() Returns the COMFORTAA enum instance
- * @method static string COMING_SOON() Returns the COMING_SOON enum instance
- * @method static string CONCERT_ONE() Returns the CONCERT_ONE enum instance
- * @method static string CONDIMENT() Returns the CONDIMENT enum instance
- * @method static string CONTENT() Returns the CONTENT enum instance
- * @method static string CONTRAIL_ONE() Returns the CONTRAIL_ONE enum instance
- * @method static string CONVERGENCE() Returns the CONVERGENCE enum instance
- * @method static string COOKIE() Returns the COOKIE enum instance
- * @method static string COPSE() Returns the COPSE enum instance
- * @method static string CORBEN() Returns the CORBEN enum instance
- * @method static string CORMORANT() Returns the CORMORANT enum instance
- * @method static string CORMORANT_GARAMOND() Returns the CORMORANT_GARAMOND enum instance
- * @method static string CORMORANT_INFANT() Returns the CORMORANT_INFANT enum instance
- * @method static string CORMORANT_SC() Returns the CORMORANT_SC enum instance
- * @method static string CORMORANT_UNICASE() Returns the CORMORANT_UNICASE enum instance
- * @method static string CORMORANT_UPRIGHT() Returns the CORMORANT_UPRIGHT enum instance
- * @method static string COURGETTE() Returns the COURGETTE enum instance
- * @method static string COUSINE() Returns the COUSINE enum instance
- * @method static string COUSTARD() Returns the COUSTARD enum instance
- * @method static string COVERED_BY_YOUR_GRACE() Returns the COVERED_BY_YOUR_GRACE enum instance
- * @method static string CRAFTY_GIRLS() Returns the CRAFTY_GIRLS enum instance
- * @method static string CREEPSTER() Returns the CREEPSTER enum instance
- * @method static string CRETE_ROUND() Returns the CRETE_ROUND enum instance
- * @method static string CRIMSON_TEXT() Returns the CRIMSON_TEXT enum instance
- * @method static string CROISSANT_ONE() Returns the CROISSANT_ONE enum instance
- * @method static string CRUSHED() Returns the CRUSHED enum instance
- * @method static string CUPRUM() Returns the CUPRUM enum instance
- * @method static string CUTIVE() Returns the CUTIVE enum instance
- * @method static string CUTIVE_MONO() Returns the CUTIVE_MONO enum instance
- * @method static string DAMION() Returns the DAMION enum instance
- * @method static string DANCING_SCRIPT() Returns the DANCING_SCRIPT enum instance
- * @method static string DANGREK() Returns the DANGREK enum instance
- * @method static string DAVID_LIBRE() Returns the DAVID_LIBRE enum instance
- * @method static string DAWNING_OF_A_NEW() Returns the DAWNING_OF_A_NEW enum instance
- * @method static string DAYS_ONE() Returns the DAYS_ONE enum instance
- * @method static string DEKKO() Returns the DEKKO enum instance
- * @method static string DELIUS() Returns the DELIUS enum instance
- * @method static string DELIUS_SWASH_CAPS() Returns the DELIUS_SWASH_CAPS enum instance
- * @method static string DELIUS_UNICASE() Returns the DELIUS_UNICASE enum instance
- * @method static string DELLA_RESPIRA() Returns the DELLA_RESPIRA enum instance
- * @method static string DENK_ONE() Returns the DENK_ONE enum instance
- * @method static string DEVONSHIRE() Returns the DEVONSHIRE enum instance
- * @method static string DHURJATI() Returns the DHURJATI enum instance
- * @method static string DIDACT_GOTHIC() Returns the DIDACT_GOTHIC enum instance
- * @method static string DIPLOMATA() Returns the DIPLOMATA enum instance
- * @method static string DIPLOMATA_SC() Returns the DIPLOMATA_SC enum instance
- * @method static string DOMINE() Returns the DOMINE enum instance
- * @method static string DONEGAL_ONE() Returns the DONEGAL_ONE enum instance
- * @method static string DOPPIO_ONE() Returns the DOPPIO_ONE enum instance
- * @method static string DORSA() Returns the DORSA enum instance
- * @method static string DOSIS() Returns the DOSIS enum instance
- * @method static string DR_SUGIYAMA() Returns the DR_SUGIYAMA enum instance
- * @method static string DURU_SANS() Returns the DURU_SANS enum instance
- * @method static string DYNALIGHT() Returns the DYNALIGHT enum instance
- * @method static string EB_GARAMOND() Returns the EB_GARAMOND enum instance
- * @method static string EAGLE_LAKE() Returns the EAGLE_LAKE enum instance
- * @method static string EATER() Returns the EATER enum instance
- * @method static string ECONOMICA() Returns the ECONOMICA enum instance
- * @method static string ECZAR() Returns the ECZAR enum instance
- * @method static string EL_MESSIRI() Returns the EL_MESSIRI enum instance
- * @method static string ELECTROLIZE() Returns the ELECTROLIZE enum instance
- * @method static string ELSIE() Returns the ELSIE enum instance
- * @method static string ELSIE_SWASH_CAPS() Returns the ELSIE_SWASH_CAPS enum instance
- * @method static string EMBLEMA_ONE() Returns the EMBLEMA_ONE enum instance
- * @method static string EMILYS_CANDY() Returns the EMILYS_CANDY enum instance
- * @method static string ENCODE_SANS() Returns the ENCODE_SANS enum instance
- * @method static string ENCODE_SANS_CONDENSED() Returns the ENCODE_SANS_CONDENSED enum instance
- * @method static string ENCODE_SANS_EXPANDED() Returns the ENCODE_SANS_EXPANDED enum instance
- * @method static string ENCODE_SANS_SEMI_CONDENSED() Returns the ENCODE_SANS_SEMI_CONDENSED enum instance
- * @method static string ENCODE_SANS_SEMI_EXPANDED() Returns the ENCODE_SANS_SEMI_EXPANDED enum instance
- * @method static string ENGAGEMENT() Returns the ENGAGEMENT enum instance
- * @method static string ENGLEBERT() Returns the ENGLEBERT enum instance
- * @method static string ENRIQUETA() Returns the ENRIQUETA enum instance
- * @method static string ERICA_ONE() Returns the ERICA_ONE enum instance
- * @method static string ESTEBAN() Returns the ESTEBAN enum instance
- * @method static string EUPHORIA_SCRIPT() Returns the EUPHORIA_SCRIPT enum instance
- * @method static string EWERT() Returns the EWERT enum instance
- * @method static string EXO() Returns the EXO enum instance
- * @method static string EXO_2() Returns the EXO_2 enum instance
- * @method static string EXPLETUS_SANS() Returns the EXPLETUS_SANS enum instance
- * @method static string FANWOOD_TEXT() Returns the FANWOOD_TEXT enum instance
- * @method static string FARSAN() Returns the FARSAN enum instance
- * @method static string FASCINATE() Returns the FASCINATE enum instance
- * @method static string FASCINATE_INLINE() Returns the FASCINATE_INLINE enum instance
- * @method static string FASTER_ONE() Returns the FASTER_ONE enum instance
- * @method static string FASTHAND() Returns the FASTHAND enum instance
- * @method static string FAUNA_ONE() Returns the FAUNA_ONE enum instance
- * @method static string FAUSTINA() Returns the FAUSTINA enum instance
- * @method static string FEDERANT() Returns the FEDERANT enum instance
- * @method static string FEDERO() Returns the FEDERO enum instance
- * @method static string FELIPA() Returns the FELIPA enum instance
- * @method static string FENIX() Returns the FENIX enum instance
- * @method static string FINGER_PAINT() Returns the FINGER_PAINT enum instance
- * @method static string FIRA_MONO() Returns the FIRA_MONO enum instance
- * @method static string FIRA_SANS() Returns the FIRA_SANS enum instance
- * @method static string FIRA_SANS_CONDENSED() Returns the FIRA_SANS_CONDENSED enum instance
- * @method static string FIRA_SANS_EXTRA_CONDENSED() Returns the FIRA_SANS_EXTRA_CONDENSED enum instance
- * @method static string FJALLA_ONE() Returns the FJALLA_ONE enum instance
- * @method static string FJORD_ONE() Returns the FJORD_ONE enum instance
- * @method static string FLAMENCO() Returns the FLAMENCO enum instance
- * @method static string FLAVORS() Returns the FLAVORS enum instance
- * @method static string FONDAMENTO() Returns the FONDAMENTO enum instance
- * @method static string FONTDINER_SWANKY() Returns the FONTDINER_SWANKY enum instance
- * @method static string FORUM() Returns the FORUM enum instance
- * @method static string FRANCOIS_ONE() Returns the FRANCOIS_ONE enum instance
- * @method static string FRANK_RUHL_LIBRE() Returns the FRANK_RUHL_LIBRE enum instance
- * @method static string FRECKLE_FACE() Returns the FRECKLE_FACE enum instance
- * @method static string FREDERICKA_THE_GREAT() Returns the FREDERICKA_THE_GREAT enum instance
- * @method static string FREDOKA_ONE() Returns the FREDOKA_ONE enum instance
- * @method static string FREEHAND() Returns the FREEHAND enum instance
- * @method static string FRESCA() Returns the FRESCA enum instance
- * @method static string FRIJOLE() Returns the FRIJOLE enum instance
- * @method static string FRUKTUR() Returns the FRUKTUR enum instance
- * @method static string FUGAZ_ONE() Returns the FUGAZ_ONE enum instance
- * @method static string GFS_DIDOT() Returns the GFS_DIDOT enum instance
- * @method static string GFS_NEOHELLENIC() Returns the GFS_NEOHELLENIC enum instance
- * @method static string GABRIELA() Returns the GABRIELA enum instance
- * @method static string GAFATA() Returns the GAFATA enum instance
- * @method static string GALADA() Returns the GALADA enum instance
- * @method static string GALDEANO() Returns the GALDEANO enum instance
- * @method static string GALINDO() Returns the GALINDO enum instance
- * @method static string GENTIUM_BASIC() Returns the GENTIUM_BASIC enum instance
- * @method static string GENTIUM_BOOK_BASIC() Returns the GENTIUM_BOOK_BASIC enum instance
- * @method static string GEO() Returns the GEO enum instance
- * @method static string GEOSTAR() Returns the GEOSTAR enum instance
- * @method static string GEOSTAR_FILL() Returns the GEOSTAR_FILL enum instance
- * @method static string GERMANIA_ONE() Returns the GERMANIA_ONE enum instance
- * @method static string GIDUGU() Returns the GIDUGU enum instance
- * @method static string GILDA_DISPLAY() Returns the GILDA_DISPLAY enum instance
- * @method static string GIVE_YOU_GLORY() Returns the GIVE_YOU_GLORY enum instance
- * @method static string GLASS_ANTIQUA() Returns the GLASS_ANTIQUA enum instance
- * @method static string GLEGOO() Returns the GLEGOO enum instance
- * @method static string GLORIA_HALLELUJAH() Returns the GLORIA_HALLELUJAH enum instance
- * @method static string GOBLIN_ONE() Returns the GOBLIN_ONE enum instance
- * @method static string GOCHI_HAND() Returns the GOCHI_HAND enum instance
- * @method static string GORDITAS() Returns the GORDITAS enum instance
- * @method static string GOUDY_BOOKLETTER_1911() Returns the GOUDY_BOOKLETTER_1911 enum instance
- * @method static string GRADUATE() Returns the GRADUATE enum instance
- * @method static string GRAND_HOTEL() Returns the GRAND_HOTEL enum instance
- * @method static string GRAVITAS_ONE() Returns the GRAVITAS_ONE enum instance
- * @method static string GREAT_VIBES() Returns the GREAT_VIBES enum instance
- * @method static string GRIFFY() Returns the GRIFFY enum instance
- * @method static string GRUPPO() Returns the GRUPPO enum instance
- * @method static string GUDEA() Returns the GUDEA enum instance
- * @method static string GURAJADA() Returns the GURAJADA enum instance
- * @method static string HABIBI() Returns the HABIBI enum instance
- * @method static string HALANT() Returns the HALANT enum instance
- * @method static string HAMMERSMITH_ONE() Returns the HAMMERSMITH_ONE enum instance
- * @method static string HANALEI() Returns the HANALEI enum instance
- * @method static string HANALEI_FILL() Returns the HANALEI_FILL enum instance
- * @method static string HANDLEE() Returns the HANDLEE enum instance
- * @method static string HANUMAN() Returns the HANUMAN enum instance
- * @method static string HAPPY_MONKEY() Returns the HAPPY_MONKEY enum instance
- * @method static string HARMATTAN() Returns the HARMATTAN enum instance
- * @method static string HEADLAND_ONE() Returns the HEADLAND_ONE enum instance
- * @method static string HEEBO() Returns the HEEBO enum instance
- * @method static string HENNY_PENNY() Returns the HENNY_PENNY enum instance
- * @method static string HERR_VON_MUELLERHOFF() Returns the HERR_VON_MUELLERHOFF enum instance
- * @method static string HIND() Returns the HIND enum instance
- * @method static string HIND_GUNTUR() Returns the HIND_GUNTUR enum instance
- * @method static string HIND_MADURAI() Returns the HIND_MADURAI enum instance
- * @method static string HIND_SILIGURI() Returns the HIND_SILIGURI enum instance
- * @method static string HIND_VADODARA() Returns the HIND_VADODARA enum instance
- * @method static string HOLTWOOD_ONE_SC() Returns the HOLTWOOD_ONE_SC enum instance
- * @method static string HOMEMADE_APPLE() Returns the HOMEMADE_APPLE enum instance
- * @method static string HOMENAJE() Returns the HOMENAJE enum instance
- * @method static string IM_FELL_DW_PICA() Returns the IM_FELL_DW_PICA enum instance
- * @method static string IM_FELL_DOUBLE_PICA() Returns the IM_FELL_DOUBLE_PICA enum instance
- * @method static string IM_FELL_ENGLISH() Returns the IM_FELL_ENGLISH enum instance
- * @method static string IM_FELL_ENGLISH_SC() Returns the IM_FELL_ENGLISH_SC enum instance
- * @method static string IM_FELL_FRENCH_CANON() Returns the IM_FELL_FRENCH_CANON enum instance
- * @method static string IM_FELL_GREAT_PRIMER() Returns the IM_FELL_GREAT_PRIMER enum instance
- * @method static string ICEBERG() Returns the ICEBERG enum instance
- * @method static string ICELAND() Returns the ICELAND enum instance
- * @method static string IMPRIMA() Returns the IMPRIMA enum instance
- * @method static string INCONSOLATA() Returns the INCONSOLATA enum instance
- * @method static string INDER() Returns the INDER enum instance
- * @method static string INDIE_FLOWER() Returns the INDIE_FLOWER enum instance
- * @method static string INIKA() Returns the INIKA enum instance
- * @method static string INKNUT_ANTIQUA() Returns the INKNUT_ANTIQUA enum instance
- * @method static string IRISH_GROVER() Returns the IRISH_GROVER enum instance
- * @method static string ISTOK_WEB() Returns the ISTOK_WEB enum instance
- * @method static string ITALIANA() Returns the ITALIANA enum instance
- * @method static string ITALIANNO() Returns the ITALIANNO enum instance
- * @method static string ITIM() Returns the ITIM enum instance
- * @method static string JACQUES_FRANCOIS() Returns the JACQUES_FRANCOIS enum instance
- * @method static string JACQUES_FRANCOIS_SHADOW() Returns the JACQUES_FRANCOIS_SHADOW enum instance
- * @method static string JALDI() Returns the JALDI enum instance
- * @method static string JIM_NIGHTSHADE() Returns the JIM_NIGHTSHADE enum instance
- * @method static string JOCKEY_ONE() Returns the JOCKEY_ONE enum instance
- * @method static string JOLLY_LODGER() Returns the JOLLY_LODGER enum instance
- * @method static string JOMHURIA() Returns the JOMHURIA enum instance
- * @method static string JOSEFIN_SANS() Returns the JOSEFIN_SANS enum instance
- * @method static string JOSEFIN_SLAB() Returns the JOSEFIN_SLAB enum instance
- * @method static string JOTI_ONE() Returns the JOTI_ONE enum instance
- * @method static string JUDSON() Returns the JUDSON enum instance
- * @method static string JULEE() Returns the JULEE enum instance
- * @method static string JULIUS_SANS_ONE() Returns the JULIUS_SANS_ONE enum instance
- * @method static string JUNGE() Returns the JUNGE enum instance
- * @method static string JURA() Returns the JURA enum instance
- * @method static string JUST_ANOTHER_HAND() Returns the JUST_ANOTHER_HAND enum instance
- * @method static string JUST_ME_AGAIN_DOWN() Returns the JUST_ME_AGAIN_DOWN enum instance
- * @method static string KADWA() Returns the KADWA enum instance
- * @method static string KALAM() Returns the KALAM enum instance
- * @method static string KAMERON() Returns the KAMERON enum instance
- * @method static string KANIT() Returns the KANIT enum instance
- * @method static string KANTUMRUY() Returns the KANTUMRUY enum instance
- * @method static string KARLA() Returns the KARLA enum instance
- * @method static string KARMA() Returns the KARMA enum instance
- * @method static string KATIBEH() Returns the KATIBEH enum instance
- * @method static string KAUSHAN_SCRIPT() Returns the KAUSHAN_SCRIPT enum instance
- * @method static string KAVIVANAR() Returns the KAVIVANAR enum instance
- * @method static string KAVOON() Returns the KAVOON enum instance
- * @method static string KDAM_THMOR() Returns the KDAM_THMOR enum instance
- * @method static string KEANIA_ONE() Returns the KEANIA_ONE enum instance
- * @method static string KELLY_SLAB() Returns the KELLY_SLAB enum instance
- * @method static string KENIA() Returns the KENIA enum instance
- * @method static string KHAND() Returns the KHAND enum instance
- * @method static string KHMER() Returns the KHMER enum instance
- * @method static string KHULA() Returns the KHULA enum instance
- * @method static string KITE_ONE() Returns the KITE_ONE enum instance
- * @method static string KNEWAVE() Returns the KNEWAVE enum instance
- * @method static string KOTTA_ONE() Returns the KOTTA_ONE enum instance
- * @method static string KOULEN() Returns the KOULEN enum instance
- * @method static string KRANKY() Returns the KRANKY enum instance
- * @method static string KREON() Returns the KREON enum instance
- * @method static string KRISTI() Returns the KRISTI enum instance
- * @method static string KRONA_ONE() Returns the KRONA_ONE enum instance
- * @method static string KUMAR_ONE() Returns the KUMAR_ONE enum instance
- * @method static string KUMAR_ONE_OUTLINE() Returns the KUMAR_ONE_OUTLINE enum instance
- * @method static string KURALE() Returns the KURALE enum instance
- * @method static string LA_BELLE_AURORE() Returns the LA_BELLE_AURORE enum instance
- * @method static string LAILA() Returns the LAILA enum instance
- * @method static string LAKKI_REDDY() Returns the LAKKI_REDDY enum instance
- * @method static string LALEZAR() Returns the LALEZAR enum instance
- * @method static string LANCELOT() Returns the LANCELOT enum instance
- * @method static string LATEEF() Returns the LATEEF enum instance
- * @method static string LATO() Returns the LATO enum instance
- * @method static string LEAGUE_SCRIPT() Returns the LEAGUE_SCRIPT enum instance
- * @method static string LECKERLI_ONE() Returns the LECKERLI_ONE enum instance
- * @method static string LEDGER() Returns the LEDGER enum instance
- * @method static string LEKTON() Returns the LEKTON enum instance
- * @method static string LEMON() Returns the LEMON enum instance
- * @method static string LEMONADA() Returns the LEMONADA enum instance
- * @method static string LIBRE_BARCODE_128() Returns the LIBRE_BARCODE_128 enum instance
- * @method static string LIBRE_BARCODE_128_TEXT() Returns the LIBRE_BARCODE_128_TEXT enum instance
- * @method static string LIBRE_BARCODE_39() Returns the LIBRE_BARCODE_39 enum instance
- * @method static string LIBRE_BARCODE_39_EXTENDED() Returns the LIBRE_BARCODE_39_EXTENDED enum instance
- * @method static string LIBRE_BARCODE_39_TEXT() Returns the LIBRE_BARCODE_39_TEXT enum instance
- * @method static string LIBRE_BASKERVILLE() Returns the LIBRE_BASKERVILLE enum instance
- * @method static string LIBRE_FRANKLIN() Returns the LIBRE_FRANKLIN enum instance
- * @method static string LIFE_SAVERS() Returns the LIFE_SAVERS enum instance
- * @method static string LILITA_ONE() Returns the LILITA_ONE enum instance
- * @method static string LILY_SCRIPT_ONE() Returns the LILY_SCRIPT_ONE enum instance
- * @method static string LIMELIGHT() Returns the LIMELIGHT enum instance
- * @method static string LINDEN_HILL() Returns the LINDEN_HILL enum instance
- * @method static string LOBSTER() Returns the LOBSTER enum instance
- * @method static string LOBSTER_TWO() Returns the LOBSTER_TWO enum instance
- * @method static string LONDRINA_OUTLINE() Returns the LONDRINA_OUTLINE enum instance
- * @method static string LONDRINA_SHADOW() Returns the LONDRINA_SHADOW enum instance
- * @method static string LONDRINA_SKETCH() Returns the LONDRINA_SKETCH enum instance
- * @method static string LONDRINA_SOLID() Returns the LONDRINA_SOLID enum instance
- * @method static string LORA() Returns the LORA enum instance
- * @method static string LOVE_YA_LIKE_A() Returns the LOVE_YA_LIKE_A enum instance
- * @method static string LOVED_BY_THE_KING() Returns the LOVED_BY_THE_KING enum instance
- * @method static string LOVERS_QUARREL() Returns the LOVERS_QUARREL enum instance
- * @method static string LUCKIEST_GUY() Returns the LUCKIEST_GUY enum instance
- * @method static string LUSITANA() Returns the LUSITANA enum instance
- * @method static string LUSTRIA() Returns the LUSTRIA enum instance
- * @method static string MACONDO() Returns the MACONDO enum instance
- * @method static string MACONDO_SWASH_CAPS() Returns the MACONDO_SWASH_CAPS enum instance
- * @method static string MADA() Returns the MADA enum instance
- * @method static string MAGRA() Returns the MAGRA enum instance
- * @method static string MAIDEN_ORANGE() Returns the MAIDEN_ORANGE enum instance
- * @method static string MAITREE() Returns the MAITREE enum instance
- * @method static string MAKO() Returns the MAKO enum instance
- * @method static string MALLANNA() Returns the MALLANNA enum instance
- * @method static string MANDALI() Returns the MANDALI enum instance
- * @method static string MANUALE() Returns the MANUALE enum instance
- * @method static string MARCELLUS() Returns the MARCELLUS enum instance
- * @method static string MARCELLUS_SC() Returns the MARCELLUS_SC enum instance
- * @method static string MARCK_SCRIPT() Returns the MARCK_SCRIPT enum instance
- * @method static string MARGARINE() Returns the MARGARINE enum instance
- * @method static string MARKO_ONE() Returns the MARKO_ONE enum instance
- * @method static string MARMELAD() Returns the MARMELAD enum instance
- * @method static string MARTEL() Returns the MARTEL enum instance
- * @method static string MARTEL_SANS() Returns the MARTEL_SANS enum instance
- * @method static string MARVEL() Returns the MARVEL enum instance
- * @method static string MATE() Returns the MATE enum instance
- * @method static string MATE_SC() Returns the MATE_SC enum instance
- * @method static string MAVEN_PRO() Returns the MAVEN_PRO enum instance
- * @method static string MCLAREN() Returns the MCLAREN enum instance
- * @method static string MEDDON() Returns the MEDDON enum instance
- * @method static string MEDIEVALSHARP() Returns the MEDIEVALSHARP enum instance
- * @method static string MEDULA_ONE() Returns the MEDULA_ONE enum instance
- * @method static string MEERA_INIMAI() Returns the MEERA_INIMAI enum instance
- * @method static string MEGRIM() Returns the MEGRIM enum instance
- * @method static string MEIE_SCRIPT() Returns the MEIE_SCRIPT enum instance
- * @method static string MERIENDA() Returns the MERIENDA enum instance
- * @method static string MERIENDA_ONE() Returns the MERIENDA_ONE enum instance
- * @method static string MERRIWEATHER() Returns the MERRIWEATHER enum instance
- * @method static string MERRIWEATHER_SANS() Returns the MERRIWEATHER_SANS enum instance
- * @method static string METAL() Returns the METAL enum instance
- * @method static string METAL_MANIA() Returns the METAL_MANIA enum instance
- * @method static string METAMORPHOUS() Returns the METAMORPHOUS enum instance
- * @method static string METROPHOBIC() Returns the METROPHOBIC enum instance
- * @method static string MICHROMA() Returns the MICHROMA enum instance
- * @method static string MILONGA() Returns the MILONGA enum instance
- * @method static string MILTONIAN() Returns the MILTONIAN enum instance
- * @method static string MILTONIAN_TATTOO() Returns the MILTONIAN_TATTOO enum instance
- * @method static string MINIVER() Returns the MINIVER enum instance
- * @method static string MIRIAM_LIBRE() Returns the MIRIAM_LIBRE enum instance
- * @method static string MIRZA() Returns the MIRZA enum instance
- * @method static string MISS_FAJARDOSE() Returns the MISS_FAJARDOSE enum instance
- * @method static string MITR() Returns the MITR enum instance
- * @method static string MODAK() Returns the MODAK enum instance
- * @method static string MODERN_ANTIQUA() Returns the MODERN_ANTIQUA enum instance
- * @method static string MOGRA() Returns the MOGRA enum instance
- * @method static string MOLENGO() Returns the MOLENGO enum instance
- * @method static string MOLLE() Returns the MOLLE enum instance
- * @method static string MONDA() Returns the MONDA enum instance
- * @method static string MONOFETT() Returns the MONOFETT enum instance
- * @method static string MONOTON() Returns the MONOTON enum instance
- * @method static string MONSIEUR_LA_DOULAISE() Returns the MONSIEUR_LA_DOULAISE enum instance
- * @method static string MONTAGA() Returns the MONTAGA enum instance
- * @method static string MONTEZ() Returns the MONTEZ enum instance
- * @method static string MONTSERRAT() Returns the MONTSERRAT enum instance
- * @method static string MONTSERRAT_ALTERNATES() Returns the MONTSERRAT_ALTERNATES enum instance
- * @method static string MONTSERRAT_SUBRAYADA() Returns the MONTSERRAT_SUBRAYADA enum instance
- * @method static string MOUL() Returns the MOUL enum instance
- * @method static string MOULPALI() Returns the MOULPALI enum instance
- * @method static string MOUNTAINS_OF_CHRISTMAS() Returns the MOUNTAINS_OF_CHRISTMAS enum instance
- * @method static string MOUSE_MEMOIRS() Returns the MOUSE_MEMOIRS enum instance
- * @method static string MR_BEDFORT() Returns the MR_BEDFORT enum instance
- * @method static string MR_DAFOE() Returns the MR_DAFOE enum instance
- * @method static string MR_DE_HAVILAND() Returns the MR_DE_HAVILAND enum instance
- * @method static string MRS_SAINT_DELAFIELD() Returns the MRS_SAINT_DELAFIELD enum instance
- * @method static string MRS_SHEPPARDS() Returns the MRS_SHEPPARDS enum instance
- * @method static string MUKTA() Returns the MUKTA enum instance
- * @method static string MUKTA_MAHEE() Returns the MUKTA_MAHEE enum instance
- * @method static string MUKTA_MALAR() Returns the MUKTA_MALAR enum instance
- * @method static string MUKTA_VAANI() Returns the MUKTA_VAANI enum instance
- * @method static string MULI() Returns the MULI enum instance
- * @method static string MYSTERY_QUEST() Returns the MYSTERY_QUEST enum instance
- * @method static string NTR() Returns the NTR enum instance
- * @method static string NEUCHA() Returns the NEUCHA enum instance
- * @method static string NEUTON() Returns the NEUTON enum instance
- * @method static string NEW_ROCKER() Returns the NEW_ROCKER enum instance
- * @method static string NEWS_CYCLE() Returns the NEWS_CYCLE enum instance
- * @method static string NICONNE() Returns the NICONNE enum instance
- * @method static string NIXIE_ONE() Returns the NIXIE_ONE enum instance
- * @method static string NOBILE() Returns the NOBILE enum instance
- * @method static string NOKORA() Returns the NOKORA enum instance
- * @method static string NORICAN() Returns the NORICAN enum instance
- * @method static string NOSIFER() Returns the NOSIFER enum instance
- * @method static string NOTHING_YOU_COULD_DO() Returns the NOTHING_YOU_COULD_DO enum instance
- * @method static string NOTICIA_TEXT() Returns the NOTICIA_TEXT enum instance
- * @method static string NOTO_SANS() Returns the NOTO_SANS enum instance
- * @method static string NOTO_SERIF() Returns the NOTO_SERIF enum instance
- * @method static string NOVA_CUT() Returns the NOVA_CUT enum instance
- * @method static string NOVA_FLAT() Returns the NOVA_FLAT enum instance
- * @method static string NOVA_MONO() Returns the NOVA_MONO enum instance
- * @method static string NOVA_OVAL() Returns the NOVA_OVAL enum instance
- * @method static string NOVA_ROUND() Returns the NOVA_ROUND enum instance
- * @method static string NOVA_SCRIPT() Returns the NOVA_SCRIPT enum instance
- * @method static string NOVA_SLIM() Returns the NOVA_SLIM enum instance
- * @method static string NOVA_SQUARE() Returns the NOVA_SQUARE enum instance
- * @method static string NUMANS() Returns the NUMANS enum instance
- * @method static string NUNITO() Returns the NUNITO enum instance
- * @method static string NUNITO_SANS() Returns the NUNITO_SANS enum instance
- * @method static string ODOR_MEAN_CHEY() Returns the ODOR_MEAN_CHEY enum instance
- * @method static string OFFSIDE() Returns the OFFSIDE enum instance
- * @method static string OLD_STANDARD_TT() Returns the OLD_STANDARD_TT enum instance
- * @method static string OLDENBURG() Returns the OLDENBURG enum instance
- * @method static string OLEO_SCRIPT() Returns the OLEO_SCRIPT enum instance
- * @method static string OLEO_SCRIPT_SWASH_CAPS() Returns the OLEO_SCRIPT_SWASH_CAPS enum instance
- * @method static string OPEN_SANS() Returns the OPEN_SANS enum instance
- * @method static string OPEN_SANS_CONDENSED() Returns the OPEN_SANS_CONDENSED enum instance
- * @method static string ORANIENBAUM() Returns the ORANIENBAUM enum instance
- * @method static string ORBITRON() Returns the ORBITRON enum instance
- * @method static string OREGANO() Returns the OREGANO enum instance
- * @method static string ORIENTA() Returns the ORIENTA enum instance
- * @method static string ORIGINAL_SURFER() Returns the ORIGINAL_SURFER enum instance
- * @method static string OSWALD() Returns the OSWALD enum instance
- * @method static string OVER_THE_RAINBOW() Returns the OVER_THE_RAINBOW enum instance
- * @method static string OVERLOCK() Returns the OVERLOCK enum instance
- * @method static string OVERLOCK_SC() Returns the OVERLOCK_SC enum instance
- * @method static string OVERPASS() Returns the OVERPASS enum instance
- * @method static string OVERPASS_MONO() Returns the OVERPASS_MONO enum instance
- * @method static string OVO() Returns the OVO enum instance
- * @method static string OXYGEN() Returns the OXYGEN enum instance
- * @method static string OXYGEN_MONO() Returns the OXYGEN_MONO enum instance
- * @method static string PT_MONO() Returns the PT_MONO enum instance
- * @method static string PT_SANS() Returns the PT_SANS enum instance
- * @method static string PT_SANS_CAPTION() Returns the PT_SANS_CAPTION enum instance
- * @method static string PT_SANS_NARROW() Returns the PT_SANS_NARROW enum instance
- * @method static string PT_SERIF() Returns the PT_SERIF enum instance
- * @method static string PT_SERIF_CAPTION() Returns the PT_SERIF_CAPTION enum instance
- * @method static string PACIFICO() Returns the PACIFICO enum instance
- * @method static string PADAUK() Returns the PADAUK enum instance
- * @method static string PALANQUIN() Returns the PALANQUIN enum instance
- * @method static string PALANQUIN_DARK() Returns the PALANQUIN_DARK enum instance
- * @method static string PANGOLIN() Returns the PANGOLIN enum instance
- * @method static string PAPRIKA() Returns the PAPRIKA enum instance
- * @method static string PARISIENNE() Returns the PARISIENNE enum instance
- * @method static string PASSERO_ONE() Returns the PASSERO_ONE enum instance
- * @method static string PASSION_ONE() Returns the PASSION_ONE enum instance
- * @method static string PATHWAY_GOTHIC_ONE() Returns the PATHWAY_GOTHIC_ONE enum instance
- * @method static string PATRICK_HAND() Returns the PATRICK_HAND enum instance
- * @method static string PATRICK_HAND_SC() Returns the PATRICK_HAND_SC enum instance
- * @method static string PATTAYA() Returns the PATTAYA enum instance
- * @method static string PATUA_ONE() Returns the PATUA_ONE enum instance
- * @method static string PAVANAM() Returns the PAVANAM enum instance
- * @method static string PAYTONE_ONE() Returns the PAYTONE_ONE enum instance
- * @method static string PEDDANA() Returns the PEDDANA enum instance
- * @method static string PERALTA() Returns the PERALTA enum instance
- * @method static string PERMANENT_MARKER() Returns the PERMANENT_MARKER enum instance
- * @method static string PETIT_FORMAL_SCRIPT() Returns the PETIT_FORMAL_SCRIPT enum instance
- * @method static string PETRONA() Returns the PETRONA enum instance
- * @method static string PHILOSOPHER() Returns the PHILOSOPHER enum instance
- * @method static string PIEDRA() Returns the PIEDRA enum instance
- * @method static string PINYON_SCRIPT() Returns the PINYON_SCRIPT enum instance
- * @method static string PIRATA_ONE() Returns the PIRATA_ONE enum instance
- * @method static string PLASTER() Returns the PLASTER enum instance
- * @method static string PLAY() Returns the PLAY enum instance
- * @method static string PLAYBALL() Returns the PLAYBALL enum instance
- * @method static string PLAYFAIR_DISPLAY() Returns the PLAYFAIR_DISPLAY enum instance
- * @method static string PLAYFAIR_DISPLAY_SC() Returns the PLAYFAIR_DISPLAY_SC enum instance
- * @method static string PODKOVA() Returns the PODKOVA enum instance
- * @method static string POIRET_ONE() Returns the POIRET_ONE enum instance
- * @method static string POLLER_ONE() Returns the POLLER_ONE enum instance
- * @method static string POLY() Returns the POLY enum instance
- * @method static string POMPIERE() Returns the POMPIERE enum instance
- * @method static string PONTANO_SANS() Returns the PONTANO_SANS enum instance
- * @method static string POPPINS() Returns the POPPINS enum instance
- * @method static string PORT_LLIGAT_SANS() Returns the PORT_LLIGAT_SANS enum instance
- * @method static string PORT_LLIGAT_SLAB() Returns the PORT_LLIGAT_SLAB enum instance
- * @method static string PRAGATI_NARROW() Returns the PRAGATI_NARROW enum instance
- * @method static string PRATA() Returns the PRATA enum instance
- * @method static string PREAHVIHEAR() Returns the PREAHVIHEAR enum instance
- * @method static string PRESS_START_2P() Returns the PRESS_START_2P enum instance
- * @method static string PRIDI() Returns the PRIDI enum instance
- * @method static string PRINCESS_SOFIA() Returns the PRINCESS_SOFIA enum instance
- * @method static string PROCIONO() Returns the PROCIONO enum instance
- * @method static string PROMPT() Returns the PROMPT enum instance
- * @method static string PROSTO_ONE() Returns the PROSTO_ONE enum instance
- * @method static string PROZA_LIBRE() Returns the PROZA_LIBRE enum instance
- * @method static string PURITAN() Returns the PURITAN enum instance
- * @method static string PURPLE_PURSE() Returns the PURPLE_PURSE enum instance
- * @method static string QUANDO() Returns the QUANDO enum instance
- * @method static string QUANTICO() Returns the QUANTICO enum instance
- * @method static string QUATTROCENTO() Returns the QUATTROCENTO enum instance
- * @method static string QUATTROCENTO_SANS() Returns the QUATTROCENTO_SANS enum instance
- * @method static string QUESTRIAL() Returns the QUESTRIAL enum instance
- * @method static string QUICKSAND() Returns the QUICKSAND enum instance
- * @method static string QUINTESSENTIAL() Returns the QUINTESSENTIAL enum instance
- * @method static string QWIGLEY() Returns the QWIGLEY enum instance
- * @method static string RACING_SANS_ONE() Returns the RACING_SANS_ONE enum instance
- * @method static string RADLEY() Returns the RADLEY enum instance
- * @method static string RAJDHANI() Returns the RAJDHANI enum instance
- * @method static string RAKKAS() Returns the RAKKAS enum instance
- * @method static string RALEWAY() Returns the RALEWAY enum instance
- * @method static string RALEWAY_DOTS() Returns the RALEWAY_DOTS enum instance
- * @method static string RAMABHADRA() Returns the RAMABHADRA enum instance
- * @method static string RAMARAJA() Returns the RAMARAJA enum instance
- * @method static string RAMBLA() Returns the RAMBLA enum instance
- * @method static string RAMMETTO_ONE() Returns the RAMMETTO_ONE enum instance
- * @method static string RANCHERS() Returns the RANCHERS enum instance
- * @method static string RANCHO() Returns the RANCHO enum instance
- * @method static string RANGA() Returns the RANGA enum instance
- * @method static string RASA() Returns the RASA enum instance
- * @method static string RATIONALE() Returns the RATIONALE enum instance
- * @method static string RAVI_PRAKASH() Returns the RAVI_PRAKASH enum instance
- * @method static string REDRESSED() Returns the REDRESSED enum instance
- * @method static string REEM_KUFI() Returns the REEM_KUFI enum instance
- * @method static string REENIE_BEANIE() Returns the REENIE_BEANIE enum instance
- * @method static string REVALIA() Returns the REVALIA enum instance
- * @method static string RHODIUM_LIBRE() Returns the RHODIUM_LIBRE enum instance
- * @method static string RIBEYE() Returns the RIBEYE enum instance
- * @method static string RIBEYE_MARROW() Returns the RIBEYE_MARROW enum instance
- * @method static string RIGHTEOUS() Returns the RIGHTEOUS enum instance
- * @method static string RISQUE() Returns the RISQUE enum instance
- * @method static string ROBOTO() Returns the ROBOTO enum instance
- * @method static string ROBOTO_CONDENSED() Returns the ROBOTO_CONDENSED enum instance
- * @method static string ROBOTO_MONO() Returns the ROBOTO_MONO enum instance
- * @method static string ROBOTO_SLAB() Returns the ROBOTO_SLAB enum instance
- * @method static string ROCHESTER() Returns the ROCHESTER enum instance
- * @method static string ROCK_SALT() Returns the ROCK_SALT enum instance
- * @method static string ROKKITT() Returns the ROKKITT enum instance
- * @method static string ROMANESCO() Returns the ROMANESCO enum instance
- * @method static string ROPA_SANS() Returns the ROPA_SANS enum instance
- * @method static string ROSARIO() Returns the ROSARIO enum instance
- * @method static string ROSARIVO() Returns the ROSARIVO enum instance
- * @method static string ROUGE_SCRIPT() Returns the ROUGE_SCRIPT enum instance
- * @method static string ROZHA_ONE() Returns the ROZHA_ONE enum instance
- * @method static string RUBIK() Returns the RUBIK enum instance
- * @method static string RUBIK_MONO_ONE() Returns the RUBIK_MONO_ONE enum instance
- * @method static string RUDA() Returns the RUDA enum instance
- * @method static string RUFINA() Returns the RUFINA enum instance
- * @method static string RUGE_BOOGIE() Returns the RUGE_BOOGIE enum instance
- * @method static string RULUKO() Returns the RULUKO enum instance
- * @method static string RUM_RAISIN() Returns the RUM_RAISIN enum instance
- * @method static string RUSLAN_DISPLAY() Returns the RUSLAN_DISPLAY enum instance
- * @method static string RUSSO_ONE() Returns the RUSSO_ONE enum instance
- * @method static string RUTHIE() Returns the RUTHIE enum instance
- * @method static string RYE() Returns the RYE enum instance
- * @method static string SACRAMENTO() Returns the SACRAMENTO enum instance
- * @method static string SAHITYA() Returns the SAHITYA enum instance
- * @method static string SAIL() Returns the SAIL enum instance
- * @method static string SAIRA() Returns the SAIRA enum instance
- * @method static string SAIRA_CONDENSED() Returns the SAIRA_CONDENSED enum instance
- * @method static string SAIRA_EXTRA_CONDENSED() Returns the SAIRA_EXTRA_CONDENSED enum instance
- * @method static string SAIRA_SEMI_CONDENSED() Returns the SAIRA_SEMI_CONDENSED enum instance
- * @method static string SALSA() Returns the SALSA enum instance
- * @method static string SANCHEZ() Returns the SANCHEZ enum instance
- * @method static string SANCREEK() Returns the SANCREEK enum instance
- * @method static string SANSITA() Returns the SANSITA enum instance
- * @method static string SARALA() Returns the SARALA enum instance
- * @method static string SARINA() Returns the SARINA enum instance
- * @method static string SARPANCH() Returns the SARPANCH enum instance
- * @method static string SATISFY() Returns the SATISFY enum instance
- * @method static string SCADA() Returns the SCADA enum instance
- * @method static string SCHEHERAZADE() Returns the SCHEHERAZADE enum instance
- * @method static string SCHOOLBELL() Returns the SCHOOLBELL enum instance
- * @method static string SCOPE_ONE() Returns the SCOPE_ONE enum instance
- * @method static string SEAWEED_SCRIPT() Returns the SEAWEED_SCRIPT enum instance
- * @method static string SECULAR_ONE() Returns the SECULAR_ONE enum instance
- * @method static string SEDGWICK_AVE() Returns the SEDGWICK_AVE enum instance
- * @method static string SEDGWICK_AVE_DISPLAY() Returns the SEDGWICK_AVE_DISPLAY enum instance
- * @method static string SEVILLANA() Returns the SEVILLANA enum instance
- * @method static string SEYMOUR_ONE() Returns the SEYMOUR_ONE enum instance
- * @method static string SHADOWS_INTO_LIGHT() Returns the SHADOWS_INTO_LIGHT enum instance
- * @method static string SHADOWS_INTO_LIGHT_TWO() Returns the SHADOWS_INTO_LIGHT_TWO enum instance
- * @method static string SHANTI() Returns the SHANTI enum instance
- * @method static string SHARE() Returns the SHARE enum instance
- * @method static string SHARE_TECH() Returns the SHARE_TECH enum instance
- * @method static string SHARE_TECH_MONO() Returns the SHARE_TECH_MONO enum instance
- * @method static string SHOJUMARU() Returns the SHOJUMARU enum instance
- * @method static string SHORT_STACK() Returns the SHORT_STACK enum instance
- * @method static string SHRIKHAND() Returns the SHRIKHAND enum instance
- * @method static string SIEMREAP() Returns the SIEMREAP enum instance
- * @method static string SIGMAR_ONE() Returns the SIGMAR_ONE enum instance
- * @method static string SIGNIKA() Returns the SIGNIKA enum instance
- * @method static string SIGNIKA_NEGATIVE() Returns the SIGNIKA_NEGATIVE enum instance
- * @method static string SIMONETTA() Returns the SIMONETTA enum instance
- * @method static string SINTONY() Returns the SINTONY enum instance
- * @method static string SIRIN_STENCIL() Returns the SIRIN_STENCIL enum instance
- * @method static string SIX_CAPS() Returns the SIX_CAPS enum instance
- * @method static string SKRANJI() Returns the SKRANJI enum instance
- * @method static string SLABO_13PX() Returns the SLABO_13PX enum instance
- * @method static string SLABO_27PX() Returns the SLABO_27PX enum instance
- * @method static string SLACKEY() Returns the SLACKEY enum instance
- * @method static string SMOKUM() Returns the SMOKUM enum instance
- * @method static string SMYTHE() Returns the SMYTHE enum instance
- * @method static string SNIGLET() Returns the SNIGLET enum instance
- * @method static string SNIPPET() Returns the SNIPPET enum instance
- * @method static string SNOWBURST_ONE() Returns the SNOWBURST_ONE enum instance
- * @method static string SOFADI_ONE() Returns the SOFADI_ONE enum instance
- * @method static string SOFIA() Returns the SOFIA enum instance
- * @method static string SONSIE_ONE() Returns the SONSIE_ONE enum instance
- * @method static string SORTS_MILL_GOUDY() Returns the SORTS_MILL_GOUDY enum instance
- * @method static string SOURCE_CODE_PRO() Returns the SOURCE_CODE_PRO enum instance
- * @method static string SOURCE_SANS_PRO() Returns the SOURCE_SANS_PRO enum instance
- * @method static string SOURCE_SERIF_PRO() Returns the SOURCE_SERIF_PRO enum instance
- * @method static string SPACE_MONO() Returns the SPACE_MONO enum instance
- * @method static string SPECIAL_ELITE() Returns the SPECIAL_ELITE enum instance
- * @method static string SPECTRAL() Returns the SPECTRAL enum instance
- * @method static string SPECTRAL_SC() Returns the SPECTRAL_SC enum instance
- * @method static string SPICY_RICE() Returns the SPICY_RICE enum instance
- * @method static string SPINNAKER() Returns the SPINNAKER enum instance
- * @method static string SPIRAX() Returns the SPIRAX enum instance
- * @method static string SQUADA_ONE() Returns the SQUADA_ONE enum instance
- * @method static string SREE_KRUSHNADEVARAYA() Returns the SREE_KRUSHNADEVARAYA enum instance
- * @method static string SRIRACHA() Returns the SRIRACHA enum instance
- * @method static string STALEMATE() Returns the STALEMATE enum instance
- * @method static string STALINIST_ONE() Returns the STALINIST_ONE enum instance
- * @method static string STARDOS_STENCIL() Returns the STARDOS_STENCIL enum instance
- * @method static string STINT_ULTRA_CONDENSED() Returns the STINT_ULTRA_CONDENSED enum instance
- * @method static string STINT_ULTRA_EXPANDED() Returns the STINT_ULTRA_EXPANDED enum instance
- * @method static string STOKE() Returns the STOKE enum instance
- * @method static string STRAIT() Returns the STRAIT enum instance
- * @method static string SUE_ELLEN_FRANCISCO() Returns the SUE_ELLEN_FRANCISCO enum instance
- * @method static string SUEZ_ONE() Returns the SUEZ_ONE enum instance
- * @method static string SUMANA() Returns the SUMANA enum instance
- * @method static string SUNSHINEY() Returns the SUNSHINEY enum instance
- * @method static string SUPERMERCADO_ONE() Returns the SUPERMERCADO_ONE enum instance
- * @method static string SURA() Returns the SURA enum instance
- * @method static string SURANNA() Returns the SURANNA enum instance
- * @method static string SURAVARAM() Returns the SURAVARAM enum instance
- * @method static string SUWANNAPHUM() Returns the SUWANNAPHUM enum instance
- * @method static string SWANKY_AND_MOO_MOO() Returns the SWANKY_AND_MOO_MOO enum instance
- * @method static string SYNCOPATE() Returns the SYNCOPATE enum instance
- * @method static string TANGERINE() Returns the TANGERINE enum instance
- * @method static string TAPROM() Returns the TAPROM enum instance
- * @method static string TAURI() Returns the TAURI enum instance
- * @method static string TAVIRAJ() Returns the TAVIRAJ enum instance
- * @method static string TEKO() Returns the TEKO enum instance
- * @method static string TELEX() Returns the TELEX enum instance
- * @method static string TENALI_RAMAKRISHNA() Returns the TENALI_RAMAKRISHNA enum instance
- * @method static string TENOR_SANS() Returns the TENOR_SANS enum instance
- * @method static string TEXT_ME_ONE() Returns the TEXT_ME_ONE enum instance
- * @method static string THE_GIRL_NEXT_DOOR() Returns the THE_GIRL_NEXT_DOOR enum instance
- * @method static string TIENNE() Returns the TIENNE enum instance
- * @method static string TILLANA() Returns the TILLANA enum instance
- * @method static string TIMMANA() Returns the TIMMANA enum instance
- * @method static string TINOS() Returns the TINOS enum instance
- * @method static string TITAN_ONE() Returns the TITAN_ONE enum instance
- * @method static string TITILLIUM_WEB() Returns the TITILLIUM_WEB enum instance
- * @method static string TRADE_WINDS() Returns the TRADE_WINDS enum instance
- * @method static string TRIRONG() Returns the TRIRONG enum instance
- * @method static string TROCCHI() Returns the TROCCHI enum instance
- * @method static string TROCHUT() Returns the TROCHUT enum instance
- * @method static string TRYKKER() Returns the TRYKKER enum instance
- * @method static string TULPEN_ONE() Returns the TULPEN_ONE enum instance
- * @method static string UBUNTU() Returns the UBUNTU enum instance
- * @method static string UBUNTU_CONDENSED() Returns the UBUNTU_CONDENSED enum instance
- * @method static string UBUNTU_MONO() Returns the UBUNTU_MONO enum instance
- * @method static string ULTRA() Returns the ULTRA enum instance
- * @method static string UNCIAL_ANTIQUA() Returns the UNCIAL_ANTIQUA enum instance
- * @method static string UNDERDOG() Returns the UNDERDOG enum instance
- * @method static string UNICA_ONE() Returns the UNICA_ONE enum instance
- * @method static string UNIFRAKTURCOOK() Returns the UNIFRAKTURCOOK enum instance
- * @method static string UNIFRAKTURMAGUNTIA() Returns the UNIFRAKTURMAGUNTIA enum instance
- * @method static string UNKEMPT() Returns the UNKEMPT enum instance
- * @method static string UNLOCK() Returns the UNLOCK enum instance
- * @method static string UNNA() Returns the UNNA enum instance
- * @method static string VT323() Returns the VT323 enum instance
- * @method static string VAMPIRO_ONE() Returns the VAMPIRO_ONE enum instance
- * @method static string VARELA() Returns the VARELA enum instance
- * @method static string VARELA_ROUND() Returns the VARELA_ROUND enum instance
- * @method static string VAST_SHADOW() Returns the VAST_SHADOW enum instance
- * @method static string VESPER_LIBRE() Returns the VESPER_LIBRE enum instance
- * @method static string VIBUR() Returns the VIBUR enum instance
- * @method static string VIDALOKA() Returns the VIDALOKA enum instance
- * @method static string VIGA() Returns the VIGA enum instance
- * @method static string VOCES() Returns the VOCES enum instance
- * @method static string VOLKHOV() Returns the VOLKHOV enum instance
- * @method static string VOLLKORN() Returns the VOLLKORN enum instance
- * @method static string VOLLKORN_SC() Returns the VOLLKORN_SC enum instance
- * @method static string VOLTAIRE() Returns the VOLTAIRE enum instance
- * @method static string WAITING_FOR_THE_SUNRISE() Returns the WAITING_FOR_THE_SUNRISE enum instance
- * @method static string WALLPOET() Returns the WALLPOET enum instance
- * @method static string WALTER_TURNCOAT() Returns the WALTER_TURNCOAT enum instance
- * @method static string WARNES() Returns the WARNES enum instance
- * @method static string WELLFLEET() Returns the WELLFLEET enum instance
- * @method static string WENDY_ONE() Returns the WENDY_ONE enum instance
- * @method static string WIRE_ONE() Returns the WIRE_ONE enum instance
- * @method static string WORK_SANS() Returns the WORK_SANS enum instance
- * @method static string YANONE_KAFFEESATZ() Returns the YANONE_KAFFEESATZ enum instance
- * @method static string YANTRAMANAV() Returns the YANTRAMANAV enum instance
- * @method static string YATRA_ONE() Returns the YATRA_ONE enum instance
- * @method static string YELLOWTAIL() Returns the YELLOWTAIL enum instance
- * @method static string YESEVA_ONE() Returns the YESEVA_ONE enum instance
- * @method static string YESTERYEAR() Returns the YESTERYEAR enum instance
- * @method static string YRSA() Returns the YRSA enum instance
- * @method static string ZEYADA() Returns the ZEYADA enum instance
- * @method static string ZILLA_SLAB() Returns the ZILLA_SLAB enum instance
- * @method static string ZILLA_SLAB_HIGHLIGHT() Returns the ZILLA_SLAB_HIGHLIGHT enum instance
+ * @method static ABEEZEE() Returns the ABEEZEE enum instance
+ * @method static ABEL() Returns the ABEL enum instance
+ * @method static ABHAYA_LIBRE() Returns the ABHAYA_LIBRE enum instance
+ * @method static ABRIL_FATFACE() Returns the ABRIL_FATFACE enum instance
+ * @method static ACLONICA() Returns the ACLONICA enum instance
+ * @method static ACME() Returns the ACME enum instance
+ * @method static ACTOR() Returns the ACTOR enum instance
+ * @method static ADAMINA() Returns the ADAMINA enum instance
+ * @method static ADVENT_PRO() Returns the ADVENT_PRO enum instance
+ * @method static AGUAFINA_SCRIPT() Returns the AGUAFINA_SCRIPT enum instance
+ * @method static AKRONIM() Returns the AKRONIM enum instance
+ * @method static ALADIN() Returns the ALADIN enum instance
+ * @method static ALDRICH() Returns the ALDRICH enum instance
+ * @method static ALEF() Returns the ALEF enum instance
+ * @method static ALEGREYA() Returns the ALEGREYA enum instance
+ * @method static ALEGREYA_SC() Returns the ALEGREYA_SC enum instance
+ * @method static ALEGREYA_SANS() Returns the ALEGREYA_SANS enum instance
+ * @method static ALEGREYA_SANS_SC() Returns the ALEGREYA_SANS_SC enum instance
+ * @method static ALEX_BRUSH() Returns the ALEX_BRUSH enum instance
+ * @method static ALFA_SLAB_ONE() Returns the ALFA_SLAB_ONE enum instance
+ * @method static ALICE() Returns the ALICE enum instance
+ * @method static ALIKE() Returns the ALIKE enum instance
+ * @method static ALIKE_ANGULAR() Returns the ALIKE_ANGULAR enum instance
+ * @method static ALLAN() Returns the ALLAN enum instance
+ * @method static ALLERTA() Returns the ALLERTA enum instance
+ * @method static ALLERTA_STENCIL() Returns the ALLERTA_STENCIL enum instance
+ * @method static ALLURA() Returns the ALLURA enum instance
+ * @method static ALMENDRA() Returns the ALMENDRA enum instance
+ * @method static ALMENDRA_DISPLAY() Returns the ALMENDRA_DISPLAY enum instance
+ * @method static ALMENDRA_SC() Returns the ALMENDRA_SC enum instance
+ * @method static AMARANTE() Returns the AMARANTE enum instance
+ * @method static AMARANTH() Returns the AMARANTH enum instance
+ * @method static AMATIC_SC() Returns the AMATIC_SC enum instance
+ * @method static AMETHYSTA() Returns the AMETHYSTA enum instance
+ * @method static AMIKO() Returns the AMIKO enum instance
+ * @method static AMIRI() Returns the AMIRI enum instance
+ * @method static AMITA() Returns the AMITA enum instance
+ * @method static ANAHEIM() Returns the ANAHEIM enum instance
+ * @method static ANDADA() Returns the ANDADA enum instance
+ * @method static ANDIKA() Returns the ANDIKA enum instance
+ * @method static ANGKOR() Returns the ANGKOR enum instance
+ * @method static ANNIE_USE_YOUR_TELESCOPE() Returns the ANNIE_USE_YOUR_TELESCOPE enum instance
+ * @method static ANONYMOUS_PRO() Returns the ANONYMOUS_PRO enum instance
+ * @method static ANTIC() Returns the ANTIC enum instance
+ * @method static ANTIC_DIDONE() Returns the ANTIC_DIDONE enum instance
+ * @method static ANTIC_SLAB() Returns the ANTIC_SLAB enum instance
+ * @method static ANTON() Returns the ANTON enum instance
+ * @method static ARAPEY() Returns the ARAPEY enum instance
+ * @method static ARBUTUS() Returns the ARBUTUS enum instance
+ * @method static ARBUTUS_SLAB() Returns the ARBUTUS_SLAB enum instance
+ * @method static ARCHITECTS_DAUGHTER() Returns the ARCHITECTS_DAUGHTER enum instance
+ * @method static ARCHIVO() Returns the ARCHIVO enum instance
+ * @method static ARCHIVO_BLACK() Returns the ARCHIVO_BLACK enum instance
+ * @method static ARCHIVO_NARROW() Returns the ARCHIVO_NARROW enum instance
+ * @method static AREF_RUQAA() Returns the AREF_RUQAA enum instance
+ * @method static ARIMA_MADURAI() Returns the ARIMA_MADURAI enum instance
+ * @method static ARIMO() Returns the ARIMO enum instance
+ * @method static ARIZONIA() Returns the ARIZONIA enum instance
+ * @method static ARMATA() Returns the ARMATA enum instance
+ * @method static ARSENAL() Returns the ARSENAL enum instance
+ * @method static ARTIFIKA() Returns the ARTIFIKA enum instance
+ * @method static ARVO() Returns the ARVO enum instance
+ * @method static ARYA() Returns the ARYA enum instance
+ * @method static ASAP() Returns the ASAP enum instance
+ * @method static ASAP_CONDENSED() Returns the ASAP_CONDENSED enum instance
+ * @method static ASAR() Returns the ASAR enum instance
+ * @method static ASSET() Returns the ASSET enum instance
+ * @method static ASSISTANT() Returns the ASSISTANT enum instance
+ * @method static ASTLOCH() Returns the ASTLOCH enum instance
+ * @method static ASUL() Returns the ASUL enum instance
+ * @method static ATHITI() Returns the ATHITI enum instance
+ * @method static ATMA() Returns the ATMA enum instance
+ * @method static ATOMIC_AGE() Returns the ATOMIC_AGE enum instance
+ * @method static AUBREY() Returns the AUBREY enum instance
+ * @method static AUDIOWIDE() Returns the AUDIOWIDE enum instance
+ * @method static AUTOUR_ONE() Returns the AUTOUR_ONE enum instance
+ * @method static AVERAGE() Returns the AVERAGE enum instance
+ * @method static AVERAGE_SANS() Returns the AVERAGE_SANS enum instance
+ * @method static AVERIA_GRUESA_LIBRE() Returns the AVERIA_GRUESA_LIBRE enum instance
+ * @method static AVERIA_LIBRE() Returns the AVERIA_LIBRE enum instance
+ * @method static AVERIA_SANS_LIBRE() Returns the AVERIA_SANS_LIBRE enum instance
+ * @method static AVERIA_SERIF_LIBRE() Returns the AVERIA_SERIF_LIBRE enum instance
+ * @method static BAD_SCRIPT() Returns the BAD_SCRIPT enum instance
+ * @method static BAHIANA() Returns the BAHIANA enum instance
+ * @method static BALOO() Returns the BALOO enum instance
+ * @method static BALOO_BHAI() Returns the BALOO_BHAI enum instance
+ * @method static BALOO_BHAIJAAN() Returns the BALOO_BHAIJAAN enum instance
+ * @method static BALOO_BHAINA() Returns the BALOO_BHAINA enum instance
+ * @method static BALOO_CHETTAN() Returns the BALOO_CHETTAN enum instance
+ * @method static BALOO_DA() Returns the BALOO_DA enum instance
+ * @method static BALOO_PAAJI() Returns the BALOO_PAAJI enum instance
+ * @method static BALOO_TAMMA() Returns the BALOO_TAMMA enum instance
+ * @method static BALOO_TAMMUDU() Returns the BALOO_TAMMUDU enum instance
+ * @method static BALOO_THAMBI() Returns the BALOO_THAMBI enum instance
+ * @method static BALTHAZAR() Returns the BALTHAZAR enum instance
+ * @method static BANGERS() Returns the BANGERS enum instance
+ * @method static BARLOW() Returns the BARLOW enum instance
+ * @method static BARLOW_CONDENSED() Returns the BARLOW_CONDENSED enum instance
+ * @method static BARLOW_SEMI_CONDENSED() Returns the BARLOW_SEMI_CONDENSED enum instance
+ * @method static BARRIO() Returns the BARRIO enum instance
+ * @method static BASIC() Returns the BASIC enum instance
+ * @method static BATTAMBANG() Returns the BATTAMBANG enum instance
+ * @method static BAUMANS() Returns the BAUMANS enum instance
+ * @method static BAYON() Returns the BAYON enum instance
+ * @method static BELGRANO() Returns the BELGRANO enum instance
+ * @method static BELLEFAIR() Returns the BELLEFAIR enum instance
+ * @method static BELLEZA() Returns the BELLEZA enum instance
+ * @method static BENCHNINE() Returns the BENCHNINE enum instance
+ * @method static BENTHAM() Returns the BENTHAM enum instance
+ * @method static BERKSHIRE_SWASH() Returns the BERKSHIRE_SWASH enum instance
+ * @method static BEVAN() Returns the BEVAN enum instance
+ * @method static BIGELOW_RULES() Returns the BIGELOW_RULES enum instance
+ * @method static BIGSHOT_ONE() Returns the BIGSHOT_ONE enum instance
+ * @method static BILBO() Returns the BILBO enum instance
+ * @method static BILBO_SWASH_CAPS() Returns the BILBO_SWASH_CAPS enum instance
+ * @method static BIORHYME() Returns the BIORHYME enum instance
+ * @method static BIORHYME_EXPANDED() Returns the BIORHYME_EXPANDED enum instance
+ * @method static BIRYANI() Returns the BIRYANI enum instance
+ * @method static BITTER() Returns the BITTER enum instance
+ * @method static BLACK_OPS_ONE() Returns the BLACK_OPS_ONE enum instance
+ * @method static BOKOR() Returns the BOKOR enum instance
+ * @method static BONBON() Returns the BONBON enum instance
+ * @method static BOOGALOO() Returns the BOOGALOO enum instance
+ * @method static BOWLBY_ONE() Returns the BOWLBY_ONE enum instance
+ * @method static BOWLBY_ONE_SC() Returns the BOWLBY_ONE_SC enum instance
+ * @method static BRAWLER() Returns the BRAWLER enum instance
+ * @method static BREE_SERIF() Returns the BREE_SERIF enum instance
+ * @method static BUBBLEGUM_SANS() Returns the BUBBLEGUM_SANS enum instance
+ * @method static BUBBLER_ONE() Returns the BUBBLER_ONE enum instance
+ * @method static BUDA() Returns the BUDA enum instance
+ * @method static BUENARD() Returns the BUENARD enum instance
+ * @method static BUNGEE() Returns the BUNGEE enum instance
+ * @method static BUNGEE_HAIRLINE() Returns the BUNGEE_HAIRLINE enum instance
+ * @method static BUNGEE_INLINE() Returns the BUNGEE_INLINE enum instance
+ * @method static BUNGEE_OUTLINE() Returns the BUNGEE_OUTLINE enum instance
+ * @method static BUNGEE_SHADE() Returns the BUNGEE_SHADE enum instance
+ * @method static BUTCHERMAN() Returns the BUTCHERMAN enum instance
+ * @method static BUTTERFLY_KIDS() Returns the BUTTERFLY_KIDS enum instance
+ * @method static CABIN() Returns the CABIN enum instance
+ * @method static CABIN_CONDENSED() Returns the CABIN_CONDENSED enum instance
+ * @method static CABIN_SKETCH() Returns the CABIN_SKETCH enum instance
+ * @method static CAESAR_DRESSING() Returns the CAESAR_DRESSING enum instance
+ * @method static CAGLIOSTRO() Returns the CAGLIOSTRO enum instance
+ * @method static CAIRO() Returns the CAIRO enum instance
+ * @method static CALLIGRAFFITTI() Returns the CALLIGRAFFITTI enum instance
+ * @method static CAMBAY() Returns the CAMBAY enum instance
+ * @method static CAMBO() Returns the CAMBO enum instance
+ * @method static CANDAL() Returns the CANDAL enum instance
+ * @method static CANTARELL() Returns the CANTARELL enum instance
+ * @method static CANTATA_ONE() Returns the CANTATA_ONE enum instance
+ * @method static CANTORA_ONE() Returns the CANTORA_ONE enum instance
+ * @method static CAPRIOLA() Returns the CAPRIOLA enum instance
+ * @method static CARDO() Returns the CARDO enum instance
+ * @method static CARME() Returns the CARME enum instance
+ * @method static CARROIS_GOTHIC() Returns the CARROIS_GOTHIC enum instance
+ * @method static CARROIS_GOTHIC_SC() Returns the CARROIS_GOTHIC_SC enum instance
+ * @method static CARTER_ONE() Returns the CARTER_ONE enum instance
+ * @method static CATAMARAN() Returns the CATAMARAN enum instance
+ * @method static CAUDEX() Returns the CAUDEX enum instance
+ * @method static CAVEAT() Returns the CAVEAT enum instance
+ * @method static CAVEAT_BRUSH() Returns the CAVEAT_BRUSH enum instance
+ * @method static CEDARVILLE_CURSIVE() Returns the CEDARVILLE_CURSIVE enum instance
+ * @method static CEVICHE_ONE() Returns the CEVICHE_ONE enum instance
+ * @method static CHANGA() Returns the CHANGA enum instance
+ * @method static CHANGA_ONE() Returns the CHANGA_ONE enum instance
+ * @method static CHANGO() Returns the CHANGO enum instance
+ * @method static CHATHURA() Returns the CHATHURA enum instance
+ * @method static CHAU_PHILOMENE_ONE() Returns the CHAU_PHILOMENE_ONE enum instance
+ * @method static CHELA_ONE() Returns the CHELA_ONE enum instance
+ * @method static CHELSEA_MARKET() Returns the CHELSEA_MARKET enum instance
+ * @method static CHENLA() Returns the CHENLA enum instance
+ * @method static CHERRY_CREAM_SODA() Returns the CHERRY_CREAM_SODA enum instance
+ * @method static CHERRY_SWASH() Returns the CHERRY_SWASH enum instance
+ * @method static CHEWY() Returns the CHEWY enum instance
+ * @method static CHICLE() Returns the CHICLE enum instance
+ * @method static CHIVO() Returns the CHIVO enum instance
+ * @method static CHONBURI() Returns the CHONBURI enum instance
+ * @method static CINZEL() Returns the CINZEL enum instance
+ * @method static CINZEL_DECORATIVE() Returns the CINZEL_DECORATIVE enum instance
+ * @method static CLICKER_SCRIPT() Returns the CLICKER_SCRIPT enum instance
+ * @method static CODA() Returns the CODA enum instance
+ * @method static CODA_CAPTION() Returns the CODA_CAPTION enum instance
+ * @method static CODYSTAR() Returns the CODYSTAR enum instance
+ * @method static COINY() Returns the COINY enum instance
+ * @method static COMBO() Returns the COMBO enum instance
+ * @method static COMFORTAA() Returns the COMFORTAA enum instance
+ * @method static COMING_SOON() Returns the COMING_SOON enum instance
+ * @method static CONCERT_ONE() Returns the CONCERT_ONE enum instance
+ * @method static CONDIMENT() Returns the CONDIMENT enum instance
+ * @method static CONTENT() Returns the CONTENT enum instance
+ * @method static CONTRAIL_ONE() Returns the CONTRAIL_ONE enum instance
+ * @method static CONVERGENCE() Returns the CONVERGENCE enum instance
+ * @method static COOKIE() Returns the COOKIE enum instance
+ * @method static COPSE() Returns the COPSE enum instance
+ * @method static CORBEN() Returns the CORBEN enum instance
+ * @method static CORMORANT() Returns the CORMORANT enum instance
+ * @method static CORMORANT_GARAMOND() Returns the CORMORANT_GARAMOND enum instance
+ * @method static CORMORANT_INFANT() Returns the CORMORANT_INFANT enum instance
+ * @method static CORMORANT_SC() Returns the CORMORANT_SC enum instance
+ * @method static CORMORANT_UNICASE() Returns the CORMORANT_UNICASE enum instance
+ * @method static CORMORANT_UPRIGHT() Returns the CORMORANT_UPRIGHT enum instance
+ * @method static COURGETTE() Returns the COURGETTE enum instance
+ * @method static COUSINE() Returns the COUSINE enum instance
+ * @method static COUSTARD() Returns the COUSTARD enum instance
+ * @method static COVERED_BY_YOUR_GRACE() Returns the COVERED_BY_YOUR_GRACE enum instance
+ * @method static CRAFTY_GIRLS() Returns the CRAFTY_GIRLS enum instance
+ * @method static CREEPSTER() Returns the CREEPSTER enum instance
+ * @method static CRETE_ROUND() Returns the CRETE_ROUND enum instance
+ * @method static CRIMSON_TEXT() Returns the CRIMSON_TEXT enum instance
+ * @method static CROISSANT_ONE() Returns the CROISSANT_ONE enum instance
+ * @method static CRUSHED() Returns the CRUSHED enum instance
+ * @method static CUPRUM() Returns the CUPRUM enum instance
+ * @method static CUTIVE() Returns the CUTIVE enum instance
+ * @method static CUTIVE_MONO() Returns the CUTIVE_MONO enum instance
+ * @method static DAMION() Returns the DAMION enum instance
+ * @method static DANCING_SCRIPT() Returns the DANCING_SCRIPT enum instance
+ * @method static DANGREK() Returns the DANGREK enum instance
+ * @method static DAVID_LIBRE() Returns the DAVID_LIBRE enum instance
+ * @method static DAWNING_OF_A_NEW() Returns the DAWNING_OF_A_NEW enum instance
+ * @method static DAYS_ONE() Returns the DAYS_ONE enum instance
+ * @method static DEKKO() Returns the DEKKO enum instance
+ * @method static DELIUS() Returns the DELIUS enum instance
+ * @method static DELIUS_SWASH_CAPS() Returns the DELIUS_SWASH_CAPS enum instance
+ * @method static DELIUS_UNICASE() Returns the DELIUS_UNICASE enum instance
+ * @method static DELLA_RESPIRA() Returns the DELLA_RESPIRA enum instance
+ * @method static DENK_ONE() Returns the DENK_ONE enum instance
+ * @method static DEVONSHIRE() Returns the DEVONSHIRE enum instance
+ * @method static DHURJATI() Returns the DHURJATI enum instance
+ * @method static DIDACT_GOTHIC() Returns the DIDACT_GOTHIC enum instance
+ * @method static DIPLOMATA() Returns the DIPLOMATA enum instance
+ * @method static DIPLOMATA_SC() Returns the DIPLOMATA_SC enum instance
+ * @method static DOMINE() Returns the DOMINE enum instance
+ * @method static DONEGAL_ONE() Returns the DONEGAL_ONE enum instance
+ * @method static DOPPIO_ONE() Returns the DOPPIO_ONE enum instance
+ * @method static DORSA() Returns the DORSA enum instance
+ * @method static DOSIS() Returns the DOSIS enum instance
+ * @method static DR_SUGIYAMA() Returns the DR_SUGIYAMA enum instance
+ * @method static DURU_SANS() Returns the DURU_SANS enum instance
+ * @method static DYNALIGHT() Returns the DYNALIGHT enum instance
+ * @method static EB_GARAMOND() Returns the EB_GARAMOND enum instance
+ * @method static EAGLE_LAKE() Returns the EAGLE_LAKE enum instance
+ * @method static EATER() Returns the EATER enum instance
+ * @method static ECONOMICA() Returns the ECONOMICA enum instance
+ * @method static ECZAR() Returns the ECZAR enum instance
+ * @method static EL_MESSIRI() Returns the EL_MESSIRI enum instance
+ * @method static ELECTROLIZE() Returns the ELECTROLIZE enum instance
+ * @method static ELSIE() Returns the ELSIE enum instance
+ * @method static ELSIE_SWASH_CAPS() Returns the ELSIE_SWASH_CAPS enum instance
+ * @method static EMBLEMA_ONE() Returns the EMBLEMA_ONE enum instance
+ * @method static EMILYS_CANDY() Returns the EMILYS_CANDY enum instance
+ * @method static ENCODE_SANS() Returns the ENCODE_SANS enum instance
+ * @method static ENCODE_SANS_CONDENSED() Returns the ENCODE_SANS_CONDENSED enum instance
+ * @method static ENCODE_SANS_EXPANDED() Returns the ENCODE_SANS_EXPANDED enum instance
+ * @method static ENCODE_SANS_SEMI_CONDENSED() Returns the ENCODE_SANS_SEMI_CONDENSED enum instance
+ * @method static ENCODE_SANS_SEMI_EXPANDED() Returns the ENCODE_SANS_SEMI_EXPANDED enum instance
+ * @method static ENGAGEMENT() Returns the ENGAGEMENT enum instance
+ * @method static ENGLEBERT() Returns the ENGLEBERT enum instance
+ * @method static ENRIQUETA() Returns the ENRIQUETA enum instance
+ * @method static ERICA_ONE() Returns the ERICA_ONE enum instance
+ * @method static ESTEBAN() Returns the ESTEBAN enum instance
+ * @method static EUPHORIA_SCRIPT() Returns the EUPHORIA_SCRIPT enum instance
+ * @method static EWERT() Returns the EWERT enum instance
+ * @method static EXO() Returns the EXO enum instance
+ * @method static EXO_2() Returns the EXO_2 enum instance
+ * @method static EXPLETUS_SANS() Returns the EXPLETUS_SANS enum instance
+ * @method static FANWOOD_TEXT() Returns the FANWOOD_TEXT enum instance
+ * @method static FARSAN() Returns the FARSAN enum instance
+ * @method static FASCINATE() Returns the FASCINATE enum instance
+ * @method static FASCINATE_INLINE() Returns the FASCINATE_INLINE enum instance
+ * @method static FASTER_ONE() Returns the FASTER_ONE enum instance
+ * @method static FASTHAND() Returns the FASTHAND enum instance
+ * @method static FAUNA_ONE() Returns the FAUNA_ONE enum instance
+ * @method static FAUSTINA() Returns the FAUSTINA enum instance
+ * @method static FEDERANT() Returns the FEDERANT enum instance
+ * @method static FEDERO() Returns the FEDERO enum instance
+ * @method static FELIPA() Returns the FELIPA enum instance
+ * @method static FENIX() Returns the FENIX enum instance
+ * @method static FINGER_PAINT() Returns the FINGER_PAINT enum instance
+ * @method static FIRA_MONO() Returns the FIRA_MONO enum instance
+ * @method static FIRA_SANS() Returns the FIRA_SANS enum instance
+ * @method static FIRA_SANS_CONDENSED() Returns the FIRA_SANS_CONDENSED enum instance
+ * @method static FIRA_SANS_EXTRA_CONDENSED() Returns the FIRA_SANS_EXTRA_CONDENSED enum instance
+ * @method static FJALLA_ONE() Returns the FJALLA_ONE enum instance
+ * @method static FJORD_ONE() Returns the FJORD_ONE enum instance
+ * @method static FLAMENCO() Returns the FLAMENCO enum instance
+ * @method static FLAVORS() Returns the FLAVORS enum instance
+ * @method static FONDAMENTO() Returns the FONDAMENTO enum instance
+ * @method static FONTDINER_SWANKY() Returns the FONTDINER_SWANKY enum instance
+ * @method static FORUM() Returns the FORUM enum instance
+ * @method static FRANCOIS_ONE() Returns the FRANCOIS_ONE enum instance
+ * @method static FRANK_RUHL_LIBRE() Returns the FRANK_RUHL_LIBRE enum instance
+ * @method static FRECKLE_FACE() Returns the FRECKLE_FACE enum instance
+ * @method static FREDERICKA_THE_GREAT() Returns the FREDERICKA_THE_GREAT enum instance
+ * @method static FREDOKA_ONE() Returns the FREDOKA_ONE enum instance
+ * @method static FREEHAND() Returns the FREEHAND enum instance
+ * @method static FRESCA() Returns the FRESCA enum instance
+ * @method static FRIJOLE() Returns the FRIJOLE enum instance
+ * @method static FRUKTUR() Returns the FRUKTUR enum instance
+ * @method static FUGAZ_ONE() Returns the FUGAZ_ONE enum instance
+ * @method static GFS_DIDOT() Returns the GFS_DIDOT enum instance
+ * @method static GFS_NEOHELLENIC() Returns the GFS_NEOHELLENIC enum instance
+ * @method static GABRIELA() Returns the GABRIELA enum instance
+ * @method static GAFATA() Returns the GAFATA enum instance
+ * @method static GALADA() Returns the GALADA enum instance
+ * @method static GALDEANO() Returns the GALDEANO enum instance
+ * @method static GALINDO() Returns the GALINDO enum instance
+ * @method static GENTIUM_BASIC() Returns the GENTIUM_BASIC enum instance
+ * @method static GENTIUM_BOOK_BASIC() Returns the GENTIUM_BOOK_BASIC enum instance
+ * @method static GEO() Returns the GEO enum instance
+ * @method static GEOSTAR() Returns the GEOSTAR enum instance
+ * @method static GEOSTAR_FILL() Returns the GEOSTAR_FILL enum instance
+ * @method static GERMANIA_ONE() Returns the GERMANIA_ONE enum instance
+ * @method static GIDUGU() Returns the GIDUGU enum instance
+ * @method static GILDA_DISPLAY() Returns the GILDA_DISPLAY enum instance
+ * @method static GIVE_YOU_GLORY() Returns the GIVE_YOU_GLORY enum instance
+ * @method static GLASS_ANTIQUA() Returns the GLASS_ANTIQUA enum instance
+ * @method static GLEGOO() Returns the GLEGOO enum instance
+ * @method static GLORIA_HALLELUJAH() Returns the GLORIA_HALLELUJAH enum instance
+ * @method static GOBLIN_ONE() Returns the GOBLIN_ONE enum instance
+ * @method static GOCHI_HAND() Returns the GOCHI_HAND enum instance
+ * @method static GORDITAS() Returns the GORDITAS enum instance
+ * @method static GOUDY_BOOKLETTER_1911() Returns the GOUDY_BOOKLETTER_1911 enum instance
+ * @method static GRADUATE() Returns the GRADUATE enum instance
+ * @method static GRAND_HOTEL() Returns the GRAND_HOTEL enum instance
+ * @method static GRAVITAS_ONE() Returns the GRAVITAS_ONE enum instance
+ * @method static GREAT_VIBES() Returns the GREAT_VIBES enum instance
+ * @method static GRIFFY() Returns the GRIFFY enum instance
+ * @method static GRUPPO() Returns the GRUPPO enum instance
+ * @method static GUDEA() Returns the GUDEA enum instance
+ * @method static GURAJADA() Returns the GURAJADA enum instance
+ * @method static HABIBI() Returns the HABIBI enum instance
+ * @method static HALANT() Returns the HALANT enum instance
+ * @method static HAMMERSMITH_ONE() Returns the HAMMERSMITH_ONE enum instance
+ * @method static HANALEI() Returns the HANALEI enum instance
+ * @method static HANALEI_FILL() Returns the HANALEI_FILL enum instance
+ * @method static HANDLEE() Returns the HANDLEE enum instance
+ * @method static HANUMAN() Returns the HANUMAN enum instance
+ * @method static HAPPY_MONKEY() Returns the HAPPY_MONKEY enum instance
+ * @method static HARMATTAN() Returns the HARMATTAN enum instance
+ * @method static HEADLAND_ONE() Returns the HEADLAND_ONE enum instance
+ * @method static HEEBO() Returns the HEEBO enum instance
+ * @method static HENNY_PENNY() Returns the HENNY_PENNY enum instance
+ * @method static HERR_VON_MUELLERHOFF() Returns the HERR_VON_MUELLERHOFF enum instance
+ * @method static HIND() Returns the HIND enum instance
+ * @method static HIND_GUNTUR() Returns the HIND_GUNTUR enum instance
+ * @method static HIND_MADURAI() Returns the HIND_MADURAI enum instance
+ * @method static HIND_SILIGURI() Returns the HIND_SILIGURI enum instance
+ * @method static HIND_VADODARA() Returns the HIND_VADODARA enum instance
+ * @method static HOLTWOOD_ONE_SC() Returns the HOLTWOOD_ONE_SC enum instance
+ * @method static HOMEMADE_APPLE() Returns the HOMEMADE_APPLE enum instance
+ * @method static HOMENAJE() Returns the HOMENAJE enum instance
+ * @method static IM_FELL_DW_PICA() Returns the IM_FELL_DW_PICA enum instance
+ * @method static IM_FELL_DOUBLE_PICA() Returns the IM_FELL_DOUBLE_PICA enum instance
+ * @method static IM_FELL_ENGLISH() Returns the IM_FELL_ENGLISH enum instance
+ * @method static IM_FELL_ENGLISH_SC() Returns the IM_FELL_ENGLISH_SC enum instance
+ * @method static IM_FELL_FRENCH_CANON() Returns the IM_FELL_FRENCH_CANON enum instance
+ * @method static IM_FELL_GREAT_PRIMER() Returns the IM_FELL_GREAT_PRIMER enum instance
+ * @method static ICEBERG() Returns the ICEBERG enum instance
+ * @method static ICELAND() Returns the ICELAND enum instance
+ * @method static IMPRIMA() Returns the IMPRIMA enum instance
+ * @method static INCONSOLATA() Returns the INCONSOLATA enum instance
+ * @method static INDER() Returns the INDER enum instance
+ * @method static INDIE_FLOWER() Returns the INDIE_FLOWER enum instance
+ * @method static INIKA() Returns the INIKA enum instance
+ * @method static INKNUT_ANTIQUA() Returns the INKNUT_ANTIQUA enum instance
+ * @method static IRISH_GROVER() Returns the IRISH_GROVER enum instance
+ * @method static ISTOK_WEB() Returns the ISTOK_WEB enum instance
+ * @method static ITALIANA() Returns the ITALIANA enum instance
+ * @method static ITALIANNO() Returns the ITALIANNO enum instance
+ * @method static ITIM() Returns the ITIM enum instance
+ * @method static JACQUES_FRANCOIS() Returns the JACQUES_FRANCOIS enum instance
+ * @method static JACQUES_FRANCOIS_SHADOW() Returns the JACQUES_FRANCOIS_SHADOW enum instance
+ * @method static JALDI() Returns the JALDI enum instance
+ * @method static JIM_NIGHTSHADE() Returns the JIM_NIGHTSHADE enum instance
+ * @method static JOCKEY_ONE() Returns the JOCKEY_ONE enum instance
+ * @method static JOLLY_LODGER() Returns the JOLLY_LODGER enum instance
+ * @method static JOMHURIA() Returns the JOMHURIA enum instance
+ * @method static JOSEFIN_SANS() Returns the JOSEFIN_SANS enum instance
+ * @method static JOSEFIN_SLAB() Returns the JOSEFIN_SLAB enum instance
+ * @method static JOTI_ONE() Returns the JOTI_ONE enum instance
+ * @method static JUDSON() Returns the JUDSON enum instance
+ * @method static JULEE() Returns the JULEE enum instance
+ * @method static JULIUS_SANS_ONE() Returns the JULIUS_SANS_ONE enum instance
+ * @method static JUNGE() Returns the JUNGE enum instance
+ * @method static JURA() Returns the JURA enum instance
+ * @method static JUST_ANOTHER_HAND() Returns the JUST_ANOTHER_HAND enum instance
+ * @method static JUST_ME_AGAIN_DOWN() Returns the JUST_ME_AGAIN_DOWN enum instance
+ * @method static KADWA() Returns the KADWA enum instance
+ * @method static KALAM() Returns the KALAM enum instance
+ * @method static KAMERON() Returns the KAMERON enum instance
+ * @method static KANIT() Returns the KANIT enum instance
+ * @method static KANTUMRUY() Returns the KANTUMRUY enum instance
+ * @method static KARLA() Returns the KARLA enum instance
+ * @method static KARMA() Returns the KARMA enum instance
+ * @method static KATIBEH() Returns the KATIBEH enum instance
+ * @method static KAUSHAN_SCRIPT() Returns the KAUSHAN_SCRIPT enum instance
+ * @method static KAVIVANAR() Returns the KAVIVANAR enum instance
+ * @method static KAVOON() Returns the KAVOON enum instance
+ * @method static KDAM_THMOR() Returns the KDAM_THMOR enum instance
+ * @method static KEANIA_ONE() Returns the KEANIA_ONE enum instance
+ * @method static KELLY_SLAB() Returns the KELLY_SLAB enum instance
+ * @method static KENIA() Returns the KENIA enum instance
+ * @method static KHAND() Returns the KHAND enum instance
+ * @method static KHMER() Returns the KHMER enum instance
+ * @method static KHULA() Returns the KHULA enum instance
+ * @method static KITE_ONE() Returns the KITE_ONE enum instance
+ * @method static KNEWAVE() Returns the KNEWAVE enum instance
+ * @method static KOTTA_ONE() Returns the KOTTA_ONE enum instance
+ * @method static KOULEN() Returns the KOULEN enum instance
+ * @method static KRANKY() Returns the KRANKY enum instance
+ * @method static KREON() Returns the KREON enum instance
+ * @method static KRISTI() Returns the KRISTI enum instance
+ * @method static KRONA_ONE() Returns the KRONA_ONE enum instance
+ * @method static KUMAR_ONE() Returns the KUMAR_ONE enum instance
+ * @method static KUMAR_ONE_OUTLINE() Returns the KUMAR_ONE_OUTLINE enum instance
+ * @method static KURALE() Returns the KURALE enum instance
+ * @method static LA_BELLE_AURORE() Returns the LA_BELLE_AURORE enum instance
+ * @method static LAILA() Returns the LAILA enum instance
+ * @method static LAKKI_REDDY() Returns the LAKKI_REDDY enum instance
+ * @method static LALEZAR() Returns the LALEZAR enum instance
+ * @method static LANCELOT() Returns the LANCELOT enum instance
+ * @method static LATEEF() Returns the LATEEF enum instance
+ * @method static LATO() Returns the LATO enum instance
+ * @method static LEAGUE_SCRIPT() Returns the LEAGUE_SCRIPT enum instance
+ * @method static LECKERLI_ONE() Returns the LECKERLI_ONE enum instance
+ * @method static LEDGER() Returns the LEDGER enum instance
+ * @method static LEKTON() Returns the LEKTON enum instance
+ * @method static LEMON() Returns the LEMON enum instance
+ * @method static LEMONADA() Returns the LEMONADA enum instance
+ * @method static LIBRE_BARCODE_128() Returns the LIBRE_BARCODE_128 enum instance
+ * @method static LIBRE_BARCODE_128_TEXT() Returns the LIBRE_BARCODE_128_TEXT enum instance
+ * @method static LIBRE_BARCODE_39() Returns the LIBRE_BARCODE_39 enum instance
+ * @method static LIBRE_BARCODE_39_EXTENDED() Returns the LIBRE_BARCODE_39_EXTENDED enum instance
+ * @method static LIBRE_BARCODE_39_TEXT() Returns the LIBRE_BARCODE_39_TEXT enum instance
+ * @method static LIBRE_BASKERVILLE() Returns the LIBRE_BASKERVILLE enum instance
+ * @method static LIBRE_FRANKLIN() Returns the LIBRE_FRANKLIN enum instance
+ * @method static LIFE_SAVERS() Returns the LIFE_SAVERS enum instance
+ * @method static LILITA_ONE() Returns the LILITA_ONE enum instance
+ * @method static LILY_SCRIPT_ONE() Returns the LILY_SCRIPT_ONE enum instance
+ * @method static LIMELIGHT() Returns the LIMELIGHT enum instance
+ * @method static LINDEN_HILL() Returns the LINDEN_HILL enum instance
+ * @method static LOBSTER() Returns the LOBSTER enum instance
+ * @method static LOBSTER_TWO() Returns the LOBSTER_TWO enum instance
+ * @method static LONDRINA_OUTLINE() Returns the LONDRINA_OUTLINE enum instance
+ * @method static LONDRINA_SHADOW() Returns the LONDRINA_SHADOW enum instance
+ * @method static LONDRINA_SKETCH() Returns the LONDRINA_SKETCH enum instance
+ * @method static LONDRINA_SOLID() Returns the LONDRINA_SOLID enum instance
+ * @method static LORA() Returns the LORA enum instance
+ * @method static LOVE_YA_LIKE_A() Returns the LOVE_YA_LIKE_A enum instance
+ * @method static LOVED_BY_THE_KING() Returns the LOVED_BY_THE_KING enum instance
+ * @method static LOVERS_QUARREL() Returns the LOVERS_QUARREL enum instance
+ * @method static LUCKIEST_GUY() Returns the LUCKIEST_GUY enum instance
+ * @method static LUSITANA() Returns the LUSITANA enum instance
+ * @method static LUSTRIA() Returns the LUSTRIA enum instance
+ * @method static MACONDO() Returns the MACONDO enum instance
+ * @method static MACONDO_SWASH_CAPS() Returns the MACONDO_SWASH_CAPS enum instance
+ * @method static MADA() Returns the MADA enum instance
+ * @method static MAGRA() Returns the MAGRA enum instance
+ * @method static MAIDEN_ORANGE() Returns the MAIDEN_ORANGE enum instance
+ * @method static MAITREE() Returns the MAITREE enum instance
+ * @method static MAKO() Returns the MAKO enum instance
+ * @method static MALLANNA() Returns the MALLANNA enum instance
+ * @method static MANDALI() Returns the MANDALI enum instance
+ * @method static MANUALE() Returns the MANUALE enum instance
+ * @method static MARCELLUS() Returns the MARCELLUS enum instance
+ * @method static MARCELLUS_SC() Returns the MARCELLUS_SC enum instance
+ * @method static MARCK_SCRIPT() Returns the MARCK_SCRIPT enum instance
+ * @method static MARGARINE() Returns the MARGARINE enum instance
+ * @method static MARKO_ONE() Returns the MARKO_ONE enum instance
+ * @method static MARMELAD() Returns the MARMELAD enum instance
+ * @method static MARTEL() Returns the MARTEL enum instance
+ * @method static MARTEL_SANS() Returns the MARTEL_SANS enum instance
+ * @method static MARVEL() Returns the MARVEL enum instance
+ * @method static MATE() Returns the MATE enum instance
+ * @method static MATE_SC() Returns the MATE_SC enum instance
+ * @method static MAVEN_PRO() Returns the MAVEN_PRO enum instance
+ * @method static MCLAREN() Returns the MCLAREN enum instance
+ * @method static MEDDON() Returns the MEDDON enum instance
+ * @method static MEDIEVALSHARP() Returns the MEDIEVALSHARP enum instance
+ * @method static MEDULA_ONE() Returns the MEDULA_ONE enum instance
+ * @method static MEERA_INIMAI() Returns the MEERA_INIMAI enum instance
+ * @method static MEGRIM() Returns the MEGRIM enum instance
+ * @method static MEIE_SCRIPT() Returns the MEIE_SCRIPT enum instance
+ * @method static MERIENDA() Returns the MERIENDA enum instance
+ * @method static MERIENDA_ONE() Returns the MERIENDA_ONE enum instance
+ * @method static MERRIWEATHER() Returns the MERRIWEATHER enum instance
+ * @method static MERRIWEATHER_SANS() Returns the MERRIWEATHER_SANS enum instance
+ * @method static METAL() Returns the METAL enum instance
+ * @method static METAL_MANIA() Returns the METAL_MANIA enum instance
+ * @method static METAMORPHOUS() Returns the METAMORPHOUS enum instance
+ * @method static METROPHOBIC() Returns the METROPHOBIC enum instance
+ * @method static MICHROMA() Returns the MICHROMA enum instance
+ * @method static MILONGA() Returns the MILONGA enum instance
+ * @method static MILTONIAN() Returns the MILTONIAN enum instance
+ * @method static MILTONIAN_TATTOO() Returns the MILTONIAN_TATTOO enum instance
+ * @method static MINIVER() Returns the MINIVER enum instance
+ * @method static MIRIAM_LIBRE() Returns the MIRIAM_LIBRE enum instance
+ * @method static MIRZA() Returns the MIRZA enum instance
+ * @method static MISS_FAJARDOSE() Returns the MISS_FAJARDOSE enum instance
+ * @method static MITR() Returns the MITR enum instance
+ * @method static MODAK() Returns the MODAK enum instance
+ * @method static MODERN_ANTIQUA() Returns the MODERN_ANTIQUA enum instance
+ * @method static MOGRA() Returns the MOGRA enum instance
+ * @method static MOLENGO() Returns the MOLENGO enum instance
+ * @method static MOLLE() Returns the MOLLE enum instance
+ * @method static MONDA() Returns the MONDA enum instance
+ * @method static MONOFETT() Returns the MONOFETT enum instance
+ * @method static MONOTON() Returns the MONOTON enum instance
+ * @method static MONSIEUR_LA_DOULAISE() Returns the MONSIEUR_LA_DOULAISE enum instance
+ * @method static MONTAGA() Returns the MONTAGA enum instance
+ * @method static MONTEZ() Returns the MONTEZ enum instance
+ * @method static MONTSERRAT() Returns the MONTSERRAT enum instance
+ * @method static MONTSERRAT_ALTERNATES() Returns the MONTSERRAT_ALTERNATES enum instance
+ * @method static MONTSERRAT_SUBRAYADA() Returns the MONTSERRAT_SUBRAYADA enum instance
+ * @method static MOUL() Returns the MOUL enum instance
+ * @method static MOULPALI() Returns the MOULPALI enum instance
+ * @method static MOUNTAINS_OF_CHRISTMAS() Returns the MOUNTAINS_OF_CHRISTMAS enum instance
+ * @method static MOUSE_MEMOIRS() Returns the MOUSE_MEMOIRS enum instance
+ * @method static MR_BEDFORT() Returns the MR_BEDFORT enum instance
+ * @method static MR_DAFOE() Returns the MR_DAFOE enum instance
+ * @method static MR_DE_HAVILAND() Returns the MR_DE_HAVILAND enum instance
+ * @method static MRS_SAINT_DELAFIELD() Returns the MRS_SAINT_DELAFIELD enum instance
+ * @method static MRS_SHEPPARDS() Returns the MRS_SHEPPARDS enum instance
+ * @method static MUKTA() Returns the MUKTA enum instance
+ * @method static MUKTA_MAHEE() Returns the MUKTA_MAHEE enum instance
+ * @method static MUKTA_MALAR() Returns the MUKTA_MALAR enum instance
+ * @method static MUKTA_VAANI() Returns the MUKTA_VAANI enum instance
+ * @method static MULI() Returns the MULI enum instance
+ * @method static MYSTERY_QUEST() Returns the MYSTERY_QUEST enum instance
+ * @method static NTR() Returns the NTR enum instance
+ * @method static NEUCHA() Returns the NEUCHA enum instance
+ * @method static NEUTON() Returns the NEUTON enum instance
+ * @method static NEW_ROCKER() Returns the NEW_ROCKER enum instance
+ * @method static NEWS_CYCLE() Returns the NEWS_CYCLE enum instance
+ * @method static NICONNE() Returns the NICONNE enum instance
+ * @method static NIXIE_ONE() Returns the NIXIE_ONE enum instance
+ * @method static NOBILE() Returns the NOBILE enum instance
+ * @method static NOKORA() Returns the NOKORA enum instance
+ * @method static NORICAN() Returns the NORICAN enum instance
+ * @method static NOSIFER() Returns the NOSIFER enum instance
+ * @method static NOTHING_YOU_COULD_DO() Returns the NOTHING_YOU_COULD_DO enum instance
+ * @method static NOTICIA_TEXT() Returns the NOTICIA_TEXT enum instance
+ * @method static NOTO_SANS() Returns the NOTO_SANS enum instance
+ * @method static NOTO_SERIF() Returns the NOTO_SERIF enum instance
+ * @method static NOVA_CUT() Returns the NOVA_CUT enum instance
+ * @method static NOVA_FLAT() Returns the NOVA_FLAT enum instance
+ * @method static NOVA_MONO() Returns the NOVA_MONO enum instance
+ * @method static NOVA_OVAL() Returns the NOVA_OVAL enum instance
+ * @method static NOVA_ROUND() Returns the NOVA_ROUND enum instance
+ * @method static NOVA_SCRIPT() Returns the NOVA_SCRIPT enum instance
+ * @method static NOVA_SLIM() Returns the NOVA_SLIM enum instance
+ * @method static NOVA_SQUARE() Returns the NOVA_SQUARE enum instance
+ * @method static NUMANS() Returns the NUMANS enum instance
+ * @method static NUNITO() Returns the NUNITO enum instance
+ * @method static NUNITO_SANS() Returns the NUNITO_SANS enum instance
+ * @method static ODOR_MEAN_CHEY() Returns the ODOR_MEAN_CHEY enum instance
+ * @method static OFFSIDE() Returns the OFFSIDE enum instance
+ * @method static OLD_STANDARD_TT() Returns the OLD_STANDARD_TT enum instance
+ * @method static OLDENBURG() Returns the OLDENBURG enum instance
+ * @method static OLEO_SCRIPT() Returns the OLEO_SCRIPT enum instance
+ * @method static OLEO_SCRIPT_SWASH_CAPS() Returns the OLEO_SCRIPT_SWASH_CAPS enum instance
+ * @method static OPEN_SANS() Returns the OPEN_SANS enum instance
+ * @method static OPEN_SANS_CONDENSED() Returns the OPEN_SANS_CONDENSED enum instance
+ * @method static ORANIENBAUM() Returns the ORANIENBAUM enum instance
+ * @method static ORBITRON() Returns the ORBITRON enum instance
+ * @method static OREGANO() Returns the OREGANO enum instance
+ * @method static ORIENTA() Returns the ORIENTA enum instance
+ * @method static ORIGINAL_SURFER() Returns the ORIGINAL_SURFER enum instance
+ * @method static OSWALD() Returns the OSWALD enum instance
+ * @method static OVER_THE_RAINBOW() Returns the OVER_THE_RAINBOW enum instance
+ * @method static OVERLOCK() Returns the OVERLOCK enum instance
+ * @method static OVERLOCK_SC() Returns the OVERLOCK_SC enum instance
+ * @method static OVERPASS() Returns the OVERPASS enum instance
+ * @method static OVERPASS_MONO() Returns the OVERPASS_MONO enum instance
+ * @method static OVO() Returns the OVO enum instance
+ * @method static OXYGEN() Returns the OXYGEN enum instance
+ * @method static OXYGEN_MONO() Returns the OXYGEN_MONO enum instance
+ * @method static PT_MONO() Returns the PT_MONO enum instance
+ * @method static PT_SANS() Returns the PT_SANS enum instance
+ * @method static PT_SANS_CAPTION() Returns the PT_SANS_CAPTION enum instance
+ * @method static PT_SANS_NARROW() Returns the PT_SANS_NARROW enum instance
+ * @method static PT_SERIF() Returns the PT_SERIF enum instance
+ * @method static PT_SERIF_CAPTION() Returns the PT_SERIF_CAPTION enum instance
+ * @method static PACIFICO() Returns the PACIFICO enum instance
+ * @method static PADAUK() Returns the PADAUK enum instance
+ * @method static PALANQUIN() Returns the PALANQUIN enum instance
+ * @method static PALANQUIN_DARK() Returns the PALANQUIN_DARK enum instance
+ * @method static PANGOLIN() Returns the PANGOLIN enum instance
+ * @method static PAPRIKA() Returns the PAPRIKA enum instance
+ * @method static PARISIENNE() Returns the PARISIENNE enum instance
+ * @method static PASSERO_ONE() Returns the PASSERO_ONE enum instance
+ * @method static PASSION_ONE() Returns the PASSION_ONE enum instance
+ * @method static PATHWAY_GOTHIC_ONE() Returns the PATHWAY_GOTHIC_ONE enum instance
+ * @method static PATRICK_HAND() Returns the PATRICK_HAND enum instance
+ * @method static PATRICK_HAND_SC() Returns the PATRICK_HAND_SC enum instance
+ * @method static PATTAYA() Returns the PATTAYA enum instance
+ * @method static PATUA_ONE() Returns the PATUA_ONE enum instance
+ * @method static PAVANAM() Returns the PAVANAM enum instance
+ * @method static PAYTONE_ONE() Returns the PAYTONE_ONE enum instance
+ * @method static PEDDANA() Returns the PEDDANA enum instance
+ * @method static PERALTA() Returns the PERALTA enum instance
+ * @method static PERMANENT_MARKER() Returns the PERMANENT_MARKER enum instance
+ * @method static PETIT_FORMAL_SCRIPT() Returns the PETIT_FORMAL_SCRIPT enum instance
+ * @method static PETRONA() Returns the PETRONA enum instance
+ * @method static PHILOSOPHER() Returns the PHILOSOPHER enum instance
+ * @method static PIEDRA() Returns the PIEDRA enum instance
+ * @method static PINYON_SCRIPT() Returns the PINYON_SCRIPT enum instance
+ * @method static PIRATA_ONE() Returns the PIRATA_ONE enum instance
+ * @method static PLASTER() Returns the PLASTER enum instance
+ * @method static PLAY() Returns the PLAY enum instance
+ * @method static PLAYBALL() Returns the PLAYBALL enum instance
+ * @method static PLAYFAIR_DISPLAY() Returns the PLAYFAIR_DISPLAY enum instance
+ * @method static PLAYFAIR_DISPLAY_SC() Returns the PLAYFAIR_DISPLAY_SC enum instance
+ * @method static PODKOVA() Returns the PODKOVA enum instance
+ * @method static POIRET_ONE() Returns the POIRET_ONE enum instance
+ * @method static POLLER_ONE() Returns the POLLER_ONE enum instance
+ * @method static POLY() Returns the POLY enum instance
+ * @method static POMPIERE() Returns the POMPIERE enum instance
+ * @method static PONTANO_SANS() Returns the PONTANO_SANS enum instance
+ * @method static POPPINS() Returns the POPPINS enum instance
+ * @method static PORT_LLIGAT_SANS() Returns the PORT_LLIGAT_SANS enum instance
+ * @method static PORT_LLIGAT_SLAB() Returns the PORT_LLIGAT_SLAB enum instance
+ * @method static PRAGATI_NARROW() Returns the PRAGATI_NARROW enum instance
+ * @method static PRATA() Returns the PRATA enum instance
+ * @method static PREAHVIHEAR() Returns the PREAHVIHEAR enum instance
+ * @method static PRESS_START_2P() Returns the PRESS_START_2P enum instance
+ * @method static PRIDI() Returns the PRIDI enum instance
+ * @method static PRINCESS_SOFIA() Returns the PRINCESS_SOFIA enum instance
+ * @method static PROCIONO() Returns the PROCIONO enum instance
+ * @method static PROMPT() Returns the PROMPT enum instance
+ * @method static PROSTO_ONE() Returns the PROSTO_ONE enum instance
+ * @method static PROZA_LIBRE() Returns the PROZA_LIBRE enum instance
+ * @method static PURITAN() Returns the PURITAN enum instance
+ * @method static PURPLE_PURSE() Returns the PURPLE_PURSE enum instance
+ * @method static QUANDO() Returns the QUANDO enum instance
+ * @method static QUANTICO() Returns the QUANTICO enum instance
+ * @method static QUATTROCENTO() Returns the QUATTROCENTO enum instance
+ * @method static QUATTROCENTO_SANS() Returns the QUATTROCENTO_SANS enum instance
+ * @method static QUESTRIAL() Returns the QUESTRIAL enum instance
+ * @method static QUICKSAND() Returns the QUICKSAND enum instance
+ * @method static QUINTESSENTIAL() Returns the QUINTESSENTIAL enum instance
+ * @method static QWIGLEY() Returns the QWIGLEY enum instance
+ * @method static RACING_SANS_ONE() Returns the RACING_SANS_ONE enum instance
+ * @method static RADLEY() Returns the RADLEY enum instance
+ * @method static RAJDHANI() Returns the RAJDHANI enum instance
+ * @method static RAKKAS() Returns the RAKKAS enum instance
+ * @method static RALEWAY() Returns the RALEWAY enum instance
+ * @method static RALEWAY_DOTS() Returns the RALEWAY_DOTS enum instance
+ * @method static RAMABHADRA() Returns the RAMABHADRA enum instance
+ * @method static RAMARAJA() Returns the RAMARAJA enum instance
+ * @method static RAMBLA() Returns the RAMBLA enum instance
+ * @method static RAMMETTO_ONE() Returns the RAMMETTO_ONE enum instance
+ * @method static RANCHERS() Returns the RANCHERS enum instance
+ * @method static RANCHO() Returns the RANCHO enum instance
+ * @method static RANGA() Returns the RANGA enum instance
+ * @method static RASA() Returns the RASA enum instance
+ * @method static RATIONALE() Returns the RATIONALE enum instance
+ * @method static RAVI_PRAKASH() Returns the RAVI_PRAKASH enum instance
+ * @method static REDRESSED() Returns the REDRESSED enum instance
+ * @method static REEM_KUFI() Returns the REEM_KUFI enum instance
+ * @method static REENIE_BEANIE() Returns the REENIE_BEANIE enum instance
+ * @method static REVALIA() Returns the REVALIA enum instance
+ * @method static RHODIUM_LIBRE() Returns the RHODIUM_LIBRE enum instance
+ * @method static RIBEYE() Returns the RIBEYE enum instance
+ * @method static RIBEYE_MARROW() Returns the RIBEYE_MARROW enum instance
+ * @method static RIGHTEOUS() Returns the RIGHTEOUS enum instance
+ * @method static RISQUE() Returns the RISQUE enum instance
+ * @method static ROBOTO() Returns the ROBOTO enum instance
+ * @method static ROBOTO_CONDENSED() Returns the ROBOTO_CONDENSED enum instance
+ * @method static ROBOTO_MONO() Returns the ROBOTO_MONO enum instance
+ * @method static ROBOTO_SLAB() Returns the ROBOTO_SLAB enum instance
+ * @method static ROCHESTER() Returns the ROCHESTER enum instance
+ * @method static ROCK_SALT() Returns the ROCK_SALT enum instance
+ * @method static ROKKITT() Returns the ROKKITT enum instance
+ * @method static ROMANESCO() Returns the ROMANESCO enum instance
+ * @method static ROPA_SANS() Returns the ROPA_SANS enum instance
+ * @method static ROSARIO() Returns the ROSARIO enum instance
+ * @method static ROSARIVO() Returns the ROSARIVO enum instance
+ * @method static ROUGE_SCRIPT() Returns the ROUGE_SCRIPT enum instance
+ * @method static ROZHA_ONE() Returns the ROZHA_ONE enum instance
+ * @method static RUBIK() Returns the RUBIK enum instance
+ * @method static RUBIK_MONO_ONE() Returns the RUBIK_MONO_ONE enum instance
+ * @method static RUDA() Returns the RUDA enum instance
+ * @method static RUFINA() Returns the RUFINA enum instance
+ * @method static RUGE_BOOGIE() Returns the RUGE_BOOGIE enum instance
+ * @method static RULUKO() Returns the RULUKO enum instance
+ * @method static RUM_RAISIN() Returns the RUM_RAISIN enum instance
+ * @method static RUSLAN_DISPLAY() Returns the RUSLAN_DISPLAY enum instance
+ * @method static RUSSO_ONE() Returns the RUSSO_ONE enum instance
+ * @method static RUTHIE() Returns the RUTHIE enum instance
+ * @method static RYE() Returns the RYE enum instance
+ * @method static SACRAMENTO() Returns the SACRAMENTO enum instance
+ * @method static SAHITYA() Returns the SAHITYA enum instance
+ * @method static SAIL() Returns the SAIL enum instance
+ * @method static SAIRA() Returns the SAIRA enum instance
+ * @method static SAIRA_CONDENSED() Returns the SAIRA_CONDENSED enum instance
+ * @method static SAIRA_EXTRA_CONDENSED() Returns the SAIRA_EXTRA_CONDENSED enum instance
+ * @method static SAIRA_SEMI_CONDENSED() Returns the SAIRA_SEMI_CONDENSED enum instance
+ * @method static SALSA() Returns the SALSA enum instance
+ * @method static SANCHEZ() Returns the SANCHEZ enum instance
+ * @method static SANCREEK() Returns the SANCREEK enum instance
+ * @method static SANSITA() Returns the SANSITA enum instance
+ * @method static SARALA() Returns the SARALA enum instance
+ * @method static SARINA() Returns the SARINA enum instance
+ * @method static SARPANCH() Returns the SARPANCH enum instance
+ * @method static SATISFY() Returns the SATISFY enum instance
+ * @method static SCADA() Returns the SCADA enum instance
+ * @method static SCHEHERAZADE() Returns the SCHEHERAZADE enum instance
+ * @method static SCHOOLBELL() Returns the SCHOOLBELL enum instance
+ * @method static SCOPE_ONE() Returns the SCOPE_ONE enum instance
+ * @method static SEAWEED_SCRIPT() Returns the SEAWEED_SCRIPT enum instance
+ * @method static SECULAR_ONE() Returns the SECULAR_ONE enum instance
+ * @method static SEDGWICK_AVE() Returns the SEDGWICK_AVE enum instance
+ * @method static SEDGWICK_AVE_DISPLAY() Returns the SEDGWICK_AVE_DISPLAY enum instance
+ * @method static SEVILLANA() Returns the SEVILLANA enum instance
+ * @method static SEYMOUR_ONE() Returns the SEYMOUR_ONE enum instance
+ * @method static SHADOWS_INTO_LIGHT() Returns the SHADOWS_INTO_LIGHT enum instance
+ * @method static SHADOWS_INTO_LIGHT_TWO() Returns the SHADOWS_INTO_LIGHT_TWO enum instance
+ * @method static SHANTI() Returns the SHANTI enum instance
+ * @method static SHARE() Returns the SHARE enum instance
+ * @method static SHARE_TECH() Returns the SHARE_TECH enum instance
+ * @method static SHARE_TECH_MONO() Returns the SHARE_TECH_MONO enum instance
+ * @method static SHOJUMARU() Returns the SHOJUMARU enum instance
+ * @method static SHORT_STACK() Returns the SHORT_STACK enum instance
+ * @method static SHRIKHAND() Returns the SHRIKHAND enum instance
+ * @method static SIEMREAP() Returns the SIEMREAP enum instance
+ * @method static SIGMAR_ONE() Returns the SIGMAR_ONE enum instance
+ * @method static SIGNIKA() Returns the SIGNIKA enum instance
+ * @method static SIGNIKA_NEGATIVE() Returns the SIGNIKA_NEGATIVE enum instance
+ * @method static SIMONETTA() Returns the SIMONETTA enum instance
+ * @method static SINTONY() Returns the SINTONY enum instance
+ * @method static SIRIN_STENCIL() Returns the SIRIN_STENCIL enum instance
+ * @method static SIX_CAPS() Returns the SIX_CAPS enum instance
+ * @method static SKRANJI() Returns the SKRANJI enum instance
+ * @method static SLABO_13PX() Returns the SLABO_13PX enum instance
+ * @method static SLABO_27PX() Returns the SLABO_27PX enum instance
+ * @method static SLACKEY() Returns the SLACKEY enum instance
+ * @method static SMOKUM() Returns the SMOKUM enum instance
+ * @method static SMYTHE() Returns the SMYTHE enum instance
+ * @method static SNIGLET() Returns the SNIGLET enum instance
+ * @method static SNIPPET() Returns the SNIPPET enum instance
+ * @method static SNOWBURST_ONE() Returns the SNOWBURST_ONE enum instance
+ * @method static SOFADI_ONE() Returns the SOFADI_ONE enum instance
+ * @method static SOFIA() Returns the SOFIA enum instance
+ * @method static SONSIE_ONE() Returns the SONSIE_ONE enum instance
+ * @method static SORTS_MILL_GOUDY() Returns the SORTS_MILL_GOUDY enum instance
+ * @method static SOURCE_CODE_PRO() Returns the SOURCE_CODE_PRO enum instance
+ * @method static SOURCE_SANS_PRO() Returns the SOURCE_SANS_PRO enum instance
+ * @method static SOURCE_SERIF_PRO() Returns the SOURCE_SERIF_PRO enum instance
+ * @method static SPACE_MONO() Returns the SPACE_MONO enum instance
+ * @method static SPECIAL_ELITE() Returns the SPECIAL_ELITE enum instance
+ * @method static SPECTRAL() Returns the SPECTRAL enum instance
+ * @method static SPECTRAL_SC() Returns the SPECTRAL_SC enum instance
+ * @method static SPICY_RICE() Returns the SPICY_RICE enum instance
+ * @method static SPINNAKER() Returns the SPINNAKER enum instance
+ * @method static SPIRAX() Returns the SPIRAX enum instance
+ * @method static SQUADA_ONE() Returns the SQUADA_ONE enum instance
+ * @method static SREE_KRUSHNADEVARAYA() Returns the SREE_KRUSHNADEVARAYA enum instance
+ * @method static SRIRACHA() Returns the SRIRACHA enum instance
+ * @method static STALEMATE() Returns the STALEMATE enum instance
+ * @method static STALINIST_ONE() Returns the STALINIST_ONE enum instance
+ * @method static STARDOS_STENCIL() Returns the STARDOS_STENCIL enum instance
+ * @method static STINT_ULTRA_CONDENSED() Returns the STINT_ULTRA_CONDENSED enum instance
+ * @method static STINT_ULTRA_EXPANDED() Returns the STINT_ULTRA_EXPANDED enum instance
+ * @method static STOKE() Returns the STOKE enum instance
+ * @method static STRAIT() Returns the STRAIT enum instance
+ * @method static SUE_ELLEN_FRANCISCO() Returns the SUE_ELLEN_FRANCISCO enum instance
+ * @method static SUEZ_ONE() Returns the SUEZ_ONE enum instance
+ * @method static SUMANA() Returns the SUMANA enum instance
+ * @method static SUNSHINEY() Returns the SUNSHINEY enum instance
+ * @method static SUPERMERCADO_ONE() Returns the SUPERMERCADO_ONE enum instance
+ * @method static SURA() Returns the SURA enum instance
+ * @method static SURANNA() Returns the SURANNA enum instance
+ * @method static SURAVARAM() Returns the SURAVARAM enum instance
+ * @method static SUWANNAPHUM() Returns the SUWANNAPHUM enum instance
+ * @method static SWANKY_AND_MOO_MOO() Returns the SWANKY_AND_MOO_MOO enum instance
+ * @method static SYNCOPATE() Returns the SYNCOPATE enum instance
+ * @method static TANGERINE() Returns the TANGERINE enum instance
+ * @method static TAPROM() Returns the TAPROM enum instance
+ * @method static TAURI() Returns the TAURI enum instance
+ * @method static TAVIRAJ() Returns the TAVIRAJ enum instance
+ * @method static TEKO() Returns the TEKO enum instance
+ * @method static TELEX() Returns the TELEX enum instance
+ * @method static TENALI_RAMAKRISHNA() Returns the TENALI_RAMAKRISHNA enum instance
+ * @method static TENOR_SANS() Returns the TENOR_SANS enum instance
+ * @method static TEXT_ME_ONE() Returns the TEXT_ME_ONE enum instance
+ * @method static THE_GIRL_NEXT_DOOR() Returns the THE_GIRL_NEXT_DOOR enum instance
+ * @method static TIENNE() Returns the TIENNE enum instance
+ * @method static TILLANA() Returns the TILLANA enum instance
+ * @method static TIMMANA() Returns the TIMMANA enum instance
+ * @method static TINOS() Returns the TINOS enum instance
+ * @method static TITAN_ONE() Returns the TITAN_ONE enum instance
+ * @method static TITILLIUM_WEB() Returns the TITILLIUM_WEB enum instance
+ * @method static TRADE_WINDS() Returns the TRADE_WINDS enum instance
+ * @method static TRIRONG() Returns the TRIRONG enum instance
+ * @method static TROCCHI() Returns the TROCCHI enum instance
+ * @method static TROCHUT() Returns the TROCHUT enum instance
+ * @method static TRYKKER() Returns the TRYKKER enum instance
+ * @method static TULPEN_ONE() Returns the TULPEN_ONE enum instance
+ * @method static UBUNTU() Returns the UBUNTU enum instance
+ * @method static UBUNTU_CONDENSED() Returns the UBUNTU_CONDENSED enum instance
+ * @method static UBUNTU_MONO() Returns the UBUNTU_MONO enum instance
+ * @method static ULTRA() Returns the ULTRA enum instance
+ * @method static UNCIAL_ANTIQUA() Returns the UNCIAL_ANTIQUA enum instance
+ * @method static UNDERDOG() Returns the UNDERDOG enum instance
+ * @method static UNICA_ONE() Returns the UNICA_ONE enum instance
+ * @method static UNIFRAKTURCOOK() Returns the UNIFRAKTURCOOK enum instance
+ * @method static UNIFRAKTURMAGUNTIA() Returns the UNIFRAKTURMAGUNTIA enum instance
+ * @method static UNKEMPT() Returns the UNKEMPT enum instance
+ * @method static UNLOCK() Returns the UNLOCK enum instance
+ * @method static UNNA() Returns the UNNA enum instance
+ * @method static VT323() Returns the VT323 enum instance
+ * @method static VAMPIRO_ONE() Returns the VAMPIRO_ONE enum instance
+ * @method static VARELA() Returns the VARELA enum instance
+ * @method static VARELA_ROUND() Returns the VARELA_ROUND enum instance
+ * @method static VAST_SHADOW() Returns the VAST_SHADOW enum instance
+ * @method static VESPER_LIBRE() Returns the VESPER_LIBRE enum instance
+ * @method static VIBUR() Returns the VIBUR enum instance
+ * @method static VIDALOKA() Returns the VIDALOKA enum instance
+ * @method static VIGA() Returns the VIGA enum instance
+ * @method static VOCES() Returns the VOCES enum instance
+ * @method static VOLKHOV() Returns the VOLKHOV enum instance
+ * @method static VOLLKORN() Returns the VOLLKORN enum instance
+ * @method static VOLLKORN_SC() Returns the VOLLKORN_SC enum instance
+ * @method static VOLTAIRE() Returns the VOLTAIRE enum instance
+ * @method static WAITING_FOR_THE_SUNRISE() Returns the WAITING_FOR_THE_SUNRISE enum instance
+ * @method static WALLPOET() Returns the WALLPOET enum instance
+ * @method static WALTER_TURNCOAT() Returns the WALTER_TURNCOAT enum instance
+ * @method static WARNES() Returns the WARNES enum instance
+ * @method static WELLFLEET() Returns the WELLFLEET enum instance
+ * @method static WENDY_ONE() Returns the WENDY_ONE enum instance
+ * @method static WIRE_ONE() Returns the WIRE_ONE enum instance
+ * @method static WORK_SANS() Returns the WORK_SANS enum instance
+ * @method static YANONE_KAFFEESATZ() Returns the YANONE_KAFFEESATZ enum instance
+ * @method static YANTRAMANAV() Returns the YANTRAMANAV enum instance
+ * @method static YATRA_ONE() Returns the YATRA_ONE enum instance
+ * @method static YELLOWTAIL() Returns the YELLOWTAIL enum instance
+ * @method static YESEVA_ONE() Returns the YESEVA_ONE enum instance
+ * @method static YESTERYEAR() Returns the YESTERYEAR enum instance
+ * @method static YRSA() Returns the YRSA enum instance
+ * @method static ZEYADA() Returns the ZEYADA enum instance
+ * @method static ZILLA_SLAB() Returns the ZILLA_SLAB enum instance
+ * @method static ZILLA_SLAB_HIGHLIGHT() Returns the ZILLA_SLAB_HIGHLIGHT enum instance
  */
 enum GoogleFont: string
 {

@@ -11,17 +11,17 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing common data types.
  *
- * @method static string STRING() Returns the STRING enum instance
- * @method static string INTEGER() Returns the INTEGER enum instance
- * @method static string INT() Returns the INT enum instance
- * @method static string FLOAT() Returns the FLOAT enum instance
- * @method static string BOOLEAN() Returns the BOOLEAN enum instance
- * @method static string ARRAY() Returns the ARRAY enum instance
- * @method static string OBJECT() Returns the OBJECT enum instance
- * @method static string NULL() Returns the NULL enum instance
- * @method static string RESOURCE() Returns the RESOURCE enum instance
- * @method static string CALLABLE() Returns the CALLABLE enum instance
- * @method static string MIXED() Returns the MIXED enum instance
+ * @method static STRING() Returns the STRING enum instance
+ * @method static INTEGER() Returns the INTEGER enum instance
+ * @method static INT() Returns the INT enum instance
+ * @method static FLOAT() Returns the FLOAT enum instance
+ * @method static BOOLEAN() Returns the BOOLEAN enum instance
+ * @method static ARRAY() Returns the ARRAY enum instance
+ * @method static OBJECT() Returns the OBJECT enum instance
+ * @method static NULL() Returns the NULL enum instance
+ * @method static RESOURCE() Returns the RESOURCE enum instance
+ * @method static CALLABLE() Returns the CALLABLE enum instance
+ * @method static MIXED() Returns the MIXED enum instance
  */
 enum DataType: string
 {

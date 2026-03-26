@@ -11,13 +11,13 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing different HTTP methods.
  *
- * @method static string GET() Returns the GET enum instance
- * @method static string POST() Returns the POST enum instance
- * @method static string PUT() Returns the PUT enum instance
- * @method static string DELETE() Returns the DELETE enum instance
- * @method static string PATCH() Returns the PATCH enum instance
- * @method static string OPTIONS() Returns the OPTIONS enum instance
- * @method static string HEAD() Returns the HEAD enum instance
+ * @method static GET() Returns the GET enum instance
+ * @method static POST() Returns the POST enum instance
+ * @method static PUT() Returns the PUT enum instance
+ * @method static DELETE() Returns the DELETE enum instance
+ * @method static PATCH() Returns the PATCH enum instance
+ * @method static OPTIONS() Returns the OPTIONS enum instance
+ * @method static HEAD() Returns the HEAD enum instance
  */
 enum HttpMethod: string
 {

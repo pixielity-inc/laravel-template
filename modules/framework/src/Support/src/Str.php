@@ -228,7 +228,6 @@ class Str extends BaseStr
      * @see snake() For snake_case conversion
      * @since 1.0.0
      */
-    #[Override]
     public static function slug($title, $separator = '-', $language = 'en', $dictionary = ['@' => 'at'])
     {
         // Replace backslashes and spaces with a single space.
@@ -273,7 +272,6 @@ class Str extends BaseStr
      * @see ASCII::to_ascii() For the underlying transliteration engine
      * @since 1.0.0
      */
-    #[Override]
     public static function ascii($value, $language = 'en')
     {
         // Use the ASCII helper to convert the string to ASCII format.

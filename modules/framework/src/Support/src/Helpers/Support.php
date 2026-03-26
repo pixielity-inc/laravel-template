@@ -202,10 +202,13 @@ if (! function_exists('e')) {
  * @return string The translated message.
  */
 if (! function_exists('trans')) {
-    function trans($id = null, $parameters = [], $locale = null): string|array|null
+    function trans($key = null, $replace = [], $locale = null): string|array|null
     {
-        // TODO: REFACTOR HERE
-        return __($id, $parameters, $locale);
+        if (is_null($key)) {
+            return $key;
+        }
+
+        return trans($key, $replace, $locale);
     }
 }
 

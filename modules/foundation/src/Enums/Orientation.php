@@ -11,13 +11,13 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing possible orientations.
  *
- * @method static string LANDSCAPE() Returns the LANDSCAPE enum instance
- * @method static string PORTRAIT() Returns the PORTRAIT enum instance
- * @method static string HORIZONTAL() Returns the HORIZONTAL enum instance
- * @method static string VERTICAL() Returns the VERTICAL enum instance
- * @method static string DIAGONAL() Returns the DIAGONAL enum instance
- * @method static string INVERSE_DIAGONAL() Returns the INVERSE_DIAGONAL enum instance
- * @method static string STANDALONE() Returns the STANDALONE enum instance
+ * @method static LANDSCAPE() Returns the LANDSCAPE enum instance
+ * @method static PORTRAIT() Returns the PORTRAIT enum instance
+ * @method static HORIZONTAL() Returns the HORIZONTAL enum instance
+ * @method static VERTICAL() Returns the VERTICAL enum instance
+ * @method static DIAGONAL() Returns the DIAGONAL enum instance
+ * @method static INVERSE_DIAGONAL() Returns the INVERSE_DIAGONAL enum instance
+ * @method static STANDALONE() Returns the STANDALONE enum instance
  */
 enum Orientation: string
 {

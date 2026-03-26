@@ -184,7 +184,6 @@ class Handler extends ExceptionHandler
      * - `renderable()`: Register a callback for rendering specific exception types
      * - `stop()`: Stop reporting specific exception types
      */
-    #[Override]
     public function register(): void
     {
         // Register Sentry exception reporting for all exceptions
@@ -227,7 +226,6 @@ class Handler extends ExceptionHandler
      * @param  Throwable  $e  The exception that was thrown
      * @return Response The HTTP response
      */
-    #[Override]
     public function render($request, Throwable $e)
     {
         // Build the full API path pattern
@@ -485,7 +483,6 @@ class Handler extends ExceptionHandler
      *
      * @see RenderCustomErrorViews
      */
-    #[Override]
     protected function prepareResponse($request, Throwable $e)
     {
         // Check if this is a custom exception with getStatusCode() method
@@ -530,7 +527,6 @@ class Handler extends ExceptionHandler
      * @param  HttpException  $e
      * @return Response
      */
-    #[Override]
     protected function renderHttpException($e)
     {
         // Only register error view paths if config is available

@@ -14,36 +14,36 @@ use Pixielity\Enum\Enum;
  * This enum defines various color palettes with their swatches,
  * categorized by light, regular, and dark shades.
  *
- * @method static string GRAY_100() Returns the GRAY_100 enum instance
- * @method static string GRAY_500() Returns the GRAY_500 enum instance
- * @method static string GRAY_900() Returns the GRAY_900 enum instance
- * @method static string RED_100() Returns the RED_100 enum instance
- * @method static string RED_500() Returns the RED_500 enum instance
- * @method static string RED_900() Returns the RED_900 enum instance
- * @method static string ORANGE_100() Returns the ORANGE_100 enum instance
- * @method static string ORANGE_500() Returns the ORANGE_500 enum instance
- * @method static string ORANGE_900() Returns the ORANGE_900 enum instance
- * @method static string YELLOW_100() Returns the YELLOW_100 enum instance
- * @method static string YELLOW_500() Returns the YELLOW_500 enum instance
- * @method static string YELLOW_900() Returns the YELLOW_900 enum instance
- * @method static string GREEN_100() Returns the GREEN_100 enum instance
- * @method static string GREEN_500() Returns the GREEN_500 enum instance
- * @method static string GREEN_900() Returns the GREEN_900 enum instance
- * @method static string TEAL_100() Returns the TEAL_100 enum instance
- * @method static string TEAL_500() Returns the TEAL_500 enum instance
- * @method static string TEAL_900() Returns the TEAL_900 enum instance
- * @method static string BLUE_100() Returns the BLUE_100 enum instance
- * @method static string BLUE_500() Returns the BLUE_500 enum instance
- * @method static string BLUE_900() Returns the BLUE_900 enum instance
- * @method static string INDIGO_100() Returns the INDIGO_100 enum instance
- * @method static string INDIGO_500() Returns the INDIGO_500 enum instance
- * @method static string INDIGO_900() Returns the INDIGO_900 enum instance
- * @method static string PURPLE_100() Returns the PURPLE_100 enum instance
- * @method static string PURPLE_500() Returns the PURPLE_500 enum instance
- * @method static string PURPLE_900() Returns the PURPLE_900 enum instance
- * @method static string PINK_100() Returns the PINK_100 enum instance
- * @method static string PINK_500() Returns the PINK_500 enum instance
- * @method static string PINK_900() Returns the PINK_900 enum instance
+ * @method static GRAY_100() Returns the GRAY_100 enum instance
+ * @method static GRAY_500() Returns the GRAY_500 enum instance
+ * @method static GRAY_900() Returns the GRAY_900 enum instance
+ * @method static RED_100() Returns the RED_100 enum instance
+ * @method static RED_500() Returns the RED_500 enum instance
+ * @method static RED_900() Returns the RED_900 enum instance
+ * @method static ORANGE_100() Returns the ORANGE_100 enum instance
+ * @method static ORANGE_500() Returns the ORANGE_500 enum instance
+ * @method static ORANGE_900() Returns the ORANGE_900 enum instance
+ * @method static YELLOW_100() Returns the YELLOW_100 enum instance
+ * @method static YELLOW_500() Returns the YELLOW_500 enum instance
+ * @method static YELLOW_900() Returns the YELLOW_900 enum instance
+ * @method static GREEN_100() Returns the GREEN_100 enum instance
+ * @method static GREEN_500() Returns the GREEN_500 enum instance
+ * @method static GREEN_900() Returns the GREEN_900 enum instance
+ * @method static TEAL_100() Returns the TEAL_100 enum instance
+ * @method static TEAL_500() Returns the TEAL_500 enum instance
+ * @method static TEAL_900() Returns the TEAL_900 enum instance
+ * @method static BLUE_100() Returns the BLUE_100 enum instance
+ * @method static BLUE_500() Returns the BLUE_500 enum instance
+ * @method static BLUE_900() Returns the BLUE_900 enum instance
+ * @method static INDIGO_100() Returns the INDIGO_100 enum instance
+ * @method static INDIGO_500() Returns the INDIGO_500 enum instance
+ * @method static INDIGO_900() Returns the INDIGO_900 enum instance
+ * @method static PURPLE_100() Returns the PURPLE_100 enum instance
+ * @method static PURPLE_500() Returns the PURPLE_500 enum instance
+ * @method static PURPLE_900() Returns the PURPLE_900 enum instance
+ * @method static PINK_100() Returns the PINK_100 enum instance
+ * @method static PINK_500() Returns the PINK_500 enum instance
+ * @method static PINK_900() Returns the PINK_900 enum instance
  */
 enum Color: string
 {

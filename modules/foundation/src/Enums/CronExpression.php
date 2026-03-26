@@ -12,99 +12,99 @@ use Pixielity\Enum\Enum;
  * Enum representing various cron expressions for scheduling tasks.
  * Each value is a cron expression string that defines the scheduling pattern.
  *
- * @method static string EVERY_SECOND() Returns the EVERY_SECOND enum instance
- * @method static string EVERY_5_SECONDS() Returns the EVERY_5_SECONDS enum instance
- * @method static string EVERY_10_SECONDS() Returns the EVERY_10_SECONDS enum instance
- * @method static string EVERY_30_SECONDS() Returns the EVERY_30_SECONDS enum instance
- * @method static string EVERY_MINUTE() Returns the EVERY_MINUTE enum instance
- * @method static string EVERY_5_MINUTES() Returns the EVERY_5_MINUTES enum instance
- * @method static string EVERY_10_MINUTES() Returns the EVERY_10_MINUTES enum instance
- * @method static string EVERY_30_MINUTES() Returns the EVERY_30_MINUTES enum instance
- * @method static string EVERY_HOUR() Returns the EVERY_HOUR enum instance
- * @method static string EVERY_2_HOURS() Returns the EVERY_2_HOURS enum instance
- * @method static string EVERY_3_HOURS() Returns the EVERY_3_HOURS enum instance
- * @method static string EVERY_4_HOURS() Returns the EVERY_4_HOURS enum instance
- * @method static string EVERY_5_HOURS() Returns the EVERY_5_HOURS enum instance
- * @method static string EVERY_6_HOURS() Returns the EVERY_6_HOURS enum instance
- * @method static string EVERY_7_HOURS() Returns the EVERY_7_HOURS enum instance
- * @method static string EVERY_8_HOURS() Returns the EVERY_8_HOURS enum instance
- * @method static string EVERY_9_HOURS() Returns the EVERY_9_HOURS enum instance
- * @method static string EVERY_10_HOURS() Returns the EVERY_10_HOURS enum instance
- * @method static string EVERY_11_HOURS() Returns the EVERY_11_HOURS enum instance
- * @method static string EVERY_12_HOURS() Returns the EVERY_12_HOURS enum instance
- * @method static string EVERY_DAY_AT_1AM() Returns the EVERY_DAY_AT_1AM enum instance
- * @method static string EVERY_DAY_AT_2AM() Returns the EVERY_DAY_AT_2AM enum instance
- * @method static string EVERY_DAY_AT_3AM() Returns the EVERY_DAY_AT_3AM enum instance
- * @method static string EVERY_DAY_AT_4AM() Returns the EVERY_DAY_AT_4AM enum instance
- * @method static string EVERY_DAY_AT_5AM() Returns the EVERY_DAY_AT_5AM enum instance
- * @method static string EVERY_DAY_AT_6AM() Returns the EVERY_DAY_AT_6AM enum instance
- * @method static string EVERY_DAY_AT_7AM() Returns the EVERY_DAY_AT_7AM enum instance
- * @method static string EVERY_DAY_AT_8AM() Returns the EVERY_DAY_AT_8AM enum instance
- * @method static string EVERY_DAY_AT_9AM() Returns the EVERY_DAY_AT_9AM enum instance
- * @method static string EVERY_DAY_AT_10AM() Returns the EVERY_DAY_AT_10AM enum instance
- * @method static string EVERY_DAY_AT_11AM() Returns the EVERY_DAY_AT_11AM enum instance
- * @method static string EVERY_DAY_AT_NOON() Returns the EVERY_DAY_AT_NOON enum instance
- * @method static string EVERY_DAY_AT_1PM() Returns the EVERY_DAY_AT_1PM enum instance
- * @method static string EVERY_DAY_AT_2PM() Returns the EVERY_DAY_AT_2PM enum instance
- * @method static string EVERY_DAY_AT_3PM() Returns the EVERY_DAY_AT_3PM enum instance
- * @method static string EVERY_DAY_AT_4PM() Returns the EVERY_DAY_AT_4PM enum instance
- * @method static string EVERY_DAY_AT_5PM() Returns the EVERY_DAY_AT_5PM enum instance
- * @method static string EVERY_DAY_AT_6PM() Returns the EVERY_DAY_AT_6PM enum instance
- * @method static string EVERY_DAY_AT_7PM() Returns the EVERY_DAY_AT_7PM enum instance
- * @method static string EVERY_DAY_AT_8PM() Returns the EVERY_DAY_AT_8PM enum instance
- * @method static string EVERY_DAY_AT_9PM() Returns the EVERY_DAY_AT_9PM enum instance
- * @method static string EVERY_DAY_AT_10PM() Returns the EVERY_DAY_AT_10PM enum instance
- * @method static string EVERY_DAY_AT_11PM() Returns the EVERY_DAY_AT_11PM enum instance
- * @method static string EVERY_DAY_AT_MIDNIGHT() Returns the EVERY_DAY_AT_MIDNIGHT enum instance
- * @method static string EVERY_WEEK() Returns the EVERY_WEEK enum instance
- * @method static string EVERY_WEEKDAY() Returns the EVERY_WEEKDAY enum instance
- * @method static string EVERY_WEEKEND() Returns the EVERY_WEEKEND enum instance
- * @method static string EVERY_1ST_DAY_OF_MONTH_AT_MIDNIGHT() Returns the EVERY_1ST_DAY_OF_MONTH_AT_MIDNIGHT enum instance
- * @method static string EVERY_1ST_DAY_OF_MONTH_AT_NOON() Returns the EVERY_1ST_DAY_OF_MONTH_AT_NOON enum instance
- * @method static string EVERY_2ND_HOUR() Returns the EVERY_2ND_HOUR enum instance
- * @method static string EVERY_2ND_HOUR_FROM_1AM_THROUGH_11PM() Returns the EVERY_2ND_HOUR_FROM_1AM_THROUGH_11PM enum instance
- * @method static string EVERY_2ND_MONTH() Returns the EVERY_2ND_MONTH enum instance
- * @method static string EVERY_QUARTER() Returns the EVERY_QUARTER enum instance
- * @method static string EVERY_6_MONTHS() Returns the EVERY_6_MONTHS enum instance
- * @method static string EVERY_YEAR() Returns the EVERY_YEAR enum instance
- * @method static string EVERY_30_MINUTES_BETWEEN_9AM_AND_5PM() Returns the EVERY_30_MINUTES_BETWEEN_9AM_AND_5PM enum instance
- * @method static string EVERY_30_MINUTES_BETWEEN_9AM_AND_6PM() Returns the EVERY_30_MINUTES_BETWEEN_9AM_AND_6PM enum instance
- * @method static string EVERY_30_MINUTES_BETWEEN_10AM_AND_7PM() Returns the EVERY_30_MINUTES_BETWEEN_10AM_AND_7PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_1AM() Returns the MONDAY_TO_FRIDAY_AT_1AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_2AM() Returns the MONDAY_TO_FRIDAY_AT_2AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_3AM() Returns the MONDAY_TO_FRIDAY_AT_3AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_4AM() Returns the MONDAY_TO_FRIDAY_AT_4AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_5AM() Returns the MONDAY_TO_FRIDAY_AT_5AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_6AM() Returns the MONDAY_TO_FRIDAY_AT_6AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_7AM() Returns the MONDAY_TO_FRIDAY_AT_7AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_8AM() Returns the MONDAY_TO_FRIDAY_AT_8AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_9AM() Returns the MONDAY_TO_FRIDAY_AT_9AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_10AM() Returns the MONDAY_TO_FRIDAY_AT_10AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_11AM() Returns the MONDAY_TO_FRIDAY_AT_11AM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_NOON() Returns the MONDAY_TO_FRIDAY_AT_NOON enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_1PM() Returns the MONDAY_TO_FRIDAY_AT_1PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_2PM() Returns the MONDAY_TO_FRIDAY_AT_2PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_3PM() Returns the MONDAY_TO_FRIDAY_AT_3PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_4PM() Returns the MONDAY_TO_FRIDAY_AT_4PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_5PM() Returns the MONDAY_TO_FRIDAY_AT_5PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_6PM() Returns the MONDAY_TO_FRIDAY_AT_6PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_7PM() Returns the MONDAY_TO_FRIDAY_AT_7PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_8PM() Returns the MONDAY_TO_FRIDAY_AT_8PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_9PM() Returns the MONDAY_TO_FRIDAY_AT_9PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_10PM() Returns the MONDAY_TO_FRIDAY_AT_10PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_11PM() Returns the MONDAY_TO_FRIDAY_AT_11PM enum instance
- * @method static string MONDAY_TO_FRIDAY_AT_MIDNIGHT() Returns the MONDAY_TO_FRIDAY_AT_MIDNIGHT enum instance
- * @method static string EVERY_SATURDAY_AT_MIDNIGHT() Returns the EVERY_SATURDAY_AT_MIDNIGHT enum instance
- * @method static string EVERY_SUNDAY_AT_MIDNIGHT() Returns the EVERY_SUNDAY_AT_MIDNIGHT enum instance
- * @method static string EVERY_WEEKEND_AT_MIDNIGHT() Returns the EVERY_WEEKEND_AT_MIDNIGHT enum instance
- * @method static string EVERY_DAY_AT_2_30PM() Returns the EVERY_DAY_AT_2_30PM enum instance
- * @method static string EVERY_WEEKDAY_AT_2_30PM() Returns the EVERY_WEEKDAY_AT_2_30PM enum instance
- * @method static string EVERY_WEEKDAY_AT_8_45AM() Returns the EVERY_WEEKDAY_AT_8_45AM enum instance
- * @method static string EVERY_15TH_DAY_OF_MONTH_AT_3PM() Returns the EVERY_15TH_DAY_OF_MONTH_AT_3PM enum instance
- * @method static string EVERY_HOUR_BETWEEN_8AM_AND_6PM_ON_WEEKDAYS() Returns the EVERY_HOUR_BETWEEN_8AM_AND_6PM_ON_WEEKDAYS enum instance
- * @method static string EVERY_15_MINUTES() Returns the EVERY_15_MINUTES enum instance
- * @method static string EVERY_20_MINUTES() Returns the EVERY_20_MINUTES enum instance
- * @method static string EVERY_45_MINUTES() Returns the EVERY_45_MINUTES enum instance
+ * @method static EVERY_SECOND() Returns the EVERY_SECOND enum instance
+ * @method static EVERY_5_SECONDS() Returns the EVERY_5_SECONDS enum instance
+ * @method static EVERY_10_SECONDS() Returns the EVERY_10_SECONDS enum instance
+ * @method static EVERY_30_SECONDS() Returns the EVERY_30_SECONDS enum instance
+ * @method static EVERY_MINUTE() Returns the EVERY_MINUTE enum instance
+ * @method static EVERY_5_MINUTES() Returns the EVERY_5_MINUTES enum instance
+ * @method static EVERY_10_MINUTES() Returns the EVERY_10_MINUTES enum instance
+ * @method static EVERY_30_MINUTES() Returns the EVERY_30_MINUTES enum instance
+ * @method static EVERY_HOUR() Returns the EVERY_HOUR enum instance
+ * @method static EVERY_2_HOURS() Returns the EVERY_2_HOURS enum instance
+ * @method static EVERY_3_HOURS() Returns the EVERY_3_HOURS enum instance
+ * @method static EVERY_4_HOURS() Returns the EVERY_4_HOURS enum instance
+ * @method static EVERY_5_HOURS() Returns the EVERY_5_HOURS enum instance
+ * @method static EVERY_6_HOURS() Returns the EVERY_6_HOURS enum instance
+ * @method static EVERY_7_HOURS() Returns the EVERY_7_HOURS enum instance
+ * @method static EVERY_8_HOURS() Returns the EVERY_8_HOURS enum instance
+ * @method static EVERY_9_HOURS() Returns the EVERY_9_HOURS enum instance
+ * @method static EVERY_10_HOURS() Returns the EVERY_10_HOURS enum instance
+ * @method static EVERY_11_HOURS() Returns the EVERY_11_HOURS enum instance
+ * @method static EVERY_12_HOURS() Returns the EVERY_12_HOURS enum instance
+ * @method static EVERY_DAY_AT_1AM() Returns the EVERY_DAY_AT_1AM enum instance
+ * @method static EVERY_DAY_AT_2AM() Returns the EVERY_DAY_AT_2AM enum instance
+ * @method static EVERY_DAY_AT_3AM() Returns the EVERY_DAY_AT_3AM enum instance
+ * @method static EVERY_DAY_AT_4AM() Returns the EVERY_DAY_AT_4AM enum instance
+ * @method static EVERY_DAY_AT_5AM() Returns the EVERY_DAY_AT_5AM enum instance
+ * @method static EVERY_DAY_AT_6AM() Returns the EVERY_DAY_AT_6AM enum instance
+ * @method static EVERY_DAY_AT_7AM() Returns the EVERY_DAY_AT_7AM enum instance
+ * @method static EVERY_DAY_AT_8AM() Returns the EVERY_DAY_AT_8AM enum instance
+ * @method static EVERY_DAY_AT_9AM() Returns the EVERY_DAY_AT_9AM enum instance
+ * @method static EVERY_DAY_AT_10AM() Returns the EVERY_DAY_AT_10AM enum instance
+ * @method static EVERY_DAY_AT_11AM() Returns the EVERY_DAY_AT_11AM enum instance
+ * @method static EVERY_DAY_AT_NOON() Returns the EVERY_DAY_AT_NOON enum instance
+ * @method static EVERY_DAY_AT_1PM() Returns the EVERY_DAY_AT_1PM enum instance
+ * @method static EVERY_DAY_AT_2PM() Returns the EVERY_DAY_AT_2PM enum instance
+ * @method static EVERY_DAY_AT_3PM() Returns the EVERY_DAY_AT_3PM enum instance
+ * @method static EVERY_DAY_AT_4PM() Returns the EVERY_DAY_AT_4PM enum instance
+ * @method static EVERY_DAY_AT_5PM() Returns the EVERY_DAY_AT_5PM enum instance
+ * @method static EVERY_DAY_AT_6PM() Returns the EVERY_DAY_AT_6PM enum instance
+ * @method static EVERY_DAY_AT_7PM() Returns the EVERY_DAY_AT_7PM enum instance
+ * @method static EVERY_DAY_AT_8PM() Returns the EVERY_DAY_AT_8PM enum instance
+ * @method static EVERY_DAY_AT_9PM() Returns the EVERY_DAY_AT_9PM enum instance
+ * @method static EVERY_DAY_AT_10PM() Returns the EVERY_DAY_AT_10PM enum instance
+ * @method static EVERY_DAY_AT_11PM() Returns the EVERY_DAY_AT_11PM enum instance
+ * @method static EVERY_DAY_AT_MIDNIGHT() Returns the EVERY_DAY_AT_MIDNIGHT enum instance
+ * @method static EVERY_WEEK() Returns the EVERY_WEEK enum instance
+ * @method static EVERY_WEEKDAY() Returns the EVERY_WEEKDAY enum instance
+ * @method static EVERY_WEEKEND() Returns the EVERY_WEEKEND enum instance
+ * @method static EVERY_1ST_DAY_OF_MONTH_AT_MIDNIGHT() Returns the EVERY_1ST_DAY_OF_MONTH_AT_MIDNIGHT enum instance
+ * @method static EVERY_1ST_DAY_OF_MONTH_AT_NOON() Returns the EVERY_1ST_DAY_OF_MONTH_AT_NOON enum instance
+ * @method static EVERY_2ND_HOUR() Returns the EVERY_2ND_HOUR enum instance
+ * @method static EVERY_2ND_HOUR_FROM_1AM_THROUGH_11PM() Returns the EVERY_2ND_HOUR_FROM_1AM_THROUGH_11PM enum instance
+ * @method static EVERY_2ND_MONTH() Returns the EVERY_2ND_MONTH enum instance
+ * @method static EVERY_QUARTER() Returns the EVERY_QUARTER enum instance
+ * @method static EVERY_6_MONTHS() Returns the EVERY_6_MONTHS enum instance
+ * @method static EVERY_YEAR() Returns the EVERY_YEAR enum instance
+ * @method static EVERY_30_MINUTES_BETWEEN_9AM_AND_5PM() Returns the EVERY_30_MINUTES_BETWEEN_9AM_AND_5PM enum instance
+ * @method static EVERY_30_MINUTES_BETWEEN_9AM_AND_6PM() Returns the EVERY_30_MINUTES_BETWEEN_9AM_AND_6PM enum instance
+ * @method static EVERY_30_MINUTES_BETWEEN_10AM_AND_7PM() Returns the EVERY_30_MINUTES_BETWEEN_10AM_AND_7PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_1AM() Returns the MONDAY_TO_FRIDAY_AT_1AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_2AM() Returns the MONDAY_TO_FRIDAY_AT_2AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_3AM() Returns the MONDAY_TO_FRIDAY_AT_3AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_4AM() Returns the MONDAY_TO_FRIDAY_AT_4AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_5AM() Returns the MONDAY_TO_FRIDAY_AT_5AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_6AM() Returns the MONDAY_TO_FRIDAY_AT_6AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_7AM() Returns the MONDAY_TO_FRIDAY_AT_7AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_8AM() Returns the MONDAY_TO_FRIDAY_AT_8AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_9AM() Returns the MONDAY_TO_FRIDAY_AT_9AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_10AM() Returns the MONDAY_TO_FRIDAY_AT_10AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_11AM() Returns the MONDAY_TO_FRIDAY_AT_11AM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_NOON() Returns the MONDAY_TO_FRIDAY_AT_NOON enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_1PM() Returns the MONDAY_TO_FRIDAY_AT_1PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_2PM() Returns the MONDAY_TO_FRIDAY_AT_2PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_3PM() Returns the MONDAY_TO_FRIDAY_AT_3PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_4PM() Returns the MONDAY_TO_FRIDAY_AT_4PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_5PM() Returns the MONDAY_TO_FRIDAY_AT_5PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_6PM() Returns the MONDAY_TO_FRIDAY_AT_6PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_7PM() Returns the MONDAY_TO_FRIDAY_AT_7PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_8PM() Returns the MONDAY_TO_FRIDAY_AT_8PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_9PM() Returns the MONDAY_TO_FRIDAY_AT_9PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_10PM() Returns the MONDAY_TO_FRIDAY_AT_10PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_11PM() Returns the MONDAY_TO_FRIDAY_AT_11PM enum instance
+ * @method static MONDAY_TO_FRIDAY_AT_MIDNIGHT() Returns the MONDAY_TO_FRIDAY_AT_MIDNIGHT enum instance
+ * @method static EVERY_SATURDAY_AT_MIDNIGHT() Returns the EVERY_SATURDAY_AT_MIDNIGHT enum instance
+ * @method static EVERY_SUNDAY_AT_MIDNIGHT() Returns the EVERY_SUNDAY_AT_MIDNIGHT enum instance
+ * @method static EVERY_WEEKEND_AT_MIDNIGHT() Returns the EVERY_WEEKEND_AT_MIDNIGHT enum instance
+ * @method static EVERY_DAY_AT_2_30PM() Returns the EVERY_DAY_AT_2_30PM enum instance
+ * @method static EVERY_WEEKDAY_AT_2_30PM() Returns the EVERY_WEEKDAY_AT_2_30PM enum instance
+ * @method static EVERY_WEEKDAY_AT_8_45AM() Returns the EVERY_WEEKDAY_AT_8_45AM enum instance
+ * @method static EVERY_15TH_DAY_OF_MONTH_AT_3PM() Returns the EVERY_15TH_DAY_OF_MONTH_AT_3PM enum instance
+ * @method static EVERY_HOUR_BETWEEN_8AM_AND_6PM_ON_WEEKDAYS() Returns the EVERY_HOUR_BETWEEN_8AM_AND_6PM_ON_WEEKDAYS enum instance
+ * @method static EVERY_15_MINUTES() Returns the EVERY_15_MINUTES enum instance
+ * @method static EVERY_20_MINUTES() Returns the EVERY_20_MINUTES enum instance
+ * @method static EVERY_45_MINUTES() Returns the EVERY_45_MINUTES enum instance
  */
 enum CronExpression: string
 {

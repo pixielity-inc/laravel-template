@@ -13,162 +13,162 @@ use Pixielity\Enum\Enum;
  *
  * This enum defines various emojis.
  *
- * @method static string THUMBS_UP() Returns the THUMBS_UP enum instance
- * @method static string THUMBS_DOWN() Returns the THUMBS_DOWN enum instance
- * @method static string SMILING_FACE() Returns the SMILING_FACE enum instance
- * @method static string CRYING_FACE() Returns the CRYING_FACE enum instance
- * @method static string HEART() Returns the HEART enum instance
- * @method static string STAR() Returns the STAR enum instance
- * @method static string FIRE() Returns the FIRE enum instance
- * @method static string CLAPPING_HANDS() Returns the CLAPPING_HANDS enum instance
- * @method static string PARTY_POPPER() Returns the PARTY_POPPER enum instance
- * @method static string CHECK_MARK() Returns the CHECK_MARK enum instance
- * @method static string QUESTION_MARK() Returns the QUESTION_MARK enum instance
- * @method static string EXCLAMATION_MARK() Returns the EXCLAMATION_MARK enum instance
- * @method static string LAUGHING_FACE() Returns the LAUGHING_FACE enum instance
- * @method static string WINKING_FACE() Returns the WINKING_FACE enum instance
- * @method static string ANGRY_FACE() Returns the ANGRY_FACE enum instance
- * @method static string CONFUSED_FACE() Returns the CONFUSED_FACE enum instance
- * @method static string SMILING_FACE_WITH_SUNGGLASSES() Returns the SMILING_FACE_WITH_SUNGGLASSES enum instance
- * @method static string THINKING_FACE() Returns the THINKING_FACE enum instance
- * @method static string HUGGING_FACE() Returns the HUGGING_FACE enum instance
- * @method static string KISSING_FACE() Returns the KISSING_FACE enum instance
- * @method static string ASTONISHED_FACE() Returns the ASTONISHED_FACE enum instance
- * @method static string PARTYING_FACE() Returns the PARTYING_FACE enum instance
- * @method static string ROBOT_FACE() Returns the ROBOT_FACE enum instance
- * @method static string GRINNING_CAT_FACE() Returns the GRINNING_CAT_FACE enum instance
- * @method static string DOG_FACE() Returns the DOG_FACE enum instance
- * @method static string CAT_FACE() Returns the CAT_FACE enum instance
- * @method static string SEE_NO_EVIL_MONKEY() Returns the SEE_NO_EVIL_MONKEY enum instance
- * @method static string THINKING() Returns the THINKING enum instance
- * @method static string TACO() Returns the TACO enum instance
- * @method static string PIZZA() Returns the PIZZA enum instance
- * @method static string BIRTHDAY_CAKE() Returns the BIRTHDAY_CAKE enum instance
- * @method static string COFFEE() Returns the COFFEE enum instance
- * @method static string BEER_MUG() Returns the BEER_MUG enum instance
- * @method static string BOTTLE_WITH_POPPING_CORK() Returns the BOTTLE_WITH_POPPING_CORK enum instance
- * @method static string HEART_EYES() Returns the HEART_EYES enum instance
- * @method static string CLINKING_GLASSES() Returns the CLINKING_GLASSES enum instance
- * @method static string RAINBOW() Returns the RAINBOW enum instance
- * @method static string EARTH_GLOBE() Returns the EARTH_GLOBE enum instance
- * @method static string SUN() Returns the SUN enum instance
- * @method static string CRESCENT_MOON() Returns the CRESCENT_MOON enum instance
- * @method static string SNOWFLAKE() Returns the SNOWFLAKE enum instance
- * @method static string HIGH_VOLTAGE() Returns the HIGH_VOLTAGE enum instance
- * @method static string CLOUD() Returns the CLOUD enum instance
- * @method static string DROPLET() Returns the DROPLET enum instance
- * @method static string MILKY_WAY() Returns the MILKY_WAY enum instance
- * @method static string SPARKLING_HEART() Returns the SPARKLING_HEART enum instance
- * @method static string CROWN() Returns the CROWN enum instance
- * @method static string SPARKLES() Returns the SPARKLES enum instance
- * @method static string FIREWORKS() Returns the FIREWORKS enum instance
- * @method static string SMILING_FACE_WITH_HEARTS() Returns the SMILING_FACE_WITH_HEARTS enum instance
- * @method static string FACE_WITH_MEDICAL_MASK() Returns the FACE_WITH_MEDICAL_MASK enum instance
- * @method static string FACE_WITH_THERMOMETER() Returns the FACE_WITH_THERMOMETER enum instance
- * @method static string FACE_WITH_HEAD_BANDAGE() Returns the FACE_WITH_HEAD_BANDAGE enum instance
- * @method static string PLEADING_FACE() Returns the PLEADING_FACE enum instance
- * @method static string YAWNING_FACE() Returns the YAWNING_FACE enum instance
- * @method static string COWBOY_HAT_FACE() Returns the COWBOY_HAT_FACE enum instance
- * @method static string FACE_WITH_MONOCLE() Returns the FACE_WITH_MONOCLE enum instance
- * @method static string FACE_WITH_HAND_OVER_MOUTH() Returns the FACE_WITH_HAND_OVER_MOUTH enum instance
- * @method static string FACE_WITH_ROLLING_EYES() Returns the FACE_WITH_ROLLING_EYES enum instance
- * @method static string FOG() Returns the FOG enum instance
- * @method static string MONKEY_FACE() Returns the MONKEY_FACE enum instance
- * @method static string HEAR_NO_EVIL_MONKEY() Returns the HEAR_NO_EVIL_MONKEY enum instance
- * @method static string SPEAK_NO_EVIL_MONKEY() Returns the SPEAK_NO_EVIL_MONKEY enum instance
- * @method static string BEAR_FACE() Returns the BEAR_FACE enum instance
- * @method static string KOALA() Returns the KOALA enum instance
- * @method static string PANDA_FACE() Returns the PANDA_FACE enum instance
- * @method static string UNICORN_FACE() Returns the UNICORN_FACE enum instance
- * @method static string EAGLE() Returns the EAGLE enum instance
- * @method static string FALCON() Returns the FALCON enum instance
- * @method static string PEACOCK() Returns the PEACOCK enum instance
- * @method static string SHARK() Returns the SHARK enum instance
- * @method static string TURTLE() Returns the TURTLE enum instance
- * @method static string OCTOPUS() Returns the OCTOPUS enum instance
- * @method static string CRAB() Returns the CRAB enum instance
- * @method static string SPIDER() Returns the SPIDER enum instance
- * @method static string SPIDER_WEB() Returns the SPIDER_WEB enum instance
- * @method static string LADY_BUG() Returns the LADY_BUG enum instance
- * @method static string HONEYBEE() Returns the HONEYBEE enum instance
- * @method static string SUNFLOWER() Returns the SUNFLOWER enum instance
- * @method static string TULIP() Returns the TULIP enum instance
- * @method static string DECIDUOUS_TREE() Returns the DECIDUOUS_TREE enum instance
- * @method static string CACTUS() Returns the CACTUS enum instance
- * @method static string HERB() Returns the HERB enum instance
- * @method static string ROSE() Returns the ROSE enum instance
- * @method static string BOUQUET() Returns the BOUQUET enum instance
- * @method static string EARTH_GLOBE_EUROPE_AFRICA() Returns the EARTH_GLOBE_EUROPE_AFRICA enum instance
- * @method static string EARTH_GLOBE_AMERICAS() Returns the EARTH_GLOBE_AMERICAS enum instance
- * @method static string EARTH_GLOBE_ASIA_AUSTRALIA() Returns the EARTH_GLOBE_ASIA_AUSTRALIA enum instance
- * @method static string GLOBE_WITH_MERIDIANS() Returns the GLOBE_WITH_MERIDIANS enum instance
- * @method static string SPIRAL_CALENDAR() Returns the SPIRAL_CALENDAR enum instance
- * @method static string NOTEBOOK() Returns the NOTEBOOK enum instance
- * @method static string BOOKS() Returns the BOOKS enum instance
- * @method static string OPEN_BOOK() Returns the OPEN_BOOK enum instance
- * @method static string SCISSORS() Returns the SCISSORS enum instance
- * @method static string PENCIL() Returns the PENCIL enum instance
- * @method static string PEN() Returns the PEN enum instance
- * @method static string PAINTBRUSH() Returns the PAINTBRUSH enum instance
- * @method static string ARTIST_PALETTE() Returns the ARTIST_PALETTE enum instance
- * @method static string MUSICAL_NOTE() Returns the MUSICAL_NOTE enum instance
- * @method static string WAVING_HAND() Returns the WAVING_HAND enum instance
- * @method static string RAISED_HAND() Returns the RAISED_HAND enum instance
- * @method static string FLEXED_BICEPS() Returns the FLEXED_BICEPS enum instance
- * @method static string RAISED_FIST() Returns the RAISED_FIST enum instance
- * @method static string HANDSHAKE() Returns the HANDSHAKE enum instance
- * @method static string RED_HEART() Returns the RED_HEART enum instance
- * @method static string BROKEN_HEART() Returns the BROKEN_HEART enum instance
- * @method static string TWO_HEARTS() Returns the TWO_HEARTS enum instance
- * @method static string HEART_WITH_ARROW() Returns the HEART_WITH_ARROW enum instance
- * @method static string HEART_WITH_RIBBON() Returns the HEART_WITH_RIBBON enum instance
- * @method static string RING() Returns the RING enum instance
- * @method static string WATER_WAVE() Returns the WATER_WAVE enum instance
- * @method static string CHRISTMAS_TREE() Returns the CHRISTMAS_TREE enum instance
- * @method static string WRAPPED_GIFT() Returns the WRAPPED_GIFT enum instance
- * @method static string BALLOON() Returns the BALLOON enum instance
- * @method static string CONFETTI_BALL() Returns the CONFETTI_BALL enum instance
- * @method static string HORSE_FACE() Returns the HORSE_FACE enum instance
- * @method static string PIG_FACE() Returns the PIG_FACE enum instance
- * @method static string RABBIT_FACE() Returns the RABBIT_FACE enum instance
- * @method static string LION_FACE() Returns the LION_FACE enum instance
- * @method static string ELEPHANT() Returns the ELEPHANT enum instance
- * @method static string CHICKEN() Returns the CHICKEN enum instance
- * @method static string FROG() Returns the FROG enum instance
- * @method static string PENGUIN() Returns the PENGUIN enum instance
- * @method static string RED_APPLE() Returns the RED_APPLE enum instance
- * @method static string BANANA() Returns the BANANA enum instance
- * @method static string WATERMELON() Returns the WATERMELON enum instance
- * @method static string SOFT_ICE_CREAM() Returns the SOFT_ICE_CREAM enum instance
- * @method static string HAMBURGER() Returns the HAMBURGER enum instance
- * @method static string HOT_DOG() Returns the HOT_DOG enum instance
- * @method static string HOT_BEVERAGE() Returns the HOT_BEVERAGE enum instance
- * @method static string TROPICAL_DRINK() Returns the TROPICAL_DRINK enum instance
- * @method static string WINE_GLASS() Returns the WINE_GLASS enum instance
- * @method static string MAN_RUNNING() Returns the MAN_RUNNING enum instance
- * @method static string WOMAN_BIKING() Returns the WOMAN_BIKING enum instance
- * @method static string MAN_SWIMMING() Returns the MAN_SWIMMING enum instance
- * @method static string SKIER() Returns the SKIER enum instance
- * @method static string SKATEBOARD() Returns the SKATEBOARD enum instance
- * @method static string INFO() Returns the INFO enum instance
- * @method static string SUCCESS() Returns the SUCCESS enum instance
- * @method static string WARNING() Returns the WARNING enum instance
- * @method static string BUG() Returns the BUG enum instance
- * @method static string QUESTION() Returns the QUESTION enum instance
- * @method static string EXCLAMATION() Returns the EXCLAMATION enum instance
- * @method static string HOURGLASS_NOT_DONE() Returns the HOURGLASS_NOT_DONE enum instance
- * @method static string HOURGLASS_DONE() Returns the HOURGLASS_DONE enum instance
- * @method static string LIGHT_BULB() Returns the LIGHT_BULB enum instance
- * @method static string LOCK() Returns the LOCK enum instance
- * @method static string UNLOCK() Returns the UNLOCK enum instance
- * @method static string ALARM_CLOCK() Returns the ALARM_CLOCK enum instance
- * @method static string CLIPBOARD() Returns the CLIPBOARD enum instance
- * @method static string PAGE_FACING_UP() Returns the PAGE_FACING_UP enum instance
- * @method static string TOOLS() Returns the TOOLS enum instance
- * @method static string GEAR() Returns the GEAR enum instance
- * @method static string PUSH_PIN() Returns the PUSH_PIN enum instance
- * @method static string CROSS_MARK() Returns the CROSS_MARK enum instance
- * @method static string POLICE_CAR_LIGHT() Returns the POLICE_CAR_LIGHT enum instance
+ * @method static THUMBS_UP() Returns the THUMBS_UP enum instance
+ * @method static THUMBS_DOWN() Returns the THUMBS_DOWN enum instance
+ * @method static SMILING_FACE() Returns the SMILING_FACE enum instance
+ * @method static CRYING_FACE() Returns the CRYING_FACE enum instance
+ * @method static HEART() Returns the HEART enum instance
+ * @method static STAR() Returns the STAR enum instance
+ * @method static FIRE() Returns the FIRE enum instance
+ * @method static CLAPPING_HANDS() Returns the CLAPPING_HANDS enum instance
+ * @method static PARTY_POPPER() Returns the PARTY_POPPER enum instance
+ * @method static CHECK_MARK() Returns the CHECK_MARK enum instance
+ * @method static QUESTION_MARK() Returns the QUESTION_MARK enum instance
+ * @method static EXCLAMATION_MARK() Returns the EXCLAMATION_MARK enum instance
+ * @method static LAUGHING_FACE() Returns the LAUGHING_FACE enum instance
+ * @method static WINKING_FACE() Returns the WINKING_FACE enum instance
+ * @method static ANGRY_FACE() Returns the ANGRY_FACE enum instance
+ * @method static CONFUSED_FACE() Returns the CONFUSED_FACE enum instance
+ * @method static SMILING_FACE_WITH_SUNGGLASSES() Returns the SMILING_FACE_WITH_SUNGGLASSES enum instance
+ * @method static THINKING_FACE() Returns the THINKING_FACE enum instance
+ * @method static HUGGING_FACE() Returns the HUGGING_FACE enum instance
+ * @method static KISSING_FACE() Returns the KISSING_FACE enum instance
+ * @method static ASTONISHED_FACE() Returns the ASTONISHED_FACE enum instance
+ * @method static PARTYING_FACE() Returns the PARTYING_FACE enum instance
+ * @method static ROBOT_FACE() Returns the ROBOT_FACE enum instance
+ * @method static GRINNING_CAT_FACE() Returns the GRINNING_CAT_FACE enum instance
+ * @method static DOG_FACE() Returns the DOG_FACE enum instance
+ * @method static CAT_FACE() Returns the CAT_FACE enum instance
+ * @method static SEE_NO_EVIL_MONKEY() Returns the SEE_NO_EVIL_MONKEY enum instance
+ * @method static THINKING() Returns the THINKING enum instance
+ * @method static TACO() Returns the TACO enum instance
+ * @method static PIZZA() Returns the PIZZA enum instance
+ * @method static BIRTHDAY_CAKE() Returns the BIRTHDAY_CAKE enum instance
+ * @method static COFFEE() Returns the COFFEE enum instance
+ * @method static BEER_MUG() Returns the BEER_MUG enum instance
+ * @method static BOTTLE_WITH_POPPING_CORK() Returns the BOTTLE_WITH_POPPING_CORK enum instance
+ * @method static HEART_EYES() Returns the HEART_EYES enum instance
+ * @method static CLINKING_GLASSES() Returns the CLINKING_GLASSES enum instance
+ * @method static RAINBOW() Returns the RAINBOW enum instance
+ * @method static EARTH_GLOBE() Returns the EARTH_GLOBE enum instance
+ * @method static SUN() Returns the SUN enum instance
+ * @method static CRESCENT_MOON() Returns the CRESCENT_MOON enum instance
+ * @method static SNOWFLAKE() Returns the SNOWFLAKE enum instance
+ * @method static HIGH_VOLTAGE() Returns the HIGH_VOLTAGE enum instance
+ * @method static CLOUD() Returns the CLOUD enum instance
+ * @method static DROPLET() Returns the DROPLET enum instance
+ * @method static MILKY_WAY() Returns the MILKY_WAY enum instance
+ * @method static SPARKLING_HEART() Returns the SPARKLING_HEART enum instance
+ * @method static CROWN() Returns the CROWN enum instance
+ * @method static SPARKLES() Returns the SPARKLES enum instance
+ * @method static FIREWORKS() Returns the FIREWORKS enum instance
+ * @method static SMILING_FACE_WITH_HEARTS() Returns the SMILING_FACE_WITH_HEARTS enum instance
+ * @method static FACE_WITH_MEDICAL_MASK() Returns the FACE_WITH_MEDICAL_MASK enum instance
+ * @method static FACE_WITH_THERMOMETER() Returns the FACE_WITH_THERMOMETER enum instance
+ * @method static FACE_WITH_HEAD_BANDAGE() Returns the FACE_WITH_HEAD_BANDAGE enum instance
+ * @method static PLEADING_FACE() Returns the PLEADING_FACE enum instance
+ * @method static YAWNING_FACE() Returns the YAWNING_FACE enum instance
+ * @method static COWBOY_HAT_FACE() Returns the COWBOY_HAT_FACE enum instance
+ * @method static FACE_WITH_MONOCLE() Returns the FACE_WITH_MONOCLE enum instance
+ * @method static FACE_WITH_HAND_OVER_MOUTH() Returns the FACE_WITH_HAND_OVER_MOUTH enum instance
+ * @method static FACE_WITH_ROLLING_EYES() Returns the FACE_WITH_ROLLING_EYES enum instance
+ * @method static FOG() Returns the FOG enum instance
+ * @method static MONKEY_FACE() Returns the MONKEY_FACE enum instance
+ * @method static HEAR_NO_EVIL_MONKEY() Returns the HEAR_NO_EVIL_MONKEY enum instance
+ * @method static SPEAK_NO_EVIL_MONKEY() Returns the SPEAK_NO_EVIL_MONKEY enum instance
+ * @method static BEAR_FACE() Returns the BEAR_FACE enum instance
+ * @method static KOALA() Returns the KOALA enum instance
+ * @method static PANDA_FACE() Returns the PANDA_FACE enum instance
+ * @method static UNICORN_FACE() Returns the UNICORN_FACE enum instance
+ * @method static EAGLE() Returns the EAGLE enum instance
+ * @method static FALCON() Returns the FALCON enum instance
+ * @method static PEACOCK() Returns the PEACOCK enum instance
+ * @method static SHARK() Returns the SHARK enum instance
+ * @method static TURTLE() Returns the TURTLE enum instance
+ * @method static OCTOPUS() Returns the OCTOPUS enum instance
+ * @method static CRAB() Returns the CRAB enum instance
+ * @method static SPIDER() Returns the SPIDER enum instance
+ * @method static SPIDER_WEB() Returns the SPIDER_WEB enum instance
+ * @method static LADY_BUG() Returns the LADY_BUG enum instance
+ * @method static HONEYBEE() Returns the HONEYBEE enum instance
+ * @method static SUNFLOWER() Returns the SUNFLOWER enum instance
+ * @method static TULIP() Returns the TULIP enum instance
+ * @method static DECIDUOUS_TREE() Returns the DECIDUOUS_TREE enum instance
+ * @method static CACTUS() Returns the CACTUS enum instance
+ * @method static HERB() Returns the HERB enum instance
+ * @method static ROSE() Returns the ROSE enum instance
+ * @method static BOUQUET() Returns the BOUQUET enum instance
+ * @method static EARTH_GLOBE_EUROPE_AFRICA() Returns the EARTH_GLOBE_EUROPE_AFRICA enum instance
+ * @method static EARTH_GLOBE_AMERICAS() Returns the EARTH_GLOBE_AMERICAS enum instance
+ * @method static EARTH_GLOBE_ASIA_AUSTRALIA() Returns the EARTH_GLOBE_ASIA_AUSTRALIA enum instance
+ * @method static GLOBE_WITH_MERIDIANS() Returns the GLOBE_WITH_MERIDIANS enum instance
+ * @method static SPIRAL_CALENDAR() Returns the SPIRAL_CALENDAR enum instance
+ * @method static NOTEBOOK() Returns the NOTEBOOK enum instance
+ * @method static BOOKS() Returns the BOOKS enum instance
+ * @method static OPEN_BOOK() Returns the OPEN_BOOK enum instance
+ * @method static SCISSORS() Returns the SCISSORS enum instance
+ * @method static PENCIL() Returns the PENCIL enum instance
+ * @method static PEN() Returns the PEN enum instance
+ * @method static PAINTBRUSH() Returns the PAINTBRUSH enum instance
+ * @method static ARTIST_PALETTE() Returns the ARTIST_PALETTE enum instance
+ * @method static MUSICAL_NOTE() Returns the MUSICAL_NOTE enum instance
+ * @method static WAVING_HAND() Returns the WAVING_HAND enum instance
+ * @method static RAISED_HAND() Returns the RAISED_HAND enum instance
+ * @method static FLEXED_BICEPS() Returns the FLEXED_BICEPS enum instance
+ * @method static RAISED_FIST() Returns the RAISED_FIST enum instance
+ * @method static HANDSHAKE() Returns the HANDSHAKE enum instance
+ * @method static RED_HEART() Returns the RED_HEART enum instance
+ * @method static BROKEN_HEART() Returns the BROKEN_HEART enum instance
+ * @method static TWO_HEARTS() Returns the TWO_HEARTS enum instance
+ * @method static HEART_WITH_ARROW() Returns the HEART_WITH_ARROW enum instance
+ * @method static HEART_WITH_RIBBON() Returns the HEART_WITH_RIBBON enum instance
+ * @method static RING() Returns the RING enum instance
+ * @method static WATER_WAVE() Returns the WATER_WAVE enum instance
+ * @method static CHRISTMAS_TREE() Returns the CHRISTMAS_TREE enum instance
+ * @method static WRAPPED_GIFT() Returns the WRAPPED_GIFT enum instance
+ * @method static BALLOON() Returns the BALLOON enum instance
+ * @method static CONFETTI_BALL() Returns the CONFETTI_BALL enum instance
+ * @method static HORSE_FACE() Returns the HORSE_FACE enum instance
+ * @method static PIG_FACE() Returns the PIG_FACE enum instance
+ * @method static RABBIT_FACE() Returns the RABBIT_FACE enum instance
+ * @method static LION_FACE() Returns the LION_FACE enum instance
+ * @method static ELEPHANT() Returns the ELEPHANT enum instance
+ * @method static CHICKEN() Returns the CHICKEN enum instance
+ * @method static FROG() Returns the FROG enum instance
+ * @method static PENGUIN() Returns the PENGUIN enum instance
+ * @method static RED_APPLE() Returns the RED_APPLE enum instance
+ * @method static BANANA() Returns the BANANA enum instance
+ * @method static WATERMELON() Returns the WATERMELON enum instance
+ * @method static SOFT_ICE_CREAM() Returns the SOFT_ICE_CREAM enum instance
+ * @method static HAMBURGER() Returns the HAMBURGER enum instance
+ * @method static HOT_DOG() Returns the HOT_DOG enum instance
+ * @method static HOT_BEVERAGE() Returns the HOT_BEVERAGE enum instance
+ * @method static TROPICAL_DRINK() Returns the TROPICAL_DRINK enum instance
+ * @method static WINE_GLASS() Returns the WINE_GLASS enum instance
+ * @method static MAN_RUNNING() Returns the MAN_RUNNING enum instance
+ * @method static WOMAN_BIKING() Returns the WOMAN_BIKING enum instance
+ * @method static MAN_SWIMMING() Returns the MAN_SWIMMING enum instance
+ * @method static SKIER() Returns the SKIER enum instance
+ * @method static SKATEBOARD() Returns the SKATEBOARD enum instance
+ * @method static INFO() Returns the INFO enum instance
+ * @method static SUCCESS() Returns the SUCCESS enum instance
+ * @method static WARNING() Returns the WARNING enum instance
+ * @method static BUG() Returns the BUG enum instance
+ * @method static QUESTION() Returns the QUESTION enum instance
+ * @method static EXCLAMATION() Returns the EXCLAMATION enum instance
+ * @method static HOURGLASS_NOT_DONE() Returns the HOURGLASS_NOT_DONE enum instance
+ * @method static HOURGLASS_DONE() Returns the HOURGLASS_DONE enum instance
+ * @method static LIGHT_BULB() Returns the LIGHT_BULB enum instance
+ * @method static LOCK() Returns the LOCK enum instance
+ * @method static UNLOCK() Returns the UNLOCK enum instance
+ * @method static ALARM_CLOCK() Returns the ALARM_CLOCK enum instance
+ * @method static CLIPBOARD() Returns the CLIPBOARD enum instance
+ * @method static PAGE_FACING_UP() Returns the PAGE_FACING_UP enum instance
+ * @method static TOOLS() Returns the TOOLS enum instance
+ * @method static GEAR() Returns the GEAR enum instance
+ * @method static PUSH_PIN() Returns the PUSH_PIN enum instance
+ * @method static CROSS_MARK() Returns the CROSS_MARK enum instance
+ * @method static POLICE_CAR_LIGHT() Returns the POLICE_CAR_LIGHT enum instance
  */
 enum Emoji: string
 {

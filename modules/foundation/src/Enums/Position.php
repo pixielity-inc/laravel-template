@@ -11,14 +11,14 @@ use Pixielity\Enum\Enum;
 /**
  * Enum representing possible positions.
  *
- * @method static string LEFT() Returns the LEFT enum instance
- * @method static string RIGHT() Returns the RIGHT enum instance
- * @method static string TOP() Returns the TOP enum instance
- * @method static string BOTTOM() Returns the BOTTOM enum instance
- * @method static string TOP_LEFT() Returns the TOP_LEFT enum instance
- * @method static string TOP_RIGHT() Returns the TOP_RIGHT enum instance
- * @method static string BOTTOM_LEFT() Returns the BOTTOM_LEFT enum instance
- * @method static string BOTTOM_RIGHT() Returns the BOTTOM_RIGHT enum instance
+ * @method static LEFT() Returns the LEFT enum instance
+ * @method static RIGHT() Returns the RIGHT enum instance
+ * @method static TOP() Returns the TOP enum instance
+ * @method static BOTTOM() Returns the BOTTOM enum instance
+ * @method static TOP_LEFT() Returns the TOP_LEFT enum instance
+ * @method static TOP_RIGHT() Returns the TOP_RIGHT enum instance
+ * @method static BOTTOM_LEFT() Returns the BOTTOM_LEFT enum instance
+ * @method static BOTTOM_RIGHT() Returns the BOTTOM_RIGHT enum instance
  */
 enum Position: string
 {

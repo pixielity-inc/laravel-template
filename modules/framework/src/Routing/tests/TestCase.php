@@ -39,7 +39,6 @@ abstract class TestCase extends Orchestra
     /**
      * Tear down the test environment.
      */
-    #[Override]
     protected function tearDown(): void
     {
         Mockery::close();

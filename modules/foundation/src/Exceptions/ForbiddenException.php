@@ -51,7 +51,6 @@ class ForbiddenException extends Exception
      *
      * @return array<string, mixed> An associative array containing the solution details.
      */
-    #[Override]
     protected function solution(): array
     {
         return [

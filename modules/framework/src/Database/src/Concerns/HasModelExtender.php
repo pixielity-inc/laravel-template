@@ -23,7 +23,7 @@ use Pixielity\Support\Reflection;
  * Has Model Features Trait.
  *
  * Provides all base Model functionality as a trait for models that cannot
- * extend the base Model class (e.g., when extending third-party packages).
+ * extend the base Model class (e.g., when extending third-party modules).
  *
  * ## Use Cases:
  * - Extending Spatie Permission models (Role, Permission)

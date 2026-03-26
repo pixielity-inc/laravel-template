@@ -1,0 +1,81 @@
+{
+  "name": "pixielity/laravel-service-provider",
+  "description": "Base infrastructure for modular service providers with traits, interfaces, and enums for Laravel applications.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "service-provider",
+    "module",
+    "modular-architecture",
+    "infrastructure",
+    "traits",
+    "base-provider",
+    "module-system"
+  ],
+  "authors": [
+    {
+      "name": "Pixielity Team",
+      "email": "dev@pixielity.com"
+    }
+  ],
+  "homepage": "https://gitlab.com/pixielity/laravel/framework/service-provider",
+  "support": {
+    "issues": "https://gitlab.com/pixielity/laravel/framework/service-provider/-/issues",
+    "source": "https://gitlab.com/pixielity/laravel/framework/service-provider"
+  },
+  "require": {
+    "php": "^8.5",
+    "spatie/laravel-health": "^1.39"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.0",
+    "phpunit/phpunit": "^11.0",
+    "mockery/mockery": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pixielity\\ServiceProvider\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pixielity\\ServiceProvider\\Tests\\": "tests/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pixielity/laravel-/foundation"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pixielity/laravel-/framework/meta"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pixielity/laravel-/discovery"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pixielity/laravel-/contracts"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pixielity/laravel-/telemetry/meta"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": []
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {}
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

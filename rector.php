@@ -13,7 +13,7 @@
  * Usage:
  *   Preview changes:  composer rector
  *   Apply changes:    composer rector:fix
- *   Specific path:    vendor/rector/rector/bin/rector process packages/Foundation --dry-run
+ *   Specific path:    vendor/rector/rector/bin/rector process modules/Foundation --dry-run
  *
  * @version 2.0.0
  *
