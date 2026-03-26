@@ -182,7 +182,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "pixielity/octane-module"
+            ]
         },
         "composer-attribute-collector": {
             "include": [
