@@ -200,10 +200,6 @@
         {
             "type": "path",
             "url": "./modules/*"
-        },
-        {
-            "type": "path",
-            "url": "./modules/l5-repository"
         }
     ],
     "autoload": {
